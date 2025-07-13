@@ -903,6 +903,25 @@ mark {
   top: 0;
   height: 100%;
 }
+.plus-button {
+      font-size: 24px;
+      background-color: #fff;
+      color: #dc965a;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      text-align: center;
+      line-height: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .plus-button:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
 .portfolio-box-01:hover .portfolio-info {
   position: relative;
   z-index: 1;
