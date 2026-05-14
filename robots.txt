@@ -1,0 +1,12 @@
+# ════════════════════════════════════════
+# DOLAN PROGRAMMING — robots.txt
+# ════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# Block access to static assets crawlers don't need
+Disallow: /static/img/
+
+# Sitemap location
+Sitemap: https://dolanprogramming.com/sitemap.xml
