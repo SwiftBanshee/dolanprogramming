@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Garage Sixth Line</title>
+<!-- Google Fonts for a modern look -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212; /* dark mode background */
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Utility classes */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Neon blue accent color */
+:root {
+  --neon-blue: #00ffff;
+}
+
+/* Header styles */
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(18, 18, 18, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+header.shrink {
+  padding: 10px 40px;
+  background-color: rgba(18, 18, 18, 1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--neon-blue);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--neon-blue);
+}
+
+/* Language toggle button */
+.language-toggle {
+  background: transparent;
+  border: 2px solid var(--neon-blue);
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.language-toggle:hover {
+  background-color: var(--neon-blue);
+  color: #000;
+}
+
+/* Call button */
+.call-btn {
+  background-color: var(--neon-blue);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  font-size: 1em;
+  position: relative;
+  animation: pulse 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 5px var(--neon-blue); }
+  50% { box-shadow: 0 0 20px var(--neon-blue); }
+}
+
+.call-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--neon-blue);
+}
+
+/* Sections styling */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero section */
+#hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #222, #111);
+  opacity: 0.7;
+  z-index: -1;
+  /* Optional: add parallax or animated gradient here */
+  background: linear-gradient(270deg, #222, #111);
+  background-size: 600% 600%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-logo {
+  font-size: 3em;
+  font-weight: bold;
+  color: var(--neon-blue);
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero-tagline {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+  animation-delay: 0.3s;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#callNow {
+  background-color: var(--neon-blue);
+  color: #000;
+  animation: pulse 2s infinite;
+}
+
+#callNow:hover {
+  transform: scale(1.05);
+}
+
+#bookNow {
+  background-color: transparent;
+  border: 2px solid var(--neon-blue);
+  color: var(--neon-blue);
+}
+
+#bookNow:hover {
+  background-color: var(--neon-blue);
+  color: #000;
+}
+
+/* About section */
+#about {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--neon-blue);
+  font-size: 2em;
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+/* Services section */
+#services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.service-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.service-icon {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: var(--neon-blue);
+  transition: transform 0.3s ease;
+}
+
+.service-icon:hover {
+  transform: rotate(15deg);
+}
+
+.service-title {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.service-desc {
+  font-size: 1em;
+  color: #ddd;
+}
+
+/* Gallery section */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.gallery-img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+/* Reviews section */
+#reviews {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.review-slide {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  transition: opacity 1s ease;
+}
+
+.review-slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* FAQ section */
+#faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #222;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-question {
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 15px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #333;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px; /* enough for content */
+  padding: 15px;
+}
+
+/* Contact / Booking section */
+#contact {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, select, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: var(--neon-blue);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Footer styles */
+footer {
+  background-color: #111;
+  padding: 30px 20px;
+  text-align: center;
+  color: #aaa;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+  color: var(--neon-blue);
+}
+
+footer p, footer a {
+  font-size: 0.9em;
+  color: #aaa;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+footer a:hover {
+  color: var(--neon-blue);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media(max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  #hero {
+    padding: 40px 20px;
+  }
+  #contact {
+    padding: 20px 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="logo">Garage Sixth Line</div>
+  <nav>
+    <a href="#hero" class="nav-link" data-en="Home" data-fr="Accueil">Home</a>
+    <a href="#about" class="nav-link" data-en="About" data-fr="À propos">About</a>
+    <a href="#services" class="nav-link" data-en="Services" data-fr="Services">Services</a>
+    <a href="#gallery" class="nav-link" data-en="Gallery" data-fr="Galerie">Gallery</a>
+    <a href="#reviews" class="nav-link" data-en="Reviews" data-fr="Avis">Reviews</a>
+    <a href="#faq" class="nav-link" data-en="FAQ" data-fr="FAQ">FAQ</a>
+    <a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+  </nav>
+  <button class="language-toggle" id="langToggle" data-en="FR" data-fr="EN">FR</button>
+</header>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="hero-logo" id="heroLogo">🚗 <span style="opacity:0;">Garage Sixth Line</span></div>
+  <div class="hero-tagline" id="heroTagline">Your mobile automotive service in Bristol, Quebec</div>
+  <div class="hero-buttons">
+    <a href="tel:8197122387" class="hero-btn" id="callNow">📞 Call Now</a>
+    <a href="#contact" class="hero-btn" id="bookNow">🛠 Book Appointment</a>
+    <a href="https://www.facebook.com/p/Garage-Sixth-Line-61567841271965/" target="_blank" class="hero-btn">Facebook</a>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="hidden">
+  <h2 data-en="About Us" data-fr="À Propos">About Us</h2>
+  <p data-en="Garage Sixth Line is a premium automotive shop offering mobile services in Bristol, Quebec. We specialize in light vehicle repairs, diagnostics, undercoating, and more." data-fr="Garage Sixth Line est un atelier automobile haut de gamme offrant des services mobiles à Bristol, Québec. Nous sommes spécialisés dans les réparations légères, diagnostics, undercoating, et plus encore.">Garage Sixth Line is a premium automotive shop offering mobile services in Bristol, Quebec. We specialize in light vehicle repairs, diagnostics, undercoating, and more.</p>
+  <p data-en="Established with a focus on quality and customer satisfaction, we bring modern automotive solutions right to your location." data-fr="Fondé avec un souci de qualité et de satisfaction client, nous apportons des solutions automobiles modernes directement chez vous.">Established with a focus on quality and customer satisfaction, we bring modern automotive solutions right to your location.</p>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="hidden">
+  <h2 data-en="Our Services" data-fr="Nos Services">Our Services</h2>
+  <div class="service-card" aria-hidden="true">
+    <div class="service-icon">🔧</div>
+    <div class="service-title" data-en="Light Vehicle Repairs" data-fr="Réparations légères">Light Vehicle Repairs</div>
+    <div class="service-desc" data-en="Quick and reliable repairs for all light vehicles." data-fr="Réparations rapides et fiables pour tous les véhicules légers.">Quick and reliable repairs for all light vehicles.</div>
+  </div>
+  <div class="service-card" aria-hidden="true">
+    <div class="service-icon">🛠️</div>
+    <div class="service-title" data-en="Used Auto Parts" data-fr="Pièces d'occasion">Used Auto Parts</div>
+    <div class="service-desc" data-en="Quality used parts for your vehicle." data-fr="Pièces d'occasion de qualité pour votre véhicule.">Quality used parts for your vehicle.</div>
+  </div>
+  <div class="service-card" aria-hidden="true">
+    <div class="service-icon">🛡️</div>
+    <div class="service-title" data-en="Undercoating" data-fr="Sous-couchage">Undercoating</div>
+    <div class="service-desc" data-en="Protect your car from rust and corrosion." data-fr="Protégez votre voiture de la rouille et de la corrosion.">Protect your car from rust and corrosion.</div>
+  </div>
+  <div class="service-card" aria-hidden="true">
+    <div class="service-icon">🔍</div>
+    <div class="service-title" data-en="Diagnostics Scanning" data-fr="Diagnostic">Diagnostics Scanning</div>
+    <div class="service-desc" data-en="Polaris and BRP diagnostics scanning services." data-fr="Services de diagnostic Polaris et BRP.">Polaris and BRP diagnostics scanning services.</div>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section id="gallery" class="hidden">
+  <h2 data-en="Gallery" data-fr="Galerie">Gallery</h2>
+  <div class="grid">
+    <!-- Placeholder images, replace src with actual images -->
+    <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Repair+1" class="gallery-img" alt="Repair"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Diagnostics" class="gallery-img" alt="Diagnostics"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Undercoating" class="gallery-img" alt="Undercoating"></div>
+    <div class="gallery-item"><img src="https://via.placeholder.com/300x200?text=Mobile Service" class="gallery-img" alt="Mobile Service"></div>
+  </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="hidden">
+  <h2 data-en="What Our Customers Say" data-fr="Ce que disent nos clients">What Our Customers Say</h2>
+  <div id="reviewContainer" style="position:relative; height:150px;">
+    <!-- Reviews will be injected here by JS -->
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section id="faq" class="hidden">
+  <h2 data-en="Frequently Asked Questions" data-fr="Foire Aux Questions">Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <div class="faq-question" data-en="Do you offer mobile services?" data-fr="Offrez-vous des services mobiles?">❓
+      <span>Do you offer mobile services?</span>
+    </div>
+    <div class="faq-answer" data-en="Yes, we come to your location for most services." data-fr="Oui, nous venons à votre emplacement pour la plupart des services.">Yes, we come to your location for most services.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question" data-en="What areas do you serve?" data-fr="Quelles zones desservez-vous?">❓
+      <span>What areas do you serve?</span>
+    </div>
+    <div class="faq-answer" data-en="Bristol and surrounding areas in Quebec." data-fr="Bristol et les régions environnantes au Québec.">Bristol and surrounding areas in Quebec.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question" data-en="How can I book an appointment?" data-fr="Comment puis-je réserver un rendez-vous?">❓
+      <span>How can I book an appointment?</span>
+    </div>
+    <div class="faq-answer" data-en="Use the contact form or call us directly." data-fr="Utilisez le formulaire de contact ou appelez-nous directement.">Use the contact form or call us directly.</div>
+  </div>
+</section>
+
+<!-- CONTACT / BOOKING SECTION -->
+<section id="contact" class="hidden">
+  <h2 data-en="Book or Contact Us" data-fr="Réservez ou Contactez-Nous">Book or Contact Us</h2>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Name / Nom" required />
+    <input type="tel" id="phone" placeholder="Phone / Téléphone" required />
+    <input type="email" id="email" placeholder="Email (optional)" />
+    <select id="service" required>
+      <option value="" disabled selected data-en="Select Service" data-fr="Sélectionnez un service">Select Service</option>
+      <option value="light_repair" data-en="Light Vehicle Repairs" data-fr="Réparations légères">Light Vehicle Repairs</option>
+      <option value="used_parts" data-en="Used Auto Parts" data-fr="Pièces d'occasion">Used Auto Parts</option>
+      <option value="undercoating" data-en="Undercoating" data-fr="Sous-couchage">Undercoating</option>
+      <option value="diagnostics" data-en="Diagnostics" data-fr="Diagnostic">Diagnostics</option>
+    </select>
+    <input type="datetime-local" id="datetime" placeholder="Preferred Date/Time" />
+    <textarea id="message" rows="4" placeholder="Message / Message"></textarea>
+    <button type="submit" class="call-btn">📩 Submit</button>
+  </form>
+  <div style="margin-top:20px;">
+    <a href="tel:8197122387" class="call-btn" style="margin-right:10px;">📞 Call Now</a>
+    <a href="mailto:jessy_laurier012@hotmail.com" class="call-btn">✉️ Email</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h3>Garage Sixth Line</h3>
+  <p>📍 Bristol, Quebec, Canada</p>
+  <p>📞 (819) 712-2387 | <a href="mailto:jessy_laurier012@hotmail.com">Email</a></p>
+  <p>
+    <a href="https://www.facebook.com/p/Garage-Sixth-Line-61567841271965/" target="_blank">Facebook</a>
+  </p>
+</footer>
+
+<!-- Scripts for interaction and animations -->
+<script>
+  // Language toggle logic
+  const langBtn = document.getElementById('langToggle');
+  let currentLang = 'en'; // default
+  const elementsToTranslate = document.querySelectorAll('[data-en]');
+
+  function setLanguage(lang) {
+    elementsToTranslate.forEach(el => {
+      if (lang === 'en') {
+        el.textContent = el.getAttribute('data-en');
+      } else {
+        el.textContent = el.getAttribute('data-fr');
+      }
+    });
+  }
+
+  langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'fr' : 'en';
+    setLanguage(currentLang);
+    langBtn.textContent = currentLang === 'en' ? 'FR' : 'EN';
+  });
+
+  // Initialize language
+  setLanguage(currentLang);
+
+  // Sticky header shrink on scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.classList.add('shrink');
+    } else {
+      header.classList.remove('shrink');
+    }
+  });
+
+  // Scroll reveal animations
+  const revealElements = document.querySelectorAll('.hidden');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        entry.target.classList.remove('hidden');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  // Animate hero text
+  document.querySelectorAll('.hero-logo, .hero-tagline, .hero-buttons').forEach(el => {
+    el.classList.add('show');
+  });
+
+  // Animate cards on scroll
+  document.querySelectorAll('.service-card').forEach(card => {
+    observer.observe(card);
+  });
+
+  // Gallery lightbox (simple implementation)
+  const galleryItems = document.querySelectorAll('.gallery-item');
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const imgSrc = item.querySelector('img').src;
+      const lightbox = document.createElement('div');
+      lightbox.style.position = 'fixed';
+      lightbox.style.top = 0; lightbox.style.left = 0;
+      lightbox.style.width = '100%'; lightbox.style.height = '100%';
+      lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
+      lightbox.style.display = 'flex'; lightbox.style.justifyContent = 'center'; lightbox.style.alignItems = 'center';
+      lightbox.style.cursor = 'pointer';
+      const img = document.createElement('img');
+      img.src = imgSrc;
+      img.style.maxWidth = '90%';
+      img.style.maxHeight = '90%';
+      lightbox.appendChild(img);
+      document.body.appendChild(lightbox);
+      lightbox.addEventListener('click', () => {
+        document.body.removeChild(lightbox);
+      });
+    });
+  });
+
+  // Reviews slider
+  const reviews = [
+    { name: 'John D.', stars: 5, text: 'Excellent service and very professional!' },
+    { name: 'Marie L.', stars: 4, text: 'Quick and reliable, highly recommended.' },
+    { name: 'Alex P.', stars: 5, text: 'My go-to mobile mechanic in Bristol.' },
+    { name: 'Sophie M.', stars: 4, text: 'Great experience, will return.' }
+  ];
+
+  const reviewContainer = document.getElementById('reviewContainer');
+  let currentReviewIndex = 0;
+
+  function showReview(index) {
+    reviewContainer.innerHTML = '';
+    const review = reviews[index];
+    const slide = document.createElement('div');
+    slide.className = 'review-slide active';
+    slide.innerHTML = `
+      <h3>${review.name} ⭐${review.stars}</h3>
+      <p>${review.text}</p>
+    `;
+    reviewContainer.appendChild(slide);
+  }
+
+  function nextReview() {
+    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+    showReview(currentReviewIndex);
+  }
+
+  // Initialize first review
+  showReview(currentReviewIndex);
+  setInterval(nextReview, 4000); // switch every 4 seconds
+
+  // FAQ toggle
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const parent = question.parentElement;
+      parent.classList.toggle('open');
+    });
+  });
+
+  // Animate section reveal on load
+  document.querySelectorAll('section').forEach(section => {
+    if (!section.classList.contains('hidden')) {
+      section.classList.add('show');
+    }
+  });
+
+  // Contact form submission
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Thank you for contacting us!'); // Placeholder for form handling
+    e.target.reset();
+  });
+</script>
+
+</body>
+</html>

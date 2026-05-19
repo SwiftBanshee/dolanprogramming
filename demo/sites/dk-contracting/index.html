@@ -1,0 +1,531 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DK Contracting - Professional residential and commercial renovations in Shawville, Quebec. Expert kitchen, bathroom, basement remodeling in Renfrew County and Pontiac region. Fully insured.">
+    <meta name="keywords" content="contractor Shawville Quebec, home renovation Pontiac, kitchen renovation Renfrew County, bathroom remodeling Shawville, general contractor Quebec, commercial renovation Pontiac">
+    <meta name="author" content="Dolan Programming">
+    <title>DK Contracting | Renovations Shawville, QC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --primary: #1e3a8a;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+        
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        
+        .sticky-header {
+            transition: all 0.3s ease;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        
+        .language-btn {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-900">
+    <!-- Sticky Header -->
+    <header class="sticky-header bg-white border-b shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl">DK</div>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-tight text-blue-950">DK Contracting</h1>
+                    <p class="text-xs text-gray-500 -mt-1">Shawville, QC</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-700">Home</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-blue-700">Services</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-700">About</a>
+                <a href="#gallery" class="nav-link text-gray-700 hover:text-blue-700">Gallery</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-700">Contact</a>
+            </nav>
+            
+            <div class="flex items-center gap-4">
+                <!-- Language Toggle -->
+                <div class="flex border rounded-full overflow-hidden text-sm font-medium">
+                    <button onclick="switchLanguage('en')" id="btn-en" 
+                            class="px-4 py-1.5 bg-blue-900 text-white transition-all">EN</button>
+                    <button onclick="switchLanguage('fr')" id="btn-fr" 
+                            class="px-4 py-1.5 hover:bg-gray-100 transition-all">FR</button>
+                </div>
+                
+                <a href="tel:6135708245" 
+                   class="hidden sm:flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-2xl font-semibold transition-all">
+                    <i class="fas fa-phone"></i>
+                    <span>(613) 570-8245</span>
+                </a>
+                
+                <!-- Hamburger -->
+                <button id="hamburger" class="md:hidden text-3xl text-gray-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-6 flex flex-col gap-6 text-lg">
+                <a href="#home" class="mobile-link">Home</a>
+                <a href="#services" class="mobile-link">Services</a>
+                <a href="#about" class="mobile-link">About Us</a>
+                <a href="#gallery" class="mobile-link">Project Gallery</a>
+                <a href="#contact" class="mobile-link">Get a Quote</a>
+                <a href="tel:6135708245" class="block bg-blue-700 text-white text-center py-4 rounded-2xl font-semibold">Call (613) 570-8245</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white pt-20">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="max-w-2xl mx-auto">
+                <span id="hero-badge" class="inline-block px-6 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm tracking-widest mb-6">FULLY INSURED • SHAWVILLE, QC</span>
+                <h2 id="hero-title" class="text-6xl md:text-7xl font-bold leading-tight mb-6">Expert Renovations.<br>Built with Trust.</h2>
+                <p id="hero-subtitle" class="text-xl md:text-2xl text-gray-200 mb-10">Residential &amp; Commercial Remodeling in Renfrew County &amp; the Pontiac Region</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" 
+                       class="px-10 py-5 bg-white text-blue-950 rounded-3xl font-semibold text-lg hover:bg-amber-300 transition-all inline-flex items-center justify-center gap-3">
+                        <span>Get Free Estimate</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#gallery" 
+                       class="px-10 py-5 border-2 border-white/80 hover:bg-white/10 rounded-3xl font-semibold text-lg transition-all">
+                        View Our Work
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                <div class="text-xs tracking-widest mb-2">SCROLL TO EXPLORE</div>
+                <i class="fas fa-chevron-down animate-bounce text-3xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold tracking-wider">WHAT WE DO</span>
+                <h2 id="services-title" class="text-5xl font-bold mt-3">Our Services</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1015/800/600')"></div>
+                    <div class="p-8">
+                        <h3 id="svc1" class="text-2xl font-semibold mb-3">Kitchen Renovations</h3>
+                        <p id="svc1-desc" class="text-gray-600">Custom cabinets, quartz countertops, modern layouts and premium finishes that transform the heart of your home.</p>
+                        <div class="mt-6 flex items-center text-blue-700 font-medium group-hover:gap-3 transition-all">
+                            Learn more <span class="text-xl">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
+                    <div class="p-8">
+                        <h3 id="svc2" class="text-2xl font-semibold mb-3">Bathroom Remodeling</h3>
+                        <p id="svc2-desc" class="text-gray-600">Luxury showers, vanities, tiling and complete bathroom transformations for both primary and guest baths.</p>
+                        <div class="mt-6 flex items-center text-blue-700 font-medium group-hover:gap-3 transition-all">
+                            Learn more <span class="text-xl">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/251/800/600')"></div>
+                    <div class="p-8">
+                        <h3 id="svc3" class="text-2xl font-semibold mb-3">Basement Finishing</h3>
+                        <p id="svc3-desc" class="text-gray-600">Custom bars, home theaters, rec rooms and functional living spaces in your lower level.</p>
+                        <div class="mt-6 flex items-center text-blue-700 font-medium group-hover:gap-3 transition-all">
+                            Learn more <span class="text-xl">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- More services -->
+                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/316/800/600')"></div>
+                    <div class="p-8">
+                        <h3 id="svc4" class="text-2xl font-semibold mb-3">Home Additions &amp; Extensions</h3>
+                        <p id="svc4-desc" class="text-gray-600">Increase your living space with expertly built additions and structural modifications.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/866/800/600')"></div>
+                    <div class="p-8">
+                        <h3 id="svc5" class="text-2xl font-semibold mb-3">Commercial Renovations</h3>
+                        <p id="svc5-desc" class="text-gray-600">Office builds, retail updates, restaurants and professional workspaces.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
+                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1016/800/600')"></div>
+                    <div class="p-8">
+                        <h3 id="svc6" class="text-2xl font-semibold mb-3">Decks, Patios &amp; Outdoor Living</h3>
+                        <p id="svc6-desc" class="text-gray-600">Beautiful outdoor spaces designed for Canadian seasons.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="https://picsum.photos/id/1018/800/900" alt="DK Contracting Team" 
+                         class="rounded-3xl shadow-2xl">
+                </div>
+                <div>
+                    <span class="text-blue-600 font-semibold">ESTABLISHED CONTRACTOR</span>
+                    <h2 id="about-title" class="text-5xl font-bold mt-4 leading-tight">Reliable Craftsmanship Across the Pontiac &amp; Renfrew</h2>
+                    <div id="about-text" class="mt-8 space-y-6 text-lg text-gray-600">
+                        <p>DK Contracting is a fully insured general contracting business based in Shawville, Quebec. We specialize in high-quality residential and commercial renovations and remodeling.</p>
+                        <p>From kitchens and bathrooms to complete home transformations, our team brings professionalism, attention to detail, and client-first service to every project in the Pontiac region and Renfrew County.</p>
+                    </div>
+                    
+                    <div class="mt-12 grid grid-cols-3 gap-8">
+                        <div>
+                            <div class="text-4xl font-bold text-blue-900">15+</div>
+                            <div class="text-sm text-gray-500">Years Experience</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-blue-900">200+</div>
+                            <div class="text-sm text-gray-500">Projects Completed</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-blue-900">100%</div>
+                            <div class="text-sm text-gray-500">Insured</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="mt-12 inline-flex items-center gap-4 group">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-2xl group-hover:rotate-12 transition">📍</div>
+                        <div>
+                            <div class="font-medium">30 Chemin Elliott</div>
+                            <div class="text-gray-500">Shawville, QC J0X 2Y0</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Teaser -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="uppercase tracking-widest text-sm font-semibold text-amber-600">Our Projects</span>
+                    <h2 id="gallery-title" class="text-5xl font-bold">Real Results</h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-3 text-blue-700 hover:text-blue-900 font-medium">
+                    View full gallery <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/1015/800/500')"></div>
+                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/201/800/500')"></div>
+                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/251/800/500')"></div>
+                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/316/800/500')"></div>
+                <div class="aspect-video bg-cover rounded-3xl overflow-hidden md:col-span-2" style="background-image: url('https://picsum.photos/id/866/1200/500')"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <div class="bg-blue-950 py-16 text-white">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h2 id="cta-title" class="text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
+            <p id="cta-text" class="text-xl mb-8 text-blue-200">Contact us today for a free, no-obligation estimate.</p>
+            <a href="#contact" 
+               class="inline-block bg-white text-blue-950 px-12 py-6 rounded-3xl text-xl font-semibold hover:scale-105 transition">
+                Get Your Free Quote
+            </a>
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-5 gap-12">
+                <div class="md:col-span-2">
+                    <h2 id="contact-title" class="text-5xl font-bold mb-8">Let's Build Something Great Together</h2>
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-phone text-3xl text-blue-700"></i>
+                                <div>
+                                    <div class="font-semibold">Phone</div>
+                                    <a href="tel:6135708245" class="text-2xl hover:underline">(613) 570-8245</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-envelope text-3xl text-blue-700"></i>
+                                <div>
+                                    <div class="font-semibold">Email</div>
+                                    <a href="mailto:duane@dkcontracting.ca" class="hover:underline">duane@dkcontracting.ca</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-4">
+                                <i class="fas fa-map-marker-alt text-3xl text-blue-700"></i>
+                                <div>
+                                    <div class="font-semibold">Address</div>
+                                    <div>30 Chemin Elliott<br>Shawville, Quebec J0X 2Y0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="md:col-span-3 bg-white p-10 rounded-3xl shadow">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Name</label>
+                                <input type="text" class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Phone</label>
+                                <input type="tel" class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Project Type</label>
+                            <select class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500">
+                                <option>Kitchen Renovation</option>
+                                <option>Bathroom Remodel</option>
+                                <option>Basement Finishing</option>
+                                <option>Home Addition</option>
+                                <option>Commercial Project</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="5" class="w-full border rounded-3xl px-5 py-4 focus:outline-none focus:border-blue-500" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-blue-900 hover:bg-blue-800 text-white py-6 rounded-3xl font-semibold text-lg transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+            <div class="grid md:grid-cols-12 gap-10">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-blue-900 font-bold text-3xl">DK</div>
+                        <div class="text-3xl font-bold">DK Contracting</div>
+                    </div>
+                    <p class="max-w-md">Professional general contracting and renovation services across the Pontiac and Renfrew County since day one.</p>
+                    
+                    <div class="mt-10 text-sm">
+                        Fully Insured • License # Pending
+                    </div>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <div class="font-semibold text-white mb-6">Quick Links</div>
+                    <div class="space-y-3 text-sm">
+                        <a href="#services" class="block hover:text-white">Services</a>
+                        <a href="#gallery" class="block hover:text-white">Gallery</a>
+                        <a href="#about" class="block hover:text-white">About Us</a>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-4">
+                    <div class="font-semibold text-white mb-6">Service Areas</div>
+                    <div class="grid grid-cols-2 gap-y-2 text-sm">
+                        <div>Shawville</div>
+                        <div>Renfrew County</div>
+                        <div>Pontiac Region</div>
+                        <div>Fort-Coulonge</div>
+                        <div>Bristol</div>
+                        <div>Quyon</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
+                <div>© 2026 DK Contracting. All Rights Reserved.</div>
+                <div class="flex items-center gap-8">
+                    <a href="https://www.dolanprogramming.ca" target="_blank" class="hover:text-white flex items-center gap-2">
+                        <span>Created by Dolan Programming</span>
+                        <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                    <div class="flex gap-6">
+                        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included via CDN
+        
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = hamburger.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            }
+        });
+        
+        // Language support
+        let currentLang = 'en';
+        
+        const translations = {
+            en: {
+                heroTitle: "Expert Renovations.<br>Built with Trust.",
+                heroSubtitle: "Residential & Commercial Remodeling in Renfrew County & the Pontiac Region",
+                servicesTitle: "Our Services",
+                aboutTitle: "Reliable Craftsmanship Across the Pontiac & Renfrew",
+                galleryTitle: "Real Results",
+                ctaTitle: "Ready to Transform Your Space?",
+                contactTitle: "Let's Build Something Great Together"
+            },
+            fr: {
+                heroTitle: "Rénovations d'expert.<br>Construites avec confiance.",
+                heroSubtitle: "Rénovation résidentielle et commerciale dans le comté de Renfrew et la région de la Pontiac",
+                servicesTitle: "Nos Services",
+                aboutTitle: "Artisanat fiable à travers la Pontiac et Renfrew",
+                galleryTitle: "Projets Réels",
+                ctaTitle: "Prêt à transformer votre espace ?",
+                contactTitle: "Construisons quelque chose de grand ensemble"
+            }
+        };
+        
+        function switchLanguage(lang) {
+            currentLang = lang;
+            
+            // Toggle active button
+            document.getElementById('btn-en').classList.toggle('bg-blue-900', lang === 'en');
+            document.getElementById('btn-en').classList.toggle('text-white', lang === 'en');
+            document.getElementById('btn-fr').classList.toggle('bg-blue-900', lang === 'fr');
+            document.getElementById('btn-fr').classList.toggle('text-white', lang === 'fr');
+            
+            // Update texts (example - expand as needed)
+            document.getElementById('hero-title').innerHTML = translations[lang].heroTitle;
+            document.getElementById('hero-subtitle').textContent = translations[lang].heroSubtitle;
+            document.getElementById('services-title').textContent = translations[lang].servicesTitle;
+            document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+            document.getElementById('gallery-title').textContent = translations[lang].galleryTitle;
+            document.getElementById('cta-title').textContent = translations[lang].ctaTitle;
+            document.getElementById('contact-title').textContent = translations[lang].contactTitle;
+        }
+        
+        // Form submission (demo)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! Your message has been received. We'll contact you shortly.");
+            this.reset();
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Keyboard escape for mobile menu
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape" && !mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Initial setup
+        console.log('%cDK Contracting website loaded successfully! Created by Dolan Programming', 'color: #1e3a8a; font-weight: bold');
+    </script>
+</body>
+</html>
+```

@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hursty's Bar & Grill – Restaurant in Shawville, Quebec</title>
+  <meta name="description" content="Hursty's Bar & Grill is Shawville, Quebec's favourite local restaurant. Enjoy breakfast, lunch, and supper in a warm, welcoming atmosphere. Call (819) 647-2546." />
+  <meta name="keywords" content="Hursty's Bar and Grill, restaurant in Shawville Quebec, breakfast Shawville QC, lunch Shawville, bar and grill Pontiac, Ottawa Valley restaurant" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Hursty's Bar & Grill – Shawville, Quebec" />
+  <meta property="og:description" content="Your local favourite in Shawville, QC. Great food, warm atmosphere, and friendly service since day one." />
+  <meta property="og:type" content="restaurant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data / Local SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Hursty's Bar & Grill",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "368 Rue Main",
+      "addressLocality": "Shawville",
+      "addressRegion": "QC",
+      "postalCode": "J0X 2Y0",
+      "addressCountry": "CA"
+    },
+    "telephone": "+18196472546",
+    "openingHours": ["Mo-Sa 07:00-18:00","Su 08:00-21:00"],
+    "servesCuisine": "Canadian",
+    "url": "https://www.facebook.com/people/Hurstys-Bar-and-Grill/100063614438958/"
+  }
+  </script>
+
+  <style>
+    /* ===========================
+       CSS VARIABLES & RESET
+    =========================== */
+    :root {
+      --amber:     #D4860A;
+      --amber-lt:  #F0A830;
+      --cream:     #F7EDD8;
+      --dark:      #1A1208;
+      --charcoal:  #2C2016;
+      --wood:      #5C3D1E;
+      --wood-lt:   #7A5230;
+      --smoke:     #3A2E20;
+      --text:      #E8DECA;
+      --text-muted:#A89070;
+      --white:     #FFFFFF;
+      --radius:    6px;
+      --transition: 0.3s ease;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior: smooth; font-size:16px; }
+
+    body {
+      background: var(--dark);
+      color: var(--text);
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ===========================
+       HEADER / NAV
+    =========================== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(26,18,8,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,134,10,0.25);
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    header.scrolled {
+      background: rgba(26,18,8,0.98);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 900;
+      color: var(--amber-lt);
+      letter-spacing: 0.03em;
+    }
+    .logo-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    nav ul {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+      align-items: center;
+    }
+    nav ul a {
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      position: relative;
+      transition: color var(--transition);
+    }
+    nav ul a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 1px;
+      background: var(--amber);
+      transition: width var(--transition);
+    }
+    nav ul a:hover { color: var(--amber-lt); }
+    nav ul a:hover::after { width: 100%; }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: flex;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(212,134,10,0.3);
+      border-radius: 20px;
+      overflow: hidden;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+    }
+    .lang-btn {
+      padding: 5px 12px;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition);
+      color: var(--text-muted);
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
+      border: none;
+      background: transparent;
+    }
+    .lang-btn.active {
+      background: var(--amber);
+      color: var(--dark);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: rgba(26,18,8,0.98);
+      border-top: 1px solid rgba(212,134,10,0.15);
+      padding: 16px 24px 24px;
+      gap: 4px;
+    }
+    .mobile-nav a {
+      display: block;
+      padding: 12px 0;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color var(--transition), padding-left var(--transition);
+    }
+    .mobile-nav a:hover { color: var(--amber-lt); padding-left: 8px; }
+    .mobile-nav.open { display: flex; }
+
+    /* ===========================
+       HERO
+    =========================== */
+    #home {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 120% 80% at 50% 60%, rgba(92,61,30,0.35) 0%, transparent 70%),
+        linear-gradient(180deg, rgba(26,18,8,0.55) 0%, rgba(26,18,8,0.75) 60%, rgba(26,18,8,0.97) 100%),
+        url('https://images.unsplash.com/photo-1514190051997-0f6f39ca5cde?w=1600&q=80') center/cover no-repeat;
+      transform: scale(1.05);
+      animation: heroZoom 16s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to   { transform: scale(1.12); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 780px;
+      padding: 0 24px;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(212,134,10,0.4);
+      padding: 6px 18px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+      animation: fadeUp 0.8s ease both;
+    }
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      color: var(--cream);
+      margin-bottom: 20px;
+      animation: fadeUp 0.8s 0.15s ease both;
+      text-shadow: 0 4px 40px rgba(0,0,0,0.6);
+    }
+    .hero-title em {
+      color: var(--amber-lt);
+      font-style: italic;
+    }
+    .hero-tagline {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.45s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity:0; transform: translateY(28px); }
+      to   { opacity:1; transform: translateY(0); }
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      font-family: 'Lato', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: var(--amber);
+      color: var(--dark);
+      box-shadow: 0 4px 20px rgba(212,134,10,0.4);
+    }
+    .btn-primary:hover {
+      background: var(--amber-lt);
+      box-shadow: 0 8px 32px rgba(212,134,10,0.5);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--cream);
+      border: 1px solid rgba(247,237,216,0.4);
+    }
+    .btn-outline:hover {
+      border-color: var(--amber);
+      color: var(--amber-lt);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: fadeUp 1s 0.8s both;
+    }
+    .scroll-line {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--amber), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%,100% { opacity: 0.4; transform: scaleY(1); }
+      50%      { opacity: 1;   transform: scaleY(1.15); }
+    }
+
+    /* ===========================
+       SECTIONS COMMON
+    =========================== */
+    section { padding: 100px 0; }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--cream);
+      margin-bottom: 16px;
+    }
+    .section-divider {
+      width: 60px; height: 3px;
+      background: var(--amber);
+      margin: 0 0 28px;
+      border-radius: 2px;
+    }
+    .section-intro {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-bottom: 56px;
+      font-weight: 300;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===========================
+       ABOUT
+    =========================== */
+    #about { background: var(--charcoal); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+    .about-image-wrap::before {
+      content: '';
+      position: absolute;
+      inset: -16px -16px 16px 16px;
+      border: 2px solid rgba(212,134,10,0.25);
+      border-radius: var(--radius);
+      z-index: 0;
+    }
+    .about-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      filter: brightness(0.88) saturate(1.1);
+    }
+    .about-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      z-index: 2;
+      background: var(--amber);
+      color: var(--dark);
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-align: center;
+      line-height: 1.3;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .about-text p { color: var(--text-muted); margin-bottom: 18px; }
+    .about-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 36px;
+    }
+    .stat {
+      text-align: center;
+      padding: 20px 24px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,134,10,0.15);
+      border-radius: var(--radius);
+      flex: 1;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--amber-lt);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* ===========================
+       MENU
+    =========================== */
+    #menu { background: var(--dark); }
+
+    .menu-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 48px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,134,10,0.15);
+      border-radius: var(--radius);
+      padding: 4px;
+      width: fit-content;
+    }
+    .menu-tab {
+      padding: 10px 28px;
+      border-radius: calc(var(--radius) - 2px);
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      transition: background var(--transition), color var(--transition);
+      font-family: 'Lato', sans-serif;
+    }
+    .menu-tab.active {
+      background: var(--amber);
+      color: var(--dark);
+    }
+
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+
+    .menu-category {
+      margin-bottom: 48px;
+    }
+    .menu-cat-title {
+      font-size: 1.3rem;
+      color: var(--amber-lt);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(212,134,10,0.2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .menu-cat-title::before {
+      content: '';
+      display: inline-block;
+      width: 6px; height: 6px;
+      background: var(--amber);
+      border-radius: 50%;
+    }
+
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+    .menu-item {
+      padding: 14px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      transition: border-color var(--transition), background var(--transition);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .menu-item:hover {
+      border-color: rgba(212,134,10,0.3);
+      background: rgba(212,134,10,0.05);
+    }
+    .menu-item-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--amber);
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+    .menu-item-name {
+      font-size: 0.95rem;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .menu-item-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .menu-note-bar {
+      background: rgba(212,134,10,0.08);
+      border: 1px solid rgba(212,134,10,0.2);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .menu-note-bar span { color: var(--amber); font-size: 1.1rem; }
+
+    /* ===========================
+       SERVICES
+    =========================== */
+    #services { background: var(--smoke); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(212,134,10,0.15);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      transition: border-color var(--transition), transform var(--transition), background var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--amber);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .service-card:hover {
+      border-color: rgba(212,134,10,0.4);
+      transform: translateY(-4px);
+      background: rgba(212,134,10,0.04);
+    }
+    .service-card:hover::after { transform: scaleX(1); }
+
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--cream);
+      margin-bottom: 10px;
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ===========================
+       SOCIAL PROOF
+    =========================== */
+    #social { background: var(--charcoal); }
+
+    .social-inner {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .social-inner .section-divider { margin: 0 auto 28px; }
+    .social-inner .section-intro { margin: 0 auto 36px; }
+
+    .fb-card {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      background: rgba(24,119,242,0.08);
+      border: 1px solid rgba(24,119,242,0.25);
+      border-radius: 12px;
+      padding: 36px 48px;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .fb-card:hover {
+      background: rgba(24,119,242,0.14);
+      border-color: rgba(24,119,242,0.45);
+    }
+    .fb-icon {
+      width: 56px; height: 56px;
+      background: #1877F2;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+    }
+    .fb-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--cream);
+    }
+    .fb-handle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .fb-cta {
+      background: #1877F2;
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: background var(--transition);
+      font-family: 'Lato', sans-serif;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .fb-cta:hover { background: #1464d4; }
+
+    /* ===========================
+       CONTACT
+    =========================== */
+    #contact { background: var(--dark); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .contact-info-block {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .contact-item {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .contact-item-icon {
+      width: 44px; height: 44px;
+      background: rgba(212,134,10,0.1);
+      border: 1px solid rgba(212,134,10,0.2);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-item-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 4px;
+    }
+    .contact-item-value {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .contact-item-value a { transition: color var(--transition); }
+    .contact-item-value a:hover { color: var(--amber-lt); }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin-top: 8px;
+    }
+    .hours-table td {
+      padding: 5px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hours-table td:first-child { color: var(--text-muted); width: 120px; }
+    .hours-table td:last-child { color: var(--text); }
+    .hours-table tr:last-child td { border-bottom: none; }
+
+    .map-wrap {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(212,134,10,0.2);
+      height: 420px;
+    }
+    .map-wrap iframe {
+      width: 100%; height: 100%;
+      border: none;
+      filter: brightness(0.9) saturate(0.9);
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: #0E0A04;
+      border-top: 1px solid rgba(212,134,10,0.15);
+      padding: 60px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .logo-main { font-size: 1.6rem; }
+    .footer-brand p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 12px;
+      max-width: 260px;
+      line-height: 1.6;
+    }
+    .footer-col-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 18px;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links a {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      transition: color var(--transition), padding-left var(--transition);
+      display: block;
+    }
+    .footer-links a:hover { color: var(--amber-lt); padding-left: 4px; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .footer-bottom a { color: var(--amber); transition: color var(--transition); }
+    .footer-bottom a:hover { color: var(--amber-lt); }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 900px) {
+      nav ul, .nav-actions .lang-toggle { display: none; }
+      .hamburger { display: flex; }
+      .nav-actions { gap: 12px; }
+      .nav-actions .lang-toggle { display: flex; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
+      .about-image-wrap { order: -1; }
+      .about-img { height: 280px; }
+      .about-badge { bottom: -12px; right: 12px; }
+
+      .services-grid { grid-template-columns: 1fr 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+      .map-wrap { height: 300px; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+
+      .menu-tabs { flex-wrap: wrap; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 72px 0; }
+      .services-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .about-stats { flex-direction: column; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .menu-items { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Hursty's Bar and Grill Home">
+      <span class="logo-main">Hursty's</span>
+      <span class="logo-sub" data-en="Bar &amp; Grill · Shawville, QC" data-fr="Bar &amp; Grill · Shawville, QC">Bar &amp; Grill · Shawville, QC</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#home"     data-en="Home"     data-fr="Accueil">Home</a></li>
+        <li><a href="#menu"     data-en="Menu"     data-fr="Menu">Menu</a></li>
+        <li><a href="#about"    data-en="About"    data-fr="À propos">About</a></li>
+        <li><a href="#services" data-en="Services" data-fr="Services">Services</a></li>
+        <li><a href="#contact"  data-en="Contact"  data-fr="Contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-toggle" role="group" aria-label="Language selector">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <button class="lang-btn"        id="btn-fr" onclick="setLang('fr')">FR</button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#home"     onclick="closeMobileMenu()" data-en="Home"     data-fr="Accueil">Home</a>
+    <a href="#menu"     onclick="closeMobileMenu()" data-en="Menu"     data-fr="Menu">Menu</a>
+    <a href="#about"    onclick="closeMobileMenu()" data-en="About"    data-fr="À propos">About</a>
+    <a href="#services" onclick="closeMobileMenu()" data-en="Services" data-fr="Services">Services</a>
+    <a href="#contact"  onclick="closeMobileMenu()" data-en="Contact"  data-fr="Contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" aria-label="Welcome to Hursty's Bar and Grill">
+  <div class="hero-bg" role="img" aria-label="Warm restaurant interior with grilled food"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-en="Shawville's Local Favourite Since Day One" data-fr="Le favori local de Shawville depuis toujours">Shawville's Local Favourite Since Day One</p>
+    <h1 class="hero-title">
+      <em>Hursty's</em><br/>
+      <span data-en="Bar &amp; Grill" data-fr="Bar &amp; Grill">Bar &amp; Grill</span>
+    </h1>
+    <p class="hero-tagline" data-en="Hungry or Thirsty? Get It All At Hursty's. Real food, warm smiles, and the heart of Shawville on every plate." data-fr="Faim ou soif ? Trouvez tout chez Hursty's. De vraie nourriture, des sourires chaleureux, et l'âme de Shawville dans chaque assiette.">
+      Hungry or Thirsty? Get It All At Hursty's. Real food, warm smiles, and the heart of Shawville on every plate.
+    </p>
+    <div class="hero-ctas">
+      <a href="#menu" class="btn btn-primary" data-en="View Our Menu" data-fr="Voir notre menu">View Our Menu</a>
+      <a href="#contact" class="btn btn-outline" data-en="Visit Us Today" data-fr="Venez nous voir">Visit Us Today</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span data-en="Scroll" data-fr="Défiler">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap reveal">
+        <img
+          class="about-img"
+          src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+          alt="Cozy interior of Hursty's Bar and Grill in Shawville, Quebec"
+          loading="lazy"
+        />
+        <div class="about-badge" aria-label="Local favourite">
+          <span data-en="Local" data-fr="Favori">Local</span>
+          <span data-en="Favourite" data-fr="Local">Favourite</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p class="section-label" data-en="Our Story" data-fr="Notre Histoire">Our Story</p>
+        <h2 class="section-title" id="about-heading">
+          <span data-en="More Than a Meal — It's Community" data-fr="Plus qu'un repas — c'est la communauté">More Than a Meal — It's Community</span>
+        </h2>
+        <div class="section-divider"></div>
+        <p data-en="Nestled on Main Street in Shawville, Quebec, Hursty's Bar &amp; Grill has long been the gathering place that neighbours count on. Whether you're stopping in after a morning drive through the Pontiac, meeting friends for a midday bite, or settling in for a hearty supper, Hursty's delivers honest, satisfying food every single time." data-fr="Situé sur la rue Main à Shawville, au Québec, le Bar &amp; Grill Hursty's est depuis longtemps le lieu de rassemblement sur lequel les voisins comptent. Que vous vous arrêtiez après une promenade matinale dans le Pontiac, que vous rencontriez des amis pour un repas de midi ou que vous vous installiez pour un copieux souper, Hursty's offre une nourriture honnête et satisfaisante chaque jour.">
+          Nestled on Main Street in Shawville, Quebec, Hursty's Bar &amp; Grill has long been the gathering place that neighbours count on. Whether you're stopping in after a morning drive through the Pontiac, meeting friends for a midday bite, or settling in for a hearty supper, Hursty's delivers honest, satisfying food every single time.
+        </p>
+        <p data-en="From our signature burgers and golden wings to the soup of the day and Mom's homemade pie, every item on the menu is made with care. Our friendly team is part of what makes Hursty's special — you'll always be greeted with a smile and treated like family." data-fr="De nos hamburgers signature et de nos délicieuses ailes à la soupe du jour et à la tarte maison de Maman, chaque article du menu est préparé avec soin. Notre équipe amicale fait partie de ce qui rend Hursty's spécial — vous serez toujours accueilli avec un sourire et traité comme un membre de la famille.">
+          From our signature burgers and golden wings to the soup of the day and Mom's homemade pie, every item on the menu is made with care. Our friendly team is part of what makes Hursty's special — you'll always be greeted with a smile and treated like family.
+        </p>
+        <p data-en="We're proud to be a fully licensed establishment with a comfortable summer patio, making us the perfect spot for groups, families, and anyone who simply wants a great meal in great company right in the heart of Shawville, QC." data-fr="Nous sommes fiers d'être un établissement entièrement licencié avec une confortable terrasse estivale, ce qui fait de nous l'endroit idéal pour les groupes, les familles et toute personne qui veut simplement un bon repas en bonne compagnie, au cœur même de Shawville, QC.">
+          We're proud to be a fully licensed establishment with a comfortable summer patio, making us the perfect spot for groups, families, and anyone who simply wants a great meal in great company right in the heart of Shawville, QC.
+        </p>
+        <div class="about-stats">
+          <div class="stat reveal">
+            <p class="stat-num">3</p>
+            <p class="stat-label" data-en="Meals Daily" data-fr="Repas Quotidiens">Meals Daily</p>
+          </div>
+          <div class="stat reveal">
+            <p class="stat-num">7</p>
+            <p class="stat-label" data-en="Days a Week" data-fr="Jours par Semaine">Days a Week</p>
+          </div>
+          <div class="stat reveal">
+            <p class="stat-num">1</p>
+            <p class="stat-label" data-en="Community" data-fr="Communauté">Community</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENU ===================== -->
+<section id="menu" aria-labelledby="menu-heading">
+  <div class="container">
+    <p class="section-label reveal" data-en="What We Serve" data-fr="Ce Que Nous Servons">What We Serve</p>
+    <h2 class="section-title reveal" id="menu-heading" data-en="Our Menu" data-fr="Notre Menu">Our Menu</h2>
+    <div class="section-divider reveal"></div>
+    <p class="section-intro reveal" data-en="Fresh and delicious every day — from a classic breakfast to a satisfying supper. Eat in or take out!" data-fr="Frais et délicieux chaque jour — d'un petit-déjeuner classique à un copieux souper. Sur place ou à emporter !">
+      Fresh and delicious every day — from a classic breakfast to a satisfying supper. Eat in or take out!
+    </p>
+
+    <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+      <button class="menu-tab active" role="tab" aria-selected="true"  onclick="switchTab(this,'tab-lunch')"   data-en="Lunch &amp; Snacks" data-fr="Dîner &amp; Collations">Lunch &amp; Snacks</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" onclick="switchTab(this,'tab-dinner')"  data-en="Supper" data-fr="Souper">Supper</button>
+      <button class="menu-tab"        role="tab" aria-selected="false" onclick="switchTab(this,'tab-drinks')"  data-en="Sides &amp; Drinks" data-fr="Accompagnements &amp; Boissons">Sides &amp; Drinks</button>
+    </div>
+
+    <!-- LUNCH / SNACKS -->
+    <div class="menu-panel active" id="tab-lunch">
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Soups &amp; Salads" data-fr="Soupes &amp; Salades">Soups &amp; Salades</h3>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Soup of the Day" data-fr="Soupe du Jour">Soup of the Day</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Cheesy French Onion Soup" data-fr="Soupe à l'oignon gratinée">Cheesy French Onion Soup</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Side Caesar Salad" data-fr="Salade César en accompagnement">Side Caesar Salad</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Caesar Salad with Grilled Chicken" data-fr="Salade César au poulet grillé">Caesar Salad with Grilled Chicken</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Side Garden Salad" data-fr="Salade jardinière en accompagnement">Side Garden Salad</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Garden Salad with Grilled Chicken" data-fr="Salade jardinière au poulet grillé">Garden Salad with Grilled Chicken</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="House Salad" data-fr="Salade Maison">House Salad</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Taco Salad" data-fr="Salade Taco">Taco Salad</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Taco Salad with Grilled Chicken" data-fr="Salade Taco au poulet grillé">Taco Salad with Grilled Chicken</p></div></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><div><p class="menu-item-name" data-en="Grilled Chicken Salad" data-fr="Salade de poulet grillé">Grilled Chicken Salad</p></div></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Sandwiches" data-fr="Sandwichs">Sandwiches</h3>
+        <p class="menu-item-note" style="margin-bottom:14px;display:block;" data-en="Served on white, brown bread, or a bagel" data-fr="Servi sur pain blanc, pain brun ou bagel">Served on white, brown bread, or a bagel</p>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Western" data-fr="Western">Western</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Pork" data-fr="Porc">Pork</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Beef" data-fr="Bœuf">Beef</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Ham" data-fr="Jambon">Ham</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="BLT" data-fr="BLT">BLT</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Chicken" data-fr="Poulet">Chicken</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Grilled Cheese" data-fr="Fromage grillé">Grilled Cheese</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Grilled Cheese with Bacon or Ham" data-fr="Fromage grillé au bacon ou jambon">Grilled Cheese with Bacon or Ham</p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Subs" data-fr="Sous-marins">Subs</h3>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Ham Sub" data-fr="Sous-marin au jambon">Ham Sub</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Grilled Chicken Sub" data-fr="Sous-marin au poulet grillé">Grilled Chicken Sub</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Roast Beef Sub" data-fr="Sous-marin au bœuf rôti">Roast Beef Sub</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Assorted Sub" data-fr="Sous-marin assorti"><span data-en="Assorted Sub" data-fr="Sous-marin assorti">Assorted Sub</span><br/><span class="menu-item-note" data-en="Combo of assorted meats" data-fr="Combinaison de viandes assorties">Combo of assorted meats</span></p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Hot Sandwiches" data-fr="Sandwichs Chauds">Hot Sandwiches</h3>
+        <p class="menu-item-note" style="margin-bottom:14px;display:block;" data-en="All served with vegetables, coleslaw &amp; your choice of potatoes" data-fr="Tous servis avec légumes, coleslaw et votre choix de pommes de terre">All served with vegetables, coleslaw &amp; your choice of potatoes</p>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hot Hamburg" data-fr="Hamburg chaud">Hot Hamburg</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hot Beef" data-fr="Bœuf chaud">Hot Beef</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hot Chicken" data-fr="Poulet chaud">Hot Chicken</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hot Pork" data-fr="Porc chaud">Hot Pork</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Smoked Meat on Rye with Fries &amp; Coleslaw" data-fr="Viande fumée sur seigle avec frites et coleslaw">Smoked Meat on Rye with Fries &amp; Coleslaw</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hursty's Club Platter (with or without Fries)" data-fr="Club Platter Hursty's (avec ou sans frites)">Hursty's Club Platter (with or without Fries)</p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Burgers 'N Stuff" data-fr="Burgers et Plus">Burgers 'N Stuff</h3>
+        <p class="menu-item-note" style="margin-bottom:14px;display:block;" data-en="All available with or without fries &amp; coleslaw" data-fr="Tous disponibles avec ou sans frites et coleslaw">All available with or without fries &amp; coleslaw</p>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hamburger" data-fr="Hamburger">Hamburger</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Cheeseburger" data-fr="Cheeseburger">Cheeseburger</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Banquet Burger" data-fr="Burger Banquet">Banquet Burger</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hursty's Double Burger" data-fr="Double Burger Hursty's">Hursty's Double Burger</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Oktoberfest Sausage" data-fr="Saucisse Oktoberfest">Oktoberfest Sausage</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Breastwich" data-fr="Breastwich">Breastwich</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hot Dog" data-fr="Hot Dog">Hot Dog</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Jumbo Hot Dog" data-fr="Jumbo Hot Dog">Jumbo Hot Dog</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Cheese Dog" data-fr="Cheese Dog">Cheese Dog</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Jumbo Cheese Dog" data-fr="Jumbo Cheese Dog">Jumbo Cheese Dog</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Whistle Dog (Jumbo) with Cheese &amp; Bacon" data-fr="Whistle Dog (Jumbo) avec fromage et bacon">Whistle Dog (Jumbo) with Cheese &amp; Bacon</p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Finger Foods &amp; Appetizers" data-fr="Bouchées &amp; Entrées">Finger Foods &amp; Appetizers</h3>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Garlic Bread" data-fr="Pain à l'ail">Garlic Bread</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Garlic Bread with Cheese" data-fr="Pain à l'ail au fromage">Garlic Bread with Cheese</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Potato Boat topped with Bacon &amp; Cheese" data-fr="Barquette de pomme de terre au bacon et fromage">Potato Boat topped with Bacon &amp; Cheese</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Nachos" data-fr="Nachos">Nachos</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Nachos with Grilled Chicken" data-fr="Nachos au poulet grillé">Nachos with Grilled Chicken</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Breaded Zucchini (12)" data-fr="Courgettes panées (12)">Breaded Zucchini (12)</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Mushroom Caps" data-fr="Champignons farcis">Mushroom Caps</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Chicken Wings (12)" data-fr="Ailes de poulet (12)">Chicken Wings (12)</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Chicken Wings (24) — Mild, Medium, Hot or Honey Garlic" data-fr="Ailes de poulet (24) — Douce, Moyenne, Forte ou Miel-ail">Chicken Wings (24) — Mild, Medium, Hot or Honey Garlic</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Jug &amp; Wing Combo (12)" data-fr="Combo Cruche &amp; Ailes (12)">Jug &amp; Wing Combo (12)</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="A Bunch O'Rings" data-fr="Rondelles d'oignon">A Bunch O'Rings</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Pizza Fingers" data-fr="Doigts de pizza">Pizza Fingers</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Pogo" data-fr="Pogo">Pogo</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Mozzarella Sticks" data-fr="Bâtonnets de mozzarella">Mozzarella Sticks</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Egg Rolls" data-fr="Rouleaux aux œufs">Egg Rolls</p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Combo Platters" data-fr="Plateaux Combinés">Combo Platters</h3>
+        <div class="menu-items">
+          <div class="menu-item" style="flex-direction:column;align-items:flex-start;">
+            <p class="menu-item-name" data-en="Combo #1" data-fr="Combo #1"><strong>Combo #1</strong></p>
+            <p class="menu-item-note" data-en="Chicken Fingers, Zucchini Sticks, Onion Rings, Wings and Fries" data-fr="Doigts de poulet, bâtonnets de courgette, rondelles d'oignon, ailes et frites">Chicken Fingers, Zucchini Sticks, Onion Rings, Wings and Fries</p>
+          </div>
+          <div class="menu-item" style="flex-direction:column;align-items:flex-start;">
+            <p class="menu-item-name" data-en="Combo #2" data-fr="Combo #2"><strong>Combo #2</strong></p>
+            <p class="menu-item-note" data-en="Mushroom Caps, Pizza Fingers, Egg Rolls, Potato Boats and Fries" data-fr="Champignons farcis, doigts de pizza, rouleaux aux œufs, barquettes de pomme de terre et frites">Mushroom Caps, Pizza Fingers, Egg Rolls, Potato Boats and Fries</p>
+          </div>
+          <div class="menu-item" style="flex-direction:column;align-items:flex-start;">
+            <p class="menu-item-name" data-en="Combo #3" data-fr="Combo #3"><strong>Combo #3</strong></p>
+            <p class="menu-item-note" data-en="Chicken Fingers, Potato Boats, Chicken Wings, Onion Rings and Fries" data-fr="Doigts de poulet, barquettes de pomme de terre, ailes de poulet, rondelles d'oignon et frites">Chicken Fingers, Potato Boats, Chicken Wings, Onion Rings and Fries</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-note-bar reveal">
+        <span>🍽️</span>
+        <p data-en="Can't decide? Ask our friendly staff for today's specials or recommendations!" data-fr="Vous n'arrivez pas à choisir ? Demandez à notre aimable personnel les spéciaux du jour ou des recommandations !">Can't decide? Ask our friendly staff for today's specials or recommendations!</p>
+      </div>
+    </div>
+
+    <!-- SUPPER -->
+    <div class="menu-panel" id="tab-dinner">
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Dinner Plates" data-fr="Assiettes Souper">Dinner Plates</h3>
+        <p class="menu-item-note" style="margin-bottom:14px;display:block;" data-en="Served with your choice of potato &amp; coleslaw" data-fr="Servi avec votre choix de pomme de terre et coleslaw">Served with your choice of potato &amp; coleslaw</p>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Chicken Kiev" data-fr="Poulet Kiev">Chicken Kiev</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Fish 'n' Chips (2)" data-fr="Poisson et frites (2)">Fish 'n' Chips (2)</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Chicken Fingers &amp; Fries" data-fr="Doigts de poulet et frites">Chicken Fingers &amp; Fries</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Fried Chicken Dinner" data-fr="Poulet frit">Fried Chicken Dinner</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Snack Basket" data-fr="Panier collation">Snack Basket</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Hamburger Steak" data-fr="Steak haché">Hamburger Steak</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Ham Steak" data-fr="Steak de jambon">Ham Steak</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Pork Chops (2)" data-fr="Côtelettes de porc (2)">Pork Chops (2)</p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Featured Cut" data-fr="Coupe Vedette">Featured Cut</h3>
+        <div class="menu-items">
+          <div class="menu-item" style="flex-direction:column;align-items:flex-start;border-color:rgba(212,134,10,0.35);background:rgba(212,134,10,0.06);">
+            <p class="menu-item-name" data-en="New York Sirloin (10 oz)" data-fr="Surlonge New York (10 oz)"><strong>New York Sirloin (10 oz) ⭐</strong></p>
+            <p class="menu-item-note" data-en="Served with Garden Salad, your choice of potato, coleslaw, vegetables &amp; a dinner roll" data-fr="Servi avec salade jardinière, votre choix de pomme de terre, coleslaw, légumes et un petit pain">Served with Garden Salad, your choice of potato, coleslaw, vegetables &amp; a dinner roll</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Desserts" data-fr="Desserts">Desserts</h3>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Mom's Homemade Pie (with or without ice cream)" data-fr="Tarte maison de Maman (avec ou sans crème glacée)">Mom's Homemade Pie (with or without ice cream)</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Ice Cream" data-fr="Crème glacée">Ice Cream</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Ice Cream Sundae — Chocolate, Butterscotch or Strawberry" data-fr="Sundae — Chocolat, caramel ou fraise">Ice Cream Sundae — Chocolate, Butterscotch or Strawberry</p></div>
+        </div>
+      </div>
+
+      <div class="menu-note-bar reveal">
+        <span>🏠</span>
+        <p data-en="Licensed dining available. Our comfortable summer patio is perfect for warm evenings!" data-fr="Salle à manger licenciée disponible. Notre confortable terrasse estivale est parfaite pour les soirées chaudes !">Licensed dining available. Our comfortable summer patio is perfect for warm evenings!</p>
+      </div>
+    </div>
+
+    <!-- SIDES & DRINKS -->
+    <div class="menu-panel" id="tab-drinks">
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Hursty's Fries &amp; Sides" data-fr="Frites et Accompagnements Hursty's">Hursty's Fries &amp; Sides</h3>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Fries — Small" data-fr="Frites — Petites">Fries — Small</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Fries — Large" data-fr="Frites — Grandes">Fries — Large</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Spicy Fries" data-fr="Frites épicées">Spicy Fries</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Spicy Fries — Large" data-fr="Frites épicées — Grandes">Spicy Fries — Large</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Poutine — Small" data-fr="Poutine — Petite">Poutine — Small</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Poutine — Large" data-fr="Poutine — Grande">Poutine — Large</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Gravy" data-fr="Sauce brune">Gravy</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Sour Cream" data-fr="Crème sûre">Sour Cream</p></div>
+        </div>
+      </div>
+
+      <div class="menu-category reveal">
+        <h3 class="menu-cat-title" data-en="Beverages" data-fr="Boissons">Beverages</h3>
+        <div class="menu-items">
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Soft Drinks — Small &amp; Large" data-fr="Boissons gazeuses — Petite et grande">Soft Drinks — Small &amp; Large</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Milk — Small &amp; Large" data-fr="Lait — Petit et grand">Milk — Small &amp; Large</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Chocolate Milk — Small &amp; Large" data-fr="Lait au chocolat — Petit et grand">Chocolate Milk — Small &amp; Large</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Tea" data-fr="Thé">Tea</p></div>
+          <div class="menu-item"><div class="menu-item-dot"></div><p class="menu-item-name" data-en="Coffee" data-fr="Café">Coffee</p></div>
+        </div>
+      </div>
+
+      <div class="menu-note-bar reveal">
+        <span>🥡</span>
+        <p data-en="Everything on our menu is available for takeout! Call ahead: (819) 647-2546" data-fr="Tout ce qui figure sur notre menu est disponible à emporter ! Appelez à l'avance : (819) 647-2546">Everything on our menu is available for takeout! Call ahead: (819) 647-2546</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <p class="section-label reveal" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</p>
+    <h2 class="section-title reveal" id="services-heading" data-en="Our Services" data-fr="Nos Services">Our Services</h2>
+    <div class="section-divider reveal"></div>
+    <p class="section-intro reveal" data-en="From your first coffee of the morning to a late Sunday supper, Hursty's has something for everyone, every day." data-fr="De votre premier café du matin à un souper du dimanche soir, Hursty's offre quelque chose pour tout le monde, chaque jour.">
+      From your first coffee of the morning to a late Sunday supper, Hursty's has something for everyone, every day.
+    </p>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🍳</span>
+        <h3 class="service-title" data-en="Breakfast" data-fr="Petit-déjeuner">Breakfast</h3>
+        <p class="service-desc" data-en="Start your day right with a classic morning meal. We open early Monday through Saturday at 7:00 AM (8:00 AM Sundays) so you never miss the most important meal of the day." data-fr="Commencez bien votre journée avec un repas matinal classique. Nous ouvrons tôt du lundi au samedi à 7 h 00 (8 h 00 le dimanche) pour que vous ne manquiez jamais le repas le plus important de la journée.">Start your day right with a classic morning meal. We open early Monday through Saturday at 7:00 AM (8:00 AM Sundays) so you never miss the most important meal of the day.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🥪</span>
+        <h3 class="service-title" data-en="Lunch" data-fr="Dîner">Lunch</h3>
+        <p class="service-desc" data-en="Whether you're on a break or catching up with friends, our midday menu offers soups, sandwiches, subs, burgers, and more — fresh and ready for you." data-fr="Que vous soyez en pause ou en train de rattraper des amis, notre menu de midi propose des soupes, des sandwichs, des sous-marins, des hamburgers et plus encore — frais et prêts pour vous.">Whether you're on a break or catching up with friends, our midday menu offers soups, sandwiches, subs, burgers, and more — fresh and ready for you.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🍽️</span>
+        <h3 class="service-title" data-en="Supper" data-fr="Souper">Supper</h3>
+        <p class="service-desc" data-en="End your day on a high note with our evening dinner selection — from chicken dinners and pork chops to our 10 oz New York Sirloin. Open Sundays until 9:00 PM." data-fr="Terminez votre journée en beauté avec notre sélection de dîner du soir — des dîners de poulet et des côtelettes de porc à notre surlonge New York de 10 oz. Ouvert le dimanche jusqu'à 21 h.">End your day on a high note with our evening dinner selection — from chicken dinners and pork chops to our 10 oz New York Sirloin. Open Sundays until 9:00 PM.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🪑</span>
+        <h3 class="service-title" data-en="Dine-In" data-fr="Salle à Manger">Dine-In</h3>
+        <p class="service-desc" data-en="Settle in and enjoy a meal in our welcoming, comfortable dining room. Licensed dining is available, and our summer patio is a neighbourhood favourite when the weather's right." data-fr="Installez-vous et profitez d'un repas dans notre salle à manger accueillante. La salle à manger licenciée est disponible, et notre terrasse estivale est un favori du quartier quand le temps le permet.">Settle in and enjoy a meal in our welcoming, comfortable dining room. Licensed dining is available, and our summer patio is a neighbourhood favourite when the weather's right.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">🥡</span>
+        <h3 class="service-title" data-en="Takeout" data-fr="À Emporter">Takeout</h3>
+        <p class="service-desc" data-en="In a hurry? Our full menu is available to take out. Call ahead at (819) 647-2546 and we'll have your order hot and ready for when you arrive." data-fr="Vous êtes pressé ? Notre menu complet est disponible à emporter. Appelez à l'avance au (819) 647-2546 et votre commande sera chaude et prête à votre arrivée.">In a hurry? Our full menu is available to take out. Call ahead at (819) 647-2546 and we'll have your order hot and ready for when you arrive.</p>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-icon" aria-hidden="true">👨‍👩‍👧‍👦</span>
+        <h3 class="service-title" data-en="Group &amp; Family Dining" data-fr="Groupes et Familles">Group &amp; Family Dining</h3>
+        <p class="service-desc" data-en="Hursty's is a family-friendly destination perfect for groups of all sizes. Whether it's a team lunch, family gathering, or community get-together, we're happy to accommodate you." data-fr="Hursty's est une destination familiale idéale pour les groupes de toutes tailles. Qu'il s'agisse d'un dîner d'équipe, d'un rassemblement familial ou d'une réunion communautaire, nous serons heureux de vous accueillir.">Hursty's is a family-friendly destination perfect for groups of all sizes. Whether it's a team lunch, family gathering, or community get-together, we're happy to accommodate you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SOCIAL PROOF ===================== -->
+<section id="social" aria-labelledby="social-heading">
+  <div class="container">
+    <div class="social-inner">
+      <p class="section-label reveal" data-en="Stay Connected" data-fr="Restez Connecté">Stay Connected</p>
+      <h2 class="section-title reveal" id="social-heading" data-en="Follow Us on Facebook" data-fr="Suivez-nous sur Facebook">Follow Us on Facebook</h2>
+      <div class="section-divider reveal"></div>
+      <p class="section-intro reveal" data-en="Keep up with our daily specials, seasonal updates, and what's happening at Hursty's Bar &amp; Grill. Join our community online!" data-fr="Suivez nos spéciaux quotidiens, les mises à jour saisonnières et ce qui se passe au Bar &amp; Grill Hursty's. Rejoignez notre communauté en ligne !">
+        Keep up with our daily specials, seasonal updates, and what's happening at Hursty's Bar &amp; Grill. Join our community online!
+      </p>
+      <a
+        href="https://www.facebook.com/people/Hurstys-Bar-and-Grill/100063614438958/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="fb-card reveal"
+        aria-label="Follow Hursty's Bar and Grill on Facebook"
+      >
+        <div class="fb-icon" aria-hidden="true">f</div>
+        <div>
+          <p class="fb-name" data-en="Hursty's Bar and Grill" data-fr="Bar et Grill Hursty's">Hursty's Bar and Grill</p>
+          <p class="fb-handle" data-en="Find us on Facebook" data-fr="Trouvez-nous sur Facebook">Find us on Facebook</p>
+        </div>
+        <span class="fb-cta" data-en="Visit Our Page →" data-fr="Visitez notre page →">Visit Our Page →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <p class="section-label reveal" data-en="Find Us" data-fr="Nous Trouver">Find Us</p>
+    <h2 class="section-title reveal" id="contact-heading" data-en="Visit Hursty's" data-fr="Visitez Hursty's">Visit Hursty's</h2>
+    <div class="section-divider reveal"></div>
+    <p class="section-intro reveal" data-en="We're right on Main Street in Shawville — come on in, we'd love to see you." data-fr="Nous sommes directement sur la rue Main à Shawville — venez, nous serions ravis de vous voir.">
+      We're right on Main Street in Shawville — come on in, we'd love to see you.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-info-block">
+        <div class="contact-item reveal">
+          <div class="contact-item-icon" aria-hidden="true">📍</div>
+          <div>
+            <p class="contact-item-label" data-en="Address" data-fr="Adresse">Address</p>
+            <p class="contact-item-value">
+              368 Rue Main<br/>
+              Shawville, QC J0X 2Y0<br/>
+              Canada
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-item-icon" aria-hidden="true">📞</div>
+          <div>
+            <p class="contact-item-label" data-en="Phone" data-fr="Téléphone">Phone</p>
+            <p class="contact-item-value">
+              <a href="tel:+18196472546">(819) 647-2546</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-item-icon" aria-hidden="true">🕐</div>
+          <div>
+            <p class="contact-item-label" data-en="Hours" data-fr="Heures">Hours</p>
+            <table class="hours-table" aria-label="Business hours">
+              <tr>
+                <td data-en="Monday – Saturday" data-fr="Lundi – Samedi">Monday – Saturday</td>
+                <td>7:00 AM – 6:00 PM</td>
+              </tr>
+              <tr>
+                <td data-en="Sunday" data-fr="Dimanche">Sunday</td>
+                <td>8:00 AM – 9:00 PM</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="contact-item reveal">
+          <div class="contact-item-icon" aria-hidden="true">🌐</div>
+          <div>
+            <p class="contact-item-label" data-en="Social" data-fr="Réseaux Sociaux">Social</p>
+            <p class="contact-item-value">
+              <a href="https://www.facebook.com/people/Hurstys-Bar-and-Grill/100063614438958/" target="_blank" rel="noopener noreferrer" data-en="Facebook Page →" data-fr="Page Facebook →">Facebook Page →</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal">
+        <iframe
+          src="https://maps.google.com/maps?q=368+Rue+Main,+Shawville,+QC+J0X+2Y0&output=embed"
+          title="Hursty's Bar and Grill location on Google Maps"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-main">Hursty's</span>
+          <span class="logo-sub" data-en="Bar &amp; Grill · Shawville, QC" data-fr="Bar &amp; Grill · Shawville, QC">Bar &amp; Grill · Shawville, QC</span>
+        </div>
+        <p data-en="Your local favourite on Main Street. Good food, great people, and a warm welcome every day of the week." data-fr="Votre favori local sur la rue Main. De la bonne nourriture, des gens formidables et un accueil chaleureux tous les jours de la semaine.">
+          Your local favourite on Main Street. Good food, great people, and a warm welcome every day of the week.
+        </p>
+        <p style="margin-top:10px;font-size:0.82rem;">
+          <a href="tel:+18196472546" style="color:var(--amber);">(819) 647-2546</a>
+        </p>
+      </div>
+
+      <div>
+        <p class="footer-col-title" data-en="Quick Links" data-fr="Liens Rapides">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="#home"     data-en="Home"     data-fr="Accueil">Home</a></li>
+          <li><a href="#menu"     data-en="Menu"     data-fr="Menu">Menu</a></li>
+          <li><a href="#about"    data-en="About"    data-fr="À propos">About</a></li>
+          <li><a href="#services" data-en="Services" data-fr="Services">Services</a></li>
+          <li><a href="#contact"  data-en="Contact"  data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title" data-en="Visit Us" data-fr="Visitez-Nous">Visit Us</p>
+        <ul class="footer-links">
+          <li><span style="color:var(--text);">368 Rue Main</span></li>
+          <li><span style="color:var(--text);">Shawville, QC J0X 2Y0</span></li>
+          <li><span style="color:var(--text-muted);font-size:0.82rem;" data-en="Mon–Sat: 7AM–6PM" data-fr="Lun–Sam : 7h–18h">Mon–Sat: 7AM–6PM</span></li>
+          <li><span style="color:var(--text-muted);font-size:0.82rem;" data-en="Sunday: 8AM–9PM" data-fr="Dimanche : 8h–21h">Sunday: 8AM–9PM</span></li>
+          <li style="margin-top:10px;">
+            <a href="https://www.facebook.com/people/Hurstys-Bar-and-Grill/100063614438958/" target="_blank" rel="noopener noreferrer" style="color:#1877F2;" data-en="Facebook →" data-fr="Facebook →">Facebook →</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p data-en="© 2025 Hursty's Bar &amp; Grill. All rights reserved." data-fr="© 2025 Bar &amp; Grill Hursty's. Tous droits réservés.">© 2025 Hursty's Bar &amp; Grill. All rights reserved.</p>
+      <p>
+        <span data-en="Created by" data-fr="Créé par">Created by</span>
+        <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener noreferrer">Dolan Programming</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // =================== LANGUAGE TOGGLE ===================
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+
+    // Update all data-en / data-fr elements
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (val !== null) {
+        // Handle elements with child elements carefully
+        if (el.children.length === 0) {
+          el.innerHTML = val;
+        } else {
+          el.innerHTML = val;
+        }
+      }
+    });
+
+    // Update lang buttons
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+  }
+
+  // =================== STICKY HEADER ===================
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // =================== MOBILE MENU ===================
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  hamburger.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  function closeMobileMenu() {
+    mobileNav.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+
+  // Close menu on outside click
+  document.addEventListener('click', e => {
+    if (!header.contains(e.target)) closeMobileMenu();
+  });
+
+  // =================== MENU TABS ===================
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.menu-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    const panel = document.getElementById(panelId);
+    if (panel) panel.classList.add('active');
+  }
+
+  // =================== SCROLL REVEAL ===================
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // Stagger children reveals
+        const delay = (Array.from(entry.target.parentNode.children).indexOf(entry.target)) * 80;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, Math.min(delay, 400));
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // =================== ACTIVE NAV LINK ===================
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('nav ul a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.style.color = link.getAttribute('href') === '#' + entry.target.id ? 'var(--amber-lt)' : '';
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => sectionObserver.observe(s));
+</script>
+</body>
+</html>

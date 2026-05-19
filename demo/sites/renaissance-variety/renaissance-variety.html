@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Renaissance Variety | Retro &amp; Modern Entertainment – Shawville, QC</title>
+  <meta name="description" content="Renaissance Variety – Shawville's entertainment destination. Video games, books, movies, music &amp; collectibles. Antique to modern at great prices. 193 Rue Centre, Shawville, Quebec."/>
+  <meta name="keywords" content="Renaissance Variety, Shawville, Quebec, retro games, used books, vintage music, movies, collectibles, video games, Pontiac County, Outaouais, entertainment shop, QC"/>
+  <meta name="geo.region" content="CA-QC"/>
+  <meta name="geo.placename" content="Shawville, Quebec"/>
+  <meta property="og:title" content="Renaissance Variety | Entertainment Shop – Shawville, QC"/>
+  <meta property="og:description" content="Video games, books, movies, music &amp; collectibles – antique to modern. Visit us in Shawville, Quebec!"/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --red: #d42b2b;
+      --red2: #e83c3c;
+      --red-dark: #a01f1f;
+      --white: #ffffff;
+      --off-white: #fdf6f0;
+      --cream: #fff8f0;
+      --black: #1a0a0a;
+      --gray: #666;
+      --gray-light: #f0ebe5;
+      --gray-mid: #ddd5cc;
+      --py: #f7c948;
+      --pg: #4caf50;
+      --pb: #3b7fc4;
+      --pbr: #8b5e3c;
+      --font-pixel: 'Press Start 2P', monospace;
+      --font-display: 'Fredoka One', cursive;
+      --font-body: 'Nunito', sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--white);color:var(--black);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden}
+
+    /* HEADER */
+    header{position:sticky;top:0;z-index:1000;background:var(--red);box-shadow:0 4px 0 var(--red-dark);padding:0 2rem;height:68px;display:flex;align-items:center;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-px{width:36px;height:36px;image-rendering:pixelated;flex-shrink:0}
+    .logo-text{display:flex;flex-direction:column;line-height:1.1}
+    .logo-main{font-family:var(--font-display);font-size:1.45rem;color:#fff;letter-spacing:.02em}
+    .logo-sub{font-size:.62rem;color:rgba(255,255,255,.75);letter-spacing:.18em;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:1.75rem}
+    nav a{font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s}
+    nav a:hover{color:var(--py)}
+    .lang-btn{font-family:var(--font-body);font-weight:800;font-size:.78rem;letter-spacing:.1em;background:#fff;border:none;color:var(--red);padding:.35rem .85rem;border-radius:4px;cursor:pointer;transition:all .2s}
+    .lang-btn:hover{background:var(--py);color:var(--red-dark)}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:26px;height:3px;background:#fff;border-radius:2px;transition:all .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+    .mobile-nav{display:none;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--red-dark);padding:1.5rem 2rem;z-index:999;transform:translateY(-110%);transition:transform .35s ease;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+    .mobile-nav.open{transform:translateY(0)}
+    .mobile-nav a{font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:#fff;text-decoration:none;padding:.85rem 0;border-bottom:1px solid rgba(255,255,255,.15);display:block}
+    .mobile-nav a:last-of-type{border-bottom:none}
+    .mobile-nav .lang-btn{margin-top:1rem}
+
+    /* HERO */
+    .hero{position:relative;background:var(--off-white);overflow:hidden;padding:5rem 2rem 6rem;min-height:88vh;display:flex;align-items:center}
+    .hero-bg{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    /* Brick floor */
+    .brick-floor{position:absolute;bottom:0;left:0;right:0;height:56px;background:repeating-linear-gradient(90deg,var(--pbr) 0 48px,#6b4628 48px 50px);border-top:4px solid #6b4628}
+    .brick-floor::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 27px,#6b4628 27px 29px)}
+    .hero-content{position:relative;z-index:2;max-width:640px}
+    .hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:var(--red);color:#fff;font-weight:800;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;padding:.3rem .85rem;border-radius:2px;margin-bottom:1.5rem}
+    .hero h1{font-family:var(--font-display);font-size:clamp(2.8rem,8vw,5rem);color:var(--black);line-height:1.05;margin-bottom:.5rem}
+    .hero h1 .accent{color:var(--red)}
+    .hero h1 .accent2{color:var(--pb)}
+    .hero-tagline{font-family:var(--font-display);font-size:clamp(1.2rem,3vw,1.7rem);color:var(--gray);margin-bottom:1.25rem}
+    .hero p.desc{font-size:1.05rem;color:var(--gray);max-width:500px;margin-bottom:2.5rem}
+    .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+    .btn-primary{font-family:var(--font-body);font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:.85rem 2rem;text-decoration:none;border:none;border-radius:6px;cursor:pointer;box-shadow:0 4px 0 var(--red-dark);transition:all .15s;display:inline-block}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--red-dark);background:var(--red2)}
+    .btn-primary:active{transform:translateY(2px);box-shadow:0 2px 0 var(--red-dark)}
+    .btn-outline{font-family:var(--font-body);font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:var(--red);padding:.85rem 2rem;text-decoration:none;border:2px solid var(--red);border-radius:6px;transition:all .15s;display:inline-block}
+    .btn-outline:hover{background:var(--red);color:#fff}
+
+    /* Pixel art sprites */
+    .sp{position:absolute;image-rendering:pixelated}
+    .sp-mario{right:6%;bottom:60px;width:100px;animation:float 3s ease-in-out infinite}
+    .sp-qblock{right:18%;bottom:130px;width:52px;animation:bump 2.5s ease-in-out infinite}
+    .sp-star{right:30%;top:14%;width:44px;animation:spin 4s linear infinite}
+    .sp-pokeball{right:9%;top:16%;width:66px;animation:float 4s ease-in-out infinite 1s}
+    .sp-cloud1{left:4%;top:10%;width:100px;animation:drift 14s linear infinite}
+    .sp-cloud2{left:26%;top:6%;width:76px;animation:drift 20s linear infinite 4s}
+    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+    @keyframes bump{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+    @keyframes spin{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(1.15)}100%{transform:rotate(360deg) scale(1)}}
+    @keyframes drift{0%{transform:translateX(0)}100%{transform:translateX(50px)}}
+
+    /* SECTIONS */
+    section{padding:5.5rem 2rem}
+    .container{max-width:1100px;margin:0 auto}
+    .section-eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-pixel);font-size:.55rem;letter-spacing:.1em;color:var(--red);margin-bottom:1rem}
+    .section-eyebrow::before{content:'';display:inline-block;width:8px;height:8px;background:var(--red)}
+    .section-title{font-family:var(--font-display);font-size:clamp(2rem,5vw,3rem);color:var(--black);line-height:1.1;margin-bottom:.75rem}
+    .section-title .accent{color:var(--red)}
+    .section-desc{font-size:1rem;color:var(--gray);max-width:520px}
+
+    /* PIXEL DIVIDER */
+    .pixel-div{width:100%;height:8px;background:repeating-linear-gradient(90deg,var(--red) 0 16px,var(--py) 16px 32px,var(--red) 32px 48px,var(--pb) 48px 64px)}
+
+    /* ABOUT */
+    #about{background:var(--cream);position:relative;overflow:hidden}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .about-img-wrap{position:relative}
+    .placeholder-img{width:100%;aspect-ratio:1;background:var(--gray-light);border:3px dashed var(--gray-mid);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gray);font-size:.82rem;font-weight:700;text-align:center;gap:.75rem;padding:2rem}
+    .ph-note{font-size:.7rem;font-weight:400;color:#999}
+    .about-badge{position:absolute;bottom:-16px;right:-16px;background:var(--red);color:#fff;font-family:var(--font-display);font-size:1rem;padding:.85rem 1.25rem;border-radius:4px;box-shadow:4px 4px 0 var(--red-dark);line-height:1.25;text-align:center}
+    .about-text p{font-size:1.05rem;color:var(--gray);margin-bottom:1rem}
+    .about-stats{display:flex;gap:2rem;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:2px solid var(--gray-mid)}
+    .stat-num{font-family:var(--font-display);font-size:2.2rem;color:var(--red)}
+    .stat-label{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray)}
+
+    /* SERVICES */
+    #services{background:var(--white)}
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+    .service-card{background:var(--cream);border:2px solid var(--gray-mid);border-radius:12px;padding:2rem 1.75rem;transition:all .25s;position:relative;overflow:hidden}
+    .service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+    .service-card:hover{border-color:var(--red);transform:translateY(-4px);box-shadow:0 8px 24px rgba(212,43,43,.12)}
+    .service-card:hover::after{transform:scaleX(1)}
+    .svc-icon{width:52px;height:52px;background:var(--red);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;box-shadow:3px 3px 0 var(--red-dark)}
+    .svc-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .service-card h3{font-family:var(--font-display);font-size:1.35rem;color:var(--black);margin-bottom:.5rem}
+    .service-card p{font-size:.95rem;color:var(--gray);line-height:1.65}
+    .service-tag{display:inline-block;margin-top:1rem;font-size:.65rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--red);background:rgba(212,43,43,.08);padding:.25rem .65rem;border-radius:3px}
+
+    /* CATALOG */
+    #catalog{background:var(--off-white);position:relative}
+    .catalog-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;margin-bottom:2rem}
+    .search-wrap{position:relative;flex:1;min-width:240px}
+    .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:var(--gray);fill:none;stroke-width:2;stroke-linecap:round;pointer-events:none}
+    #catalogSearch{width:100%;font-family:var(--font-body);font-size:.95rem;font-weight:600;color:var(--black);background:#fff;border:2px solid var(--gray-mid);border-radius:8px;padding:.7rem 1rem .7rem 2.75rem;outline:none;transition:border-color .2s}
+    #catalogSearch:focus{border-color:var(--red)}
+    .filter-row{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;align-items:center}
+    .filter-label{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--gray);margin-right:.25rem}
+    .filter-btn{font-family:var(--font-body);font-weight:700;font-size:.73rem;letter-spacing:.06em;text-transform:uppercase;background:#fff;border:2px solid var(--gray-mid);color:var(--gray);padding:.35rem .85rem;border-radius:20px;cursor:pointer;transition:all .18s}
+    .filter-btn:hover,.filter-btn.active{background:var(--red);color:#fff;border-color:var(--red)}
+    .results-meta{font-size:.8rem;color:var(--gray);font-weight:600;margin-bottom:1.25rem}
+    .results-meta span{color:var(--red);font-weight:800}
+
+    #catalogGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:1rem;min-height:200px}
+    .catalog-item{background:#fff;border:2px solid var(--gray-mid);border-radius:10px;overflow:hidden;transition:all .22s;position:relative}
+    .catalog-item:hover{transform:translateY(-5px);box-shadow:0 8px 24px rgba(212,43,43,.12);border-color:var(--red)}
+    .cat-img{width:100%;aspect-ratio:3/4;background:var(--gray-light);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gray-mid);font-size:.6rem;font-weight:700;letter-spacing:.1em;text-align:center;gap:.4rem;padding:.75rem;border-bottom:2px solid var(--gray-mid);position:relative;overflow:hidden}
+    .cat-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .cat-img svg{width:36px;height:36px;stroke:var(--gray-mid);fill:none;stroke-width:1.5}
+    .item-badge{position:absolute;top:8px;left:8px;font-family:var(--font-pixel);font-size:.45rem;padding:.22rem .5rem;border-radius:3px;z-index:1}
+    .badge-new{background:var(--red);color:#fff}
+    .badge-hot{background:var(--py);color:var(--black)}
+    .badge-rare{background:var(--pb);color:#fff}
+    .cat-info{padding:.85rem}
+    .cat-type{font-size:.62rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+    .cat-info h4{font-family:var(--font-display);font-size:1rem;color:var(--black);line-height:1.2;margin-bottom:.2rem}
+    .cat-sub{font-size:.78rem;color:var(--gray)}
+    .cat-cond{display:inline-block;margin-top:.5rem;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:var(--gray-light);color:var(--gray);padding:.15rem .45rem;border-radius:3px}
+    .no-results{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--gray);font-weight:700}
+    .no-results .px{font-family:var(--font-pixel);font-size:1.5rem;color:var(--red);display:block;margin-bottom:1rem}
+    .catalog-note{margin-top:2rem;padding:1.25rem 1.5rem;background:rgba(212,43,43,.06);border-left:4px solid var(--red);border-radius:0 6px 6px 0;font-size:.95rem;color:var(--gray)}
+
+    /* ADMIN */
+    #adminToggle{text-align:center;margin-top:2rem}
+    .admin-toggle-btn{font-family:var(--font-pixel);font-size:.5rem;background:transparent;border:1px dashed var(--gray-mid);color:var(--gray-mid);padding:.5rem 1rem;cursor:pointer;border-radius:4px;transition:all .2s}
+    .admin-toggle-btn:hover{border-color:var(--gray);color:var(--gray)}
+    #adminPanel{display:none;margin-top:2rem;background:#fff;border:2px solid var(--red);border-radius:12px;padding:2rem}
+    #adminPanel.vis{display:block}
+    #adminLogin{text-align:center}
+    #adminLogin h3{font-family:var(--font-display);font-size:1.5rem;margin-bottom:.5rem;color:var(--red)}
+    #adminLogin p{font-size:.85rem;color:var(--gray);margin-bottom:1.25rem}
+    .a-input{width:100%;max-width:320px;font-family:var(--font-body);font-size:.95rem;color:var(--black);background:var(--off-white);border:2px solid var(--gray-mid);border-radius:6px;padding:.65rem 1rem;outline:none;margin-bottom:.75rem;display:block;margin-left:auto;margin-right:auto}
+    .a-input:focus{border-color:var(--red)}
+    .a-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .fg{display:flex;flex-direction:column;gap:.35rem}
+    .fg.full{grid-column:1/-1}
+    .fg label{font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--gray)}
+    .fg input,.fg select,.fg textarea{font-family:var(--font-body);font-size:.92rem;color:var(--black);background:var(--off-white);border:2px solid var(--gray-mid);border-radius:6px;padding:.6rem .85rem;outline:none;transition:border-color .2s}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--red)}
+    .fg textarea{resize:vertical;min-height:80px}
+    .a-actions{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap}
+    .btn-save{font-family:var(--font-body);font-weight:800;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;background:#4caf50;color:#fff;border:none;border-radius:6px;padding:.7rem 1.5rem;cursor:pointer;box-shadow:0 3px 0 #2e7d32;transition:all .15s}
+    .btn-save:hover{background:#43a047;transform:translateY(-1px)}
+    .btn-clear{font-family:var(--font-body);font-weight:800;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;background:var(--gray-light);color:var(--gray);border:2px solid var(--gray-mid);border-radius:6px;padding:.7rem 1.25rem;cursor:pointer;transition:all .15s}
+    .btn-clear:hover{border-color:var(--gray);color:var(--black)}
+    .a-msg{margin-top:.75rem;padding:.65rem 1rem;border-radius:6px;font-size:.85rem;font-weight:700;display:none}
+    .a-msg.ok{background:rgba(76,175,80,.12);color:#2e7d32;display:block}
+    .a-msg.err{background:rgba(212,43,43,.1);color:var(--red-dark);display:block}
+    .a-sec-title{font-family:var(--font-display);font-size:1.2rem;color:var(--black);margin:1.75rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--gray-mid)}
+    .a-list{display:flex;flex-direction:column;gap:.6rem;max-height:420px;overflow-y:auto;padding-right:4px}
+    .a-row{display:flex;align-items:center;gap:.75rem;background:var(--off-white);border:1px solid var(--gray-mid);border-radius:6px;padding:.6rem .85rem}
+    .a-row:hover{border-color:var(--red)}
+    .ar-type{font-size:.62rem;font-weight:800;text-transform:uppercase;color:var(--red);min-width:70px}
+    .ar-title{flex:1;font-size:.9rem;font-weight:700;color:var(--black)}
+    .ar-sub{font-size:.78rem;color:var(--gray);min-width:80px;text-align:right}
+    .btn-del{background:transparent;border:1px solid var(--gray-mid);color:var(--gray);border-radius:4px;padding:.2rem .5rem;font-size:.65rem;cursor:pointer;transition:all .15s;font-family:var(--font-pixel)}
+    .btn-del:hover{border-color:var(--red);color:var(--red);background:rgba(212,43,43,.06)}
+    .a-ie{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    .btn-exp{font-family:var(--font-body);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;background:var(--pb);color:#fff;border:none;border-radius:6px;padding:.55rem 1.1rem;cursor:pointer;box-shadow:0 2px 0 #1a5fa0}
+    .btn-imp{font-family:var(--font-body);font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;background:var(--py);color:var(--black);border:none;border-radius:6px;padding:.55rem 1.1rem;cursor:pointer;box-shadow:0 2px 0 #c49d00}
+
+    /* WHY */
+    #why{background:var(--red);position:relative;overflow:hidden}
+    #why .section-eyebrow{color:rgba(255,255,255,.7)}
+    #why .section-eyebrow::before{background:rgba(255,255,255,.5)}
+    #why .section-title{color:#fff}
+    #why .section-title .accent{color:var(--py)}
+    .why-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:3rem}
+    .why-card{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.2);border-radius:12px;padding:1.75rem;transition:all .2s}
+    .why-card:hover{background:rgba(255,255,255,.18);transform:translateY(-4px)}
+    .why-num{font-family:var(--font-pixel);font-size:.7rem;color:var(--py);margin-bottom:.75rem}
+    .why-card strong{display:block;font-family:var(--font-display);font-size:1.2rem;color:#fff;margin-bottom:.4rem}
+    .why-card span{font-size:.92rem;color:rgba(255,255,255,.8);line-height:1.6}
+
+    /* SOCIAL */
+    #social{background:var(--black);position:relative;overflow:hidden}
+    #social::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 70% 50%,rgba(212,43,43,.15) 0%,transparent 70%);pointer-events:none}
+    #social .section-eyebrow{color:var(--red2)}
+    #social .section-eyebrow::before{background:var(--red2)}
+    #social .section-title{color:#fff}
+    #social .section-title .accent{color:var(--py)}
+    .social-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+    .social-text p{color:rgba(255,255,255,.65);font-size:1.05rem;max-width:460px;margin-top:.75rem}
+    .social-btns{display:flex;gap:1rem;flex-wrap:wrap}
+    .social-btn{font-family:var(--font-body);font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:.8rem 1.75rem;border-radius:6px;transition:all .2s;display:inline-block}
+    .social-btn.fb{background:#1877F2;color:#fff;box-shadow:0 3px 0 #0d5fc7}
+    .social-btn.fb:hover{background:#166fe5;transform:translateY(-2px)}
+    .social-btn.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;box-shadow:0 3px 0 #5b1e82}
+    .social-btn.ig:hover{opacity:.9;transform:translateY(-2px)}
+
+    /* CONTACT */
+    #contact{background:var(--cream);position:relative}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+    .contact-card{background:#fff;border:2px solid var(--gray-mid);border-radius:12px;padding:2rem}
+    .contact-card h3{font-family:var(--font-display);font-size:1.4rem;color:var(--black);margin-bottom:1.5rem}
+    .c-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.25rem}
+    .ci-ico{width:38px;height:38px;background:rgba(212,43,43,.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ci-ico svg{width:18px;height:18px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round}
+    .ci-lbl{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--gray);margin-bottom:.2rem}
+    .ci-val{font-size:1rem;font-weight:600;color:var(--black)}
+    .ci-val a{color:var(--black);text-decoration:none}
+    .ci-val a:hover{color:var(--red)}
+    .map-ph{background:var(--gray-light);border:2px dashed var(--gray-mid);border-radius:10px;height:100%;min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--gray);font-size:.82rem;font-weight:700;text-align:center;padding:2rem}
+    .map-ph svg{width:40px;height:40px;stroke:var(--gray-mid);fill:none;stroke-width:1.5}
+
+    /* FOOTER */
+    footer{background:var(--black);padding:3.5rem 2rem 2rem;color:rgba(255,255,255,.65)}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.75rem}
+    .footer-logo{font-family:var(--font-display);font-size:1.6rem;color:#fff;display:block;margin-bottom:.75rem}
+    .footer-brand p{font-size:.9rem;line-height:1.65;max-width:260px}
+    .footer-col h4{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.2em;color:var(--red2);margin-bottom:1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul li a{font-size:.9rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+    .footer-col ul li a:hover{color:#fff}
+    .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+    .footer-bottom p{font-size:.78rem}
+    .footer-bottom a{color:var(--red2);text-decoration:none}
+    .footer-bottom a:hover{text-decoration:underline}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      nav{display:none}
+      .hamburger{display:flex}
+      .mobile-nav{display:flex}
+      .about-grid,.contact-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr 1fr}
+      .sp-mario,.sp-pokeball{display:none}
+    }
+    @media(max-width:600px){
+      header{padding:0 1rem}
+      section{padding:4rem 1.25rem}
+      .hero{padding:3rem 1.25rem 6rem;min-height:auto}
+      #catalogGrid{grid-template-columns:repeat(2,1fr)}
+      .footer-inner{grid-template-columns:1fr;gap:2rem}
+      .footer-bottom{flex-direction:column;align-items:flex-start}
+      .sp-qblock,.sp-star,.sp-cloud1,.sp-cloud2{display:none}
+      .a-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="#" class="logo-wrap">
+    <svg class="logo-px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+      <rect width="16" height="16" fill="#f7c948"/>
+      <rect x="2" y="2" width="12" height="2" fill="#fff8dc"/>
+      <rect x="2" y="2" width="2" height="12" fill="#fff8dc"/>
+      <rect x="2" y="12" width="12" height="2" fill="#c49d00"/>
+      <rect x="12" y="2" width="2" height="12" fill="#c49d00"/>
+      <rect x="7" y="4" width="2" height="2" fill="#8b5e3c"/>
+      <rect x="5" y="6" width="2" height="2" fill="#8b5e3c"/>
+      <rect x="7" y="6" width="2" height="2" fill="#8b5e3c"/>
+      <rect x="7" y="8" width="2" height="2" fill="#8b5e3c"/>
+      <rect x="7" y="11" width="2" height="2" fill="#8b5e3c"/>
+    </svg>
+    <div class="logo-text">
+      <span class="logo-main">Renaissance Variety</span>
+      <span class="logo-sub">Shawville, QC</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#about" data-en="About" data-fr="A Propos">About</a>
+    <a href="#services" data-en="Services" data-fr="Services">Services</a>
+    <a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a>
+    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+    <button class="lang-btn" id="langToggle">FR</button>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" data-en="About" data-fr="A Propos">About</a>
+  <a href="#services" data-en="Services" data-fr="Services">Services</a>
+  <a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a>
+  <a href="#social" data-en="Follow Us" data-fr="Suivez-nous">Follow Us</a>
+  <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  <button class="lang-btn" id="langToggleMobile">FR</button>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <!-- Pixel clouds -->
+    <svg class="sp sp-cloud1" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="16" y="16" width="32" height="16" fill="white"/><rect x="8" y="8" width="16" height="24" fill="white"/>
+      <rect x="24" y="0" width="24" height="24" fill="white"/><rect x="40" y="8" width="16" height="24" fill="white"/>
+      <rect x="0" y="16" width="8" height="8" fill="white"/><rect x="56" y="16" width="8" height="8" fill="white"/>
+    </svg>
+    <svg class="sp sp-cloud2" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+      <rect x="16" y="16" width="32" height="16" fill="white"/><rect x="8" y="8" width="16" height="24" fill="white"/>
+      <rect x="24" y="0" width="24" height="24" fill="white"/><rect x="40" y="8" width="16" height="24" fill="white"/>
+      <rect x="0" y="16" width="8" height="8" fill="white"/><rect x="56" y="16" width="8" height="8" fill="white"/>
+    </svg>
+    <!-- Pixel star -->
+    <svg class="sp sp-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="0" width="4" height="8" fill="#f7c948"/>
+      <rect x="0" y="8" width="24" height="4" fill="#f7c948"/>
+      <rect x="4" y="4" width="16" height="4" fill="#f7c948"/>
+      <rect x="2" y="12" width="4" height="6" fill="#f7c948"/>
+      <rect x="18" y="12" width="4" height="6" fill="#f7c948"/>
+      <rect x="6" y="16" width="5" height="8" fill="#f7c948"/>
+      <rect x="13" y="16" width="5" height="8" fill="#f7c948"/>
+    </svg>
+    <!-- Pokeball -->
+    <svg class="sp sp-pokeball" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="14" fill="#e53935"/>
+      <rect x="2" y="14" width="28" height="4" fill="white"/>
+      <circle cx="16" cy="16" r="5" fill="white" stroke="#222" stroke-width="2"/>
+      <circle cx="16" cy="16" r="2.5" fill="#e53935"/>
+      <path d="M2 16 A14 14 0 0 1 30 16" fill="#e53935"/>
+      <path d="M2 16 A14 14 0 0 0 30 16" fill="white"/>
+      <rect x="2" y="14" width="28" height="4" fill="#222"/>
+      <circle cx="16" cy="16" r="5" fill="white"/>
+      <circle cx="16" cy="16" r="2.5" fill="#ccc"/>
+    </svg>
+    <!-- Mario sprite -->
+    <svg class="sp sp-mario" viewBox="0 0 64 80" xmlns="http://www.w3.org/2000/svg">
+      <rect x="16" y="0" width="32" height="8" fill="#d42b2b"/>
+      <rect x="8" y="8" width="40" height="8" fill="#d42b2b"/>
+      <rect x="8" y="16" width="40" height="16" fill="#f5a623"/>
+      <rect x="14" y="18" width="6" height="6" fill="white"/>
+      <rect x="44" y="18" width="6" height="6" fill="white"/>
+      <rect x="16" y="20" width="3" height="3" fill="#111"/>
+      <rect x="45" y="20" width="3" height="3" fill="#111"/>
+      <rect x="10" y="28" width="14" height="4" fill="#8b5e3c"/>
+      <rect x="40" y="28" width="14" height="4" fill="#8b5e3c"/>
+      <rect x="10" y="32" width="44" height="16" fill="#d42b2b"/>
+      <rect x="16" y="36" width="12" height="12" fill="#3b7fc4"/>
+      <rect x="36" y="36" width="12" height="12" fill="#3b7fc4"/>
+      <rect x="20" y="42" width="4" height="4" fill="#f7c948"/>
+      <rect x="40" y="42" width="4" height="4" fill="#f7c948"/>
+      <rect x="12" y="48" width="14" height="16" fill="#3b7fc4"/>
+      <rect x="38" y="48" width="14" height="16" fill="#3b7fc4"/>
+      <rect x="8" y="64" width="20" height="8" fill="#8b5e3c"/>
+      <rect x="36" y="64" width="20" height="8" fill="#8b5e3c"/>
+      <rect x="0" y="32" width="10" height="10" fill="#f5a623"/>
+      <rect x="54" y="32" width="10" height="10" fill="#f5a623"/>
+    </svg>
+    <!-- Question block -->
+    <svg class="sp sp-qblock" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <rect width="32" height="32" fill="#f7c948"/>
+      <rect x="2" y="2" width="28" height="3" fill="#fff8dc"/><rect x="2" y="2" width="3" height="28" fill="#fff8dc"/>
+      <rect x="2" y="27" width="28" height="3" fill="#c49d00"/><rect x="27" y="2" width="3" height="28" fill="#c49d00"/>
+      <rect x="13" y="7" width="6" height="3" fill="#8b5e3c"/><rect x="8" y="10" width="5" height="4" fill="#8b5e3c"/>
+      <rect x="13" y="10" width="6" height="4" fill="#8b5e3c"/><rect x="13" y="14" width="6" height="4" fill="#8b5e3c"/>
+      <rect x="13" y="21" width="6" height="4" fill="#8b5e3c"/>
+    </svg>
+    <div class="brick-floor"></div>
+  </div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow" data-en="Shawville's Entertainment Shop" data-fr="La Boutique Divertissement de Shawville">Shawville's Entertainment Shop</span>
+    <h1>
+      <span data-en="Your <span class='accent'>Past</span> &amp; <span class='accent2'>Present</span>" data-fr="Votre <span class='accent'>Passe</span> &amp; <span class='accent2'>Present</span>">Your <span class="accent">Past</span> &amp; <span class="accent2">Present</span></span><br>
+      <span data-en="Lives Here." data-fr="Vit Ici.">Lives Here.</span>
+    </h1>
+    <p class="hero-tagline" data-en="Games. Books. Movies. Music. Collectibles." data-fr="Jeux. Livres. Films. Musique. Objets de collection.">Games. Books. Movies. Music. Collectibles.</p>
+    <p class="desc" data-en="From rare retro finds to the latest releases — all under one roof in Shawville, QC. Browse thousands of titles at prices you'll love." data-fr="Des trouvailles retro rares aux dernieres sorties — tout sous un meme toit a Shawville, QC. Des milliers de titres a des prix que vous aimerez.">From rare retro finds to the latest releases &mdash; all under one roof in Shawville, QC. Browse thousands of titles at prices you'll love.</p>
+    <div class="hero-ctas">
+      <a href="#catalog" class="btn-primary" data-en="Browse the Catalog" data-fr="Parcourir le Catalogue">Browse the Catalog</a>
+      <a href="#contact" class="btn-outline" data-en="Find Us" data-fr="Nous Trouver">Find Us</a>
+    </div>
+  </div>
+</section>
+
+<div class="pixel-div"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="placeholder-img">
+          <svg viewBox="0 0 48 48" width="60" height="60"><rect x="4" y="10" width="40" height="28" rx="3" stroke="#ccc" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="8" stroke="#ccc" stroke-width="2" fill="none"/><circle cx="24" cy="24" r="3" fill="#ccc"/></svg>
+          <strong data-en="REPLACE WITH STORE PHOTO" data-fr="REMPLACER PAR PHOTO">REPLACE WITH STORE PHOTO</strong>
+          <span class="ph-note" data-en="Tip: Use a photo showing the Mario / Pokemon mural on the building!" data-fr="Conseil: Utilisez une photo de la fresque Mario / Pokemon sur le batiment!">Tip: Use a photo showing the Mario / Pokemon mural on the building!</span>
+        </div>
+        <div class="about-badge">193 Rue Centre<br>Shawville, QC</div>
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow" data-en="Our Story" data-fr="Notre Histoire">Our Story</p>
+        <h2 class="section-title" data-en="More Than a Shop.<br><span class='accent'>A Collection.</span>" data-fr="Plus qu'une Boutique.<br><span class='accent'>Une Collection.</span>">More Than a Shop.<br><span class="accent">A Collection.</span></h2>
+        <p class="reveal d1" data-en="Renaissance Variety is Shawville's go-to entertainment destination — a treasure-packed universe of video games, books, movies, and music spanning every decade and every genre." data-fr="Renaissance Variety est la destination divertissement incontournable de Shawville — un univers rempli de tresors : jeux video, livres, films et musique couvrant chaque decennie.">Renaissance Variety is Shawville&rsquo;s go-to entertainment destination &mdash; a treasure-packed universe of video games, books, movies, and music spanning every decade and every genre.</p>
+        <p class="reveal d2" data-en="Whether you're hunting for a rare NES cartridge, a classic novel, a vintage LP, or the latest release — we have it at prices that make it impossible to leave empty-handed." data-fr="Que vous cherchiez une rare cartouche NES, un roman classique, un vinyle vintage ou la derniere sortie — nous l'avons a des prix qui rendent impossible de repartir les mains vides.">Whether you&rsquo;re hunting for a rare NES cartridge, a classic novel, a vintage LP, or the latest release &mdash; we have it at prices that make it impossible to leave empty-handed.</p>
+        <p class="reveal d3" data-en="Inspired by the spirit of adventure — just like the murals on our walls — every visit is a new discovery." data-fr="Inspire par l'esprit d'aventure — comme les fresques sur nos murs — chaque visite est une nouvelle decouverte.">Inspired by the spirit of adventure &mdash; just like the murals on our walls &mdash; every visit is a new discovery.</p>
+        <div class="about-stats reveal">
+          <div class="stat"><div class="stat-num">1000s</div><div class="stat-label" data-en="Items In Stock" data-fr="Articles en Stock">Items In Stock</div></div>
+          <div class="stat"><div class="stat-num" data-en="All Eras" data-fr="Toutes Eres">All Eras</div><div class="stat-label" data-en="Retro to Recent" data-fr="Retro au Recent">Retro to Recent</div></div>
+          <div class="stat"><div class="stat-num">Local</div><div class="stat-label" data-en="Shawville Proud" data-fr="Fierte Shawville">Shawville Proud</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pixel-div"></div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow" data-en="What We Carry" data-fr="Ce Que Nous Vendons">What We Carry</p>
+      <h2 class="section-title" data-en="Every Format, <span class='accent'>Every Genre.</span>" data-fr="Chaque Format, <span class='accent'>Chaque Genre.</span>">Every Format, <span class="accent">Every Genre.</span></h2>
+      <p class="section-desc" data-en="From Atari cartridges to 4K Blu-rays, vinyl records to paperbacks — we carry it all." data-fr="Des cartouches Atari aux Blu-ray 4K, des vinyles aux romans de poche — nous avons tout.">From Atari cartridges to 4K Blu-rays, vinyl records to paperbacks &mdash; we carry it all.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="1"/><path d="M8 6V4h8v2"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3 data-en="Video Games" data-fr="Jeux Video">Video Games</h3>
+        <p data-en="Atari to PlayStation 5. Nintendo classics, Sega gems, Xbox titles, and PC games — every platform, every generation." data-fr="Atari a PlayStation 5. Classiques Nintendo, joyaux Sega, titres Xbox et jeux PC — chaque plateforme, chaque generation.">Atari to PlayStation 5. Nintendo classics, Sega gems, Xbox titles, and PC games &mdash; every platform, every generation.</p>
+        <span class="service-tag" data-en="Retro &amp; Modern" data-fr="Retro &amp; Moderne">Retro &amp; Modern</span>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 012-2h13a1 1 0 010 2H6a1 1 0 00-1 1v13"/><path d="M4 19a2 2 0 002 2h13a1 1 0 000-2H6a2 2 0 01-2-2z"/></svg></div>
+        <h3 data-en="Books" data-fr="Livres">Books</h3>
+        <p data-en="Fiction, non-fiction, sci-fi, romance, history and more. From rare first editions to popular paperbacks — all at great prices." data-fr="Fiction, non-fiction, sci-fi, romance, histoire et plus. Des premieres editions rares aux romans de poche populaires.">Fiction, non-fiction, sci-fi, romance, history and more. From rare first editions to popular paperbacks.</p>
+        <span class="service-tag" data-en="All Genres" data-fr="Tous Genres">All Genres</span>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.07A1 1 0 0121 8.862V18a1 1 0 01-1.445.895L15 17"/><rect x="2" y="6" width="14" height="13" rx="2"/></svg></div>
+        <h3 data-en="Movies" data-fr="Films">Movies</h3>
+        <p data-en="VHS tapes, DVDs, Blu-rays, and 4K Ultra HD. Cult classics, blockbusters, foreign films, documentaries — your collection starts here." data-fr="Cassettes VHS, DVD, Blu-ray et 4K Ultra HD. Classiques cultes, blockbusters, films etrangers, documentaires.">VHS tapes, DVDs, Blu-rays, and 4K Ultra HD. Cult classics, blockbusters, foreign films, documentaries.</p>
+        <span class="service-tag" data-en="VHS to 4K" data-fr="VHS a 4K">VHS to 4K</span>
+      </div>
+      <div class="service-card reveal">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3 data-en="Music" data-fr="Musique">Music</h3>
+        <p data-en="Vinyl records, cassette tapes, and CDs. Rock, jazz, country, classical, hip-hop — from vintage pressings to recent releases." data-fr="Vinyles, cassettes et CD. Rock, jazz, country, classique, hip-hop — des pressages vintage aux sorties recentes.">Vinyl records, cassette tapes, and CDs. Rock, jazz, country, classical, hip-hop.</p>
+        <span class="service-tag" data-en="Vinyl &amp; More" data-fr="Vinyle &amp; Plus">Vinyl &amp; More</span>
+      </div>
+      <div class="service-card reveal d1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3 data-en="Collectibles" data-fr="Objets de Collection">Collectibles</h3>
+        <p data-en="Action figures, board games, trading cards, memorabilia, and unique finds. One-of-a-kind pieces that don't last long on the shelf." data-fr="Figurines, jeux de societe, cartes a collectionner, objets souvenirs et trouvailles uniques.">Action figures, board games, trading cards, memorabilia, and unique finds.</p>
+        <span class="service-tag" data-en="Rare Finds" data-fr="Trouvailles Rares">Rare Finds</span>
+      </div>
+      <div class="service-card reveal d2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 data-en="Buy, Sell &amp; Trade" data-fr="Achat, Vente &amp; Echange">Buy, Sell &amp; Trade</h3>
+        <p data-en="Have something to sell? We buy and trade too. Bring in your collection — games, records, books — and let's make a deal." data-fr="Vous avez quelque chose a vendre? Nous achetons et echangeons aussi. Apportez votre collection et faisons affaire.">Have something to sell? We buy and trade too. Bring in your collection and let&rsquo;s make a deal.</p>
+        <span class="service-tag" data-en="Come In &amp; Trade" data-fr="Venez Echanger">Come In &amp; Trade</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pixel-div"></div>
+
+<!-- CATALOG -->
+<section id="catalog">
+  <div class="container">
+    <div class="catalog-top reveal">
+      <div>
+        <p class="section-eyebrow" data-en="Browse In-Store Items" data-fr="Articles en Magasin">Browse In-Store Items</p>
+        <h2 class="section-title" data-en="The <span class='accent'>Catalog</span>" data-fr="Le <span class='accent'>Catalogue</span>">The <span class="accent">Catalog</span></h2>
+        <p class="section-desc" data-en="Search our collection live. Items are added and updated by staff regularly. Come in to purchase!" data-fr="Recherchez notre collection en direct. Articles ajoutes et mis a jour regulierement par le personnel. Venez acheter!">Search our collection live. Items are added and updated by staff regularly. Come in to purchase!</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap">
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" id="catalogSearch" placeholder="Search titles, artists, genres..."/>
+      </div>
+    </div>
+    <div class="filter-row">
+      <span class="filter-label" data-en="Category:" data-fr="Categorie:">Category:</span>
+      <button class="filter-btn active" data-filter="all" data-en="All" data-fr="Tout">All</button>
+      <button class="filter-btn" data-filter="games" data-en="Games" data-fr="Jeux">Games</button>
+      <button class="filter-btn" data-filter="books" data-en="Books" data-fr="Livres">Books</button>
+      <button class="filter-btn" data-filter="music" data-en="Music" data-fr="Musique">Music</button>
+      <button class="filter-btn" data-filter="movies" data-en="Movies" data-fr="Films">Movies</button>
+      <button class="filter-btn" data-filter="collectibles" data-en="Collectibles" data-fr="Collection">Collectibles</button>
+      <button class="filter-btn" data-filter="other" data-en="Other" data-fr="Autre">Other</button>
+    </div>
+
+    <div class="results-meta" id="resultsCount">Showing <span>0</span> items</div>
+    <div id="catalogGrid"></div>
+
+    <p class="catalog-note reveal" data-en="Stock changes daily. Follow us on Facebook and Instagram to see the latest arrivals. Visit us in-store to purchase!" data-fr="Le stock change chaque jour. Suivez-nous sur Facebook et Instagram pour les dernieres arrivees. Visitez-nous en magasin pour acheter!">Stock changes daily. Follow us on Facebook and Instagram to see the latest arrivals. Visit us in-store to purchase!</p>
+
+    <div id="adminToggle">
+      <button class="admin-toggle-btn" id="showAdminBtn" data-en="Staff Login" data-fr="Connexion Personnel">Staff Login</button>
+    </div>
+
+    <div id="adminPanel">
+      <div id="adminLogin">
+        <h3 data-en="Staff Access" data-fr="Acces Personnel">Staff Access</h3>
+        <p data-en="Enter the admin password to manage the catalog." data-fr="Entrez le mot de passe pour gerer le catalogue.">Enter the admin password to manage the catalog.</p>
+        <input type="password" class="a-input" id="adminPwInput" placeholder="Password"/>
+        <button class="btn-primary" id="adminLoginBtn" data-en="Sign In" data-fr="Se Connecter">Sign In</button>
+        <p id="loginErr" style="color:var(--red);font-size:.82rem;margin-top:.75rem;display:none" data-en="Incorrect password." data-fr="Mot de passe incorrect.">Incorrect password.</p>
+      </div>
+
+      <div id="adminMgr" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--red)" data-en="Catalog Manager" data-fr="Gestionnaire">Catalog Manager</h3>
+          <button class="btn-clear" id="adminLogoutBtn" data-en="Log Out" data-fr="Se Deconnecter">Log Out</button>
+        </div>
+
+        <h4 class="a-sec-title" data-en="Add New Item" data-fr="Ajouter un Article">Add New Item</h4>
+        <div class="a-grid">
+          <div class="fg">
+            <label data-en="Title *" data-fr="Titre *">Title *</label>
+            <input type="text" id="iTitle" placeholder="e.g. Super Mario Bros. 3"/>
+          </div>
+          <div class="fg">
+            <label data-en="Category *" data-fr="Categorie *">Category *</label>
+            <select id="iCat">
+              <option value="games" data-en="Video Games" data-fr="Jeux Video">Video Games</option>
+              <option value="books" data-en="Books" data-fr="Livres">Books</option>
+              <option value="music" data-en="Music" data-fr="Musique">Music</option>
+              <option value="movies" data-en="Movies" data-fr="Films">Movies</option>
+              <option value="collectibles" data-en="Collectibles" data-fr="Objets de Collection">Collectibles</option>
+              <option value="other" data-en="Other" data-fr="Autre">Other</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label data-en="Subtitle / Platform / Format" data-fr="Sous-titre / Plateforme / Format">Subtitle / Platform / Format</label>
+            <input type="text" id="iSub" placeholder="e.g. NES Cartridge, Paperback, Vinyl LP"/>
+          </div>
+          <div class="fg">
+            <label data-en="Condition" data-fr="Etat">Condition</label>
+            <select id="iCond">
+              <option value="New">New / Neuf</option>
+              <option value="Like New" selected>Like New / Comme Neuf</option>
+              <option value="Good">Good / Bon</option>
+              <option value="Fair">Fair / Acceptable</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label data-en="Badge" data-fr="Badge">Badge</label>
+            <select id="iBadge">
+              <option value="" data-en="None" data-fr="Aucun">None</option>
+              <option value="new" data-en="NEW" data-fr="NOUVEAU">NEW</option>
+              <option value="hot" data-en="HOT" data-fr="POPULAIRE">HOT</option>
+              <option value="rare" data-en="RARE" data-fr="RARE">RARE</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label data-en="Image URL (optional)" data-fr="URL Image (optionnel)">Image URL (optional)</label>
+            <input type="text" id="iImg" placeholder="https://..."/>
+          </div>
+          <div class="fg full">
+            <label data-en="Notes (optional)" data-fr="Notes (optionnel)">Notes (optional)</label>
+            <textarea id="iNotes" placeholder="e.g. Original box included, slight shelf wear..."></textarea>
+          </div>
+        </div>
+        <div class="a-actions">
+          <button class="btn-save" id="addItemBtn" data-en="Add to Catalog" data-fr="Ajouter au Catalogue">Add to Catalog</button>
+          <button class="btn-clear" id="clearFormBtn" data-en="Clear" data-fr="Effacer">Clear</button>
+        </div>
+        <div class="a-msg" id="aMsg"></div>
+
+        <h4 class="a-sec-title" data-en="Manage Items" data-fr="Gerer les Articles">Manage Items <span id="aItemCount" style="font-family:var(--font-body);font-size:.85rem;color:var(--gray);font-weight:400"></span></h4>
+        <input type="text" class="a-input" id="aSearch" placeholder="Filter items..." style="display:inline-block;max-width:320px;margin:0 0 .75rem 0"/>
+        <div class="a-list" id="aList"></div>
+
+        <div class="a-ie">
+          <button class="btn-exp" id="exportBtn" data-en="Export JSON" data-fr="Exporter JSON">Export JSON</button>
+          <button class="btn-imp" id="importBtn" data-en="Import JSON" data-fr="Importer JSON">Import JSON</button>
+          <input type="file" id="importFile" accept=".json" style="display:none"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pixel-div"></div>
+
+<!-- WHY -->
+<section id="why">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow" data-en="Why Renaissance" data-fr="Pourquoi Renaissance">Why Renaissance</p>
+      <h2 class="section-title" data-en="Not Just Nostalgia.<br><span class='accent'>Real Value.</span>" data-fr="Pas que la Nostalgie.<br><span class='accent'>De la Vraie Valeur.</span>">Not Just Nostalgia.<br><span class="accent">Real Value.</span></h2>
+    </div>
+    <div class="why-cards">
+      <div class="why-card reveal"><div class="why-num">01</div><strong data-en="Unbeatable Prices" data-fr="Prix Imbattables">Unbeatable Prices</strong><span data-en="We keep it affordable so you can build your collection without breaking the bank." data-fr="Nous maintenons des prix abordables pour que vous puissiez developper votre collection sans vous ruiner.">We keep it affordable so you can build your collection without breaking the bank.</span></div>
+      <div class="why-card reveal d1"><div class="why-num">02</div><strong data-en="Something for Everyone" data-fr="Quelque Chose pour Tous">Something for Everyone</strong><span data-en="Kids, collectors, casual shoppers — formats and genres for all ages and tastes." data-fr="Enfants, collectionneurs, acheteurs occasionnels — formats et genres pour tous les ages et gouts.">Kids, collectors, casual shoppers &mdash; formats and genres for all ages and tastes.</span></div>
+      <div class="why-card reveal d2"><div class="why-num">03</div><strong data-en="Always Changing" data-fr="Toujours Renouvele">Always Changing</strong><span data-en="New items arrive regularly. Every visit is a new treasure hunt — something always surprises you." data-fr="De nouveaux articles arrivent regulierement. Chaque visite est une chasse au tresor.">New items arrive regularly. Every visit is a new treasure hunt.</span></div>
+      <div class="why-card reveal d3"><div class="why-num">04</div><strong data-en="Community-Driven" data-fr="Ancre dans la Communaute">Community-Driven</strong><span data-en="Active on Facebook with thousands of followers. New arrivals and deals posted constantly." data-fr="Actif sur Facebook avec des milliers d'abonnes. Nouvelles arrivees et offres postes constamment.">Active on Facebook with thousands of followers. New arrivals and deals posted constantly.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social">
+  <div class="container">
+    <div class="social-inner">
+      <div class="social-text">
+        <p class="section-eyebrow" data-en="Stay Connected" data-fr="Restez Connectes">Stay Connected</p>
+        <h2 class="section-title" data-en="Follow the <span class='accent'>Hunt.</span>" data-fr="Suivez la <span class='accent'>Chasse.</span>">Follow the <span class="accent">Hunt.</span></h2>
+        <p data-en="We post new arrivals and deals on Facebook and Instagram every day. Join our group to see what just landed." data-fr="Nous publions de nouvelles arrivees et offres sur Facebook et Instagram chaque jour. Rejoignez notre groupe pour voir ce qui vient d'arriver.">We post new arrivals and deals on Facebook and Instagram every day. Join our group to see what just landed.</p>
+      </div>
+      <div class="social-btns">
+        <a href="https://www.facebook.com/HellZXpress/" target="_blank" rel="noopener" class="social-btn fb" data-en="Facebook Group" data-fr="Groupe Facebook">Facebook Group</a>
+        <a href="https://www.instagram.com/renaissancevariety/" target="_blank" rel="noopener" class="social-btn ig">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <p class="section-eyebrow" data-en="Visit Us" data-fr="Visitez-nous">Visit Us</p>
+      <h2 class="section-title" data-en="Come Find <span class='accent'>Your</span> Treasure." data-fr="Venez Trouver <span class='accent'>Votre</span> Tresor.">Come Find <span class="accent">Your</span> Treasure.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3 data-en="Get in Touch" data-fr="Contactez-nous">Get in Touch</h3>
+        <div class="c-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="ci-lbl" data-en="Address" data-fr="Adresse">Address</div><div class="ci-val">193 Rue Centre<br>Shawville, QC, Canada</div></div>
+        </div>
+        <div class="c-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91"/></svg></div>
+          <div><div class="ci-lbl" data-en="Phone" data-fr="Telephone">Phone</div><div class="ci-val"><a href="tel:+18196475086">(819) 647-5086</a></div></div>
+        </div>
+        <div class="c-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="ci-lbl" data-en="Email" data-fr="Courriel">Email</div><div class="ci-val"><a href="mailto:renaissancevariety@gmail.com">renaissancevariety@gmail.com</a></div></div>
+        </div>
+        <div class="c-item">
+          <div class="ci-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+          <div><div class="ci-lbl" data-en="Hours" data-fr="Heures">Hours</div><div class="ci-val" style="font-size:.9rem" data-en="Hours may vary — check our Facebook page or call us." data-fr="Les heures peuvent varier — consultez notre Facebook ou appelez-nous.">Hours may vary &mdash; check our Facebook page or call us.</div></div>
+        </div>
+      </div>
+      <div class="map-ph reveal d1">
+        <svg viewBox="0 0 24 24" width="48" height="48"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <strong>193 Rue Centre<br>Shawville, QC</strong>
+        <p style="font-size:.82rem;color:#999;max-width:200px" data-en="Replace with an embedded Google Map iframe" data-fr="Remplacer par un iframe Google Maps">Replace with an embedded Google Map iframe</p>
+        <a href="https://www.google.com/maps/search/193+Rue+Centre+Shawville+QC" target="_blank" rel="noopener" class="btn-primary" style="margin-top:.5rem" data-en="Get Directions" data-fr="Obtenir l'Itineraire">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Renaissance Variety</span>
+      <p data-en="Shawville's entertainment shop for video games, books, movies, music and collectibles. Retro to modern — all at great prices." data-fr="La boutique de divertissement de Shawville pour jeux video, livres, films, musique et objets de collection. Retro au moderne — tous a super prix.">Shawville&rsquo;s entertainment shop for video games, books, movies, music &amp; collectibles. Retro to modern &mdash; all at great prices.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Navigate" data-fr="Navigation">Navigate</h4>
+      <ul>
+        <li><a href="#about" data-en="About Us" data-fr="A Propos">About Us</a></li>
+        <li><a href="#services" data-en="Services" data-fr="Services">Services</a></li>
+        <li><a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a></li>
+        <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Connect" data-fr="Connecter">Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/HellZXpress/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/renaissancevariety/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:renaissancevariety@gmail.com">Email Us</a></li>
+        <li><a href="tel:+18196475086">(819) 647-5086</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Renaissance Variety. 193 Rue Centre, Shawville, QC.</p>
+    <p data-en="Website by" data-fr="Site web par">Website by <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a></p>
+  </div>
+</footer>
+
+<script>
+// ── DATA ──
+const STORE_KEY = 'rv_catalog_v2';
+const ADMIN_PW  = 'renaissance2025'; // Change this password before going live!
+
+function loadItems() {
+  try { const r = localStorage.getItem(STORE_KEY); return r ? JSON.parse(r) : samples(); }
+  catch(e) { return samples(); }
+}
+function saveItems(items) { localStorage.setItem(STORE_KEY, JSON.stringify(items)); }
+function samples() {
+  const t = Date.now();
+  return [
+    {id:t-1,  title:"Super Nintendo Console",       category:"games",       sub:"SNES System",               condition:"Good",     badge:"hot",  image:"", notes:"Tested and working",       ts:t-1},
+    {id:t-2,  title:"Pokemon Blue Version",          category:"games",       sub:"Game Boy Cartridge",         condition:"Good",     badge:"rare", image:"", notes:"",                          ts:t-2},
+    {id:t-3,  title:"The Lord of the Rings",         category:"books",       sub:"Tolkien – Paperback Box Set",condition:"Like New", badge:"new",  image:"", notes:"",                          ts:t-3},
+    {id:t-4,  title:"Fleetwood Mac – Rumours",       category:"music",       sub:"Vinyl LP",                   condition:"Good",     badge:"hot",  image:"", notes:"Original 1977 pressing",   ts:t-4},
+    {id:t-5,  title:"Jurassic Park",                 category:"movies",      sub:"VHS",                        condition:"Good",     badge:"",     image:"", notes:"",                          ts:t-5},
+    {id:t-6,  title:"The Dark Knight",               category:"movies",      sub:"Blu-ray",                    condition:"Like New", badge:"new",  image:"", notes:"",                          ts:t-6},
+    {id:t-7,  title:"Vintage Beyblade Collection",   category:"collectibles",sub:"10-piece lot",               condition:"Good",     badge:"rare", image:"", notes:"",                          ts:t-7},
+    {id:t-8,  title:"Nintendo 64 + Controllers",     category:"games",       sub:"N64 Console Bundle",         condition:"Good",     badge:"",     image:"", notes:"2 controllers included",   ts:t-8},
+    {id:t-9,  title:"AC/DC – Back in Black",         category:"music",       sub:"Vinyl LP",                   condition:"Good",     badge:"",     image:"", notes:"",                          ts:t-9},
+    {id:t-10, title:"Harry Potter Complete Series",  category:"books",       sub:"Hardcover Box Set",          condition:"Good",     badge:"hot",  image:"", notes:"",                          ts:t-10},
+    {id:t-11, title:"PlayStation 2 Slim",            category:"games",       sub:"PS2 Console + 5 Games",      condition:"Like New", badge:"new",  image:"", notes:"",                          ts:t-11},
+    {id:t-12, title:"Pulp Fiction",                  category:"movies",      sub:"DVD",                        condition:"Like New", badge:"",     image:"", notes:"",                          ts:t-12},
+  ];
+}
+
+let allItems = loadItems();
+let curLang = 'en', curFilter = 'all', curQ = '';
+
+// ── CATALOG ──
+const catLabels = {
+  games:       {en:'Video Games',   fr:'Jeux Video'},
+  books:       {en:'Books',         fr:'Livres'},
+  music:       {en:'Music',         fr:'Musique'},
+  movies:      {en:'Movies',        fr:'Films'},
+  collectibles:{en:'Collectibles',  fr:'Collection'},
+  other:       {en:'Other',         fr:'Autre'},
+};
+const catIcons = {
+  games:        '<rect x="2" y="6" width="20" height="12" rx="1"/><circle cx="12" cy="12" r="2"/>',
+  books:        '<path d="M4 19V5a2 2 0 012-2h13"/><path d="M4 19a2 2 0 002 2h13"/>',
+  music:        '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/>',
+  movies:       '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M16 4v16"/>',
+  collectibles: '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 23 12 19.77 5.82 23 7 14.14 2 9.27l6.91-1.01z"/>',
+  other:        '<circle cx="12" cy="12" r="9"/>',
+};
+const badgeDef = {
+  new:  {en:'NEW',      fr:'NOUVEAU',   cls:'badge-new'},
+  hot:  {en:'HOT',      fr:'POPULAIRE', cls:'badge-hot'},
+  rare: {en:'RARE',     fr:'RARE',      cls:'badge-rare'},
+};
+
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+function catLabel(c,l){return (catLabels[c]||{en:c,fr:c})[l]||c}
+function badgeHTML(b,l){const d=badgeDef[b];return d?`<span class="item-badge ${d.cls}">${d[l]||d.en}</span>`:'';}
+
+function renderCatalog(){
+  const q = curQ.toLowerCase().trim();
+  const grid = document.getElementById('catalogGrid');
+  const filtered = allItems.filter(item=>{
+    const mc = curFilter==='all'||item.category===curFilter;
+    const mq = !q||[item.title,item.sub,item.notes,catLabel(item.category,'en')].join(' ').toLowerCase().includes(q);
+    return mc&&mq;
+  }).sort((a,b)=>b.ts-a.ts);
+
+  document.getElementById('resultsCount').innerHTML =
+    (curLang==='fr'?'Affichage de <span>':'Showing <span>')+filtered.length+'</span>'+(curLang==='fr'?' articles':' items');
+
+  if(!filtered.length){
+    grid.innerHTML=`<div class="no-results"><span class="px">X_X</span>${curLang==='fr'?'Aucun article trouve. Essayez une autre recherche.':'No items found. Try a different search.'}</div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(item=>{
+    const img = item.image
+      ? `<img src="${esc(item.image)}" alt="${esc(item.title)}" loading="lazy" onerror="this.style.display='none'">`
+      : `<svg viewBox="0 0 24 24">${catIcons[item.category]||catIcons.other}</svg>`;
+    return `<div class="catalog-item"><div class="cat-img">${badgeHTML(item.badge,curLang)}${img}</div>
+      <div class="cat-info">
+        <div class="cat-type">${catLabel(item.category,curLang)}</div>
+        <h4>${esc(item.title)}</h4>
+        ${item.sub?`<div class="cat-sub">${esc(item.sub)}</div>`:''}
+        ${item.condition?`<span class="cat-cond">${esc(item.condition)}</span>`:''}
+      </div></div>`;
+  }).join('');
+}
+
+document.getElementById('catalogSearch').addEventListener('input',function(){curQ=this.value;renderCatalog()});
+document.querySelectorAll('.filter-btn').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filter-btn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); curFilter=b.dataset.filter; renderCatalog();
+}));
+
+// ── ADMIN ──
+let loggedIn = false;
+document.getElementById('showAdminBtn').addEventListener('click',()=>{
+  document.getElementById('adminPanel').classList.toggle('vis');
+  if(document.getElementById('adminPanel').classList.contains('vis')&&loggedIn) renderAdminList();
+});
+document.getElementById('adminLoginBtn').addEventListener('click',()=>{
+  if(document.getElementById('adminPwInput').value===ADMIN_PW){
+    loggedIn=true;
+    document.getElementById('adminLogin').style.display='none';
+    document.getElementById('adminMgr').style.display='block';
+    renderAdminList();
+  } else { document.getElementById('loginErr').style.display='block'; }
+});
+document.getElementById('adminPwInput').addEventListener('keydown',e=>{ if(e.key==='Enter') document.getElementById('adminLoginBtn').click(); });
+document.getElementById('adminLogoutBtn').addEventListener('click',()=>{
+  loggedIn=false;
+  document.getElementById('adminLogin').style.display='block';
+  document.getElementById('adminMgr').style.display='none';
+  document.getElementById('adminPwInput').value='';
+  document.getElementById('loginErr').style.display='none';
+  document.getElementById('adminPanel').classList.remove('vis');
+});
+document.getElementById('addItemBtn').addEventListener('click',()=>{
+  const title=document.getElementById('iTitle').value.trim();
+  if(!title){showMsg(curLang==='fr'?'Entrez un titre.':'Please enter a title.','err');return;}
+  allItems.unshift({id:Date.now(),title,category:document.getElementById('iCat').value,
+    sub:document.getElementById('iSub').value.trim(),condition:document.getElementById('iCond').value,
+    badge:document.getElementById('iBadge').value,image:document.getElementById('iImg').value.trim(),
+    notes:document.getElementById('iNotes').value.trim(),ts:Date.now()});
+  saveItems(allItems); renderCatalog(); renderAdminList(); clearForm();
+  showMsg(curLang==='fr'?'Article ajoute!':'Item added successfully!','ok');
+});
+document.getElementById('clearFormBtn').addEventListener('click',clearForm);
+function clearForm(){['iTitle','iSub','iImg','iNotes'].forEach(id=>document.getElementById(id).value='');document.getElementById('iCat').value='games';document.getElementById('iCond').value='Like New';document.getElementById('iBadge').value='';}
+function showMsg(msg,type){const el=document.getElementById('aMsg');el.textContent=msg;el.className='a-msg '+type;setTimeout(()=>el.className='a-msg',3500);}
+
+function renderAdminList(){
+  const q=(document.getElementById('aSearch').value||'').toLowerCase();
+  const list=document.getElementById('aList');
+  document.getElementById('aItemCount').textContent=`(${allItems.length} total)`;
+  const f=allItems.filter(i=>!q||(i.title+i.sub+i.category).toLowerCase().includes(q));
+  if(!f.length){list.innerHTML=`<div style="padding:1rem;color:var(--gray);font-size:.85rem">${curLang==='fr'?'Aucun article.':'No items.'}</div>`;return;}
+  list.innerHTML=f.map(i=>`<div class="a-row"><span class="ar-type">${catLabel(i.category,curLang)}</span><span class="ar-title">${esc(i.title)}</span><span class="ar-sub">${esc(i.sub||'')}</span><button class="btn-del" data-id="${i.id}">${curLang==='fr'?'Supprimer':'Delete'}</button></div>`).join('');
+  list.querySelectorAll('.btn-del').forEach(btn=>btn.addEventListener('click',()=>{
+    const id=Number(btn.dataset.id);
+    if(confirm(curLang==='fr'?'Supprimer cet article?':'Delete this item?')){
+      allItems=allItems.filter(i=>i.id!==id); saveItems(allItems); renderCatalog(); renderAdminList();
+      showMsg(curLang==='fr'?'Article supprime.':'Item deleted.','ok');
+    }
+  }));
+}
+document.getElementById('aSearch').addEventListener('input',renderAdminList);
+
+document.getElementById('exportBtn').addEventListener('click',()=>{
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([JSON.stringify(allItems,null,2)],{type:'application/json'}));
+  a.download='renaissance-catalog.json'; a.click();
+});
+document.getElementById('importBtn').addEventListener('click',()=>document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change',function(){
+  const file=this.files[0]; if(!file) return;
+  const r=new FileReader();
+  r.onload=e=>{try{const d=JSON.parse(e.target.result);if(!Array.isArray(d))throw 0;allItems=d;saveItems(d);renderCatalog();renderAdminList();showMsg(`Imported ${d.length} items!`,'ok');}catch{showMsg('Import failed: invalid JSON.','err');}};
+  r.readAsText(file); this.value='';
+});
+
+// ── LANGUAGE ──
+function setLang(l){
+  curLang=l;
+  document.querySelectorAll('[data-en]').forEach(el=>{const v=el.getAttribute('data-'+l)||el.getAttribute('data-en');if(v)el.innerHTML=v;});
+  document.querySelectorAll('#langToggle,#langToggleMobile').forEach(b=>b.textContent=l==='en'?'FR':'EN');
+  document.documentElement.lang=l==='fr'?'fr':'en';
+  document.getElementById('catalogSearch').placeholder=l==='fr'?'Rechercher titres, artistes, genres...':'Search titles, artists, genres...';
+  document.querySelector('.filter-label').innerHTML=l==='fr'?'Categorie:':'Category:';
+  renderCatalog(); if(loggedIn) renderAdminList();
+}
+document.getElementById('langToggle').addEventListener('click',()=>setLang(curLang==='en'?'fr':'en'));
+document.getElementById('langToggleMobile').addEventListener('click',()=>setLang(curLang==='en'?'fr':'en'));
+
+// ── HAMBURGER ──
+const ham=document.getElementById('hamburger'), mnav=document.getElementById('mobileNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mnav.classList.toggle('open');});
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mnav.classList.remove('open');}));
+
+// ── REVEAL ──
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ── INIT ──
+renderCatalog();
+</script>
+</body>
+</html>

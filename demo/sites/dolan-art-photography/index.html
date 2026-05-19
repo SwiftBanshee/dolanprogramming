@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dolan Art | Fine Art & Custom Paintings | Quebec, Canada</title>
+  <meta name="description" content="Dolan Art by Cheryl Dolan — original paintings, custom artwork, and fine art commissions in Quebec, Canada. Browse our gallery of oils, acrylics, watercolors and more." />
+  <meta name="keywords" content="Dolan Art, Cheryl Dolan, peintures Quebec, artist Quebec, custom paintings Quebec, fine art Canada, original artwork, art gallery Quebec, commission painting" />
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Quebec, Canada" />
+  <meta property="og:title" content="Dolan Art | Fine Art & Custom Paintings | Quebec" />
+  <meta property="og:description" content="Original paintings and custom fine art by Cheryl Dolan, Quebec artist." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== VARIABLES ===== */
+    :root {
+      --cream: #f5f0e8;
+      --warm-white: #faf8f4;
+      --charcoal: #1a1714;
+      --deep-brown: #2c2018;
+      --gold: #b8922a;
+      --gold-light: #d4a843;
+      --terracotta: #c4623a;
+      --dusty-rose: #c9897a;
+      --sage: #7a8c6e;
+      --ink: #2a2420;
+      --mid-gray: #888075;
+      --light-border: #e0d8cc;
+      --nav-height: 72px;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--warm-white);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+    img { display: block; width: 100%; object-fit: cover; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; font-family: inherit; border: none; background: none; }
+
+    /* ===== GRAIN OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ===== STICKY HEADER ===== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(250, 248, 244, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--light-border);
+      transition: box-shadow var(--transition);
+    }
+    #header.scrolled {
+      box-shadow: 0 2px 24px rgba(26,23,20,0.08);
+    }
+    .header-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+    .header-logo .logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--charcoal);
+      letter-spacing: -0.02em;
+    }
+    .header-logo .logo-sub {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .header-nav a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .header-nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width var(--transition);
+    }
+    .header-nav a:hover { color: var(--charcoal); }
+    .header-nav a:hover::after { width: 100%; }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .lang-btn {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border: 1px solid var(--light-border);
+      border-radius: 2px;
+      color: var(--charcoal);
+      background: transparent;
+      transition: all var(--transition);
+    }
+    .lang-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: white;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--charcoal);
+      transition: all var(--transition);
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--nav-height);
+      left: 0; right: 0;
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--light-border);
+      padding: 24px 40px 32px;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 999;
+      box-shadow: 0 8px 32px rgba(26,23,20,0.1);
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all var(--transition);
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .mobile-menu a {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      border-bottom: 1px solid var(--light-border);
+      padding-bottom: 16px;
+    }
+    .mobile-menu .lang-btn-mobile {
+      align-self: flex-start;
+      margin-top: 4px;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: var(--nav-height);
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 60px 80px 60px;
+      position: relative;
+    }
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; bottom: 0;
+      width: 100%;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--warm-white) 100%);
+      z-index: -1;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--charcoal);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--terracotta);
+    }
+    .hero-desc {
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--mid-gray);
+      max-width: 420px;
+      margin-bottom: 44px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.65s forwards;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 15px 36px;
+      background: var(--charcoal);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+      border: 1px solid var(--charcoal);
+    }
+    .btn-primary:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(184,146,42,0.3);
+    }
+    .btn-outline {
+      display: inline-block;
+      padding: 15px 36px;
+      background: transparent;
+      color: var(--charcoal);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--charcoal);
+      transition: all var(--transition);
+    }
+    .btn-outline:hover {
+      background: var(--charcoal);
+      color: white;
+      transform: translateY(-2px);
+    }
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-img-stack {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 4px;
+    }
+    .hero-img-item {
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-img-item img {
+      height: 100%;
+      transition: transform 0.8s ease;
+    }
+    .hero-img-item:hover img { transform: scale(1.05); }
+    .hero-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(26,23,20,0.15), transparent);
+    }
+    .hero-img-item:first-child {
+      grid-row: span 2;
+      animation: slideInRight 1s 0.3s both;
+    }
+    .hero-img-item:nth-child(2) { animation: slideInRight 1s 0.5s both; }
+    .hero-img-item:nth-child(3) { animation: slideInRight 1s 0.7s both; }
+
+    /* Floating badge */
+    .hero-badge {
+      position: absolute;
+      bottom: 48px;
+      left: -24px;
+      background: var(--charcoal);
+      color: white;
+      padding: 16px 28px;
+      opacity: 0;
+      animation: fadeUp 0.8s 1.1s forwards;
+      z-index: 10;
+    }
+    .hero-badge .badge-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1;
+      color: var(--gold-light);
+    }
+    .hero-badge .badge-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-top: 4px;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 60px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0;
+      animation: fadeUp 0.8s 1.3s forwards;
+    }
+    .scroll-line {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .scroll-line::after {
+      content: '';
+      position: absolute;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: var(--charcoal);
+      animation: slideLine 1.8s 1.5s infinite;
+    }
+    .scroll-text {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+    }
+
+    /* ===== MARQUEE TICKER ===== */
+    .marquee-wrap {
+      background: var(--charcoal);
+      padding: 14px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 22s linear infinite;
+      white-space: nowrap;
+    }
+    .marquee-track span {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      padding: 0 32px;
+    }
+    .marquee-track .dot {
+      color: var(--gold);
+      font-size: 0.9rem;
+      padding: 0;
+    }
+
+    /* ===== SECTION COMMONS ===== */
+    section { padding: 100px 0; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 3.5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+    }
+    .section-title em { font-style: italic; color: var(--terracotta); }
+    .section-desc {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--mid-gray);
+      max-width: 540px;
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      background: var(--cream);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-frame {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      position: relative;
+    }
+    .about-img-frame img { height: 100%; }
+    .about-img-frame::after {
+      content: '';
+      position: absolute;
+      inset: 16px -16px -16px 16px;
+      border: 1px solid var(--gold);
+      z-index: -1;
+    }
+    .about-accent {
+      position: absolute;
+      top: -24px;
+      right: -24px;
+      width: 120px;
+      height: 120px;
+      background: var(--terracotta);
+      opacity: 0.12;
+      border-radius: 50%;
+    }
+    .about-content { padding: 20px 0; }
+    .about-content .section-desc { margin-bottom: 28px; }
+    .about-content .section-desc + .section-desc { margin-top: 0; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+      padding-top: 40px;
+      border-top: 1px solid var(--light-border);
+    }
+    .stat-item {}
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-top: 6px;
+    }
+
+    /* ===== SERVICES ===== */
+    #services {}
+    .services-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 64px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      background: var(--cream);
+      padding: 44px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: all var(--transition);
+      cursor: default;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .service-card:hover {
+      background: var(--charcoal);
+      transform: translateY(-4px);
+      z-index: 2;
+    }
+    .service-card:hover .service-name,
+    .service-card:hover .service-desc { color: white; }
+    .service-card:hover .service-num { color: var(--gold-light); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--light-border);
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: color var(--transition);
+    }
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 14px;
+      transition: color var(--transition);
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--mid-gray);
+      transition: color var(--transition);
+    }
+
+    /* ===== NEW RELEASES ===== */
+    #new-releases {
+      background: var(--charcoal);
+      overflow: hidden;
+      position: relative;
+    }
+    #new-releases::before {
+      content: 'NEW';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 22vw;
+      font-weight: 900;
+      color: rgba(255,255,255,0.025);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    #new-releases .section-eyebrow { color: var(--gold-light); }
+    #new-releases .section-title { color: white; }
+    #new-releases .section-desc { color: rgba(255,255,255,0.5); }
+    .releases-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+    }
+    .releases-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .release-card {
+      position: relative;
+      overflow: hidden;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .release-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--gold);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+    .release-img {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .release-img img {
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+    .release-card:hover .release-img img { transform: scale(1.07); }
+    .release-info {
+      padding: 20px 20px 24px;
+    }
+    .release-badge {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(184,146,42,0.15);
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 10px;
+    }
+    .release-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .release-meta {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 300;
+    }
+
+    /* ===== CATALOG ===== */
+    #catalog { background: var(--warm-white); }
+    .catalog-controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+    .catalog-search {
+      flex: 1;
+      min-width: 220px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--cream);
+      border: 1px solid var(--light-border);
+      padding: 12px 20px;
+    }
+    .catalog-search input {
+      border: none;
+      background: transparent;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      width: 100%;
+      outline: none;
+    }
+    .catalog-search input::placeholder { color: var(--mid-gray); }
+    .filter-btn {
+      padding: 12px 22px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: 1px solid var(--light-border);
+      background: white;
+      color: var(--mid-gray);
+      transition: all var(--transition);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--charcoal);
+      color: white;
+      border-color: var(--charcoal);
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .catalog-item {
+      background: white;
+      border: 1px solid var(--light-border);
+      overflow: hidden;
+      transition: all var(--transition);
+      cursor: pointer;
+    }
+    .catalog-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(26,23,20,0.1);
+      border-color: var(--gold);
+    }
+    .catalog-item-img {
+      aspect-ratio: 1/1;
+      overflow: hidden;
+      background: var(--cream);
+    }
+    .catalog-item-img img {
+      height: 100%;
+      transition: transform 0.5s ease;
+    }
+    .catalog-item:hover .catalog-item-img img { transform: scale(1.06); }
+    .catalog-item-info {
+      padding: 18px 20px 20px;
+    }
+    .catalog-item-cat {
+      font-size: 0.64rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .catalog-item-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+    .catalog-item-meta {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      font-weight: 300;
+    }
+    .catalog-item-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+    .catalog-item-tag {
+      font-size: 0.62rem;
+      padding: 3px 8px;
+      background: var(--cream);
+      color: var(--mid-gray);
+      border-radius: 2px;
+    }
+    .catalog-item.is-new .catalog-item-info::before {
+      content: attr(data-badge);
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--terracotta);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-bottom: 8px;
+    }
+    .catalog-load-more {
+      text-align: center;
+      margin-top: 56px;
+    }
+    .catalog-count {
+      font-size: 0.8rem;
+      color: var(--mid-gray);
+      margin-bottom: 20px;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,23,20,0.92);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-inner {
+      max-width: 900px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: white;
+      overflow: hidden;
+      animation: fadeUp 0.4s both;
+    }
+    .lightbox-img { aspect-ratio: 1/1; }
+    .lightbox-img img { height: 100%; }
+    .lightbox-details {
+      padding: 48px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .lightbox-cat {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .lightbox-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .lightbox-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--mid-gray);
+      margin-bottom: 28px;
+    }
+    .lightbox-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      border-top: 1px solid var(--light-border);
+      padding-top: 28px;
+    }
+    .spec-item .spec-label {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 4px;
+    }
+    .spec-item .spec-val {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px; right: 24px;
+      color: white;
+      font-size: 1.8rem;
+      line-height: 1;
+      padding: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity var(--transition);
+    }
+    .lightbox-close:hover { opacity: 1; }
+
+    /* ===== ADMIN PANEL ===== */
+    #admin-panel {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,23,20,0.85);
+      z-index: 3000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #admin-panel.open { display: flex; }
+    .admin-modal {
+      background: white;
+      width: 100%;
+      max-width: 760px;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: fadeUp 0.3s both;
+    }
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 36px;
+      border-bottom: 1px solid var(--light-border);
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 1;
+    }
+    .admin-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--charcoal);
+    }
+    .admin-body { padding: 36px; }
+    .admin-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 32px;
+      border-bottom: 2px solid var(--light-border);
+    }
+    .admin-tab {
+      padding: 10px 24px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: all var(--transition);
+    }
+    .admin-tab.active {
+      color: var(--charcoal);
+      border-bottom-color: var(--gold);
+    }
+    .admin-section { display: none; }
+    .admin-section.active { display: block; }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+    .form-group.full { grid-column: span 2; }
+    .form-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+    }
+    .form-input, .form-select, .form-textarea {
+      font-family: 'Jost', sans-serif;
+      font-size: 0.9rem;
+      padding: 11px 16px;
+      border: 1px solid var(--light-border);
+      background: var(--warm-white);
+      color: var(--charcoal);
+      outline: none;
+      transition: border-color var(--transition);
+      width: 100%;
+    }
+    .form-textarea { resize: vertical; min-height: 80px; }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--charcoal);
+      cursor: pointer;
+    }
+    .form-check input { width: 16px; height: 16px; accent-color: var(--gold); }
+    .admin-submit {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .btn-admin {
+      padding: 13px 30px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--charcoal);
+      color: white;
+      border: 1px solid var(--charcoal);
+      transition: all var(--transition);
+    }
+    .btn-admin:hover { background: var(--gold); border-color: var(--gold); }
+    .btn-admin.danger { background: #c0392b; border-color: #c0392b; }
+    .btn-admin.danger:hover { background: #a93226; border-color: #a93226; }
+    .admin-list { display: flex; flex-direction: column; gap: 8px; }
+    .admin-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      background: var(--cream);
+      border: 1px solid var(--light-border);
+    }
+    .admin-list-item-info {}
+    .admin-list-item-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+    }
+    .admin-list-item-meta {
+      font-size: 0.78rem;
+      color: var(--mid-gray);
+      margin-top: 2px;
+    }
+    .admin-list-item-actions { display: flex; gap: 8px; }
+    .btn-sm {
+      padding: 6px 14px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: all var(--transition);
+    }
+    .btn-sm.edit {
+      background: var(--charcoal);
+      color: white;
+      border: 1px solid var(--charcoal);
+    }
+    .btn-sm.delete {
+      background: transparent;
+      color: #c0392b;
+      border: 1px solid #c0392b;
+    }
+    .btn-sm.delete:hover { background: #c0392b; color: white; }
+    .admin-badge {
+      display: inline-block;
+      font-size: 0.6rem;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .admin-badge.new { background: var(--terracotta); color: white; }
+    .admin-badge.feat { background: var(--gold); color: white; }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--cream); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info {}
+    .contact-info .section-desc { margin-bottom: 40px; }
+    .contact-links { display: flex; flex-direction: column; gap: 20px; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: white;
+      border: 1px solid var(--light-border);
+      transition: all var(--transition);
+    }
+    .contact-link:hover {
+      border-color: var(--gold);
+      transform: translateX(4px);
+    }
+    .contact-link-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-link-icon svg { width: 18px; height: 18px; fill: white; }
+    .contact-link-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid-gray);
+      margin-bottom: 4px;
+    }
+    .contact-link-val {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+    .contact-form {}
+    .contact-form .form-group { margin-bottom: 16px; }
+    .contact-note {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--mid-gray);
+      margin-top: 16px;
+      font-style: italic;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--deep-brown);
+      padding: 64px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 56px;
+    }
+    .footer-brand .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 16px;
+    }
+    .footer-brand p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.45);
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.5);
+      transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: white; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 28px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      font-weight: 300;
+    }
+    .footer-credit {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      font-weight: 300;
+    }
+    .footer-credit a {
+      color: var(--gold-light);
+      transition: color var(--transition);
+    }
+    .footer-credit a:hover { color: white; }
+
+    /* ===== ADMIN TRIGGER ===== */
+    .admin-trigger {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: var(--charcoal);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      z-index: 500;
+      opacity: 0.5;
+      transition: opacity var(--transition);
+    }
+    .admin-trigger:hover { opacity: 1; }
+    .admin-trigger svg { width: 20px; height: 20px; }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes slideLine {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .hero-left { padding: 80px 40px 80px; min-height: calc(100vh - var(--nav-height)); }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .services-header { grid-template-columns: 1fr; gap: 20px; }
+      .releases-track { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      :root { --nav-height: 64px; }
+      #header { padding: 0 20px; }
+      .header-nav { display: none; }
+      .header-right .lang-btn { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: flex; }
+      .container { padding: 0 20px; }
+      section { padding: 72px 0; }
+      .hero-left { padding: 48px 20px 60px; }
+      .hero-title { font-size: 2.4rem; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+      .services-grid { grid-template-columns: 1fr; }
+      .releases-track { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .catalog-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .lightbox-inner { grid-template-columns: 1fr; max-height: 90vh; overflow-y: auto; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: auto; }
+    }
+    @media (max-width: 480px) {
+      .releases-track { grid-template-columns: 1fr; }
+      .catalog-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr; }
+      .admin-modal { max-height: 100vh; }
+    }
+
+    /* Notification */
+    .toast {
+      position: fixed;
+      bottom: 80px;
+      right: 24px;
+      background: var(--charcoal);
+      color: white;
+      padding: 14px 24px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      z-index: 5000;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all var(--transition);
+      pointer-events: none;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- STICKY HEADER -->
+<header id="header">
+  <a href="#" class="header-logo">
+    <span class="logo-main">Dolan Art</span>
+    <span class="logo-sub" data-en="Fine Art by Cheryl Dolan" data-fr="Beaux-Arts par Cheryl Dolan">Fine Art by Cheryl Dolan</span>
+  </a>
+  <nav class="header-nav">
+    <a href="#about" data-en="About" data-fr="À propos">About</a>
+    <a href="#services" data-en="Services" data-fr="Services">Services</a>
+    <a href="#new-releases" data-en="New Releases" data-fr="Nouveautés">New Releases</a>
+    <a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a>
+    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  </nav>
+  <div class="header-right">
+    <button class="lang-btn" id="lang-toggle">FR</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about" class="mobile-nav-link" data-en="About" data-fr="À propos">About</a>
+  <a href="#services" class="mobile-nav-link" data-en="Services" data-fr="Services">Services</a>
+  <a href="#new-releases" class="mobile-nav-link" data-en="New Releases" data-fr="Nouveautés">New Releases</a>
+  <a href="#catalog" class="mobile-nav-link" data-en="Catalog" data-fr="Catalogue">Catalog</a>
+  <a href="#contact" class="mobile-nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+  <button class="lang-btn lang-btn-mobile" id="lang-toggle-mobile">FR</button>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow" data-en="Quebec Artist · Original Fine Art" data-fr="Artiste Québécoise · Beaux-Arts Originaux">Quebec Artist · Original Fine Art</p>
+    <h1 class="hero-title" data-en="Art that <em>speaks</em> to the soul" data-fr="L'art qui <em>parle</em> à l'âme">Art that <em>speaks</em> to the soul</h1>
+    <p class="hero-desc" data-en="Original paintings, custom commissions, and expressive fine art by Cheryl Dolan — proudly created in Quebec, Canada." data-fr="Peintures originales, commandes personnalisées et beaux-arts expressifs par Cheryl Dolan — créés fièrement au Québec, Canada.">Original paintings, custom commissions, and expressive fine art by Cheryl Dolan — proudly created in Quebec, Canada.</p>
+    <div class="hero-btns">
+      <a href="#catalog" class="btn-primary" data-en="Browse Catalog" data-fr="Voir le Catalogue">Browse Catalog</a>
+      <a href="#contact" class="btn-outline" data-en="Commission a Piece" data-fr="Commander une Oeuvre">Commission a Piece</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text" data-en="Scroll to explore" data-fr="Défiler pour explorer">Scroll to explore</span>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-img-stack">
+      <div class="hero-img-item">
+        <img src="https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=600&h=900&fit=crop" alt="Painting 1" />
+        <div class="hero-img-overlay"></div>
+      </div>
+      <div class="hero-img-item">
+        <img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&h=450&fit=crop" alt="Painting 2" />
+        <div class="hero-img-overlay"></div>
+      </div>
+      <div class="hero-img-item">
+        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&h=450&fit=crop" alt="Painting 3" />
+        <div class="hero-img-overlay"></div>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-num" id="total-count">24</div>
+      <div class="badge-label" data-en="Works in Catalog" data-fr="Oeuvres au Catalogue">Works in Catalog</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marquee">
+    <span data-en="Original Paintings" data-fr="Peintures Originales">Original Paintings</span>
+    <span class="dot">·</span>
+    <span data-en="Custom Commissions" data-fr="Commandes Sur Mesure">Custom Commissions</span>
+    <span class="dot">·</span>
+    <span data-en="Oil on Canvas" data-fr="Huile sur Toile">Oil on Canvas</span>
+    <span class="dot">·</span>
+    <span data-en="Watercolour" data-fr="Aquarelle">Watercolour</span>
+    <span class="dot">·</span>
+    <span data-en="Acrylic" data-fr="Acrylique">Acrylic</span>
+    <span class="dot">·</span>
+    <span data-en="Quebec Artist" data-fr="Artiste Québécoise">Quebec Artist</span>
+    <span class="dot">·</span>
+    <span data-en="Portraits" data-fr="Portraits">Portraits</span>
+    <span class="dot">·</span>
+    <span data-en="Landscapes" data-fr="Paysages">Landscapes</span>
+    <span class="dot">·</span>
+    <!-- duplicate for seamless loop -->
+    <span data-en="Original Paintings" data-fr="Peintures Originales">Original Paintings</span>
+    <span class="dot">·</span>
+    <span data-en="Custom Commissions" data-fr="Commandes Sur Mesure">Custom Commissions</span>
+    <span class="dot">·</span>
+    <span data-en="Oil on Canvas" data-fr="Huile sur Toile">Oil on Canvas</span>
+    <span class="dot">·</span>
+    <span data-en="Watercolour" data-fr="Aquarelle">Watercolour</span>
+    <span class="dot">·</span>
+    <span data-en="Acrylic" data-fr="Acrylique">Acrylic</span>
+    <span class="dot">·</span>
+    <span data-en="Quebec Artist" data-fr="Artiste Québécoise">Quebec Artist</span>
+    <span class="dot">·</span>
+    <span data-en="Portraits" data-fr="Portraits">Portraits</span>
+    <span class="dot">·</span>
+    <span data-en="Landscapes" data-fr="Paysages">Landscapes</span>
+    <span class="dot">·</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <div class="about-img-frame">
+          <img src="cheryl-dolan.jpg" alt="Artist at work — replace with photo of Cheryl Dolan" />
+        </div>
+        <div class="about-accent"></div>
+      </div>
+      <div class="about-content reveal">
+        <p class="section-eyebrow" data-en="About the Artist" data-fr="À propos de l'Artiste">About the Artist</p>
+        <h2 class="section-title" data-en="A passion for <em>colour</em> and canvas" data-fr="Une passion pour la <em>couleur</em> et la toile">A passion for <em>colour</em> and canvas</h2>
+        <p class="section-desc" data-en="Cheryl Dolan is a Quebec-based fine art painter whose work captures the beauty of everyday life through vibrant colour, expressive brushwork, and a deep emotional connection to her subjects." data-fr="Cheryl Dolan est une peintre de beaux-arts basée au Québec dont le travail capture la beauté de la vie quotidienne à travers des couleurs vives, une touche expressive et un lien émotionnel profond avec ses sujets.">Cheryl Dolan is a Quebec-based fine art painter whose work captures the beauty of everyday life through vibrant colour, expressive brushwork, and a deep emotional connection to her subjects.</p>
+        <p class="section-desc" style="margin-top:16px" data-en="From landscapes that breathe with light to intimate portraits and still lifes, each piece is created with care, intention, and a love of the craft. Commissions are warmly welcomed." data-fr="Des paysages lumineux aux portraits intimes et natures mortes, chaque pièce est créée avec soin, intention et amour du métier. Les commandes sont chaleureusement accueillies.">From landscapes that breathe with light to intimate portraits and still lifes, each piece is created with care, intention, and a love of the craft. Commissions are warmly welcomed.</p>
+        <div class="about-stats">
+          <div class="stat-item">
+            <div class="stat-num">20+</div>
+            <div class="stat-label" data-en="Years Painting" data-fr="Années de Peinture">Years Painting</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="catalog-stat">200+</div>
+            <div class="stat-label" data-en="Works Created" data-fr="Oeuvres Créées">Works Created</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">QC</div>
+            <div class="stat-label" data-en="Quebec, Canada" data-fr="Québec, Canada">Quebec, Canada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div>
+        <p class="section-eyebrow" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</p>
+        <h2 class="section-title" data-en="Services &amp; <em>Specialties</em>" data-fr="Services &amp; <em>Spécialités</em>">Services &amp; <em>Specialties</em></h2>
+      </div>
+      <p class="section-desc" data-en="From original fine art to personal commissions — each service is handled with the same care and artistry that defines every piece that leaves the studio." data-fr="Des beaux-arts originaux aux commissions personnelles — chaque service est traité avec le même soin et le même savoir-faire qui définissent chaque pièce quittant l'atelier.">From original fine art to personal commissions — each service is handled with the same care and artistry that defines every piece that leaves the studio.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        <div class="service-name" data-en="Original Paintings" data-fr="Peintures Originales">Original Paintings</div>
+        <p class="service-desc" data-en="One-of-a-kind original works available for purchase. Browse the catalog to find landscapes, portraits, still lifes, and more — each piece unique and ready to hang." data-fr="Oeuvres originales uniques disponibles à l'achat. Parcourez le catalogue pour trouver des paysages, portraits, natures mortes et plus — chaque pièce unique et prête à accrocher.">One-of-a-kind original works available for purchase. Browse the catalog to find landscapes, portraits, still lifes, and more — each piece unique and ready to hang.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        <div class="service-name" data-en="Custom Commissions" data-fr="Commandes Sur Mesure">Custom Commissions</div>
+        <p class="service-desc" data-en="Have a vision? Bring it to life. Commission a personalized painting — a cherished memory, a beloved pet, a portrait, or a landscape that means something to you." data-fr="Avez-vous une vision? Donnez-lui vie. Commandez une peinture personnalisée — un souvenir précieux, un animal bien-aimé, un portrait ou un paysage qui vous est cher.">Have a vision? Bring it to life. Commission a personalized painting — a cherished memory, a beloved pet, a portrait, or a landscape that means something to you.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        <div class="service-name" data-en="Pet Portraits" data-fr="Portraits d'Animaux">Pet Portraits</div>
+        <p class="service-desc" data-en="A beloved speciality — capturing the personality and spirit of your furry friends in paint. A timeless gift for any pet lover." data-fr="Une spécialité bien-aimée — capturer la personnalité et l'esprit de vos compagnons à fourrure en peinture. Un cadeau intemporel pour tout amoureux des animaux.">A beloved speciality — capturing the personality and spirit of your furry friends in paint. A timeless gift for any pet lover.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        <div class="service-name" data-en="Portrait Painting" data-fr="Portrait">Portrait Painting</div>
+        <p class="service-desc" data-en="Family portraits, individual likenesses, and commemorative pieces. Painted with warmth and a skilled eye for capturing character and emotion." data-fr="Portraits de famille, portraits individuels et pièces commémoratives. Peints avec chaleur et un oeil habile pour capturer le caractère et les émotions.">Family portraits, individual likenesses, and commemorative pieces. Painted with warmth and a skilled eye for capturing character and emotion.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">05</div>
+        <div class="service-name" data-en="Landscape &amp; Nature" data-fr="Paysage &amp; Nature">Landscape &amp; Nature</div>
+        <p class="service-desc" data-en="Celebrating the beauty of the Canadian landscape — from the Quebec countryside to serene waterways, vibrant seasons, and sweeping skies." data-fr="Célébrer la beauté du paysage canadien — de la campagne québécoise aux voies navigables sereines, aux saisons éclatantes et aux vastes ciels.">Celebrating the beauty of the Canadian landscape — from the Quebec countryside to serene waterways, vibrant seasons, and sweeping skies.</p>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num">06</div>
+        <div class="service-name" data-en="Corporate &amp; Gifts" data-fr="Corporatif &amp; Cadeaux">Corporate &amp; Gifts</div>
+        <p class="service-desc" data-en="Original art makes an unforgettable gift or a distinguished piece for an office or business space. Contact us for corporate inquiries and gift commissions." data-fr="L'art original est un cadeau inoubliable ou une pièce distinguée pour un bureau ou un espace commercial. Contactez-nous pour les demandes corporatives et commandes-cadeaux.">Original art makes an unforgettable gift or a distinguished piece for an office or business space. Contact us for corporate inquiries and gift commissions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW RELEASES -->
+<section id="new-releases">
+  <div class="container">
+    <div class="releases-header reveal">
+      <div>
+        <p class="section-eyebrow" data-en="Just Added" data-fr="Tout Juste Ajouté">Just Added</p>
+        <h2 class="section-title" data-en="New <em>Releases</em>" data-fr="Nouvelles <em>Oeuvres</em>">New <em>Releases</em></h2>
+      </div>
+      <a href="#catalog" class="btn-outline" style="color:white;border-color:rgba(255,255,255,0.3)" data-en="View Full Catalog" data-fr="Voir le Catalogue Complet">View Full Catalog</a>
+    </div>
+    <div class="releases-track" id="new-releases-grid">
+      <!-- Populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG -->
+<section id="catalog">
+  <div class="container">
+    <div style="margin-bottom:48px" class="reveal">
+      <p class="section-eyebrow" data-en="Art Collection" data-fr="Collection d'Art">Art Collection</p>
+      <h2 class="section-title" data-en="Browse the <em>Catalog</em>" data-fr="Parcourez le <em>Catalogue</em>">Browse the <em>Catalog</em></h2>
+      <p class="section-desc" data-en="Explore the full collection — from new additions to timeless classics. Use the filters to find exactly what you're looking for." data-fr="Explorez la collection complète — des nouveaux ajouts aux classiques intemporels. Utilisez les filtres pour trouver exactement ce que vous cherchez.">Explore the full collection — from new additions to timeless classics. Use the filters to find exactly what you're looking for.</p>
+    </div>
+    <div class="catalog-controls">
+      <div class="catalog-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="catalog-search-input" data-placeholder-en="Search paintings..." data-placeholder-fr="Rechercher des peintures..." placeholder="Search paintings..." />
+      </div>
+      <button class="filter-btn active" data-filter="all" data-en="All" data-fr="Tout">All</button>
+      <button class="filter-btn" data-filter="landscape" data-en="Landscape" data-fr="Paysage">Landscape</button>
+      <button class="filter-btn" data-filter="portrait" data-en="Portrait" data-fr="Portrait">Portrait</button>
+      <button class="filter-btn" data-filter="still-life" data-en="Still Life" data-fr="Nature Morte">Still Life</button>
+      <button class="filter-btn" data-filter="abstract" data-en="Abstract" data-fr="Abstrait">Abstract</button>
+      <button class="filter-btn" data-filter="animals" data-en="Animals" data-fr="Animaux">Animals</button>
+    </div>
+    <div class="catalog-count" id="catalog-count-display"></div>
+    <div class="catalog-grid" id="catalog-grid"></div>
+    <div class="catalog-load-more">
+      <button class="btn-primary" id="load-more-btn" data-en="Load More Paintings" data-fr="Charger Plus de Peintures">Load More Paintings</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <p class="section-eyebrow" data-en="Get in Touch" data-fr="Contactez-nous">Get in Touch</p>
+        <h2 class="section-title" data-en="Let's create something <em>beautiful</em>" data-fr="Créons quelque chose de <em>beau</em>">Let's create something <em>beautiful</em></h2>
+        <p class="section-desc" data-en="Interested in a commission, a purchase, or simply want to know more? Reach out through Facebook or the form — Cheryl looks forward to hearing from you." data-fr="Intéressé par une commande, un achat ou souhaitez-vous simplement en savoir plus? Contactez-nous via Facebook ou le formulaire — Cheryl sera ravie d'avoir de vos nouvelles.">Interested in a commission, a purchase, or simply want to know more? Reach out through Facebook or the form — Cheryl looks forward to hearing from you.</p>
+        <div class="contact-links" style="margin-top:36px">
+          <a href="https://www.facebook.com/DolanArt/" target="_blank" class="contact-link">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label" data-en="Facebook Group" data-fr="Groupe Facebook">Facebook Group</div>
+              <div class="contact-link-val">Dolan Art</div>
+            </div>
+          </a>
+          <div class="contact-link" style="cursor:default">
+            <div class="contact-link-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-link-label" data-en="Location" data-fr="Emplacement">Location</div>
+              <div class="contact-link-val" data-en="Quebec, Canada" data-fr="Québec, Canada">Quebec, Canada</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-en="Your Name" data-fr="Votre Nom">Your Name</label>
+            <input type="text" class="form-input" id="cf-name" data-placeholder-en="Jane Smith" data-placeholder-fr="Marie Tremblay" placeholder="Jane Smith" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Email Address" data-fr="Adresse Courriel">Email Address</label>
+            <input type="email" class="form-input" id="cf-email" placeholder="hello@example.com" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-en="Subject" data-fr="Sujet">Subject</label>
+          <select class="form-select" id="cf-subject">
+            <option data-en="Commission Inquiry" data-fr="Demande de Commission">Commission Inquiry</option>
+            <option data-en="Purchase Inquiry" data-fr="Demande d'Achat">Purchase Inquiry</option>
+            <option data-en="General Question" data-fr="Question Générale">General Question</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-en="Message" data-fr="Message">Message</label>
+          <textarea class="form-textarea" id="cf-message" rows="5" data-placeholder-en="Tell me about your project or inquiry..." data-placeholder-fr="Parlez-moi de votre projet ou de votre demande..."></textarea>
+        </div>
+        <button class="btn-primary" style="width:100%;text-align:center" onclick="submitContactForm()" data-en="Send Message" data-fr="Envoyer le Message">Send Message</button>
+        <p class="contact-note" data-en="* This form is for inquiries only. No purchases are made through this website." data-fr="* Ce formulaire est uniquement pour les demandes. Aucun achat n'est effectué via ce site.">* This form is for inquiries only. No purchases are made through this website.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">Dolan Art</div>
+        <p data-en="Original fine art and custom commissions by Cheryl Dolan, proudly based in Quebec, Canada." data-fr="Beaux-arts originaux et commandes personnalisées par Cheryl Dolan, fièrement basée au Québec, Canada.">Original fine art and custom commissions by Cheryl Dolan, proudly based in Quebec, Canada.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Explore" data-fr="Explorer">Explore</h4>
+        <ul>
+          <li><a href="#about" data-en="About Cheryl" data-fr="À propos de Cheryl">About Cheryl</a></li>
+          <li><a href="#services" data-en="Services" data-fr="Services">Services</a></li>
+          <li><a href="#new-releases" data-en="New Releases" data-fr="Nouvelles Oeuvres">New Releases</a></li>
+          <li><a href="#catalog" data-en="Full Catalog" data-fr="Catalogue Complet">Full Catalog</a></li>
+          <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Connect" data-fr="Connecter">Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/DolanArt/" target="_blank">Facebook — Dolan Art</a></li>
+          <li><a href="https://paintingsbycheryldolan.blogspot.com/" target="_blank" data-en="Blog" data-fr="Blogue">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-en="© 2025 Dolan Art. All rights reserved. Quebec, Canada." data-fr="© 2025 Dolan Art. Tous droits réservés. Québec, Canada.">© 2025 Dolan Art. All rights reserved. Quebec, Canada.</p>
+      <p class="footer-credit" data-en="Website designed &amp; developed by <a href='https://www.dolanprogramming.ca' target='_blank'>Dolan Programming</a>" data-fr="Site conçu et développé par <a href='https://www.dolanprogramming.ca' target='_blank'>Dolan Programming</a>">Website designed &amp; developed by <a href="https://www.dolanprogramming.ca" target="_blank">Dolan Programming</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <div class="lightbox-inner">
+    <div class="lightbox-img"><img id="lightbox-img" src="" alt="" /></div>
+    <div class="lightbox-details">
+      <div class="lightbox-cat" id="lightbox-cat"></div>
+      <div class="lightbox-title" id="lightbox-title"></div>
+      <div class="lightbox-desc" id="lightbox-desc"></div>
+      <div class="lightbox-specs">
+        <div class="spec-item">
+          <div class="spec-label" data-lang-key="medium">Medium</div>
+          <div class="spec-val" id="lightbox-medium"></div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label" data-lang-key="size">Size</div>
+          <div class="spec-val" id="lightbox-size"></div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label" data-lang-key="year">Year</div>
+          <div class="spec-val" id="lightbox-year"></div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-label" data-lang-key="status">Status</div>
+          <div class="spec-val" id="lightbox-status"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel">
+  <div class="admin-modal">
+    <div class="admin-header">
+      <h3 data-en="Admin Panel" data-fr="Panneau d'Administration">Admin Panel</h3>
+      <button class="hamburger" onclick="closeAdmin()" style="display:flex">
+        <span style="transform: translateY(7px) rotate(45deg)"></span>
+        <span style="opacity:0"></span>
+        <span style="transform: translateY(-7px) rotate(-45deg)"></span>
+      </button>
+    </div>
+    <div class="admin-body">
+      <div class="admin-tabs">
+        <button class="admin-tab active" onclick="switchTab('add')" data-en="Add Painting" data-fr="Ajouter une Peinture">Add Painting</button>
+        <button class="admin-tab" onclick="switchTab('manage')" data-en="Manage Catalog" data-fr="Gérer le Catalogue">Manage Catalog</button>
+      </div>
+      <!-- ADD FORM -->
+      <div class="admin-section active" id="tab-add">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-en="Title (English)" data-fr="Titre (Anglais)">Title (English)</label>
+            <input type="text" class="form-input" id="add-title-en" placeholder="e.g. Autumn Reflections" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Title (French)" data-fr="Titre (Français)">Title (French)</label>
+            <input type="text" class="form-input" id="add-title-fr" placeholder="ex: Reflets d'Automne" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-en="Category" data-fr="Catégorie">Category</label>
+            <select class="form-select" id="add-category">
+              <option value="landscape" data-en="Landscape" data-fr="Paysage">Landscape</option>
+              <option value="portrait" data-en="Portrait" data-fr="Portrait">Portrait</option>
+              <option value="still-life" data-en="Still Life" data-fr="Nature Morte">Still Life</option>
+              <option value="abstract" data-en="Abstract" data-fr="Abstrait">Abstract</option>
+              <option value="animals" data-en="Animals" data-fr="Animaux">Animals</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Medium" data-fr="Médium">Medium</label>
+            <select class="form-select" id="add-medium">
+              <option>Oil on Canvas</option>
+              <option>Acrylic on Canvas</option>
+              <option>Watercolour</option>
+              <option>Mixed Media</option>
+              <option>Pastel</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-en="Size (e.g. 16x20 in)" data-fr="Taille (ex: 16x20 po)">Size (e.g. 16x20 in)</label>
+            <input type="text" class="form-input" id="add-size" placeholder="16x20 in" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-en="Year" data-fr="Année">Year</label>
+            <input type="number" class="form-input" id="add-year" placeholder="2025" value="2025" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-en="Image URL (paste a photo URL)" data-fr="URL de l'image (collez l'URL d'une photo)">Image URL (paste a photo URL)</label>
+          <input type="text" class="form-input" id="add-img" placeholder="https://..." />
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-en="Description (English)" data-fr="Description (Anglais)">Description (English)</label>
+          <textarea class="form-textarea" id="add-desc-en" placeholder="Describe this painting..."></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" data-en="Description (French)" data-fr="Description (Français)">Description (French)</label>
+          <textarea class="form-textarea" id="add-desc-fr" placeholder="Décrivez cette peinture..."></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" data-en="Status" data-fr="Statut">Status</label>
+            <select class="form-select" id="add-status">
+              <option value="Available" data-en="Available" data-fr="Disponible">Available</option>
+              <option value="Sold" data-en="Sold" data-fr="Vendu">Sold</option>
+              <option value="Commission Only" data-en="Commission Only" data-fr="Sur Commande Seulement">Commission Only</option>
+            </select>
+          </div>
+          <div class="form-group" style="justify-content:flex-end;padding-top:28px">
+            <label class="form-check">
+              <input type="checkbox" id="add-isnew" checked />
+              <span data-en="Mark as New Release" data-fr="Marquer comme Nouvelle Oeuvre">Mark as New Release</span>
+            </label>
+          </div>
+        </div>
+        <div class="admin-submit">
+          <button class="btn-admin" onclick="addPainting()" data-en="Add to Catalog" data-fr="Ajouter au Catalogue">Add to Catalog</button>
+        </div>
+      </div>
+      <!-- MANAGE -->
+      <div class="admin-section" id="tab-manage">
+        <div style="margin-bottom:16px">
+          <input type="text" class="form-input" id="admin-search" placeholder="Search catalog..." oninput="renderAdminList()" />
+        </div>
+        <div class="admin-list" id="admin-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ADMIN TRIGGER -->
+<button class="admin-trigger" onclick="openAdmin()" title="Admin Panel">
+  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+    <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+  </svg>
+</button>
+
+<script>
+// ===========================
+// DATA STORE
+// ===========================
+const STORAGE_KEY = 'dolanart_catalog_v1';
+
+const defaultPaintings = [
+  { id: 1, titleEn: "Morning on the St. Lawrence", titleFr: "Matin sur le Saint-Laurent", category: "landscape", medium: "Oil on Canvas", size: "24x36 in", year: 2024, img: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=600&h=600&fit=crop", descEn: "A serene morning landscape capturing the misty light over the St. Lawrence River. Rich blues and warm golds blend across the canvas.", descFr: "Un paysage matinal serein capturant la lumière brumeuse sur le fleuve Saint-Laurent. De riches bleus et des ors chauds se fondent sur la toile.", status: "Available", isNew: true },
+  { id: 2, titleEn: "Autumn in Laurentides", titleFr: "Automne dans les Laurentides", category: "landscape", medium: "Acrylic on Canvas", size: "18x24 in", year: 2024, img: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=600&h=600&fit=crop", descEn: "A vibrant celebration of Quebec autumn colours — fiery reds, burnt oranges, and golden yellows fill this landscape with warmth.", descFr: "Une célébration vibrante des couleurs d'automne québécoises — des rouges vifs, des oranges brûlés et des jaunes dorés remplissent ce paysage de chaleur.", status: "Available", isNew: true },
+  { id: 3, titleEn: "Golden Retriever Study", titleFr: "Étude de Golden Retriever", category: "animals", medium: "Oil on Canvas", size: "12x16 in", year: 2024, img: "https://images.unsplash.com/photo-1601979031925-424e53b6caaa?w=600&h=600&fit=crop", descEn: "A loving portrait of a golden retriever, painted with expressive brushwork that captures the warmth and loyalty of man's best friend.", descFr: "Un portrait affectueux d'un golden retriever, peint avec une touche expressive qui capture la chaleur et la loyauté du meilleur ami de l'homme.", status: "Sold", isNew: true },
+  { id: 4, titleEn: "Still Life with Peonies", titleFr: "Nature Morte aux Pivoines", category: "still-life", medium: "Oil on Canvas", size: "16x20 in", year: 2023, img: "https://images.unsplash.com/photo-1490750967868-88df5691cc9c?w=600&h=600&fit=crop", descEn: "Lush pink and white peonies overflow from a ceramic vase, painted in the classical tradition with a modern expressive touch.", descFr: "De luxuriantes pivoines roses et blanches débordent d'un vase en céramique, peintes dans la tradition classique avec une touche expressive moderne.", status: "Available", isNew: true },
+  { id: 5, titleEn: "Winter Birches", titleFr: "Bouleaux d'Hiver", category: "landscape", medium: "Acrylic on Canvas", size: "20x30 in", year: 2023, img: "https://images.unsplash.com/photo-1491002052546-bf38f186af56?w=600&h=600&fit=crop", descEn: "White birch trees stand stark against a deep winter sky. The quiet of a Quebec winter is captured in cool blues and crisp whites.", descFr: "Des bouleaux blancs se dressent contre un ciel d'hiver profond. Le silence d'un hiver québécois est capturé en bleus froids et blancs cristallins.", status: "Available", isNew: false },
+  { id: 6, titleEn: "Portrait — Marie", titleFr: "Portrait — Marie", category: "portrait", medium: "Oil on Canvas", size: "16x20 in", year: 2023, img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&h=600&fit=crop", descEn: "An intimate portrait study. Commission your own likeness — each portrait is painted from reference photos with care and attention.", descFr: "Une étude de portrait intime. Commandez votre propre portrait — chaque portrait est peint à partir de photos de référence avec soin et attention.", status: "Commission Only", isNew: false },
+  { id: 7, titleEn: "Abstract Warmth No. 3", titleFr: "Chaleur Abstraite No. 3", category: "abstract", medium: "Mixed Media", size: "24x24 in", year: 2023, img: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=600&fit=crop", descEn: "Part of an ongoing series exploring warm earth tones through gestural abstraction. Terracotta, ochre, and deep umber create a grounded energy.", descFr: "Partie d'une série explorant les tons de terre chauds à travers l'abstraction gestuelle. Terre cuite, ocre et brun profond créent une énergie ancrée.", status: "Available", isNew: false },
+  { id: 8, titleEn: "Red Cardinal in Snow", titleFr: "Cardinal Rouge dans la Neige", category: "animals", medium: "Watercolour", size: "9x12 in", year: 2023, img: "https://images.unsplash.com/photo-1589802829985-817e51171b92?w=600&h=600&fit=crop", descEn: "A brilliant red cardinal perched on a snow-laden branch. A beloved Quebec winter scene rendered in delicate watercolour.", descFr: "Un brillant cardinal rouge perché sur une branche chargée de neige. Une scène hivernale québécoise bien-aimée rendue en aquarelle délicate.", status: "Sold", isNew: false },
+  { id: 9, titleEn: "Old Quebec City Street", titleFr: "Rue du Vieux-Québec", category: "landscape", medium: "Oil on Canvas", size: "16x20 in", year: 2022, img: "https://images.unsplash.com/photo-1465101162946-4377e57745c3?w=600&h=600&fit=crop", descEn: "Cobblestone streets and historic architecture of Old Quebec City, painted en plein air with warm evening light.", descFr: "Rues pavées et architecture historique du Vieux-Québec, peintes en plein air avec une douce lumière du soir.", status: "Sold", isNew: false },
+  { id: 10, titleEn: "Roses in Blue Vase", titleFr: "Roses dans un Vase Bleu", category: "still-life", medium: "Oil on Canvas", size: "12x16 in", year: 2022, img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop", descEn: "Classic red roses arranged in a deep blue vase, painted with attention to light and the velvety texture of the petals.", descFr: "Des roses rouges classiques arrangées dans un vase bleu profond, peintes avec une attention à la lumière et à la texture veloutée des pétales.", status: "Available", isNew: false },
+  { id: 11, titleEn: "Lac Memphrémagog at Dusk", titleFr: "Lac Memphrémagog au Crépuscule", category: "landscape", medium: "Acrylic on Canvas", size: "30x40 in", year: 2022, img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=600&fit=crop", descEn: "The soft, fading light of dusk over Lac Memphrémagog in the Eastern Townships. One of the artist's favourite subjects.", descFr: "La douce lumière déclinante du crépuscule sur le lac Memphrémagog dans les Cantons-de-l'Est. L'un des sujets préférés de l'artiste.", status: "Available", isNew: false },
+  { id: 12, titleEn: "Two Cats on a Sill", titleFr: "Deux Chats sur un Rebord", category: "animals", medium: "Watercolour", size: "11x14 in", year: 2022, img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&h=600&fit=crop", descEn: "A charming scene of two cats watching the world from a sunny windowsill. Painted in soft, luminous watercolour.", descFr: "Une scène charmante de deux chats observant le monde depuis un rebord de fenêtre ensoleillé. Peint en aquarelle douce et lumineuse.", status: "Sold", isNew: false },
+];
+
+let catalog = [];
+let currentFilter = 'all';
+let currentLang = 'en';
+let displayCount = 12;
+const PAGE_SIZE = 12;
+
+function loadCatalog() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    catalog = saved ? JSON.parse(saved) : [...defaultPaintings];
+  } catch(e) {
+    catalog = [...defaultPaintings];
+  }
+}
+function saveCatalog() {
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(catalog)); } catch(e) {}
+}
+function getNextId() {
+  return catalog.length > 0 ? Math.max(...catalog.map(p=>p.id)) + 1 : 1;
+}
+
+// ===========================
+// LANGUAGE
+// ===========================
+function setLang(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  // Text elements
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const txt = el.getAttribute('data-' + lang);
+    if (txt) el.innerHTML = txt;
+  });
+
+  // Placeholder elements
+  document.querySelectorAll('[data-placeholder-en]').forEach(el => {
+    el.placeholder = el.getAttribute('data-placeholder-' + lang) || el.getAttribute('data-placeholder-en');
+  });
+
+  // Lang button labels
+  const newLabel = lang === 'en' ? 'FR' : 'EN';
+  document.getElementById('lang-toggle').textContent = newLabel;
+  document.getElementById('lang-toggle-mobile').textContent = newLabel;
+
+  // Re-render catalog and releases
+  renderCatalog();
+  renderNewReleases();
+  renderAdminList();
+
+  // Filter buttons - re-apply active state text
+  document.querySelectorAll('.filter-btn[data-' + lang + ']').forEach(btn => {
+    btn.textContent = btn.getAttribute('data-' + lang);
+    if(btn.classList.contains('active')) btn.textContent = btn.getAttribute('data-' + lang);
+  });
+}
+
+function toggleLang() {
+  setLang(currentLang === 'en' ? 'fr' : 'en');
+}
+
+document.getElementById('lang-toggle').addEventListener('click', toggleLang);
+document.getElementById('lang-toggle-mobile').addEventListener('click', toggleLang);
+
+// ===========================
+// HAMBURGER MENU
+// ===========================
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobile-menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  if(mobileMenu.style.display === 'flex') {
+    mobileMenu.style.display = 'none';
+  } else {
+    mobileMenu.style.display = 'flex';
+  }
+});
+
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    mobileMenu.style.display = 'none';
+  });
+});
+
+// ===========================
+// SCROLL EFFECTS
+// ===========================
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(el => observer.observe(el));
+
+// ===========================
+// CATALOG RENDER
+// ===========================
+function getFilteredItems() {
+  const q = (document.getElementById('catalog-search-input').value || '').toLowerCase();
+  return catalog.filter(p => {
+    const matchCat = currentFilter === 'all' || p.category === currentFilter;
+    const titleKey = currentLang === 'fr' ? p.titleFr : p.titleEn;
+    const matchQ = !q || (titleKey||'').toLowerCase().includes(q) || (p.category||'').includes(q) || (p.medium||'').toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+}
+
+function renderCatalog() {
+  const grid = document.getElementById('catalog-grid');
+  const items = getFilteredItems();
+  const showing = items.slice(0, displayCount);
+  const countEl = document.getElementById('catalog-count-display');
+  const lmBtn = document.getElementById('load-more-btn');
+
+  countEl.textContent = currentLang === 'fr'
+    ? `Affichage de ${showing.length} sur ${items.length} oeuvres`
+    : `Showing ${showing.length} of ${items.length} works`;
+
+  document.getElementById('total-count').textContent = catalog.length;
+  lmBtn.style.display = showing.length < items.length ? 'inline-block' : 'none';
+
+  grid.innerHTML = showing.map(p => {
+    const title = currentLang === 'fr' ? p.titleFr : p.titleEn;
+    const catLabel = getCatLabel(p.category);
+    const imgSrc = p.img || 'https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=400&h=400&fit=crop';
+    const newBadge = p.isNew ? (currentLang === 'fr' ? 'Nouveau' : 'New') : '';
+    return `
+    <div class="catalog-item${p.isNew?' is-new':''}" onclick="openLightbox(${p.id})">
+      <div class="catalog-item-img">
+        <img src="${imgSrc}" alt="${title}" loading="lazy" />
+      </div>
+      <div class="catalog-item-info"${p.isNew?` data-badge="${newBadge}"`:''}> 
+        <div class="catalog-item-cat">${catLabel}</div>
+        <div class="catalog-item-title">${title}</div>
+        <div class="catalog-item-meta">${p.medium} · ${p.year}</div>
+        <div class="catalog-item-tags">
+          <span class="catalog-item-tag">${p.size}</span>
+          <span class="catalog-item-tag" style="color:${p.status==='Sold'?'#c0392b':p.status==='Available'?'var(--sage)':'var(--gold)'}">${p.status}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function getCatLabel(cat) {
+  const labels = {
+    landscape: {en:'Landscape', fr:'Paysage'},
+    portrait: {en:'Portrait', fr:'Portrait'},
+    'still-life': {en:'Still Life', fr:'Nature Morte'},
+    abstract: {en:'Abstract', fr:'Abstrait'},
+    animals: {en:'Animals', fr:'Animaux'}
+  };
+  return labels[cat] ? labels[cat][currentLang] : cat;
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    displayCount = PAGE_SIZE;
+    renderCatalog();
+  });
+});
+
+document.getElementById('catalog-search-input').addEventListener('input', () => {
+  displayCount = PAGE_SIZE;
+  renderCatalog();
+});
+
+document.getElementById('load-more-btn').addEventListener('click', () => {
+  displayCount += PAGE_SIZE;
+  renderCatalog();
+});
+
+// ===========================
+// NEW RELEASES
+// ===========================
+function renderNewReleases() {
+  const grid = document.getElementById('new-releases-grid');
+  const newItems = catalog.filter(p => p.isNew).slice(0, 4);
+  if(newItems.length === 0) {
+    grid.innerHTML = `<div style="color:rgba(255,255,255,0.4);font-size:0.9rem;grid-column:span 4;text-align:center;padding:40px 0">${currentLang==='fr'?'Aucune nouvelle oeuvre pour le moment.':'No new releases yet.'}</div>`;
+    return;
+  }
+  grid.innerHTML = newItems.map(p => {
+    const title = currentLang === 'fr' ? p.titleFr : p.titleEn;
+    const newLabel = currentLang === 'fr' ? 'Nouveau' : 'New';
+    const imgSrc = p.img || 'https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=400&h=600&fit=crop';
+    return `
+    <div class="release-card" onclick="openLightbox(${p.id})">
+      <div class="release-img"><img src="${imgSrc}" alt="${title}" loading="lazy" /></div>
+      <div class="release-info">
+        <span class="release-badge">${newLabel}</span>
+        <div class="release-title">${title}</div>
+        <div class="release-meta">${p.medium} · ${p.year}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ===========================
+// LIGHTBOX
+// ===========================
+function openLightbox(id) {
+  const p = catalog.find(x => x.id === id);
+  if(!p) return;
+  document.getElementById('lightbox-img').src = p.img || '';
+  document.getElementById('lightbox-img').alt = currentLang==='fr' ? p.titleFr : p.titleEn;
+  document.getElementById('lightbox-cat').textContent = getCatLabel(p.category);
+  document.getElementById('lightbox-title').textContent = currentLang==='fr' ? p.titleFr : p.titleEn;
+  document.getElementById('lightbox-desc').textContent = currentLang==='fr' ? (p.descFr||p.descEn) : (p.descEn||p.descFr);
+  document.getElementById('lightbox-medium').textContent = p.medium;
+  document.getElementById('lightbox-size').textContent = p.size;
+  document.getElementById('lightbox-year').textContent = p.year;
+  document.getElementById('lightbox-status').textContent = p.status;
+  document.getElementById('lightbox-status').style.color = p.status==='Sold' ? '#c0392b' : p.status==='Available' ? 'var(--sage)' : 'var(--gold)';
+
+  // Update spec labels
+  const specLabels = {
+    medium: {en:'Medium', fr:'Médium'},
+    size: {en:'Size', fr:'Taille'},
+    year: {en:'Year', fr:'Année'},
+    status: {en:'Status', fr:'Statut'}
+  };
+  document.querySelectorAll('[data-lang-key]').forEach(el => {
+    const k = el.dataset.langKey;
+    if(specLabels[k]) el.textContent = specLabels[k][currentLang];
+  });
+
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if(e.target === this) closeLightbox();
+});
+document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeLightbox(); closeAdmin(); } });
+
+// ===========================
+// ADMIN PANEL
+// ===========================
+function openAdmin() {
+  document.getElementById('admin-panel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderAdminList();
+}
+function closeAdmin() {
+  document.getElementById('admin-panel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('admin-panel').addEventListener('click', function(e) {
+  if(e.target === this) closeAdmin();
+});
+
+function switchTab(tab) {
+  document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.admin-section').forEach(s => s.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('tab-' + tab).classList.add('active');
+  if(tab === 'manage') renderAdminList();
+}
+
+function addPainting() {
+  const titleEn = document.getElementById('add-title-en').value.trim();
+  const titleFr = document.getElementById('add-title-fr').value.trim();
+  if(!titleEn) { showToast('Please enter a title (English).'); return; }
+  const p = {
+    id: getNextId(),
+    titleEn: titleEn || 'Untitled',
+    titleFr: titleFr || titleEn,
+    category: document.getElementById('add-category').value,
+    medium: document.getElementById('add-medium').value,
+    size: document.getElementById('add-size').value || '16x20 in',
+    year: parseInt(document.getElementById('add-year').value) || 2025,
+    img: document.getElementById('add-img').value.trim() || 'https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=600&h=600&fit=crop',
+    descEn: document.getElementById('add-desc-en').value.trim(),
+    descFr: document.getElementById('add-desc-fr').value.trim(),
+    status: document.getElementById('add-status').value,
+    isNew: document.getElementById('add-isnew').checked,
+  };
+  catalog.unshift(p);
+  saveCatalog();
+  renderCatalog();
+  renderNewReleases();
+  showToast(currentLang === 'fr' ? 'Peinture ajoutée au catalogue.' : 'Painting added to catalog.');
+  // Reset form
+  ['add-title-en','add-title-fr','add-img','add-desc-en','add-desc-fr','add-size'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('add-isnew').checked = true;
+}
+
+function deletePainting(id) {
+  if(!confirm(currentLang==='fr' ? 'Supprimer cette peinture ?' : 'Delete this painting?')) return;
+  catalog = catalog.filter(p => p.id !== id);
+  saveCatalog();
+  renderCatalog();
+  renderNewReleases();
+  renderAdminList();
+  showToast(currentLang==='fr' ? 'Peinture supprimée.' : 'Painting removed.');
+}
+
+function toggleNew(id) {
+  const p = catalog.find(x => x.id === id);
+  if(p) { p.isNew = !p.isNew; saveCatalog(); renderCatalog(); renderNewReleases(); renderAdminList(); }
+}
+
+function renderAdminList() {
+  const list = document.getElementById('admin-list');
+  const q = (document.getElementById('admin-search').value || '').toLowerCase();
+  const items = catalog.filter(p => {
+    const t = (p.titleEn + p.titleFr).toLowerCase();
+    return !q || t.includes(q);
+  });
+  if(!items.length) {
+    list.innerHTML = `<div style="color:var(--mid-gray);font-size:0.88rem;padding:20px 0;">${currentLang==='fr'?'Aucun résultat.':'No results.'}</div>`;
+    return;
+  }
+  list.innerHTML = items.map(p => `
+    <div class="admin-list-item">
+      <div class="admin-list-item-info">
+        <div class="admin-list-item-title">
+          ${p.titleEn}
+          ${p.isNew ? `<span class="admin-badge new">${currentLang==='fr'?'Nouveau':'New'}</span>` : ''}
+        </div>
+        <div class="admin-list-item-meta">${getCatLabel(p.category)} · ${p.medium} · ${p.year} · ${p.status}</div>
+      </div>
+      <div class="admin-list-item-actions">
+        <button class="btn-sm edit" onclick="toggleNew(${p.id})">${p.isNew ? (currentLang==='fr'?'Retirer Nouveau':'Remove New') : (currentLang==='fr'?'Marquer Nouveau':'Mark New')}</button>
+        <button class="btn-sm delete" onclick="deletePainting(${p.id})">${currentLang==='fr'?'Supprimer':'Delete'}</button>
+      </div>
+    </div>`).join('');
+}
+
+// ===========================
+// CONTACT FORM
+// ===========================
+function submitContactForm() {
+  const name = document.getElementById('cf-name').value.trim();
+  const email = document.getElementById('cf-email').value.trim();
+  const msg = document.getElementById('cf-message').value.trim();
+  if(!name || !email || !msg) {
+    showToast(currentLang==='fr' ? 'Veuillez remplir tous les champs.' : 'Please fill in all fields.');
+    return;
+  }
+  showToast(currentLang==='fr' ? 'Merci ! Votre message a été envoyé.' : 'Thank you! Your message has been sent.');
+  ['cf-name','cf-email','cf-message'].forEach(id => document.getElementById(id).value = '');
+}
+
+// ===========================
+// TOAST
+// ===========================
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+// ===========================
+// INIT
+// ===========================
+loadCatalog();
+setLang('en');
+
+// Staggered reveal for service cards
+document.querySelectorAll('.service-card').forEach((card, i) => {
+  card.style.transitionDelay = (i * 0.06) + 's';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kojack's Chinese Restaurant | Shawville, QC</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Kojack's Chinese Restaurant in Shawville, Quebec. Authentic Chinese cuisine in the heart of the Pontiac region. Dine-in and takeout available. Call (819) 647-2254." />
+  <meta name="keywords" content="Chinese restaurant Shawville, Chinese food Pontiac Quebec, restaurant Shawville QC, takeout Shawville, Kojacks Chinese, restaurant Pontiac, nourriture chinoise Shawville, restaurant chinois Pontiac" />
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Shawville, Quebec" />
+  <meta name="geo.position" content="45.5967;-76.9820" />
+  <meta name="ICBM" content="45.5967, -76.9820" />
+  <meta property="og:title" content="Kojack's Chinese Restaurant | Shawville, QC" />
+  <meta property="og:description" content="Authentic Chinese cuisine in Shawville, Quebec. Under exciting new ownership. Dine-in and takeout." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:locale" content="en_CA" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --red:        #C41E3A;
+      --red-dark:   #8B0000;
+      --gold:       #C9974C;
+      --gold-light: #E8C87A;
+      --cream:      #FAF6EF;
+      --ink:        #1A1208;
+      --ink-soft:   #3D2E14;
+      --border:     rgba(201,151,76,0.25);
+      --nav-h:      72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─────────────────────────────── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--nav-h);
+      background: rgba(26,18,8,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5vw;
+      transition: box-shadow .3s;
+    }
+    header.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,.4); }
+
+    .logo {
+      display: flex; flex-direction: column; line-height: 1;
+      text-decoration: none;
+    }
+    .logo-main {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      color: var(--gold-light);
+      letter-spacing: .04em;
+    }
+    .logo-sub {
+      font-size: .65rem;
+      color: var(--gold);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    nav { display: flex; align-items: center; gap: 2rem; }
+    nav a {
+      color: rgba(255,255,255,.78);
+      text-decoration: none;
+      font-size: .82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      position: relative;
+      padding-bottom: 3px;
+      transition: color .2s;
+    }
+    nav a::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 100%;
+      height: 1px; background: var(--gold);
+      transition: right .25s ease;
+    }
+    nav a:hover { color: var(--gold-light); }
+    nav a:hover::after { right: 0; }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .35rem .8rem;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+      margin-left: .5rem;
+    }
+    .lang-btn:hover { background: var(--gold); color: var(--ink); }
+
+    /* hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--gold-light);
+      transition: transform .3s, opacity .3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none;
+      position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: rgba(26,18,8,.98);
+      padding: 1.5rem 5vw 2rem;
+      flex-direction: column; gap: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      z-index: 999;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: rgba(255,255,255,.8);
+      text-decoration: none;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .5rem 0;
+      border-bottom: 1px solid rgba(201,151,76,.15);
+      transition: color .2s;
+    }
+    .mobile-nav a:hover { color: var(--gold-light); }
+    .mobile-nav .lang-btn { align-self: flex-start; margin-top: .5rem; }
+
+    /* ─── HERO ────────────────────────────────── */
+    #home {
+      min-height: 100vh;
+      background:
+        linear-gradient(180deg, rgba(26,18,8,.72) 0%, rgba(26,18,8,.45) 50%, rgba(26,18,8,.82) 100%),
+        url('https://images.unsplash.com/photo-1563245372-f21724e3856d?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      padding: var(--nav-h) 5vw 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* animated lanterns */
+    .lantern {
+      position: absolute;
+      width: 18px; height: 30px;
+      border-radius: 50% 50% 40% 40%;
+      opacity: .18;
+      animation: sway 6s ease-in-out infinite;
+    }
+    .lantern::after {
+      content: '';
+      display: block; width: 2px; height: 20px;
+      background: inherit;
+      margin: 0 auto;
+      border-radius: 0 0 2px 2px;
+    }
+    .l1 { background: var(--red); top: 8%; left: 8%; animation-delay: 0s; }
+    .l2 { background: var(--gold); top: 12%; left: 18%; animation-delay: 1s; }
+    .l3 { background: var(--red); top: 6%; right: 12%; animation-delay: .5s; }
+    .l4 { background: var(--gold); top: 16%; right: 22%; animation-delay: 1.5s; }
+    .l5 { background: var(--red); top: 9%; left: 40%; animation-delay: .8s; }
+
+    @keyframes sway {
+      0%,100% { transform: rotate(-6deg); }
+      50%      { transform: rotate(6deg); }
+    }
+
+    /* floating particles */
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0;
+      animation: float-up 8s ease-in infinite;
+    }
+    @keyframes float-up {
+      0%   { transform: translateY(0) scale(0); opacity: 0; }
+      10%  { opacity: .5; }
+      90%  { opacity: .2; }
+      100% { transform: translateY(-60vh) scale(.3); opacity: 0; }
+    }
+
+    .hero-inner { position: relative; z-index: 2; max-width: 780px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: .4rem 1.2rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      animation: fadeDown .8s ease both;
+    }
+    .hero-badge::before, .hero-badge::after {
+      content: '';
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 30px; height: 1px; background: rgba(255,255,255,.5);
+    }
+    .hero-badge::before { right: 100%; margin-right: 8px; }
+    .hero-badge::after  { left: 100%; margin-left: 8px; }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 8vw, 6rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 1rem;
+      animation: fadeDown .8s .15s ease both;
+    }
+    .hero-title em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .hero-divider {
+      width: 80px; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 1.2rem auto;
+      animation: scaleIn .8s .3s ease both;
+    }
+
+    .hero-sub {
+      font-size: clamp(.9rem, 2vw, 1.1rem);
+      color: rgba(255,255,255,.78);
+      line-height: 1.7;
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      animation: fadeUp .8s .4s ease both;
+    }
+
+    .hero-cta {
+      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+      animation: fadeUp .8s .5s ease both;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: .85rem 2.2rem;
+      font-size: .85rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border: 2px solid var(--red);
+      transition: background .2s, transform .2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      text-decoration: none;
+      padding: .85rem 2.2rem;
+      font-size: .85rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border: 2px solid rgba(255,255,255,.5);
+      transition: border-color .2s, color .2s, transform .2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--gold-light); color: var(--gold-light); transform: translateY(-2px); }
+
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: .5rem;
+      color: rgba(255,255,255,.45); font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      animation: fadeUp 1s .8s ease both;
+    }
+    .hero-scroll span { display: block; width: 1px; height: 40px; background: var(--gold); animation: grow 1.8s ease-in-out infinite; }
+    @keyframes grow {
+      0%,100% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      50%      { transform: scaleY(1); opacity: 1; }
+    }
+
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: none; } }
+    @keyframes fadeUp   { from { opacity: 0; transform: translateY(20px); }  to { opacity: 1; transform: none; } }
+    @keyframes scaleIn  { from { transform: scaleX(0); opacity: 0; }         to { transform: scaleX(1); opacity: 1; } }
+
+    /* ─── SECTION SHARED ─────────────────────── */
+    section { padding: 7rem 5vw; }
+
+    .section-label {
+      font-size: .68rem;
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: .8rem;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+    .section-body {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--ink-soft);
+      max-width: 580px;
+    }
+    .gold-rule {
+      width: 50px; height: 2px;
+      background: var(--gold);
+      margin: 1.2rem 0 2rem;
+    }
+
+    /* ─── NEW OWNERS ─────────────────────────── */
+    #about {
+      background: var(--ink);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    #about::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 80% 50%, rgba(196,30,58,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,151,76,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap img {
+      width: 100%; aspect-ratio: 4/5; object-fit: cover;
+      display: block;
+    }
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: -16px; left: -16px;
+      width: 60%; height: 60%;
+      border-top: 2px solid var(--gold);
+      border-left: 2px solid var(--gold);
+    }
+    .about-img-wrap::after {
+      content: '';
+      position: absolute;
+      bottom: -16px; right: -16px;
+      width: 60%; height: 60%;
+      border-bottom: 2px solid var(--red);
+      border-right: 2px solid var(--red);
+    }
+
+    .about-tag {
+      display: inline-block;
+      background: var(--red);
+      color: #fff;
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: .3rem 1rem;
+      margin-bottom: 1rem;
+    }
+    #about .section-title { color: #fff; }
+    #about .section-body { color: rgba(255,255,255,.7); max-width: 100%; }
+    #about .gold-rule { background: var(--red); }
+
+    .about-stats {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-top: 2.5rem;
+    }
+    .stat {
+      border-left: 2px solid var(--gold);
+      padding-left: 1rem;
+    }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: .78rem;
+      color: rgba(255,255,255,.5);
+      letter-spacing: .08em;
+      margin-top: .3rem;
+    }
+
+    /* ─── SERVICES ───────────────────────────── */
+    #services {
+      background: var(--cream);
+    }
+    .services-header { max-width: 600px; margin-bottom: 4rem; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+    }
+    .service-card {
+      background: #fff;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform .3s;
+      cursor: default;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 100%; height: 3px;
+      background: var(--red);
+      transition: right .3s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); }
+    .service-card:hover::before { right: 0; }
+
+    .service-icon {
+      width: 48px; height: 48px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--red);
+    }
+    .service-icon svg { width: 22px; height: 22px; }
+
+    .service-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: var(--ink);
+      margin-bottom: .7rem;
+    }
+    .service-desc {
+      font-size: .88rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ─── MENU ───────────────────────────────── */
+    #menu { background: #fff; }
+
+    .menu-tabs {
+      display: flex; gap: 0; flex-wrap: wrap;
+      border-bottom: 2px solid var(--border);
+      margin-bottom: 3rem;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      padding: .9rem 1.6rem;
+      cursor: pointer;
+      position: relative;
+      transition: color .2s;
+    }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0; right: 0; height: 2px;
+      background: var(--red);
+      transform: scaleX(0);
+      transition: transform .2s;
+    }
+    .tab-btn.active { color: var(--red); }
+    .tab-btn.active::after { transform: scaleX(1); }
+    .tab-btn:hover { color: var(--red); }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .menu-notice {
+      background: linear-gradient(135deg, var(--ink) 0%, #2a1a0a 100%);
+      padding: 3rem;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 2rem; align-items: center;
+      margin-bottom: 2.5rem;
+    }
+    .menu-notice p {
+      color: rgba(255,255,255,.7);
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+    .menu-notice strong { color: var(--gold-light); }
+    .menu-placeholder {
+      border: 1px dashed rgba(201,151,76,.4);
+      padding: 4rem 2rem;
+      text-align: center;
+      color: rgba(255,255,255,.3);
+      font-size: .8rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      min-width: 180px;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .menu-item {
+      padding: 1.5rem;
+      border: 1px solid var(--border);
+      position: relative;
+      transition: border-color .2s;
+    }
+    .menu-item:hover { border-color: var(--gold); }
+
+    .menu-item-top {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: .5rem;
+    }
+    .menu-item-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--ink);
+      flex: 1; padding-right: 1rem;
+    }
+    .menu-item-price {
+      font-size: .88rem;
+      color: var(--red);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .menu-item-desc {
+      font-size: .82rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+    .menu-popular {
+      position: absolute;
+      top: -1px; right: 1.2rem;
+      background: var(--red);
+      color: #fff;
+      font-size: .6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      padding: .2rem .6rem;
+    }
+
+    /* ─── PHOTO GALLERY ───────────────────────── */
+    #gallery { background: var(--ink); overflow: hidden; padding: 7rem 0; }
+    .gallery-header { padding: 0 5vw; margin-bottom: 3rem; }
+    #gallery .section-title { color: #fff; }
+    #gallery .section-label { color: var(--gold); }
+    #gallery .gold-rule { background: var(--gold); }
+
+    .gallery-strip {
+      display: flex; gap: 12px;
+      padding: 0 5vw;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .gallery-strip::-webkit-scrollbar { display: none; }
+
+    .gallery-thumb {
+      flex: 0 0 280px;
+      height: 340px;
+      overflow: hidden;
+      position: relative;
+    }
+    .gallery-thumb img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .5s ease;
+    }
+    .gallery-thumb:hover img { transform: scale(1.06); }
+    .gallery-thumb .photo-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.7));
+      color: rgba(255,255,255,.6);
+      font-size: .68rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 2rem .8rem .7rem;
+      text-align: center;
+    }
+
+    /* ─── LOCATION / CONTACT ─────────────────── */
+    #contact { background: var(--cream); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .info-block { margin-bottom: 2rem; }
+    .info-label {
+      font-size: .65rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: .4rem;
+    }
+    .info-value {
+      font-size: 1rem;
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    .info-value a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--border); }
+    .info-value a:hover { border-color: var(--red); color: var(--red); }
+
+    .hours-grid {
+      display: grid; grid-template-columns: auto 1fr;
+      gap: .4rem 1.5rem;
+      font-size: .9rem;
+    }
+    .hours-grid .day { color: var(--ink-soft); }
+    .hours-grid .time { color: var(--ink); }
+
+    .map-placeholder {
+      background: #e8e2d8;
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem;
+      border: 1px solid var(--border);
+      color: var(--ink-soft);
+      font-size: .8rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .map-placeholder svg { opacity: .3; width: 40px; height: 40px; }
+
+    .cta-bar {
+      background: var(--red);
+      padding: .8rem 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    .cta-bar p { color: rgba(255,255,255,.85); font-size: .85rem; }
+    .cta-bar a {
+      color: #fff;
+      font-size: .8rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,.5);
+      padding: .5rem 1.2rem;
+      transition: background .2s;
+    }
+    .cta-bar a:hover { background: rgba(255,255,255,.15); }
+
+    /* ─── FOOTER ─────────────────────────────── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 5vw 2rem;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand .logo-main { font-size: 1.4rem; }
+    .footer-brand p {
+      color: rgba(255,255,255,.45);
+      font-size: .85rem;
+      line-height: 1.7;
+      margin-top: .8rem;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: .68rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: .6rem; }
+    .footer-col a {
+      color: rgba(255,255,255,.5);
+      text-decoration: none;
+      font-size: .85rem;
+      transition: color .2s;
+    }
+    .footer-col a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 1rem;
+    }
+    .footer-bottom p {
+      color: rgba(255,255,255,.3);
+      font-size: .78rem;
+    }
+    .footer-bottom a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-bottom a:hover { color: var(--gold-light); }
+
+    /* ─── MARQUEE ─────────────────────────────── */
+    .marquee-wrap {
+      background: var(--red);
+      overflow: hidden;
+      padding: .7rem 0;
+      white-space: nowrap;
+    }
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 22s linear infinite;
+    }
+    .marquee-track span {
+      display: inline-block;
+      color: rgba(255,255,255,.9);
+      font-size: .72rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      padding: 0 3rem;
+    }
+    .marquee-track span::before {
+      content: '* ';
+      color: rgba(255,255,255,.4);
+    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 900px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-img-wrap { max-width: 420px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1/-1; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 5rem 5vw; }
+      .menu-notice { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    /* ─── UTILS ──────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header id="main-header">
+  <a href="#home" class="logo">
+    <span class="logo-main">Kojack's</span>
+    <span class="logo-sub">Chinese Restaurant</span>
+  </a>
+
+  <nav>
+    <a href="#home"     data-en="Home"     data-fr="Accueil">Home</a>
+    <a href="#about"    data-en="Our Story" data-fr="Notre Histoire">Our Story</a>
+    <a href="#services" data-en="Services"  data-fr="Services">Services</a>
+    <a href="#menu"     data-en="Menu"      data-fr="Menu">Menu</a>
+    <a href="#gallery"  data-en="Gallery"   data-fr="Galerie">Gallery</a>
+    <a href="#contact"  data-en="Contact"   data-fr="Contact">Contact</a>
+    <button class="lang-btn" id="lang-toggle">FR</button>
+  </nav>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#home"     data-en="Home"     data-fr="Accueil">Home</a>
+  <a href="#about"    data-en="Our Story" data-fr="Notre Histoire">Our Story</a>
+  <a href="#services" data-en="Services"  data-fr="Services">Services</a>
+  <a href="#menu"     data-en="Menu"      data-fr="Menu">Menu</a>
+  <a href="#gallery"  data-en="Gallery"   data-fr="Galerie">Gallery</a>
+  <a href="#contact"  data-en="Contact"   data-fr="Contact">Contact</a>
+  <button class="lang-btn" id="lang-toggle-mobile">FR</button>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" style="margin-top:var(--nav-h)">
+  <div class="marquee-track">
+    <span data-en="Now Under New Ownership" data-fr="Sous Nouvelle Direction">Now Under New Ownership</span>
+    <span data-en="Dine-In Available" data-fr="Service en Salle Disponible">Dine-In Available</span>
+    <span data-en="Takeout Welcome" data-fr="Commandes à Emporter">Takeout Welcome</span>
+    <span data-en="Call (819) 647-2254" data-fr="Appelez le (819) 647-2254">Call (819) 647-2254</span>
+    <span data-en="291 Rue Main, Shawville, QC" data-fr="291 Rue Main, Shawville, QC">291 Rue Main, Shawville, QC</span>
+    <span data-en="Now Under New Ownership" data-fr="Sous Nouvelle Direction">Now Under New Ownership</span>
+    <span data-en="Dine-In Available" data-fr="Service en Salle Disponible">Dine-In Available</span>
+    <span data-en="Takeout Welcome" data-fr="Commandes à Emporter">Takeout Welcome</span>
+    <span data-en="Call (819) 647-2254" data-fr="Appelez le (819) 647-2254">Call (819) 647-2254</span>
+    <span data-en="291 Rue Main, Shawville, QC" data-fr="291 Rue Main, Shawville, QC">291 Rue Main, Shawville, QC</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="home">
+  <!-- Lanterns -->
+  <div class="lantern l1"></div>
+  <div class="lantern l2"></div>
+  <div class="lantern l3"></div>
+  <div class="lantern l4"></div>
+  <div class="lantern l5"></div>
+
+  <!-- Particles -->
+  <div class="particle" style="left:15%;bottom:10%;animation-delay:0s;"></div>
+  <div class="particle" style="left:30%;bottom:5%;animation-delay:2s;"></div>
+  <div class="particle" style="left:55%;bottom:15%;animation-delay:4s;"></div>
+  <div class="particle" style="left:70%;bottom:8%;animation-delay:1s;"></div>
+  <div class="particle" style="left:85%;bottom:12%;animation-delay:3s;"></div>
+
+  <div class="hero-inner">
+    <div class="hero-badge" data-en="New Ownership — Shawville, Quebec" data-fr="Nouvelle Direction — Shawville, Québec">New Ownership — Shawville, Quebec</div>
+    <h1 class="hero-title">
+      <em data-en="Authentic" data-fr="Cuisine">Authentic</em><br>
+      <span data-en="Chinese Cuisine" data-fr="Chinoise Authentique">Chinese Cuisine</span>
+    </h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub" data-en="A beloved Shawville tradition reimagined under passionate new ownership. Savour the flavours of China right in the heart of the Pontiac." data-fr="Une tradition bien-aimée de Shawville réinventée sous une nouvelle direction passionnée. Savourez les saveurs de la Chine au coeur du Pontiac.">A beloved Shawville tradition reimagined under passionate new ownership. Savour the flavours of China right in the heart of the Pontiac.</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn-primary" data-en="View Our Menu" data-fr="Voir Notre Menu">View Our Menu</a>
+      <a href="#contact" class="btn-outline" data-en="Find Us" data-fr="Nous Trouver">Find Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span></span>
+  </div>
+</section>
+
+<!-- NEW OWNERS / ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-img-wrap reveal">
+      <!-- TEMPLATE PHOTO: Replace with a photo of the restaurant or owners -->
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Restaurant interior — replace with your own photo" />
+    </div>
+    <div class="reveal" style="transition-delay:.15s">
+      <div class="about-tag" data-en="Under New Ownership" data-fr="Sous Nouvelle Direction">Under New Ownership</div>
+      <h2 class="section-title" data-en="A Fresh Chapter for Kojack's" data-fr="Un Nouveau Chapitre pour Kojack's">A Fresh Chapter for Kojack's</h2>
+      <div class="gold-rule"></div>
+      <p class="section-body" data-en="Kojack's Chinese Restaurant has been a cornerstone of Shawville and the greater Pontiac region for years. Now, under exciting new ownership, we are bringing renewed energy, fresh recipes, and a deep commitment to quality and community to every table. Same beloved address, brand-new experience." data-fr="Le Restaurant Chinois Kojack's est une institution de Shawville et de la région du Pontiac depuis de nombreuses années. Sous une nouvelle direction enthousiaste, nous apportons une énergie renouvelée, des recettes fraîches et un engagement profond envers la qualité et la communauté. Même adresse bien-aimée, nouvelle expérience.">Kojack's Chinese Restaurant has been a cornerstone of Shawville and the greater Pontiac region for years. Now, under exciting new ownership, we are bringing renewed energy, fresh recipes, and a deep commitment to quality and community to every table. Same beloved address, brand-new experience.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num" data-en="New" data-fr="Nouvelle">New</div>
+          <div class="stat-label" data-en="Ownership &amp; Vision" data-fr="Direction &amp; Vision">Ownership &amp; Vision</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-en="Fresh" data-fr="Fraîche">Fresh</div>
+          <div class="stat-label" data-en="Recipes &amp; Ingredients" data-fr="Recettes &amp; Ingrédients">Recipes &amp; Ingredients</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-en="Local" data-fr="Local">Local</div>
+          <div class="stat-label" data-en="Pontiac Community" data-fr="Communauté Pontiac">Pontiac Community</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-en="Always" data-fr="Toujours">Always</div>
+          <div class="stat-label" data-en="Welcoming Guests" data-fr="Accueillant nos hôtes">Welcoming Guests</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-header reveal">
+    <div class="section-label" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</div>
+    <h2 class="section-title" data-en="Dining Your Way" data-fr="Mangez à Votre Façon">Dining Your Way</h2>
+    <div class="gold-rule"></div>
+    <p class="section-body" data-en="Whether you prefer a relaxed sit-down meal or the convenience of takeout, Kojack's is here to serve the Shawville and Pontiac community with authentic Chinese flavours." data-fr="Que vous préfériez un repas tranquille sur place ou la commodité d'une commande à emporter, Kojack's est là pour servir la communauté de Shawville et du Pontiac avec des saveurs chinoises authentiques.">Whether you prefer a relaxed sit-down meal or the convenience of takeout, Kojack's is here to serve the Shawville and Pontiac community with authentic Chinese flavours.</p>
+  </div>
+
+  <div class="services-grid reveal" style="transition-delay:.1s">
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </div>
+      <div class="service-title" data-en="Dine-In" data-fr="Repas sur Place">Dine-In</div>
+      <p class="service-desc" data-en="Enjoy a full sit-down dining experience in our welcoming restaurant. Perfect for family meals, dates, or a relaxed evening out." data-fr="Profitez d'une expérience complète dans notre restaurant accueillant. Parfait pour les repas en famille, les sorties en couple ou une soirée détendue.">Enjoy a full sit-down dining experience in our welcoming restaurant. Perfect for family meals, dates, or a relaxed evening out.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </div>
+      <div class="service-title" data-en="Takeout" data-fr="Commandes à Emporter">Takeout</div>
+      <p class="service-desc" data-en="Call ahead and pick up your favourite dishes. Quick, convenient, and just as delicious — your comfort food, your way." data-fr="Appelez à l'avance et venez chercher vos plats préférés. Rapide, pratique et tout aussi délicieux — votre plat réconfortant, à votre façon.">Call ahead and pick up your favourite dishes. Quick, convenient, and just as delicious — your comfort food, your way.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="service-title" data-en="Lunch Specials" data-fr="Spéciaux du Midi">Lunch Specials</div>
+      <p class="service-desc" data-en="Midday value-packed combo plates that hit the spot without breaking the bank. Ask us about today's lunch specials." data-fr="Des assiettes repas de midi riches en saveurs sans se ruiner. Demandez-nous les spéciaux du jour.">Midday value-packed combo plates that hit the spot without breaking the bank. Ask us about today's lunch specials.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <div class="service-title" data-en="Group &amp; Family Dining" data-fr="Repas en Groupe et en Famille">Group &amp; Family Dining</div>
+      <p class="service-desc" data-en="Planning a gathering? Our menu is perfect for sharing. Family-style portions and group-friendly seating available." data-fr="Vous planifiez un rassemblement? Notre menu est parfait pour partager. Portions familiales et tables pour groupes disponibles.">Planning a gathering? Our menu is perfect for sharing. Family-style portions and group-friendly seating available.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <div class="service-title" data-en="Combination Plates" data-fr="Assiettes Combinées">Combination Plates</div>
+      <p class="service-desc" data-en="Can't decide? Our combo plates let you enjoy multiple dishes in one generous serving — always a crowd favourite." data-fr="Vous n'arrivez pas à choisir? Nos assiettes combo vous permettent de profiter de plusieurs plats en une seule portion généreuse.">Can't decide? Our combo plates let you enjoy multiple dishes in one generous serving — always a crowd favourite.</p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="service-title" data-en="Local to Shawville" data-fr="Local à Shawville">Local to Shawville</div>
+      <p class="service-desc" data-en="Proudly serving Shawville and the Pontiac region. A true community restaurant at the heart of 291 Rue Main." data-fr="Fièrement au service de Shawville et de la région du Pontiac. Un vrai restaurant communautaire au coeur du 291 rue Main.">Proudly serving Shawville and the Pontiac region. A true community restaurant at the heart of 291 Rue Main.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="reveal">
+    <div class="section-label" data-en="Our Menu" data-fr="Notre Menu">Our Menu</div>
+    <h2 class="section-title" data-en="Something for Everyone" data-fr="Quelque Chose pour Tous">Something for Everyone</h2>
+    <div class="gold-rule"></div>
+  </div>
+
+  <div class="menu-notice reveal" style="transition-delay:.1s">
+    <div>
+      <p><strong data-en="Menu Coming Soon" data-fr="Menu Bientôt Disponible">Menu Coming Soon</strong></p>
+      <p data-en="We are currently updating our full menu. In the meantime, call us at (819) 647-2254 for today's offerings or visit us at 291 Rue Main, Shawville. Below is a sample of classic dishes we are proud to serve." data-fr="Nous mettons à jour notre menu complet. En attendant, appelez-nous au (819) 647-2254 pour les offres du jour ou venez nous voir au 291 rue Main, Shawville. Vous trouverez ci-dessous un aperçu des plats classiques que nous sommes fiers de servir.">We are currently updating our full menu. In the meantime, call us at (819) 647-2254 for today's offerings or visit us at 291 Rue Main, Shawville. Below is a sample of classic dishes we are proud to serve.</p>
+    </div>
+    <!-- TEMPLATE: Replace this block with a photo of your printed menu -->
+    <div class="menu-placeholder" data-en="Place Menu Image Here" data-fr="Insérez Image du Menu">Place Menu Image Here</div>
+  </div>
+
+  <div class="menu-tabs reveal" style="transition-delay:.15s">
+    <button class="tab-btn active" onclick="switchTab(event,'appetizers')" data-en="Appetizers" data-fr="Entrées">Appetizers</button>
+    <button class="tab-btn" onclick="switchTab(event,'mains')" data-en="Main Dishes" data-fr="Plats Principaux">Main Dishes</button>
+    <button class="tab-btn" onclick="switchTab(event,'noodles')" data-en="Noodles &amp; Rice" data-fr="Nouilles &amp; Riz">Noodles &amp; Rice</button>
+    <button class="tab-btn" onclick="switchTab(event,'soups')" data-en="Soups" data-fr="Soupes">Soups</button>
+  </div>
+
+  <div id="appetizers" class="tab-panel active reveal" style="transition-delay:.2s">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-popular" data-en="Popular" data-fr="Populaire">Popular</div>
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Spring Rolls" data-fr="Rouleaux Printaniers">Spring Rolls</div>
+          <div class="menu-item-price">$6.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Crispy golden rolls filled with seasoned vegetables and pork. Served with plum sauce." data-fr="Rouleaux dorés et croustillants garnis de légumes et de porc assaisonnés. Servis avec sauce aux prunes.">Crispy golden rolls filled with seasoned vegetables and pork. Served with plum sauce.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Wontons" data-fr="Wontons">Wontons</div>
+          <div class="menu-item-price">$7.50</div>
+        </div>
+        <p class="menu-item-desc" data-en="Pan-fried or steamed dumplings filled with seasoned pork and ginger." data-fr="Dumplings poêlés ou vapeur garnis de porc et gingembre assaisonnés.">Pan-fried or steamed dumplings filled with seasoned pork and ginger.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Garlic Ribs" data-fr="Côtes à l'Ail">Garlic Ribs</div>
+          <div class="menu-item-price">$11.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Tender spareribs marinated in a savoury garlic and soy glaze, lightly fried to perfection." data-fr="Côtes levées tendres marinées dans un glacis savoureux à l'ail et à la sauce soja.">Tender spareribs marinated in a savoury garlic and soy glaze, lightly fried to perfection.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Chicken Wings" data-fr="Ailes de Poulet">Chicken Wings</div>
+          <div class="menu-item-price">$10.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Crispy Chinese-style wings tossed in a sweet and savoury glaze." data-fr="Ailes à la chinoise croustillantes enrobées d'un glacis sucré-salé.">Crispy Chinese-style wings tossed in a sweet and savoury glaze.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="mains" class="tab-panel reveal">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-popular" data-en="Popular" data-fr="Populaire">Popular</div>
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="General Tao Chicken" data-fr="Poulet du Général Tao">General Tao Chicken</div>
+          <div class="menu-item-price">$14.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Crispy chicken pieces tossed in a bold sweet-spicy sauce. A Canadian-Chinese classic." data-fr="Morceaux de poulet croustillants enrobés d'une sauce sucrée-épicée. Un classique sino-canadien.">Crispy chicken pieces tossed in a bold sweet-spicy sauce. A Canadian-Chinese classic.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Beef with Broccoli" data-fr="Boeuf aux Brocolis">Beef with Broccoli</div>
+          <div class="menu-item-price">$15.50</div>
+        </div>
+        <p class="menu-item-desc" data-en="Tender sliced beef and fresh broccoli wok-tossed in a rich oyster sauce." data-fr="Tranches de boeuf tendres et brocoli frais sautés au wok dans une riche sauce aux huîtres.">Tender sliced beef and fresh broccoli wok-tossed in a rich oyster sauce.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Sweet and Sour Pork" data-fr="Porc Aigre-Doux">Sweet and Sour Pork</div>
+          <div class="menu-item-price">$14.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Golden pork pieces with peppers, onion, and pineapple in a vibrant sweet-and-sour sauce." data-fr="Morceaux de porc dorés avec poivrons, oignons et ananas dans une sauce aigre-douce vive.">Golden pork pieces with peppers, onion, and pineapple in a vibrant sweet-and-sour sauce.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Shrimp with Lobster Sauce" data-fr="Crevettes Sauce Homard">Shrimp with Lobster Sauce</div>
+          <div class="menu-item-price">$17.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Tender shrimp in a silky, savoury egg-drop lobster sauce. A house specialty." data-fr="Crevettes tendres dans une sauce homard soyeuse. Une spécialité de la maison.">Tender shrimp in a silky, savoury egg-drop lobster sauce. A house specialty.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="noodles" class="tab-panel reveal">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-popular" data-en="Popular" data-fr="Populaire">Popular</div>
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Chicken Fried Rice" data-fr="Riz Frit au Poulet">Chicken Fried Rice</div>
+          <div class="menu-item-price">$13.50</div>
+        </div>
+        <p class="menu-item-desc" data-en="Classic wok-fried rice with chicken, egg, and vegetables." data-fr="Riz classique sauté au wok avec poulet, oeuf et légumes.">Classic wok-fried rice with chicken, egg, and vegetables.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Beef Chow Mein" data-fr="Chow Mein au Boeuf">Beef Chow Mein</div>
+          <div class="menu-item-price">$14.50</div>
+        </div>
+        <p class="menu-item-desc" data-en="Pan-fried egg noodles with tender beef slices and crisp vegetables." data-fr="Nouilles aux oeufs poêlées avec tranches de boeuf tendres et légumes croquants.">Pan-fried egg noodles with tender beef slices and crisp vegetables.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Singapore Rice Noodles" data-fr="Nouilles de Riz Singapour">Singapore Rice Noodles</div>
+          <div class="menu-item-price">$14.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Thin rice vermicelli wok-tossed with shrimp, BBQ pork, egg, and curry spices." data-fr="Vermicelles de riz sautés au wok avec crevettes, porc BBQ, oeuf et épices de curry.">Thin rice vermicelli wok-tossed with shrimp, BBQ pork, egg, and curry spices.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="soups" class="tab-panel reveal">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-popular" data-en="Popular" data-fr="Populaire">Popular</div>
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Egg Drop Soup" data-fr="Soupe aux Oeufs">Egg Drop Soup</div>
+          <div class="menu-item-price">$4.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="Light chicken broth with ribbons of egg and green onion." data-fr="Bouillon de poulet léger avec rubans d'oeuf et oignon vert.">Light chicken broth with ribbons of egg and green onion.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Hot and Sour Soup" data-fr="Soupe Aigre-Piquante">Hot and Sour Soup</div>
+          <div class="menu-item-price">$5.95</div>
+        </div>
+        <p class="menu-item-desc" data-en="A bold, tangy, and spicy soup with tofu, mushrooms, bamboo shoots, and egg." data-fr="Une soupe corsée, acidulée et épicée avec tofu, champignons, pousses de bambou et oeuf.">A bold, tangy, and spicy soup with tofu, mushrooms, bamboo shoots, and egg.</p>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-top">
+          <div class="menu-item-name" data-en="Wonton Soup" data-fr="Soupe Wonton">Wonton Soup</div>
+          <div class="menu-item-price">$6.50</div>
+        </div>
+        <p class="menu-item-desc" data-en="Pork-filled wontons in a clear, flavourful broth with bok choy." data-fr="Wontons garnis de porc dans un bouillon clair et savoureux avec bok choy.">Pork-filled wontons in a clear, flavourful broth with bok choy.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem; padding: 1.5rem; border:1px solid var(--border); background: #fffdf9;" class="reveal">
+    <p style="font-size:.88rem;color:var(--ink-soft);line-height:1.7;" data-en="This is a sample menu for illustration. Prices and availability are subject to change. Please call (819) 647-2254 for the most current menu and daily specials." data-fr="Ce menu est un exemple d'illustration. Les prix et la disponibilité sont sujets à changement. Veuillez appeler le (819) 647-2254 pour le menu actuel et les spéciaux du jour.">This is a sample menu for illustration. Prices and availability are subject to change. Please call (819) 647-2254 for the most current menu and daily specials.</p>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <div class="section-label" data-en="Photo Gallery" data-fr="Galerie Photos">Photo Gallery</div>
+    <h2 class="section-title" data-en="A Taste of Kojack's" data-fr="Un Avant-Goût de Kojack's">A Taste of Kojack's</h2>
+    <div class="gold-rule"></div>
+  </div>
+  <div class="gallery-strip reveal" style="transition-delay:.1s">
+    <!-- TEMPLATE PHOTOS: Replace each src with your actual restaurant/food photos -->
+    <div class="gallery-thumb">
+      <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=600&q=80" alt="Chinese food — replace with your photo" />
+      <div class="photo-label" data-en="Our Dishes" data-fr="Nos Plats">Our Dishes</div>
+    </div>
+    <div class="gallery-thumb">
+      <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&q=80" alt="Restaurant dining room — replace with your photo" />
+      <div class="photo-label" data-en="Dining Room" data-fr="Salle à Manger">Dining Room</div>
+    </div>
+    <div class="gallery-thumb">
+      <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&q=80" alt="Noodle dish — replace with your photo" />
+      <div class="photo-label" data-en="Noodles &amp; Rice" data-fr="Nouilles &amp; Riz">Noodles &amp; Rice</div>
+    </div>
+    <div class="gallery-thumb">
+      <img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=600&q=80" alt="Chinese dumplings — replace with your photo" />
+      <div class="photo-label" data-en="Appetizers" data-fr="Entrées">Appetizers</div>
+    </div>
+    <div class="gallery-thumb">
+      <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=600&q=80" alt="Stir fry — replace with your photo" />
+      <div class="photo-label" data-en="Wok Specialties" data-fr="Spécialités au Wok">Wok Specialties</div>
+    </div>
+  </div>
+  <p style="padding:1.2rem 5vw 0; color:rgba(255,255,255,.3); font-size:.72rem; letter-spacing:.15em; text-transform:uppercase;" data-en="Template photos shown — replace with your own." data-fr="Photos de gabarit — à remplacer par les vôtres.">Template photos shown — replace with your own.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="section-label" data-en="Find Us" data-fr="Nous Trouver">Find Us</div>
+      <h2 class="section-title reveal" data-en="Visit Kojack's" data-fr="Visitez Kojack's">Visit Kojack's</h2>
+      <div class="gold-rule"></div>
+
+      <div class="info-block reveal" style="transition-delay:.1s">
+        <div class="info-label" data-en="Address" data-fr="Adresse">Address</div>
+        <div class="info-value">
+          291 Rue Main<br>Shawville, QC J0X 2Y0
+        </div>
+      </div>
+
+      <div class="info-block reveal" style="transition-delay:.15s">
+        <div class="info-label" data-en="Phone" data-fr="Téléphone">Phone</div>
+        <div class="info-value">
+          <a href="tel:+18196472254">(819) 647-2254</a>
+        </div>
+      </div>
+
+      <div class="info-block reveal" style="transition-delay:.2s">
+        <div class="info-label" data-en="Hours" data-fr="Heures d'Ouverture">Hours</div>
+        <div class="info-value">
+          <div class="hours-grid">
+            <span class="day" data-en="Mon – Thu" data-fr="Lun – Jeu">Mon – Thu</span>
+            <span class="time" data-en="11:00 AM – 9:00 PM" data-fr="11 h – 21 h">11:00 AM – 9:00 PM</span>
+            <span class="day" data-en="Fri – Sat" data-fr="Ven – Sam">Fri – Sat</span>
+            <span class="time" data-en="11:00 AM – 10:00 PM" data-fr="11 h – 22 h">11:00 AM – 10:00 PM</span>
+            <span class="day" data-en="Sunday" data-fr="Dimanche">Sunday</span>
+            <span class="time" data-en="12:00 PM – 9:00 PM" data-fr="12 h – 21 h">12:00 PM – 9:00 PM</span>
+          </div>
+          <p style="font-size:.78rem;color:#888;margin-top:.6rem;" data-en="Hours subject to change — call ahead to confirm." data-fr="Heures sujettes à changement — appelez pour confirmer.">Hours subject to change — call ahead to confirm.</p>
+        </div>
+      </div>
+
+      <div class="cta-bar reveal" style="transition-delay:.25s">
+        <p data-en="Ready to order? Give us a call!" data-fr="Prêt à commander? Appelez-nous!">Ready to order? Give us a call!</p>
+        <a href="tel:+18196472254">(819) 647-2254</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:.15s">
+      <!-- TEMPLATE: Embed a real Google Map here — replace the div below with an <iframe> from Google Maps -->
+      <div class="map-placeholder">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--ink)"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-en="Replace with Google Maps embed" data-fr="Remplacer par une intégration Google Maps">Replace with Google Maps embed</span>
+        <span style="font-size:.65rem;opacity:.5">291 Rue Main, Shawville QC</span>
+      </div>
+      <p style="font-size:.75rem;color:#999;margin-top:.8rem;line-height:1.6;" data-en="To add a Google Map: go to maps.google.com, search your address, click Share > Embed a map, and paste the iframe code here." data-fr="Pour ajouter Google Maps: allez sur maps.google.com, cherchez votre adresse, cliquez Partager > Intégrer une carte, et collez le code iframe ici.">To add a Google Map: go to maps.google.com, search your address, click Share &gt; Embed a map, and paste the iframe code here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo" style="margin-bottom:.5rem;display:inline-block">
+        <span class="logo-main">Kojack's Chinese Restaurant</span>
+      </a>
+      <p data-en="Authentic Chinese cuisine in the heart of Shawville, Quebec. Proudly serving the Pontiac region under new ownership." data-fr="Cuisine chinoise authentique au coeur de Shawville, Québec. Fièrement au service de la région du Pontiac sous une nouvelle direction.">Authentic Chinese cuisine in the heart of Shawville, Quebec. Proudly serving the Pontiac region under new ownership.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-en="Navigate" data-fr="Navigation">Navigate</h4>
+      <ul>
+        <li><a href="#home"     data-en="Home"      data-fr="Accueil">Home</a></li>
+        <li><a href="#about"    data-en="Our Story"  data-fr="Notre Histoire">Our Story</a></li>
+        <li><a href="#services" data-en="Services"   data-fr="Services">Services</a></li>
+        <li><a href="#menu"     data-en="Menu"       data-fr="Menu">Menu</a></li>
+        <li><a href="#gallery"  data-en="Gallery"    data-fr="Galerie">Gallery</a></li>
+        <li><a href="#contact"  data-en="Contact"    data-fr="Contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 data-en="Contact" data-fr="Contact">Contact</h4>
+      <ul>
+        <li style="color:rgba(255,255,255,.5);font-size:.85rem;">291 Rue Main</li>
+        <li style="color:rgba(255,255,255,.5);font-size:.85rem;">Shawville, QC J0X 2Y0</li>
+        <li><a href="tel:+18196472254">(819) 647-2254</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p data-en="&copy; 2025 Kojack's Chinese Restaurant. All rights reserved." data-fr="&copy; 2025 Restaurant Chinois Kojack's. Tous droits réservés.">&copy; 2025 Kojack's Chinese Restaurant. All rights reserved.</p>
+    <p>
+      <span data-en="Website by " data-fr="Site web par ">Website by </span>
+      <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  // ─── LANGUAGE TOGGLE ─────────────────────────
+  let lang = 'en';
+
+  function applyLang(l) {
+    lang = l;
+    document.documentElement.lang = l === 'fr' ? 'fr' : 'en';
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const txt = el.getAttribute('data-' + l);
+      if (txt) el.innerHTML = txt;
+    });
+
+    // Update button labels
+    const label = l === 'en' ? 'FR' : 'EN';
+    document.getElementById('lang-toggle').textContent = label;
+    document.getElementById('lang-toggle-mobile').textContent = label;
+  }
+
+  document.getElementById('lang-toggle').addEventListener('click', () => applyLang(lang === 'en' ? 'fr' : 'en'));
+  document.getElementById('lang-toggle-mobile').addEventListener('click', () => applyLang(lang === 'en' ? 'fr' : 'en'));
+
+  // ─── STICKY HEADER SHADOW ────────────────────
+  window.addEventListener('scroll', () => {
+    document.getElementById('main-header').classList.toggle('scrolled', scrollY > 10);
+  });
+
+  // ─── HAMBURGER ───────────────────────────────
+  const ham = document.getElementById('hamburger');
+  const mob = document.getElementById('mobile-nav');
+
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    mob.classList.toggle('open');
+  });
+
+  mob.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      ham.classList.remove('open');
+      mob.classList.remove('open');
+    });
+  });
+
+  // ─── MENU TABS ───────────────────────────────
+  function switchTab(e, id) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    e.currentTarget.classList.add('active');
+    document.getElementById(id).classList.add('active');
+  }
+
+  // ─── SCROLL REVEAL ───────────────────────────
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

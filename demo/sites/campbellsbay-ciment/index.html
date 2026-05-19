@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campbell's Bay Ciment | Ready-Mix Concrete, Aggregates & Construction Services – Pontiac, Quebec</title>
+  <meta name="description" content="Campbell's Bay Ciment – Leading manufacturer and supplier of ready-mix concrete, aggregates, stamped concrete, poured foundations, and more. Serving Pontiac, Outaouais, West Quebec, and the Ottawa Valley since 1982." />
+  <meta name="keywords" content="ready-mix concrete Pontiac QC, concrete supplier Quebec, stamped concrete Ottawa Valley, poured concrete foundation West Quebec, aggregate supplier Outaouais, Campbell's Bay Ciment, béton prêt-à-l'emploi Pontiac" />
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Campbell's Bay, Pontiac, Quebec" />
+  <meta property="og:title" content="Campbell's Bay Ciment | Concrete & Aggregate Supplier – Pontiac, QC" />
+  <meta property="og:description" content="Ready-mix concrete, aggregates, stamped concrete & construction services in Pontiac, Outaouais & Ottawa Valley." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.campbellsbayciment.ca/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --blue-dark:   #0a1f44;
+      --blue-mid:    #1a3a6e;
+      --blue:        #1e4fa3;
+      --blue-bright: #2e6fd9;
+      --blue-light:  #4f9cf0;
+      --accent:      #f0a500;
+      --white:       #ffffff;
+      --offwhite:    #f4f7fc;
+      --gray:        #8a98b0;
+      --text:        #1a2540;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Source Sans 3', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+
+    /* ── PHOTO PLACEHOLDER ── */
+    .photo-slot {
+      background: #dce6f5;
+      border: 2px dashed #a0b8d8;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #5a7aaa;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .photo-slot:hover { background: #cddaf0; border-color: var(--blue-bright); color: var(--blue); }
+    .photo-slot svg { width: 36px; height: 36px; opacity: 0.5; }
+    .photo-slot span { opacity: 0.7; }
+    /* When an img is placed inside, it fills the slot */
+    .photo-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
+
+    /* ── HEADER ── */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10,31,68,0.97);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; height: 70px;
+    }
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-icon { width: 40px; height: 40px; background: var(--blue-bright); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .logo-icon svg { width: 22px; height: 22px; fill: white; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-name { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--white); }
+    .logo-sub { font-size: 0.62rem; color: var(--blue-light); letter-spacing: 1.5px; text-transform: uppercase; }
+
+    nav { display: flex; align-items: center; gap: 2px; }
+    nav a {
+      color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.4px; text-transform: uppercase; padding: 6px 9px; border-radius: 4px; transition: all 0.2s; white-space: nowrap;
+    }
+    nav a:hover, nav a.active { color: var(--white); background: rgba(255,255,255,0.12); }
+
+    .lang-btn {
+      margin-left: 8px; background: var(--blue-bright); color: white; padding: 6px 16px;
+      border-radius: 20px; font-size: 0.76rem; cursor: pointer; border: none;
+      font-family: 'Source Sans 3', sans-serif; font-weight: 700; letter-spacing: 1px;
+      text-transform: uppercase; transition: background 0.2s;
+    }
+    .lang-btn:hover { background: var(--blue-light); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: white; border-radius: 2px; transition: all 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    #mobile-menu { display: none; flex-direction: column; background: var(--blue-dark); padding: 12px 24px 20px; }
+    #mobile-menu.open { display: flex; }
+    #mobile-menu a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    #mobile-menu a:last-of-type { border-bottom: none; }
+    #mobile-menu .lang-btn { display: inline-block; margin-top: 14px; width: fit-content; }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh; padding-top: 70px;
+      background: linear-gradient(160deg, var(--blue-dark) 0%, var(--blue-mid) 50%, var(--blue) 100%);
+      position: relative; display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridShift 20s linear infinite;
+    }
+    @keyframes gridShift { from { transform: translateY(0); } to { transform: translateY(60px); } }
+    .hero-orb { position: absolute; border-radius: 50%; filter: blur(80px); animation: orbPulse 6s ease-in-out infinite; }
+    .orb1 { width: 500px; height: 500px; background: rgba(46,111,217,0.3); top: -100px; right: -100px; }
+    .orb2 { width: 300px; height: 300px; background: rgba(240,165,0,0.15); bottom: 50px; left: 8%; animation-delay: -3s; }
+    @keyframes orbPulse { 0%,100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.1); opacity: 1; } }
+
+    .hero-content {
+      position: relative; max-width: 1280px; margin: 0 auto; padding: 60px 24px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
+      padding: 6px 14px; font-size: 0.72rem; color: var(--blue-light); letter-spacing: 1.5px;
+      text-transform: uppercase; margin-bottom: 20px;
+    }
+    .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1}50%{opacity:0.3} }
+
+    .hero-title { font-family: 'Oswald', sans-serif; font-size: clamp(2.4rem,5vw,4rem); font-weight: 700; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
+    .hero-title span { color: var(--accent); }
+    .hero-desc { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.75; max-width: 520px; margin-bottom: 36px; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn-primary { background: var(--accent); color: var(--blue-dark); padding: 14px 30px; border-radius: 6px; font-weight: 700; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase; transition: all 0.25s; display: inline-block; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(240,165,0,0.4); }
+    .btn-outline { background: transparent; color: white; padding: 14px 30px; border-radius: 6px; font-weight: 600; font-size: 0.88rem; text-decoration: none; letter-spacing: 0.5px; text-transform: uppercase; border: 2px solid rgba(255,255,255,0.4); transition: all 0.25s; display: inline-block; }
+    .btn-outline:hover { border-color: white; background: rgba(255,255,255,0.08); transform: translateY(-2px); }
+
+    .hero-stats { display: flex; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+    .stat-num { font-family: 'Oswald', sans-serif; font-size: 2rem; font-weight: 700; color: var(--white); line-height: 1; }
+    .stat-num span { color: var(--accent); }
+    .stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+    /* Hero photo strip */
+    .hero-photos {
+      display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 220px 180px; gap: 12px;
+    }
+    .hero-photos .photo-slot:first-child { grid-row: 1 / 3; }
+
+    /* ── SECTION BASICS ── */
+    section { scroll-margin-top: 70px; }
+    .section-inner { max-width: 1280px; margin: 0 auto; padding: 90px 24px; }
+    .section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue-bright); margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
+    .section-label::before { content: ''; display: block; width: 28px; height: 2px; background: var(--blue-bright); }
+    .section-title { font-family: 'Oswald', sans-serif; font-size: clamp(1.8rem,3.5vw,2.7rem); font-weight: 700; color: var(--blue-dark); line-height: 1.15; margin-bottom: 14px; }
+    .section-title span { color: var(--blue-bright); }
+    .section-desc { font-size: 0.97rem; color: #4a5568; line-height: 1.75; max-width: 640px; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--offwhite); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
+    .about-text p { color: #4a5568; line-height: 1.8; margin-bottom: 16px; font-size: 0.96rem; }
+
+    .about-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+    .about-card { background: white; border-radius: 10px; padding: 18px 20px; border-left: 4px solid var(--blue-bright); box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; }
+    .about-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+    .about-card-icon { width: 32px; height: 32px; margin-bottom: 8px; }
+    .about-card-icon svg { width: 100%; height: 100%; fill: var(--blue-bright); }
+    .about-card-title { font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 0.92rem; color: var(--blue-dark); }
+    .about-card-text { font-size: 0.76rem; color: var(--gray); margin-top: 3px; line-height: 1.5; }
+
+    .about-right { display: flex; flex-direction: column; gap: 20px; }
+    /* About photo grid */
+    .about-photo-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 200px 160px; gap: 12px; }
+    .about-photo-grid .photo-slot:first-child { grid-column: 1 / 3; }
+
+    .timeline { position: relative; padding-left: 26px; }
+    .timeline::before { content: ''; position: absolute; left: 0; top: 6px; bottom: 6px; width: 3px; background: linear-gradient(to bottom, var(--blue-bright), var(--accent)); border-radius: 2px; }
+    .timeline-item { position: relative; padding-bottom: 28px; opacity: 0; transform: translateX(20px); transition: all 0.6s; }
+    .timeline-item.visible { opacity: 1; transform: translateX(0); }
+    .timeline-item::before { content: ''; position: absolute; left: -33px; top: 5px; width: 12px; height: 12px; background: var(--blue-bright); border-radius: 50%; border: 3px solid var(--offwhite); box-shadow: 0 0 0 2px var(--blue-bright); }
+    .timeline-year { font-family: 'Oswald', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--blue-bright); letter-spacing: 1px; }
+    .timeline-text { font-size: 0.88rem; color: #4a5568; line-height: 1.6; margin-top: 2px; }
+
+    /* ── FLEET GALLERY (new section) ── */
+    #fleet { background: white; }
+    .fleet-intro { max-width: 680px; margin-bottom: 48px; }
+    .fleet-grid-main { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 300px 220px; gap: 14px; margin-bottom: 14px; }
+    .fleet-grid-main .photo-slot:first-child { grid-row: 1 / 3; }
+    .fleet-grid-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .fleet-grid-row .photo-slot { height: 180px; }
+
+    /* ── PRODUCTS ── */
+    #products { background: var(--offwhite); }
+    .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 18px; margin-top: 48px; }
+    .product-card {
+      background: white; border-radius: 12px; padding: 26px 22px; position: relative;
+      overflow: hidden; border: 1px solid transparent;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s, border-color 0.3s;
+    }
+    .product-card.visible { opacity: 1; transform: translateY(0); }
+    .product-card:hover { border-color: var(--blue-bright); box-shadow: 0 12px 35px rgba(30,79,163,0.11); }
+    .product-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(to bottom, var(--blue-bright), var(--blue-light)); transform: scaleY(0); transition: transform 0.3s; }
+    .product-card:hover::before { transform: scaleY(1); }
+    .product-icon-box { width: 44px; height: 44px; background: var(--offwhite); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .product-icon-box svg { width: 22px; height: 22px; fill: var(--blue-bright); }
+    .product-name { font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 600; color: var(--blue-dark); margin-bottom: 6px; }
+    .product-desc { font-size: 0.81rem; color: var(--gray); line-height: 1.6; }
+
+    /* ── STAMPED CONCRETE ── */
+    #stamped { background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%); position: relative; overflow: hidden; }
+    #stamped::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(255,255,255,0.04) 39px, rgba(255,255,255,0.04) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(255,255,255,0.04) 39px, rgba(255,255,255,0.04) 40px); }
+    #stamped .section-title { color: white; }
+    #stamped .section-desc { color: rgba(255,255,255,0.7); }
+    #stamped .section-label { color: var(--accent); }
+    #stamped .section-label::before { background: var(--accent); }
+
+    .stamped-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; margin-top: 48px; }
+    .stamped-photo-stack { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 240px 180px; gap: 12px; }
+    .stamped-photo-stack .photo-slot { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); color: rgba(255,255,255,0.5); }
+    .stamped-photo-stack .photo-slot:first-child { grid-column: 1 / 3; }
+    .stamped-photo-stack .photo-slot svg { opacity: 0.3; fill: white; }
+    .stamped-photo-stack .photo-slot:hover { background: rgba(255,255,255,0.14); border-color: rgba(255,255,255,0.5); }
+
+    .stamped-features { display: flex; flex-direction: column; gap: 16px; }
+    .stamped-feature { display: flex; gap: 16px; align-items: flex-start; background: rgba(255,255,255,0.07); border-radius: 10px; padding: 18px 20px; border: 1px solid rgba(255,255,255,0.08); transition: background 0.2s; }
+    .stamped-feature:hover { background: rgba(255,255,255,0.11); }
+    .stamped-feature-icon { width: 38px; height: 38px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .stamped-feature-icon svg { width: 18px; height: 18px; fill: var(--accent); }
+    .stamped-feature-title { font-family: 'Oswald', sans-serif; font-weight: 600; color: white; font-size: 0.93rem; margin-bottom: 4px; }
+    .stamped-feature-text { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+    /* ── SERVICES ── */
+    #services { background: var(--offwhite); }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-top: 48px; }
+    .service-card {
+      background: white; border-radius: 14px; padding: 30px 26px; box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      position: relative; overflow: hidden;
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.5s, transform 0.5s, box-shadow 0.3s;
+    }
+    .service-card.visible { opacity: 1; transform: translateY(0); }
+    .service-card:hover { box-shadow: 0 16px 40px rgba(30,79,163,0.13); transform: translateY(-4px); }
+    .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--blue-bright), var(--blue-light)); transform: scaleX(0); transition: transform 0.3s; }
+    .service-card:hover::after { transform: scaleX(1); }
+    .service-icon-box { width: 50px; height: 50px; background: linear-gradient(135deg, var(--blue-bright), var(--blue-light)); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .service-icon-box svg { width: 24px; height: 24px; fill: white; }
+    .service-name { font-family: 'Oswald', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--blue-dark); margin-bottom: 10px; }
+    .service-desc { font-size: 0.84rem; color: #5a6880; line-height: 1.65; }
+    .service-tags { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .service-tag { font-size: 0.7rem; background: var(--offwhite); color: var(--blue-mid); padding: 3px 10px; border-radius: 20px; font-weight: 600; }
+
+    /* ── WORK PHOTOS ── */
+    #workphotos { background: white; }
+    .work-intro { max-width: 680px; margin-bottom: 48px; }
+    .work-mosaic { display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 260px 200px 240px; gap: 14px; }
+    .work-mosaic .photo-slot:nth-child(1) { grid-column: 1 / 3; }
+    .work-mosaic .photo-slot:nth-child(5) { grid-column: 2 / 4; }
+    .work-mosaic .photo-slot:nth-child(6) { grid-column: 1 / 2; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--offwhite); }
+    .testimonials-wrap { overflow: hidden; position: relative; margin-top: 48px; }
+    .testimonials-track { display: flex; gap: 22px; animation: scrollTestimonials 42s linear infinite; width: max-content; }
+    .testimonials-track:hover { animation-play-state: paused; }
+    @keyframes scrollTestimonials { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .testimonial-card { background: white; border-radius: 14px; padding: 26px; width: 310px; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.05); position: relative; }
+    .testimonial-card::before { content: '"'; position: absolute; top: 12px; left: 20px; font-family: 'Oswald', sans-serif; font-size: 4rem; color: var(--blue-bright); opacity: 0.15; line-height: 1; }
+    .testimonial-stars { color: var(--accent); font-size: 0.82rem; margin-bottom: 6px; }
+    .testimonial-text { font-size: 0.88rem; color: #4a5568; line-height: 1.7; padding-top: 18px; font-style: italic; }
+    .testimonial-author { margin-top: 14px; font-weight: 700; font-size: 0.8rem; color: var(--blue-dark); }
+    .fade-edges { position: relative; }
+    .fade-edges::before, .fade-edges::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+    .fade-edges::before { left: 0; background: linear-gradient(to right, var(--offwhite), transparent); }
+    .fade-edges::after { right: 0; background: linear-gradient(to left, var(--offwhite), transparent); }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--blue-dark); }
+    #contact .section-label { color: var(--accent); }
+    #contact .section-label::before { background: var(--accent); }
+    #contact .section-title { color: white; }
+    #contact .section-desc { color: rgba(255,255,255,0.65); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 48px; }
+    .contact-info { display: flex; flex-direction: column; gap: 22px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-item-icon { width: 44px; height: 44px; background: rgba(255,255,255,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-item-icon svg { width: 20px; height: 20px; fill: var(--blue-light); }
+    .contact-item-label { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4); margin-bottom: 3px; }
+    .contact-item-val { font-weight: 600; color: white; font-size: 0.93rem; }
+    .contact-item-val a { color: var(--blue-light); text-decoration: none; }
+    .contact-item-val a:hover { text-decoration: underline; }
+    .contact-form { background: white; border-radius: 16px; padding: 36px; box-shadow: 0 8px 40px rgba(0,0,0,0.25); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+    .form-group label { font-size: 0.75rem; font-weight: 700; color: var(--blue-dark); text-transform: uppercase; letter-spacing: 0.5px; }
+    .form-group input, .form-group textarea, .form-group select { border: 2px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; font-size: 0.9rem; font-family: 'Source Sans 3', sans-serif; color: var(--text); transition: border-color 0.2s; outline: none; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--blue-bright); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .btn-submit { width: 100%; padding: 14px; background: var(--blue-dark); color: white; border: none; border-radius: 8px; font-size: 0.88rem; font-weight: 700; font-family: 'Source Sans 3', sans-serif; letter-spacing: 0.5px; text-transform: uppercase; cursor: pointer; transition: all 0.25s; }
+    .btn-submit:hover { background: var(--blue-bright); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(30,79,163,0.3); }
+
+    /* ── FOOTER ── */
+    footer { background: #060f24; color: rgba(255,255,255,0.5); padding: 50px 24px 24px; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 22px; }
+    .footer-brand p { font-size: 0.82rem; line-height: 1.7; margin-top: 14px; max-width: 300px; }
+    .footer-brand .contact-line { font-size: 0.8rem; margin-top: 8px; }
+    .footer-brand .contact-line a { color: var(--blue-light); text-decoration: none; }
+    .footer-col h4 { font-family: 'Oswald', sans-serif; color: white; font-size: 0.88rem; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 14px; }
+    .footer-col a { display: block; color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; padding: 3px 0; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--blue-light); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+    .footer-copy { font-size: 0.76rem; }
+    .footer-credit a { color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.76rem; }
+    .footer-credit a:hover { text-decoration: underline; }
+
+    /* ── FADE IN ── */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.65s, transform 0.65s; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .hero-content { grid-template-columns: 1fr; }
+      .hero-photos { grid-template-columns: 1fr 1fr; grid-template-rows: 180px 150px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo-grid { grid-template-rows: 180px 140px; }
+      .stamped-layout { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .fleet-grid-main { grid-template-columns: 1fr 1fr; grid-template-rows: 200px 200px 200px; }
+      .fleet-grid-main .photo-slot:first-child { grid-row: 1; grid-column: 1 / 3; }
+      .work-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .work-mosaic .photo-slot:nth-child(1) { grid-column: 1 / 3; height: 220px; }
+      .work-mosaic .photo-slot:nth-child(5) { grid-column: auto; }
+      .work-mosaic .photo-slot:nth-child(6) { grid-column: auto; }
+      .work-mosaic .photo-slot { height: 180px; }
+    }
+    @media (max-width: 600px) {
+      .section-inner { padding: 60px 16px; }
+      .about-cards { grid-template-columns: 1fr; }
+      .fleet-grid-row { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .hero-ctas { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ======== HEADER ======== -->
+<header id="header">
+  <div class="header-inner">
+    <a href="#home" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Campbell's Bay Ciment</span>
+        <span class="logo-sub">Est. 1982 &middot; Pontiac, QC</span>
+      </div>
+    </a>
+    <nav id="desktop-nav">
+      <a href="#home" class="active" data-en="Home" data-fr="Accueil">Home</a>
+      <a href="#about" data-en="About Us" data-fr="&Agrave; propos">About Us</a>
+      <a href="#products" data-en="Products" data-fr="Produits">Products</a>
+      <a href="#stamped" data-en="Stamped Concrete" data-fr="B&eacute;ton Estamp&eacute;">Stamped Concrete</a>
+      <a href="#services" data-en="Services" data-fr="Services">Services</a>
+      <a href="#testimonials" data-en="Testimonials" data-fr="T&eacute;moignages">Testimonials</a>
+      <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="lang-toggle" onclick="toggleLang()">FR</button>
+    </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div id="mobile-menu">
+    <a href="#home" onclick="closeMenu()" data-en="Home" data-fr="Accueil">Home</a>
+    <a href="#about" onclick="closeMenu()" data-en="About Us" data-fr="&Agrave; propos">About Us</a>
+    <a href="#products" onclick="closeMenu()" data-en="Products" data-fr="Produits">Products</a>
+    <a href="#stamped" onclick="closeMenu()" data-en="Stamped Concrete" data-fr="B&eacute;ton Estamp&eacute;">Stamped Concrete</a>
+    <a href="#services" onclick="closeMenu()" data-en="Services" data-fr="Services">Services</a>
+    <a href="#testimonials" onclick="closeMenu()" data-en="Testimonials" data-fr="T&eacute;moignages">Testimonials</a>
+    <a href="#contact" onclick="closeMenu()" data-en="Contact" data-fr="Contact">Contact</a>
+    <button class="lang-btn" id="lang-toggle-mobile" onclick="toggleLang()">FR</button>
+  </div>
+</header>
+
+<!-- ======== HERO ======== -->
+<section id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge" data-en="Pontiac &middot; Outaouais &middot; Ottawa Valley" data-fr="Pontiac &middot; Outaouais &middot; Vall&eacute;e de l'Outaouais">Pontiac &middot; Outaouais &middot; Ottawa Valley</div>
+      <h1 class="hero-title" data-en="Building the <span>Foundation</span> of Your Project" data-fr="Construire la <span>Fondation</span> de Votre Projet">Building the <span>Foundation</span> of Your Project</h1>
+      <p class="hero-desc" data-en="Leading manufacturer and supplier of ready-mix concrete, aggregates, and construction services in Pontiac and the Ottawa Valley. Trusted by residential and commercial builders since 1982." data-fr="Fabricant et fournisseur de b&eacute;ton pr&ecirc;t-&agrave;-l'emploi, granulats et services de construction dans le Pontiac et la vall&eacute;e de l'Outaouais. Reconnus par les constructeurs depuis 1982.">Leading manufacturer and supplier of ready-mix concrete, aggregates, and construction services in Pontiac and the Ottawa Valley. Trusted by residential and commercial builders since 1982.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary" data-en="Get a Quote" data-fr="Obtenir un Devis">Get a Quote</a>
+        <a href="#services" class="btn-outline" data-en="Our Services" data-fr="Nos Services">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">40<span>+</span></div><div class="stat-label" data-en="Years Experience" data-fr="Ans d'Exp&eacute;rience">Years Experience</div></div>
+        <div class="stat"><div class="stat-num">100<span>s</span></div><div class="stat-label" data-en="Happy Clients" data-fr="Clients Satisfaits">Happy Clients</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label" data-en="Provinces Served" data-fr="Provinces Desservies">Provinces Served</div></div>
+      </div>
+    </div>
+    <!-- HERO PHOTO AREA -->
+    <div class="hero-photos">
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Add Truck Photo" data-fr="Ajouter Photo Camion">Add Truck Photo</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Add Photo" data-fr="Ajouter Photo">Add Photo</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Add Photo" data-fr="Ajouter Photo">Add Photo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== ABOUT ======== -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <div class="section-label" data-en="Our Story" data-fr="Notre Histoire">Our Story</div>
+        <h2 class="section-title" data-en="Over 40 Years of <span>Concrete Excellence</span>" data-fr="Plus de 40 ans d'<span>Excellence en B&eacute;ton</span>">Over 40 Years of <span>Concrete Excellence</span></h2>
+        <p data-en="Campbell's Bay Ciment was established in June 1982 as a company devoted to supplying ready-mix concrete to the construction market in Pontiac County. We now serve clients across West Quebec, Outaouais, and the Ottawa Valley." data-fr="La Cimenterie Campbell's Bay a &eacute;t&eacute; fond&eacute;e en juin 1982 pour fournir du b&eacute;ton pr&ecirc;t-&agrave;-l'emploi dans le comt&eacute; de Pontiac. Nous desservons aujourd'hui les clients dans l'Ouest du Qu&eacute;bec, l'Outaouais et la vall&eacute;e de l'Outaouais.">Campbell's Bay Ciment was established in June 1982 as a company devoted to supplying ready-mix concrete to the construction market in Pontiac County. We now serve clients across West Quebec, Outaouais, and the Ottawa Valley.</p>
+        <p data-en="Since entering the poured concrete foundation sector in 1987 and expanding into aggregate production during the 1990s, we have grown into a full-service concrete and aggregate company serving both residential and commercial markets." data-fr="Depuis notre entr&eacute;e dans le secteur des fondations en 1987 et notre expansion dans la production de granulats dans les ann&eacute;es 1990, nous sommes devenus une entreprise compl&egrave;te de b&eacute;ton et de granulats.">Since entering the poured concrete foundation sector in 1987 and expanding into aggregate production during the 1990s, we have grown into a full-service concrete and aggregate company serving both residential and commercial markets.</p>
+        <p data-en="A proud member of the McGrimmon Holdings family of companies, with operations spanning both Quebec and Ontario." data-fr="Membre fier de la famille d'entreprises McGrimmon Holdings, avec des activit&eacute;s couvrant le Qu&eacute;bec et l'Ontario.">A proud member of the McGrimmon Holdings family of companies, with operations spanning both Quebec and Ontario.</p>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="about-card-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+            <div class="about-card-title" data-en="RBQ Licensed" data-fr="Certifi&eacute; RBQ">RBQ Licensed</div>
+            <div class="about-card-text">#1857-2792-35</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+            <div class="about-card-title" data-en="Local Roots" data-fr="Ancrage Local">Local Roots</div>
+            <div class="about-card-text" data-en="Pontiac County, QC" data-fr="Comt&eacute; de Pontiac, QC">Pontiac County, QC</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm13 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg></div>
+            <div class="about-card-title" data-en="Own Fleet" data-fr="Flotte Propre">Own Fleet</div>
+            <div class="about-card-text" data-en="Trucks, pumpers &amp; slingers" data-fr="Camions, pompes et lance-pierres">Trucks, pumpers &amp; slingers</div>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
+            <div class="about-card-title" data-en="Since 1982" data-fr="Depuis 1982">Since 1982</div>
+            <div class="about-card-text" data-en="Decades of community trust" data-fr="D&eacute;cennies de confiance">Decades of community trust</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-right fade-in">
+        <!-- ABOUT PHOTO GRID -->
+        <div class="about-photo-grid">
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span data-en="Add Company Photo" data-fr="Ajouter Photo">Add Company Photo</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span data-en="Add Photo" data-fr="Ajouter Photo">Add Photo</span>
+          </div>
+          <div class="photo-slot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span data-en="Add Photo" data-fr="Ajouter Photo">Add Photo</span>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1982</div>
+            <div class="timeline-text" data-en="Founded in Campbell's Bay — began supplying ready-mix concrete to Pontiac County." data-fr="Fond&eacute;e &agrave; Campbell's Bay &mdash; a commenc&eacute; &agrave; fournir du b&eacute;ton au comt&eacute; de Pontiac.">Founded in Campbell's Bay — began supplying ready-mix concrete to Pontiac County.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1987</div>
+            <div class="timeline-text" data-en="RBQ-registered contractor. Entered the poured concrete foundation market for residential and commercial builds." data-fr="Entrepreneur enregistr&eacute; &agrave; la RBQ. Entr&eacute; sur le march&eacute; des fondations en b&eacute;ton coul&eacute; r&eacute;sidentielles et commerciales.">RBQ-registered contractor. Entered the poured concrete foundation market for residential and commercial builds.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1990s</div>
+            <div class="timeline-text" data-en="Acquired hundreds of acres of gravel deposits — became both manufacturer and supplier of fine and coarse aggregate products." data-fr="Acquisition de centaines d'acres de gisements de gravier &mdash; est devenu fabricant et fournisseur de granulats fins et grossiers.">Acquired hundreds of acres of gravel deposits — became both manufacturer and supplier of fine and coarse aggregate products.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year" data-en="Today" data-fr="Aujourd'hui">Today</div>
+            <div class="timeline-text" data-en="Full-service concrete, aggregate, and stamped concrete company proudly serving QC and ON." data-fr="Entreprise compl&egrave;te de b&eacute;ton et granulats desservant fi&egrave;rement le QC et l'ON.">Full-service concrete, aggregate, and stamped concrete company proudly serving QC and ON.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FLEET & EQUIPMENT PHOTOS ======== -->
+<section id="fleet">
+  <div class="section-inner">
+    <div class="fleet-intro fade-in">
+      <div class="section-label" data-en="Our Fleet" data-fr="Notre Flotte">Our Fleet</div>
+      <h2 class="section-title" data-en="Built to <span>Deliver</span>" data-fr="Construit pour <span>Livrer</span>">Built to <span>Deliver</span></h2>
+      <p class="section-desc" data-en="Our fleet of concrete trucks, pumpers, boom trucks, dump trucks, and stone slingers are ready to serve your project across Pontiac, Outaouais, and the Ottawa Valley." data-fr="Notre flotte de camions &agrave; b&eacute;ton, pompes, camions-fl&egrave;ches, camions-bennes et lance-pierres est pr&ecirc;te &agrave; servir votre projet dans le Pontiac, l'Outaouais et la vall&eacute;e de l'Outaouais.">Our fleet of concrete trucks, pumpers, boom trucks, dump trucks, and stone slingers are ready to serve your project across Pontiac, Outaouais, and the Ottawa Valley.</p>
+    </div>
+    <!-- MAIN FLEET PHOTO GRID -->
+    <div class="fleet-grid-main fade-in">
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Main Truck Photo" data-fr="Photo Principale">Main Truck Photo</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Mixer Truck" data-fr="Camion Malaxeur">Mixer Truck</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Pump Truck" data-fr="Camion Pompe">Pump Truck</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Dump Truck" data-fr="Camion-Benne">Dump Truck</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Boom Truck" data-fr="Camion-Fl&egrave;che">Boom Truck</span>
+      </div>
+    </div>
+    <!-- SECOND ROW -->
+    <div class="fleet-grid-row fade-in">
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Stone Slinger" data-fr="Lance-Pierre">Stone Slinger</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Crusher Equipment" data-fr="Concasseur">Crusher Equipment</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Yard / Plant" data-fr="Cour / Usine">Yard / Plant</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Add Photo" data-fr="Ajouter Photo">Add Photo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PRODUCTS ======== -->
+<section id="products">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</div>
+      <h2 class="section-title" data-en="Our <span>Products</span>" data-fr="Nos <span>Produits</span>">Our <span>Products</span></h2>
+      <p class="section-desc" data-en="From ready-mix concrete to construction aggregates, we supply the essential materials your project needs — delivered on time, to spec." data-fr="Du b&eacute;ton pr&ecirc;t-&agrave;-l'emploi aux granulats de construction, nous fournissons les mat&eacute;riaux essentiels dont votre projet a besoin.">From ready-mix concrete to construction aggregates, we supply the essential materials your project needs — delivered on time, to spec.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4z"/></svg></div>
+        <div class="product-name" data-en="Ready-Mix Concrete" data-fr="B&eacute;ton Pr&ecirc;t-&agrave;-l'Emploi">Ready-Mix Concrete</div>
+        <div class="product-desc" data-en="Custom mixed concrete delivered directly to your job site, fresh and ready to pour." data-fr="B&eacute;ton m&eacute;lang&eacute; sur mesure livr&eacute; directement sur votre chantier.">Custom mixed concrete delivered directly to your job site, fresh and ready to pour.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+        <div class="product-name" data-en="Pre-Cast Concrete Blocks" data-fr="Blocs en B&eacute;ton Pr&eacute;fabriqu&eacute;">Pre-Cast Concrete Blocks</div>
+        <div class="product-desc" data-en="Available in sizes 2&times;2&times;2, 2&times;2&times;4, 3&times;3&times;4, and 3&times;3&times;8." data-fr="Disponibles en tailles 2&times;2&times;2, 2&times;2&times;4, 3&times;3&times;4 et 3&times;3&times;8.">Available in sizes 2&times;2&times;2, 2&times;2&times;4, 3&times;3&times;4, and 3&times;3&times;8.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+        <div class="product-name" data-en="Well Tiles" data-fr="Tuiles de Puits">Well Tiles</div>
+        <div class="product-desc" data-en="Manufactured concrete well tiles for residential and rural water systems." data-fr="Tuiles de puits en b&eacute;ton fabriqu&eacute;es pour syst&egrave;mes d'eau r&eacute;sidentiels et ruraux.">Manufactured concrete well tiles for residential and rural water systems.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M5 8h14v2H5zM3 12h18v2H3zM7 16h10v2H7z"/></svg></div>
+        <div class="product-name" data-en="Crushed Stone &amp; Sand" data-fr="Pierre Concass&eacute;e et Sable">Crushed Stone &amp; Sand</div>
+        <div class="product-desc" data-en="Mg-20, Mg-56, stone dust, clear stone — sourced from our own quarries." data-fr="Mg-20, Mg-56, poussi&egrave;re de pierre, pierre claire &mdash; tir&eacute;s de nos propres carri&egrave;res.">Mg-20, Mg-56, stone dust, clear stone — sourced from our own quarries.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M3 17h18v2H3zM3 13h18v2H3zM3 9h18v2H3zM3 5h18v2H3z"/></svg></div>
+        <div class="product-name" data-en="Gravel &amp; Construction Aggregates" data-fr="Gravier et Granulats de Construction">Gravel &amp; Construction Aggregates</div>
+        <div class="product-desc" data-en="Fine and coarse aggregate products from our own licensed deposits." data-fr="Produits de granulats fins et grossiers provenant de nos propres gisements.">Fine and coarse aggregate products from our own licensed deposits.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M11 3H13V10H11zM11 14H13V21H11zM3 11H10V13H3zM14 11H21V13H14z"/></svg></div>
+        <div class="product-name" data-en="Wire Mesh &amp; Rebar" data-fr="Treillis et Armatures">Wire Mesh &amp; Rebar</div>
+        <div class="product-desc" data-en="Reinforcement materials to strengthen your concrete pours and slabs." data-fr="Mat&eacute;riaux de renforcement pour vos coul&eacute;es de b&eacute;ton et dalles.">Reinforcement materials to strengthen your concrete pours and slabs.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M9 3H15V7H9zM7 9H17V21H7z"/></svg></div>
+        <div class="product-name" data-en="Septic Tank Lids" data-fr="Couvercles de Fosse Septique">Septic Tank Lids</div>
+        <div class="product-desc" data-en="Durable pre-cast concrete septic tank lids for residential systems." data-fr="Couvercles de fosse septique en b&eacute;ton pr&eacute;fabriqu&eacute; pour syst&egrave;mes r&eacute;sidentiels.">Durable pre-cast concrete septic tank lids for residential systems.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M12 3l-8 4.5v9L12 21l8-4.5v-9L12 3zm0 2.31L18.19 9 12 12.69 5.81 9 12 5.31z"/></svg></div>
+        <div class="product-name" data-en="Stamped Concrete Supplies" data-fr="Fournitures B&eacute;ton Estamp&eacute;">Stamped Concrete Supplies</div>
+        <div class="product-desc" data-en="Coloring powder and releasing agents for decorative stamped concrete finishes." data-fr="Poudre colorante et agents de lib&eacute;ration pour finitions en b&eacute;ton estamp&eacute;.">Coloring powder and releasing agents for decorative stamped concrete finishes.</div>
+      </div>
+      <div class="product-card">
+        <div class="product-icon-box"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+        <div class="product-name" data-en="Styro Rail (ICF)" data-fr="Styro Rail (ICF)">Styro Rail (ICF)</div>
+        <div class="product-desc" data-en="Insulated Concrete Forms for energy-efficient, structurally superior construction." data-fr="Coffrages isolants pour une construction &eacute;co&eacute;nerg&eacute;tique et structurellement sup&eacute;rieure.">Insulated Concrete Forms for energy-efficient, structurally superior construction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== STAMPED CONCRETE ======== -->
+<section id="stamped">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label" data-en="Decorative Concrete" data-fr="B&eacute;ton D&eacute;coratif">Decorative Concrete</div>
+      <h2 class="section-title" data-en="Stamped Concrete" data-fr="B&eacute;ton Estamp&eacute;">Stamped Concrete</h2>
+      <p class="section-desc" data-en="Transform ordinary concrete into beautiful, textured surfaces that replicate natural stone, brick, slate, and more. Perfect for driveways, patios, walkways, and pool decks." data-fr="Transformez le b&eacute;ton ordinaire en surfaces belles et textur&eacute;es qui reproduisent la pierre naturelle, la brique, l'ardoise et plus encore.">Transform ordinary concrete into beautiful, textured surfaces that replicate natural stone, brick, slate, and more. Perfect for driveways, patios, walkways, and pool decks.</p>
+    </div>
+    <div class="stamped-layout">
+      <!-- STAMPED PHOTO AREA -->
+      <div class="stamped-photo-stack fade-in">
+        <div class="photo-slot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-en="Stamped Concrete Project" data-fr="Projet B&eacute;ton Estamp&eacute;">Stamped Concrete Project</span>
+        </div>
+        <div class="photo-slot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-en="Pattern Close-Up" data-fr="Gros Plan Motif">Pattern Close-Up</span>
+        </div>
+        <div class="photo-slot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          <span data-en="Driveway Project" data-fr="Entr&eacute;e de Maison">Driveway Project</span>
+        </div>
+      </div>
+      <div class="stamped-features fade-in">
+        <div class="stamped-feature">
+          <div class="stamped-feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18V17l7 4 7-4v-5.82L23 9 12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 16l-5 2.72L7 16v-3.73L12 15l5-2.73V16z"/></svg></div>
+          <div>
+            <div class="stamped-feature-title" data-en="Endless Pattern Options" data-fr="Options de Motifs Illimit&eacute;es">Endless Pattern Options</div>
+            <div class="stamped-feature-text" data-en="Natural stone, brick, slate, cobblestone, flagstone &mdash; and custom designs to match any aesthetic." data-fr="Pierre naturelle, brique, ardoise, pav&eacute;, dalle &mdash; et des designs personnalis&eacute;s.">Natural stone, brick, slate, cobblestone, flagstone — and custom designs to match any aesthetic.</div>
+          </div>
+        </div>
+        <div class="stamped-feature">
+          <div class="stamped-feature-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+          <div>
+            <div class="stamped-feature-title" data-en="Built for Quebec's Climate" data-fr="Con&ccedil;u pour le Climat Qu&eacute;b&eacute;cois">Built for Quebec's Climate</div>
+            <div class="stamped-feature-text" data-en="Weather-resistant and designed to withstand repeated freeze-thaw cycles." data-fr="R&eacute;sistant aux int&eacute;mp&eacute;ries et con&ccedil;u pour les cycles de gel-d&eacute;gel r&eacute;p&eacute;t&eacute;s.">Weather-resistant and designed to withstand repeated freeze-thaw cycles.</div>
+          </div>
+        </div>
+        <div class="stamped-feature">
+          <div class="stamped-feature-icon"><svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg></div>
+          <div>
+            <div class="stamped-feature-title" data-en="Cost-Effective Elegance" data-fr="&Eacute;l&eacute;gance &Eacute;conomique">Cost-Effective Elegance</div>
+            <div class="stamped-feature-text" data-en="Premium look at a fraction of the cost of natural stone or pavers." data-fr="Apparence haut de gamme &agrave; une fraction du co&ucirc;t de la pierre naturelle ou des pav&eacute;s.">Premium look at a fraction of the cost of natural stone or pavers.</div>
+          </div>
+        </div>
+        <div class="stamped-feature">
+          <div class="stamped-feature-icon"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+          <div>
+            <div class="stamped-feature-title" data-en="Curb Appeal &amp; Value" data-fr="Valorisation Ext&eacute;rieure">Curb Appeal &amp; Value</div>
+            <div class="stamped-feature-text" data-en="Ideal for driveways, patios, pool decks, walkways, and commercial spaces." data-fr="Id&eacute;al pour les entr&eacute;es, terrasses, margelles de piscine, all&eacute;es et espaces commerciaux.">Ideal for driveways, patios, pool decks, walkways, and commercial spaces.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== SERVICES ======== -->
+<section id="services">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label" data-en="What We Do" data-fr="Ce Que Nous Faisons">What We Do</div>
+      <h2 class="section-title" data-en="Our <span>Services</span>" data-fr="Nos <span>Services</span>">Our <span>Services</span></h2>
+      <p class="section-desc" data-en="From foundation pours to stone slinging, mobile crushing to concrete pumping — we have the equipment and expertise to handle projects of any size across the Ottawa Valley." data-fr="Des coul&eacute;es de fondation au slingage de pierre, du concassage mobile au pompage de b&eacute;ton &mdash; nous avons l'&eacute;quipement et l'expertise pour g&eacute;rer des projets de toute envergure.">From foundation pours to stone slinging, mobile crushing to concrete pumping — we have the equipment and expertise to handle projects of any size across the Ottawa Valley.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg></div>
+        <div class="service-name" data-en="Poured Concrete Foundations" data-fr="Fondations en B&eacute;ton Coul&eacute;">Poured Concrete Foundations</div>
+        <div class="service-desc" data-en="Residential and commercial poured concrete foundations by our RBQ-licensed crew with decades of expertise in the Ottawa Valley." data-fr="Fondations en b&eacute;ton coul&eacute; r&eacute;sidentielles et commerciales par notre &eacute;quipe agr&eacute;&eacute;e RBQ.">Residential and commercial poured concrete foundations by our RBQ-licensed crew with decades of expertise in the Ottawa Valley.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zm-.5 1.5l1.96 2.5H17V9.5h2.5zM6 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm13 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg></div>
+        <div class="service-name" data-en="Dump Truck Services" data-fr="Services de Camion-Benne">Dump Truck Services</div>
+        <div class="service-desc" data-en="Reliable dump truck delivery and haulage for aggregates, fill material, and construction supplies throughout Pontiac and the Ottawa Valley." data-fr="Livraison et transport fiables par camion-benne pour les granulats et fournitures de construction dans tout le Pontiac.">Reliable dump truck delivery and haulage for aggregates, fill material, and construction supplies throughout Pontiac and the Ottawa Valley.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 18a8 8 0 110-16 8 8 0 010 16zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg></div>
+        <div class="service-name" data-en="Mobile Crushing" data-fr="Concassage Mobile">Mobile Crushing</div>
+        <div class="service-desc" data-en="On-site mobile crushing to process rock and aggregate directly at your project location, saving time and transport costs." data-fr="Concassage mobile sur site pour traiter la roche et les granulats directement &agrave; l'emplacement de votre projet.">On-site mobile crushing to process rock and aggregate directly at your project location, saving time and transport costs.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8z"/></svg></div>
+        <div class="service-name" data-en="Concrete Pumping" data-fr="Pompage de B&eacute;ton">Concrete Pumping</div>
+        <div class="service-desc" data-en="Pump concrete to hard-to-reach areas and elevated heights. Ideal for walls, floors, and foundations where direct truck access is not possible." data-fr="Pompez le b&eacute;ton vers des zones difficiles d'acc&egrave;s. Id&eacute;al pour les murs, planchers et fondations sans acc&egrave;s direct par camion.">Pump concrete to hard-to-reach areas and elevated heights. Ideal for walls, floors, and foundations where direct truck access is not possible.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M22 9V7h-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-2h2v-2h-2v-2h2v-2h-2V9h2zm-4 10H4V5h14v14z"/></svg></div>
+        <div class="service-name" data-en="Boom Truck Services" data-fr="Services de Camion-Fl&egrave;che">Boom Truck Services</div>
+        <div class="service-desc" data-en="Boom truck capabilities for lifting and placing materials on-site, supporting construction crews across Quebec and Ontario." data-fr="Capacit&eacute;s de camion-fl&egrave;che pour lever et placer des mat&eacute;riaux sur site au Qu&eacute;bec et en Ontario.">Boom truck capabilities for lifting and placing materials on-site, supporting construction crews across Quebec and Ontario.</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M3 17h18v2H3zM3 13h12v2H3zM3 9h8v2H3zM3 5h5v2H3z"/></svg></div>
+        <div class="service-name" data-en="Stone Slinger" data-fr="Lance-Pierre">Stone Slinger</div>
+        <div class="service-desc" data-en="Precision stone slinging for hard-to-access areas. Ideal for drainage, driveways, back fills, grade fills, parking lots, and steep slopes." data-fr="Slingage de pierre de pr&eacute;cision pour les zones difficiles d'acc&egrave;s. Id&eacute;al pour le drainage, les entr&eacute;es, remblais et pentes raides.">Precision stone slinging for hard-to-access areas. Ideal for drainage, driveways, back fills, grade fills, parking lots, and steep slopes.</div>
+        <div class="service-tags">
+          <span class="service-tag" data-en="Drainage" data-fr="Drainage">Drainage</span>
+          <span class="service-tag" data-en="Driveways" data-fr="Entr&eacute;es">Driveways</span>
+          <span class="service-tag" data-en="Back Fills" data-fr="Contre-remblais">Back Fills</span>
+          <span class="service-tag" data-en="Parking Lots" data-fr="Stationnements">Parking Lots</span>
+          <span class="service-tag" data-en="Landscaping" data-fr="Am&eacute;nagement">Landscaping</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-box"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+        <div class="service-name" data-en="ICF &ndash; Styrorail" data-fr="ICF &ndash; Styrorail">ICF &ndash; Styrorail</div>
+        <div class="service-desc" data-en="Insulated Concrete Form construction using Styrorail for energy-efficient, structurally superior walls in residential and commercial builds." data-fr="Construction de coffrages isolants avec Styrorail pour des murs &eacute;co&eacute;nerg&eacute;tiques dans les constructions r&eacute;sidentielles et commerciales.">Insulated Concrete Form construction using Styrorail for energy-efficient, structurally superior walls in residential and commercial builds.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== PROJECT PHOTOS ======== -->
+<section id="workphotos">
+  <div class="section-inner">
+    <div class="work-intro fade-in">
+      <div class="section-label" data-en="Our Work" data-fr="Nos R&eacute;alisations">Our Work</div>
+      <h2 class="section-title" data-en="Projects Across the <span>Valley</span>" data-fr="Projets &agrave; travers la <span>Vall&eacute;e</span>">Projects Across the <span>Valley</span></h2>
+      <p class="section-desc" data-en="From residential foundations in Pontiac to commercial pours across the Ottawa Valley, our work speaks for itself." data-fr="Des fondations r&eacute;sidentielles au Pontiac aux coul&eacute;es commerciales dans la vall&eacute;e de l'Outaouais, notre travail parle de lui-m&ecirc;me.">From residential foundations in Pontiac to commercial pours across the Ottawa Valley, our work speaks for itself.</p>
+    </div>
+    <div class="work-mosaic fade-in">
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Foundation Pour" data-fr="Coul&eacute;e de Fondation">Foundation Pour</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Concrete Delivery" data-fr="Livraison B&eacute;ton">Concrete Delivery</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Aggregate Supply" data-fr="Fourniture Granulats">Aggregate Supply</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Residential Project" data-fr="Projet R&eacute;sidentiel">Residential Project</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Commercial Project" data-fr="Projet Commercial">Commercial Project</span>
+      </div>
+      <div class="photo-slot">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        <span data-en="Pump in Action" data-fr="Pompe en Action">Pump in Action</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== TESTIMONIALS ======== -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;">
+      <div class="section-label" style="justify-content:center;" data-en="What Clients Say" data-fr="Ce Que Disent les Clients">What Clients Say</div>
+      <h2 class="section-title" data-en="Trusted by <span>Builders Across the Valley</span>" data-fr="Reconnus par <span>les Constructeurs de la Vall&eacute;e</span>">Trusted by <span>Builders Across the Valley</span></h2>
+    </div>
+  </div>
+  <div class="fade-edges">
+    <div class="testimonials-wrap">
+      <div class="testimonials-track">
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you for the great service over the course of the build and the excellent workmanship by your men. Will definitely recommend your company to others." data-fr="Merci pour le grand service tout au long de la construction et l'excellent travail de vos hommes. Je recommanderai certainement votre entreprise.">Thank you for the great service over the course of the build and the excellent workmanship by your men. Will definitely recommend your company to others.</p><div class="testimonial-author">B.M. &mdash; Lapasse, Ontario</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="It is refreshing to deal with an honest businessman who values integrity." data-fr="C'est rafra&icirc;chissant de traiter avec un homme d'affaires honn&ecirc;te qui valorise l'int&eacute;grit&eacute;.">It is refreshing to deal with an honest businessman who values integrity.</p><div class="testimonial-author">R.F. &mdash; Mansfield, QC</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you for your wonderful, professional and speedy service." data-fr="Merci pour votre service merveilleux, professionnel et rapide.">Thank you for your wonderful, professional and speedy service.</p><div class="testimonial-author">D.L. &mdash; Ottawa Valley</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you and your employees for the excellent work and professionalism in erecting the foundation for our house. You made the job go very smoothly." data-fr="Merci &agrave; vous et vos employ&eacute;s pour l'excellent travail et le professionnalisme lors de l'&eacute;rection de la fondation de notre maison.">Thank you and your employees for the excellent work and professionalism in erecting the foundation for our house. You made the job go very smoothly.</p><div class="testimonial-author">C&D &mdash; Outaouais, QC</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thanks for your effort and willingness to come all the way up here. If you ever need a reference, feel free to contact me." data-fr="Merci pour vos efforts et votre volont&eacute; de venir jusqu'ici. Si vous avez besoin d'une r&eacute;f&eacute;rence, n'h&eacute;sitez pas.">Thanks for your effort and willingness to come all the way up here. If you ever need a reference, feel free to contact me.</p><div class="testimonial-author">M.S. &mdash; Pontiac, QC</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Your team was fast and professional. Thank you for the excellent service." data-fr="Votre &eacute;quipe &eacute;tait rapide et professionnelle. Merci pour l'excellent service.">Your team was fast and professional. Thank you for the excellent service.</p><div class="testimonial-author">E.K. &mdash; Ottawa Valley</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you for your great work &mdash; conscientious, courteous service and friendly advice." data-fr="Merci pour votre excellent travail &mdash; service consciencieux, courtois et conseils amicaux.">Thank you for your great work &mdash; conscientious, courteous service and friendly advice.</p><div class="testimonial-author">J.P. &mdash; West Quebec</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you for a job well done. Your men worked hard considering the heat this month." data-fr="Merci pour un travail bien fait. Vos hommes ont travaill&eacute; dur malgr&eacute; la chaleur ce mois-ci.">Thank you for a job well done. Your men worked hard considering the heat this month.</p><div class="testimonial-author">J.P. &mdash; Pontiac County</div></div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you for the great service over the course of the build and the excellent workmanship by your men. Will definitely recommend your company to others." data-fr="Merci pour le grand service tout au long de la construction et l'excellent travail de vos hommes. Je recommanderai certainement votre entreprise.">Thank you for the great service over the course of the build and the excellent workmanship by your men. Will definitely recommend your company to others.</p><div class="testimonial-author">B.M. &mdash; Lapasse, Ontario</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="It is refreshing to deal with an honest businessman who values integrity." data-fr="C'est rafra&icirc;chissant de traiter avec un homme d'affaires honn&ecirc;te qui valorise l'int&eacute;grit&eacute;.">It is refreshing to deal with an honest businessman who values integrity.</p><div class="testimonial-author">R.F. &mdash; Mansfield, QC</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thank you for your wonderful, professional and speedy service." data-fr="Merci pour votre service merveilleux, professionnel et rapide.">Thank you for your wonderful, professional and speedy service.</p><div class="testimonial-author">D.L. &mdash; Ottawa Valley</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Your team was fast and professional. Thank you for the excellent service." data-fr="Votre &eacute;quipe &eacute;tait rapide et professionnelle. Merci pour l'excellent service.">Your team was fast and professional. Thank you for the excellent service.</p><div class="testimonial-author">E.K. &mdash; Ottawa Valley</div></div>
+        <div class="testimonial-card"><div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="testimonial-text" data-en="Thanks for your effort and willingness to come all the way up here. If you ever need a reference, feel free to contact me." data-fr="Merci pour vos efforts et votre volont&eacute; de venir jusqu'ici. Si vous avez besoin d'une r&eacute;f&eacute;rence, n'h&eacute;sitez pas.">Thanks for your effort and willingness to come all the way up here. If you ever need a reference, feel free to contact me.</p><div class="testimonial-author">M.S. &mdash; Pontiac, QC</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== CONTACT ======== -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label" data-en="Reach Out" data-fr="Contactez-Nous">Reach Out</div>
+      <h2 class="section-title" data-en="Get in <span>Touch</span>" data-fr="Prenez <span>Contact</span>">Get in <span>Touch</span></h2>
+      <p class="section-desc" data-en="Ready to start your project? Request a quote or ask us anything. We serve Pontiac, Outaouais, West Quebec, and the Upper Ottawa Valley." data-fr="Pr&ecirc;t &agrave; d&eacute;marrer votre projet? Demandez un devis. Nous desservons Pontiac, l'Outaouais, l'Ouest du Qu&eacute;bec et la haute vall&eacute;e de l'Outaouais.">Ready to start your project? Request a quote or ask us anything. We serve Pontiac, Outaouais, West Quebec, and the Upper Ottawa Valley.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-in">
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div><div class="contact-item-label" data-en="Phone" data-fr="T&eacute;l&eacute;phone">Phone</div><div class="contact-item-val"><a href="tel:+18196482144">(819) 648-2144</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><div class="contact-item-label" data-en="Email" data-fr="Courriel">Email</div><div class="contact-item-val"><a href="mailto:admin@campbellsbayciment.ca">admin@campbellsbayciment.ca</a></div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div><div class="contact-item-label" data-en="Service Area" data-fr="Zone de Service">Service Area</div><div class="contact-item-val" data-en="Campbell's Bay, Pontiac County, Outaouais, West Quebec, Upper Ottawa Valley, Ontario" data-fr="Campbell's Bay, Comt&eacute; de Pontiac, Outaouais, Ouest du Qu&eacute;bec, Haute Vall&eacute;e de l'Outaouais, Ontario">Campbell's Bay, Pontiac County, Outaouais, West Quebec, Upper Ottawa Valley, Ontario</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg></div>
+          <div><div class="contact-item-label" data-en="License" data-fr="Licence">License</div><div class="contact-item-val">RBQ #1857-2792-35</div></div>
+        </div>
+      </div>
+      <div class="contact-form fade-in">
+        <div class="form-row">
+          <div class="form-group"><label data-en="First Name" data-fr="Pr&eacute;nom">First Name</label><input type="text" placeholder="John" /></div>
+          <div class="form-group"><label data-en="Last Name" data-fr="Nom de Famille">Last Name</label><input type="text" placeholder="Smith" /></div>
+        </div>
+        <div class="form-group"><label data-en="Email" data-fr="Courriel">Email</label><input type="email" placeholder="john@example.com" /></div>
+        <div class="form-group"><label data-en="Phone" data-fr="T&eacute;l&eacute;phone">Phone</label><input type="tel" placeholder="(819) 000-0000" /></div>
+        <div class="form-group">
+          <label data-en="Service Needed" data-fr="Service Requis">Service Needed</label>
+          <select>
+            <option data-en="Select a service..." data-fr="Choisir un service...">Select a service...</option>
+            <option data-en="Ready-Mix Concrete" data-fr="B&eacute;ton Pr&ecirc;t-&agrave;-l'Emploi">Ready-Mix Concrete</option>
+            <option data-en="Poured Foundation" data-fr="Fondation Coul&eacute;e">Poured Foundation</option>
+            <option data-en="Stamped Concrete" data-fr="B&eacute;ton Estamp&eacute;">Stamped Concrete</option>
+            <option data-en="Mobile Crushing" data-fr="Concassage Mobile">Mobile Crushing</option>
+            <option data-en="Stone Slinger" data-fr="Lance-Pierre">Stone Slinger</option>
+            <option data-en="Concrete Pumping" data-fr="Pompage de B&eacute;ton">Concrete Pumping</option>
+            <option data-en="Dump Truck" data-fr="Camion-Benne">Dump Truck</option>
+            <option data-en="Aggregates / Gravel" data-fr="Granulats / Gravier">Aggregates / Gravel</option>
+            <option data-en="Other" data-fr="Autre">Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label data-en="Message" data-fr="Message">Message</label><textarea placeholder="Tell us about your project..."></textarea></div>
+        <button class="btn-submit" data-en="Send Message" data-fr="Envoyer le Message">Send Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== FOOTER ======== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="logo">
+          <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg></div>
+          <div class="logo-text"><span class="logo-name">Campbell's Bay Ciment</span><span class="logo-sub">Est. 1982 &middot; Pontiac, QC</span></div>
+        </a>
+        <p data-en="Leading concrete manufacturer and supplier serving Pontiac, Outaouais, West Quebec, and the Upper Ottawa Valley since 1982." data-fr="Fabricant et fournisseur de b&eacute;ton de premier plan desservant Pontiac, l'Outaouais, l'Ouest du Qu&eacute;bec et la haute vall&eacute;e de l'Outaouais depuis 1982.">Leading concrete manufacturer and supplier serving Pontiac, Outaouais, West Quebec, and the Upper Ottawa Valley since 1982.</p>
+        <div class="contact-line"><a href="tel:+18196482144">(819) 648-2144</a> &nbsp;&middot;&nbsp; <a href="mailto:admin@campbellsbayciment.ca">admin@campbellsbayciment.ca</a></div>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Navigation" data-fr="Navigation">Navigation</h4>
+        <a href="#home" data-en="Home" data-fr="Accueil">Home</a>
+        <a href="#about" data-en="About Us" data-fr="&Agrave; propos">About Us</a>
+        <a href="#products" data-en="Products" data-fr="Produits">Products</a>
+        <a href="#stamped" data-en="Stamped Concrete" data-fr="B&eacute;ton Estamp&eacute;">Stamped Concrete</a>
+        <a href="#services" data-en="Services" data-fr="Services">Services</a>
+        <a href="#testimonials" data-en="Testimonials" data-fr="T&eacute;moignages">Testimonials</a>
+        <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Services" data-fr="Services">Services</h4>
+        <a href="#services" data-en="Poured Foundations" data-fr="Fondations Coul&eacute;es">Poured Foundations</a>
+        <a href="#services" data-en="Mobile Crushing" data-fr="Concassage Mobile">Mobile Crushing</a>
+        <a href="#services" data-en="Concrete Pumping" data-fr="Pompage de B&eacute;ton">Concrete Pumping</a>
+        <a href="#services" data-en="Stone Slinger" data-fr="Lance-Pierre">Stone Slinger</a>
+        <a href="#services" data-en="Boom Truck" data-fr="Camion-Fl&egrave;che">Boom Truck</a>
+        <a href="#services" data-en="ICF &ndash; Styrorail" data-fr="ICF &ndash; Styrorail">ICF &ndash; Styrorail</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy" data-en="&copy; 2025 Campbell's Bay Ciment. All rights reserved. &middot; Campbell's Bay, Pontiac, QC &middot; RBQ #1857-2792-35" data-fr="&copy; 2025 Cimenterie Campbell's Bay. Tous droits r&eacute;serv&eacute;s. &middot; Campbell's Bay, Pontiac, QC &middot; RBQ #1857-2792-35">&copy; 2025 Campbell's Bay Ciment. All rights reserved. &middot; Campbell's Bay, Pontiac, QC &middot; RBQ #1857-2792-35</div>
+      <div class="footer-credit"><span data-en="Website by " data-fr="Site web par ">Website by </span><a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // LANGUAGE
+  let lang = 'en';
+  function toggleLang() {
+    lang = lang === 'en' ? 'fr' : 'en';
+    document.documentElement.lang = lang;
+    ['lang-toggle','lang-toggle-mobile'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = lang === 'en' ? 'FR' : 'EN';
+    });
+    applyLang();
+  }
+  function applyLang() {
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (!val) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = val;
+      else if (el.tagName === 'OPTION') el.textContent = val;
+      else el.innerHTML = val;
+    });
+  }
+
+  // HAMBURGER
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+    document.getElementById('hamburger').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+  }
+
+  // SCROLL ANIMATIONS
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        e.target.querySelectorAll('.product-card, .service-card, .timeline-item').forEach((child, i) => {
+          setTimeout(() => child.classList.add('visible'), i * 75);
+        });
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in, .product-card, .service-card, .timeline-item').forEach(el => observer.observe(el));
+
+  // ACTIVE NAV
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#desktop-nav a[href^="#"]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.id; });
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current));
+  }, { passive: true });
+</script>
+</body>
+</html>

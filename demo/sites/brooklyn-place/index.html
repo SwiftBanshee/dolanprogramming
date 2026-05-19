@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO META TAGS ===== -->
+  <title>Brooklyn Place | Ice Cream & Treats – Shawville, Quebec</title>
+  <meta name="description" content="Brooklyn Place is Shawville Quebec's favourite ice cream parlour and treat shop. Visit us at 359 Rue Main for delicious ice cream, sundaes, specialty treats, and Fusion Mineral Paint. A beloved local destination since 1999." />
+  <meta name="keywords" content="ice cream Shawville Quebec, dessert shop Shawville QC, Brooklyn Place Shawville, ice cream parlour Shawville, treats Shawville Quebec, Fusion Mineral Paint Shawville, Bonnie Harris Brooklyn Place" />
+  <meta name="author" content="Brooklyn Place – Bonnie Harris" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Brooklyn Place | Ice Cream & Treats – Shawville, QC" />
+  <meta property="og:description" content="Shawville's sweetest spot since 1999. Ice cream, specialty treats, and Fusion Mineral Paint." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ===== STYLES ===== -->
+  <style>
+    /* ==========================================
+       CSS CUSTOM PROPERTIES
+    ========================================== */
+    :root {
+      --cream:      #FFF8F0;
+      --blush:      #FFCBA4;
+      --coral:      #FF7043;
+      --berry:      #C2185B;
+      --mint:       #4DB6AC;
+      --chocolate:  #4E342E;
+      --warm-white: #FFFDF9;
+      --text:       #2D1B0E;
+      --text-light: #7D5A4F;
+      --shadow:     rgba(78,52,46,0.12);
+      --shadow-lg:  rgba(78,52,46,0.22);
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Nunito', sans-serif;
+
+      --radius:    16px;
+      --radius-lg: 28px;
+      --trans:     0.35s cubic-bezier(.4,0,.2,1);
+      --header-h:  72px;
+    }
+
+    /* ==========================================
+       RESET & BASE
+    ========================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--warm-white);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    h1,h2,h3,h4 { font-family: var(--font-display); line-height: 1.2; }
+
+    /* ==========================================
+       SCROLLBAR
+    ========================================== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 4px; }
+
+    /* ==========================================
+       UTILITY
+    ========================================== */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: .75rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--coral);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      color: var(--chocolate);
+      margin-bottom: 20px;
+    }
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 600px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform var(--trans), box-shadow var(--trans), background var(--trans);
+      border: none;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--coral);
+      color: #fff;
+      box-shadow: 0 6px 24px rgba(255,112,67,.35);
+    }
+    .btn-primary:hover {
+      background: var(--berry);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(255,112,67,.45);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--coral);
+      border: 2.5px solid var(--coral);
+    }
+    .btn-outline:hover {
+      background: var(--coral);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* ==========================================
+       FADE-IN ANIMATION
+    ========================================== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-in.delay-1 { transition-delay: .1s; }
+    .fade-in.delay-2 { transition-delay: .2s; }
+    .fade-in.delay-3 { transition-delay: .3s; }
+    .fade-in.delay-4 { transition-delay: .4s; }
+    .fade-in.delay-5 { transition-delay: .5s; }
+
+    /* ==========================================
+       LANGUAGE TOGGLE
+    ========================================== */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      background: var(--cream);
+      border-radius: 50px;
+      padding: 4px;
+      gap: 2px;
+      border: 2px solid var(--blush);
+    }
+    .lang-btn {
+      background: transparent;
+      border: none;
+      border-radius: 50px;
+      padding: 5px 14px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: .85rem;
+      cursor: pointer;
+      color: var(--text-light);
+      transition: background var(--trans), color var(--trans);
+    }
+    .lang-btn.active {
+      background: var(--coral);
+      color: #fff;
+    }
+
+    /* ==========================================
+       HEADER
+    ========================================== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      background: rgba(255,253,249,.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--trans), box-shadow var(--trans);
+    }
+    #header.scrolled {
+      border-color: var(--blush);
+      box-shadow: 0 4px 24px var(--shadow);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--coral), var(--berry));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 4px 16px rgba(255,112,67,.3);
+      flex-shrink: 0;
+    }
+    .logo-text {
+      display: flex; flex-direction: column; line-height: 1;
+    }
+    .logo-name {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.35rem;
+      color: var(--chocolate);
+    }
+    .logo-tagline {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--text-light);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    nav ul {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    nav a {
+      font-weight: 600;
+      font-size: .92rem;
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: color var(--trans), background var(--trans);
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 4px; left: 50%; right: 50%;
+      height: 2px;
+      background: var(--coral);
+      border-radius: 2px;
+      transition: left var(--trans), right var(--trans);
+    }
+    nav a:hover { color: var(--coral); }
+    nav a:hover::after { left: 14px; right: 14px; }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      z-index: 1100;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px; height: 2.5px;
+      background: var(--chocolate);
+      border-radius: 2px;
+      transition: transform var(--trans), opacity var(--trans);
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: var(--warm-white);
+      border-bottom: 2px solid var(--blush);
+      padding: 20px 24px 28px;
+      z-index: 999;
+      box-shadow: 0 8px 32px var(--shadow);
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: transform var(--trans), opacity var(--trans);
+    }
+    .mobile-nav.open {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .mobile-nav ul { flex-direction: column; gap: 4px; }
+    .mobile-nav a {
+      display: block;
+      font-size: 1.1rem;
+      padding: 12px 16px;
+      border-radius: 10px;
+    }
+    .mobile-nav a:hover { background: var(--cream); color: var(--coral); }
+    .mobile-nav .lang-toggle { margin-top: 16px; justify-content: center; }
+
+    /* ==========================================
+       HERO
+    ========================================== */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: var(--header-h);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 80% 40%, rgba(255,203,164,.55) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 50% at 15% 80%, rgba(77,182,172,.18) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 70% at 50% 0%, rgba(255,112,67,.12) 0%, transparent 50%),
+        var(--cream);
+    }
+    /* Decorative blobs */
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(60px);
+      opacity: .45;
+      pointer-events: none;
+    }
+    .hero-blob-1 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, #FFCBA4, #FF7043);
+      top: -100px; right: -150px;
+      animation: float 8s ease-in-out infinite;
+    }
+    .hero-blob-2 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, #4DB6AC, #26A69A);
+      bottom: 50px; left: -80px;
+      animation: float 10s ease-in-out infinite reverse;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50%       { transform: translateY(-24px) rotate(8deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 80px 0;
+    }
+    .hero-text {}
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,.8);
+      border: 1.5px solid var(--blush);
+      border-radius: 50px;
+      padding: 6px 18px 6px 10px;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--coral);
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+      animation: fadeDown .8s ease .2s both;
+    }
+    .hero-badge span { font-size: 1.1rem; }
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-h1 {
+      font-size: clamp(2.8rem, 6vw, 4.4rem);
+      color: var(--chocolate);
+      line-height: 1.1;
+      margin-bottom: 20px;
+      animation: fadeUp .9s ease .3s both;
+    }
+    .hero-h1 em { color: var(--coral); font-style: italic; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .hero-p {
+      font-size: 1.15rem;
+      color: var(--text-light);
+      margin-bottom: 36px;
+      max-width: 440px;
+      animation: fadeUp .9s ease .45s both;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp .9s ease .55s both;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 48px;
+      animation: fadeUp .9s ease .65s both;
+    }
+    .hero-stat {}
+    .hero-stat strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--coral);
+    }
+    .hero-stat span {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* Hero visual – ice cream stack */
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeUp 1s ease .3s both;
+    }
+    .ice-cream-stack {
+      position: relative;
+      width: 340px; height: 420px;
+    }
+    .ice-cream-card {
+      position: absolute;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 60px var(--shadow-lg);
+      transition: transform var(--trans);
+    }
+    .ice-cream-card:hover { transform: scale(1.03) rotate(-1deg); }
+    .ice-cream-card-main {
+      width: 240px; height: 320px;
+      top: 50px; left: 50px;
+      background: linear-gradient(160deg, #FDDBA5 0%, #FFCBA4 50%, #FFA07A 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 7rem;
+      z-index: 3;
+    }
+    .ice-cream-card-back1 {
+      width: 200px; height: 270px;
+      top: 20px; left: 20px;
+      background: linear-gradient(160deg, #B2EBF2 0%, #80DEEA 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+      z-index: 2;
+      transform: rotate(-6deg);
+    }
+    .ice-cream-card-back2 {
+      width: 190px; height: 250px;
+      top: 140px; right: 10px;
+      background: linear-gradient(160deg, #F8BBD0 0%, #F48FB1 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem;
+      z-index: 2;
+      transform: rotate(5deg);
+    }
+    .float-badge {
+      position: absolute;
+      background: #fff;
+      border-radius: 16px;
+      padding: 10px 16px;
+      box-shadow: 0 8px 28px var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--chocolate);
+      white-space: nowrap;
+      z-index: 10;
+      animation: floatBadge 4s ease-in-out infinite;
+    }
+    @keyframes floatBadge {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    .float-badge-1 { top: 0; right: -20px; animation-delay: 0s; }
+    .float-badge-2 { bottom: 40px; left: -30px; animation-delay: 1.5s; }
+    .float-badge .badge-icon { font-size: 1.3rem; }
+
+    /* ==========================================
+       ABOUT
+    ========================================== */
+    #about {
+      padding: 100px 0;
+      background: var(--warm-white);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative;
+    }
+    .about-img-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 110%;
+    }
+    .about-img-main {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, #FFCBA4 0%, #FF7043 40%, #C2185B 100%);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8rem;
+      box-shadow: 0 24px 64px var(--shadow-lg);
+      overflow: hidden;
+    }
+    .about-img-main::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .about-img-accent {
+      position: absolute;
+      width: 48%;
+      bottom: -28px;
+      right: -28px;
+      background: linear-gradient(135deg, #4DB6AC, #26A69A);
+      border-radius: var(--radius);
+      padding-bottom: 48%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 40px rgba(77,182,172,.4);
+      z-index: 2;
+      overflow: hidden;
+    }
+    .about-img-accent-inner {
+      position: absolute;
+      inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 4rem;
+    }
+    .about-year-tag {
+      position: absolute;
+      top: -20px; left: -20px;
+      background: var(--chocolate);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      text-align: center;
+      z-index: 3;
+      box-shadow: 0 8px 28px var(--shadow-lg);
+    }
+    .about-year-tag strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+    .about-year-tag small {
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      opacity: .8;
+    }
+    .about-text h2 { margin-bottom: 16px; }
+    .about-text p {
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+    .about-highlight {
+      background: var(--cream);
+      border-left: 4px solid var(--coral);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .about-highlight p {
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--chocolate);
+      margin: 0;
+    }
+    .about-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+    .pill {
+      background: var(--cream);
+      border: 1.5px solid var(--blush);
+      border-radius: 50px;
+      padding: 7px 18px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--chocolate);
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* ==========================================
+       PRODUCTS / SERVICES
+    ========================================== */
+    #products {
+      padding: 100px 0;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    #products::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -100px;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(255,112,67,.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .products-header { text-align: center; margin-bottom: 64px; }
+    .products-header .section-subtitle { margin: 0 auto; }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 28px;
+    }
+    .product-card {
+      background: var(--warm-white);
+      border-radius: var(--radius-lg);
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 4px 20px var(--shadow);
+      transition: transform var(--trans), box-shadow var(--trans);
+      position: relative;
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+    .product-card:nth-child(1)::before { background: linear-gradient(90deg, var(--coral), var(--berry)); }
+    .product-card:nth-child(2)::before { background: linear-gradient(90deg, var(--mint), #26A69A); }
+    .product-card:nth-child(3)::before { background: linear-gradient(90deg, #FFB300, #FF8F00); }
+    .product-card:nth-child(4)::before { background: linear-gradient(90deg, var(--berry), #880E4F); }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px var(--shadow-lg);
+    }
+    .product-icon {
+      width: 80px; height: 80px;
+      border-radius: 24px;
+      margin: 0 auto 24px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.4rem;
+    }
+    .product-card:nth-child(1) .product-icon { background: linear-gradient(135deg, #FFE0D0, #FFCBA4); }
+    .product-card:nth-child(2) .product-icon { background: linear-gradient(135deg, #E0F7FA, #B2EBF2); }
+    .product-card:nth-child(3) .product-icon { background: linear-gradient(135deg, #FFF9C4, #FFF176); }
+    .product-card:nth-child(4) .product-icon { background: linear-gradient(135deg, #FCE4EC, #F8BBD0); }
+    .product-card h3 {
+      font-size: 1.35rem;
+      color: var(--chocolate);
+      margin-bottom: 12px;
+    }
+    .product-card p {
+      font-size: .95rem;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .product-items {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+    .product-tag {
+      background: var(--cream);
+      color: var(--text-light);
+      border-radius: 50px;
+      padding: 4px 12px;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+
+    /* ==========================================
+       GALLERY
+    ========================================== */
+    #gallery {
+      padding: 100px 0;
+      background: var(--warm-white);
+    }
+    .gallery-header { text-align: center; margin-bottom: 52px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 220px);
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gallery-item:nth-child(4) { grid-column: span 2; }
+    .gallery-face {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform var(--trans);
+    }
+    .gallery-item:hover .gallery-face { transform: scale(1.05); }
+    .gallery-face-emoji { font-size: 4.5rem; }
+    .gallery-item:nth-child(1) .gallery-face-emoji { font-size: 7rem; }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(78,52,46,.6) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity var(--trans);
+      display: flex; align-items: flex-end; padding: 20px;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .gallery-overlay span {
+      color: #fff;
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    /* Gallery colours */
+    .g1 { background: linear-gradient(135deg, #FFCBA4, #FF7043); }
+    .g2 { background: linear-gradient(135deg, #F8BBD0, #F06292); }
+    .g3 { background: linear-gradient(135deg, #B2EBF2, #4DD0E1); }
+    .g4 { background: linear-gradient(135deg, #DCEDC8, #AED581); }
+    .g5 { background: linear-gradient(135deg, #FFF9C4, #FFD54F); }
+    .g6 { background: linear-gradient(135deg, #E1BEE7, #BA68C8); }
+
+    /* ==========================================
+       CONTACT
+    ========================================== */
+    #contact {
+      padding: 100px 0;
+      background: var(--cream);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .contact-info h2 { margin-bottom: 16px; }
+    .contact-info > p { color: var(--text-light); margin-bottom: 36px; }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .contact-item-icon {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .ci-1 { background: linear-gradient(135deg, #FFE0D0, #FFCBA4); }
+    .ci-2 { background: linear-gradient(135deg, #E0F7FA, #B2EBF2); }
+    .ci-3 { background: linear-gradient(135deg, #FCE4EC, #F8BBD0); }
+    .contact-item-text {}
+    .contact-item-text strong {
+      display: block;
+      font-weight: 700;
+      color: var(--chocolate);
+      margin-bottom: 2px;
+    }
+    .contact-item-text span {
+      color: var(--text-light);
+      font-size: .95rem;
+    }
+    .contact-item-text a:hover { color: var(--coral); }
+    .social-links {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .social-link {
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      background: var(--warm-white);
+      border: 1.5px solid var(--blush);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      transition: transform var(--trans), background var(--trans), border-color var(--trans), box-shadow var(--trans);
+      text-decoration: none;
+    }
+    .social-link:hover {
+      background: var(--coral);
+      border-color: var(--coral);
+      transform: translateY(-4px) rotate(-5deg);
+      box-shadow: 0 8px 24px rgba(255,112,67,.35);
+    }
+    .map-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 12px 48px var(--shadow-lg);
+      height: 380px;
+    }
+    .map-wrap iframe {
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    /* ==========================================
+       FOOTER
+    ========================================== */
+    footer {
+      background: var(--chocolate);
+      color: rgba(255,255,255,.75);
+      padding: 60px 0 32px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand {}
+    .footer-logo {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .footer-logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--coral), var(--berry));
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+    }
+    .footer-logo-name {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: #fff;
+      font-weight: 900;
+    }
+    .footer-brand p { font-size: .9rem; line-height: 1.7; max-width: 280px; }
+    .footer-social {
+      display: flex; gap: 10px; margin-top: 20px;
+    }
+    .footer-social a {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      transition: background var(--trans), transform var(--trans);
+    }
+    .footer-social a:hover { background: var(--coral); transform: translateY(-3px); }
+    .footer-col h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .footer-col a {
+      font-size: .9rem;
+      transition: color var(--trans);
+    }
+    .footer-col a:hover { color: var(--blush); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.12);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: .84rem;
+    }
+    .footer-bottom a {
+      color: var(--blush);
+      font-weight: 600;
+    }
+    .footer-bottom a:hover { color: #fff; }
+
+    /* ==========================================
+       RESPONSIVE
+    ========================================== */
+    @media (max-width: 1024px) {
+      .hero-content { gap: 40px; }
+      .about-grid { gap: 48px; }
+    }
+    @media (max-width: 900px) {
+      nav, .header-right .lang-toggle { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav { display: block; }
+
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 0;
+        gap: 48px;
+      }
+      .hero-p { margin-left: auto; margin-right: auto; }
+      .hero-cta { justify-content: center; }
+      .hero-stats { justify-content: center; }
+      .hero-visual { order: -1; }
+      .ice-cream-stack { width: 280px; height: 340px; }
+      .ice-cream-card-main { width: 180px; height: 240px; }
+      .ice-cream-card-back1 { width: 150px; height: 200px; }
+      .ice-cream-card-back2 { width: 150px; height: 190px; }
+
+      .about-grid { grid-template-columns: 1fr; }
+      .about-visual { max-width: 400px; margin: 0 auto; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: span 2; }
+    }
+    @media (max-width: 640px) {
+      :root { --header-h: 64px; }
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item:nth-child(1) { grid-column: span 2; height: 220px; }
+      .gallery-item:nth-child(4) { grid-column: span 1; }
+      .gallery-item { height: 160px; }
+
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-brand { grid-column: auto; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+    }
+    @media (max-width: 420px) {
+      .ice-cream-stack { width: 220px; height: 280px; }
+      .ice-cream-card-main { width: 150px; height: 200px; top: 40px; left: 35px; font-size: 5rem; }
+      .ice-cream-card-back1 { width: 120px; height: 165px; }
+      .ice-cream-card-back2 { width: 120px; height: 160px; right: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER
+  ========================================== -->
+  <header id="header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+
+        <!-- Logo -->
+        <a href="#home" class="logo" aria-label="Brooklyn Place – Home">
+          <div class="logo-icon" aria-hidden="true">🍦</div>
+          <div class="logo-text">
+            <span class="logo-name">Brooklyn Place</span>
+            <span class="logo-tagline" data-i18n="logo-tagline">Ice Cream &amp; Treats · Shawville, QC</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav aria-label="Main navigation">
+          <ul>
+            <li><a href="#home"     data-i18n="nav-home">Home</a></li>
+            <li><a href="#about"    data-i18n="nav-about">About</a></li>
+            <li><a href="#products" data-i18n="nav-products">Products</a></li>
+            <li><a href="#gallery"  data-i18n="nav-gallery">Gallery</a></li>
+            <li><a href="#contact"  data-i18n="nav-contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right side: language toggle + hamburger -->
+        <div class="header-right">
+          <div class="lang-toggle" role="group" aria-label="Language selection">
+            <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+            <button class="lang-btn"        data-lang="fr" aria-pressed="false">FR</button>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul>
+      <li><a href="#home"     data-i18n="nav-home"     class="mobile-link">Home</a></li>
+      <li><a href="#about"    data-i18n="nav-about"    class="mobile-link">About</a></li>
+      <li><a href="#products" data-i18n="nav-products" class="mobile-link">Products</a></li>
+      <li><a href="#gallery"  data-i18n="nav-gallery"  class="mobile-link">Gallery</a></li>
+      <li><a href="#contact"  data-i18n="nav-contact"  class="mobile-link">Contact</a></li>
+    </ul>
+    <div class="lang-toggle" role="group" aria-label="Language selection">
+      <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+      <button class="lang-btn"        data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+
+
+  <!-- ==========================================
+       HERO
+  ========================================== -->
+  <section id="home" aria-labelledby="hero-heading">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span>🏅</span>
+            <span data-i18n="hero-badge">Shawville's #1 Sweet Spot since 1999</span>
+          </div>
+          <h1 class="hero-h1" id="hero-heading">
+            <span data-i18n="hero-h1a">Sweet Treats &amp;</span><br>
+            <em data-i18n="hero-h1b">Happy Scoops</em><br>
+            <span data-i18n="hero-h1c">for Everyone</span>
+          </h1>
+          <p class="hero-p" data-i18n="hero-p">
+            Brooklyn Place has been Shawville, Quebec's most beloved ice cream parlour and treat shop since 1999. Come in, scoop up a smile, and taste the love Bonnie bakes into every visit.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">
+              <span>📍</span>
+              <span data-i18n="hero-cta1">Visit Us Today</span>
+            </a>
+            <a href="#products" class="btn btn-outline">
+              <span data-i18n="hero-cta2">See Our Treats</span>
+              <span>→</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>25+</strong>
+              <span data-i18n="stat-years">Years Open</span>
+            </div>
+            <div class="hero-stat">
+              <strong>🍦</strong>
+              <span data-i18n="stat-flavours">Dozens of Flavours</span>
+            </div>
+            <div class="hero-stat">
+              <strong>❤️</strong>
+              <span data-i18n="stat-community">Community Favourite</span>
+            </div>
+          </div>
+        </div><!-- /hero-text -->
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="ice-cream-stack">
+            <div class="ice-cream-card ice-cream-card-back1">🍧</div>
+            <div class="ice-cream-card ice-cream-card-back2">🍓</div>
+            <div class="ice-cream-card ice-cream-card-main">🍦</div>
+            <div class="float-badge float-badge-1">
+              <span class="badge-icon">🌟</span>
+              <span data-i18n="badge1">Made with love</span>
+            </div>
+            <div class="float-badge float-badge-2">
+              <span class="badge-icon">📍</span>
+              <span data-i18n="badge2">Shawville, QC</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       ABOUT
+  ========================================== -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Visual column -->
+        <div class="about-visual fade-in">
+          <div class="about-img-wrap">
+            <div class="about-img-main" aria-hidden="true">🏪</div>
+            <div class="about-img-accent" aria-hidden="true">
+              <div class="about-img-accent-inner">🎨</div>
+            </div>
+          </div>
+          <div class="about-year-tag" aria-label="Established 1999">
+            <small data-i18n="est">Est.</small>
+            <strong>1999</strong>
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="about-text fade-in delay-2">
+          <span class="section-label" data-i18n="about-label">Our Story</span>
+          <h2 class="section-title" id="about-heading" data-i18n="about-title">
+            A Family Legacy Born in Shawville
+          </h2>
+          <p data-i18n="about-p1">
+            Brooklyn Place has its roots in Shawville's community fabric going all the way back to 1999, when Bonnie Harris first opened its doors as Video One — a beloved local video rental shop that became a neighbourhood gathering place.
+          </p>
+          <p data-i18n="about-p2">
+            As times changed, Bonnie's passion for community and bringing smiles to people's faces led her to transform the shop into what it is today: a vibrant ice cream parlour and treat destination right here on Rue Main in Shawville, Quebec.
+          </p>
+          <div class="about-highlight">
+            <p data-i18n="about-quote">
+              "The name Brooklyn Place is close to my heart — it's named after my granddaughter Brooklyn. Every scoop we serve is a little tribute to the joy she brings to our family." — Bonnie Harris
+            </p>
+          </div>
+          <p data-i18n="about-p3">
+            Today, Brooklyn Place is more than just an ice cream shop. It's a cherished piece of Shawville life, where locals come to celebrate milestones, beat the heat, pick up Fusion Mineral Paint for a home project, and simply enjoy the warmth of a true community space.
+          </p>
+          <div class="about-pills">
+            <span class="pill">🍦 <span data-i18n="pill1">Ice Cream Parlour</span></span>
+            <span class="pill">🎨 <span data-i18n="pill2">Fusion Mineral Paint</span></span>
+            <span class="pill">📍 <span data-i18n="pill3">Shawville, QC</span></span>
+            <span class="pill">❤️ <span data-i18n="pill4">Family-Owned</span></span>
+            <span class="pill">🏆 <span data-i18n="pill5">Since 1999</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       PRODUCTS / SERVICES
+  ========================================== -->
+  <section id="products" aria-labelledby="products-heading">
+    <div class="container">
+      <div class="products-header fade-in">
+        <span class="section-label" data-i18n="products-label">What We Offer</span>
+        <h2 class="section-title" id="products-heading" data-i18n="products-title">
+          Something Sweet for Everyone
+        </h2>
+        <p class="section-subtitle" data-i18n="products-subtitle">
+          From classic scoops to specialty sundaes, and even artisan paint — Brooklyn Place has a little something for every visit.
+        </p>
+      </div>
+
+      <div class="products-grid">
+
+        <!-- Card 1: Ice Cream -->
+        <div class="product-card fade-in delay-1">
+          <div class="product-icon" aria-hidden="true">🍦</div>
+          <h3 data-i18n="prod1-title">Ice Cream &amp; Cones</h3>
+          <p data-i18n="prod1-desc">Choose from a wide variety of delicious flavours served in a cone, cup, or waffle cone. Classic and creative options for every taste bud.</p>
+          <div class="product-items">
+            <span class="pill product-tag" data-i18n="prod1-t1">Soft Serve</span>
+            <span class="pill product-tag" data-i18n="prod1-t2">Hard Scoop</span>
+            <span class="pill product-tag" data-i18n="prod1-t3">Waffle Cones</span>
+            <span class="pill product-tag" data-i18n="prod1-t4">Dipped Cones</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Sundaes & Specialty Treats -->
+        <div class="product-card fade-in delay-2">
+          <div class="product-icon" aria-hidden="true">🍨</div>
+          <h3 data-i18n="prod2-title">Sundaes &amp; Specialty Treats</h3>
+          <p data-i18n="prod2-desc">Indulge in our handcrafted sundaes, floats, and seasonal specials. Every treat is made with care and heaped with toppings you'll love.</p>
+          <div class="product-items">
+            <span class="pill product-tag" data-i18n="prod2-t1">Ice Cream Sundaes</span>
+            <span class="pill product-tag" data-i18n="prod2-t2">Root Beer Floats</span>
+            <span class="pill product-tag" data-i18n="prod2-t3">Milkshakes</span>
+            <span class="pill product-tag" data-i18n="prod2-t4">Banana Splits</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Seasonal Offerings -->
+        <div class="product-card fade-in delay-3">
+          <div class="product-icon" aria-hidden="true">🌸</div>
+          <h3 data-i18n="prod3-title">Seasonal Offerings</h3>
+          <p data-i18n="prod3-desc">We bring special flavours and limited-time treats throughout the year. Check in with us for the latest seasonal sensations and holiday favourites.</p>
+          <div class="product-items">
+            <span class="pill product-tag" data-i18n="prod3-t1">Seasonal Flavours</span>
+            <span class="pill product-tag" data-i18n="prod3-t2">Holiday Treats</span>
+            <span class="pill product-tag" data-i18n="prod3-t3">Summer Specials</span>
+          </div>
+        </div>
+
+        <!-- Card 4: Fusion Mineral Paint -->
+        <div class="product-card fade-in delay-4">
+          <div class="product-icon" aria-hidden="true">🎨</div>
+          <h3 data-i18n="prod4-title">Fusion Mineral Paint</h3>
+          <p data-i18n="prod4-desc">Beyond sweets, Brooklyn Place is your local destination for premium Fusion Mineral Paint. Transform your home with beautiful, durable colours you'll love.</p>
+          <div class="product-items">
+            <span class="pill product-tag" data-i18n="prod4-t1">Full Colour Range</span>
+            <span class="pill product-tag" data-i18n="prod4-t2">In-Store Pickup</span>
+            <span class="pill product-tag" data-i18n="prod4-t3">Expert Advice</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       GALLERY
+  ========================================== -->
+  <section id="gallery" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="gallery-header fade-in">
+        <span class="section-label" data-i18n="gallery-label">Our Sweet Moments</span>
+        <h2 class="section-title" id="gallery-heading" data-i18n="gallery-title">
+          A Glimpse of Brooklyn Place
+        </h2>
+        <p class="section-subtitle" data-i18n="gallery-subtitle">
+          Every visit is a memory in the making. Stop by and create yours at 359 Rue Main, Shawville.
+        </p>
+      </div>
+
+      <div class="gallery-grid" role="list">
+
+        <div class="gallery-item g1 fade-in" role="listitem">
+          <div class="gallery-face"><span class="gallery-face-emoji" aria-hidden="true">🍦</span></div>
+          <div class="gallery-overlay"><span data-i18n="gal1">Signature Soft Serve</span></div>
+        </div>
+
+        <div class="gallery-item g2 fade-in delay-1" role="listitem">
+          <div class="gallery-face"><span class="gallery-face-emoji" aria-hidden="true">🍓</span></div>
+          <div class="gallery-overlay"><span data-i18n="gal2">Strawberry Sundae</span></div>
+        </div>
+
+        <div class="gallery-item g3 fade-in delay-2" role="listitem">
+          <div class="gallery-face"><span class="gallery-face-emoji" aria-hidden="true">🧁</span></div>
+          <div class="gallery-overlay"><span data-i18n="gal3">Specialty Treats</span></div>
+        </div>
+
+        <div class="gallery-item g4 fade-in delay-1" role="listitem">
+          <div class="gallery-face"><span class="gallery-face-emoji" aria-hidden="true">🏪</span></div>
+          <div class="gallery-overlay"><span data-i18n="gal4">Our Shawville Storefront</span></div>
+        </div>
+
+        <div class="gallery-item g5 fade-in delay-2" role="listitem">
+          <div class="gallery-face"><span class="gallery-face-emoji" aria-hidden="true">🍨</span></div>
+          <div class="gallery-overlay"><span data-i18n="gal5">Classic Sundaes</span></div>
+        </div>
+
+        <div class="gallery-item g6 fade-in delay-3" role="listitem">
+          <div class="gallery-face"><span class="gallery-face-emoji" aria-hidden="true">🎨</span></div>
+          <div class="gallery-overlay"><span data-i18n="gal6">Fusion Mineral Paint</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       CONTACT
+  ========================================== -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info fade-in">
+          <span class="section-label" data-i18n="contact-label">Find Us</span>
+          <h2 class="section-title" id="contact-heading" data-i18n="contact-title">
+            Come Visit Us in Shawville
+          </h2>
+          <p data-i18n="contact-p">
+            We'd love to see you! Stop by Brooklyn Place on Rue Main in Shawville, Quebec for your favourite frozen treats and more.
+          </p>
+
+          <div class="contact-item">
+            <div class="contact-item-icon ci-1" aria-hidden="true">📍</div>
+            <div class="contact-item-text">
+              <strong data-i18n="contact-addr-label">Address</strong>
+              <span>359 Rue Main, Shawville, QC J0X 2Y0</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon ci-2" aria-hidden="true">📞</div>
+            <div class="contact-item-text">
+              <strong data-i18n="contact-phone-label">Phone</strong>
+              <span><a href="tel:+18196476522">(819) 647-6522</a></span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon ci-3" aria-hidden="true">👩‍💼</div>
+            <div class="contact-item-text">
+              <strong data-i18n="contact-owner-label">Owner</strong>
+              <span>Bonnie Harris</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links" aria-label="Social media links">
+            <a href="https://www.facebook.com/VideoPlusOne/" target="_blank" rel="noopener noreferrer"
+               class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/explore/locations/349153699/brooklyn-place/" target="_blank" rel="noopener noreferrer"
+               class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@brooklynplace" target="_blank" rel="noopener noreferrer"
+               class="social-link" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2 6.34 6.34 0 0 0 9.49 21.5a6.34 6.34 0 0 0 6.34-6.34V8.69a8.12 8.12 0 0 0 4.74 1.5V6.74a4.85 4.85 0 0 1-.98-.05z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="map-wrap fade-in delay-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2805.4946697697077!2d-76.49432392346867!3d45.59765337107651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccebfb2b2e1fc91%3A0x44e62eaba01a9a2f!2s359%20Rue%20Main%2C%20Shawville%2C%20QC%20J0X%202Y0!5e0!3m2!1sen!2sca!4v1714832000000!5m2!1sen!2sca"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Brooklyn Place location map">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       FOOTER
+  ========================================== -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="footer-logo" aria-label="Brooklyn Place">
+            <div class="footer-logo-icon" aria-hidden="true">🍦</div>
+            <span class="footer-logo-name">Brooklyn Place</span>
+          </div>
+          <p data-i18n="footer-desc">
+            Shawville, Quebec's sweetest destination since 1999. Ice cream, treats, and Fusion Mineral Paint — all under one roof, with love from Bonnie.
+          </p>
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://www.facebook.com/VideoPlusOne/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/explore/locations/349153699/brooklyn-place/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@brooklynplace" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15.2 6.34 6.34 0 0 0 9.49 21.5a6.34 6.34 0 0 0 6.34-6.34V8.69a8.12 8.12 0 0 0 4.74 1.5V6.74a4.85 4.85 0 0 1-.98-.05z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer-nav-title">Quick Links</h4>
+          <ul>
+            <li><a href="#home"     data-i18n="nav-home">Home</a></li>
+            <li><a href="#about"    data-i18n="nav-about">About</a></li>
+            <li><a href="#products" data-i18n="nav-products">Products</a></li>
+            <li><a href="#gallery"  data-i18n="nav-gallery">Gallery</a></li>
+            <li><a href="#contact"  data-i18n="nav-contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer-contact-title">Contact</h4>
+          <ul>
+            <li><span style="opacity:.7">359 Rue Main</span></li>
+            <li><span style="opacity:.7">Shawville, QC J0X 2Y0</span></li>
+            <li><a href="tel:+18196476522">(819) 647-6522</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="copy-year"></span> Brooklyn Place. <span data-i18n="footer-rights">All rights reserved.</span></span>
+        <span>
+          <span data-i18n="footer-credit">Created by</span>
+          <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener noreferrer">Dolan Programming</a>
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       JAVASCRIPT
+  ========================================== -->
+  <script>
+    /* ==========================================
+       TRANSLATIONS
+    ========================================== */
+    const translations = {
+      en: {
+        /* Meta (updated via JS) */
+        'page-title': 'Brooklyn Place | Ice Cream & Treats – Shawville, Quebec',
+
+        /* Header */
+        'logo-tagline':  'Ice Cream & Treats · Shawville, QC',
+        'nav-home':      'Home',
+        'nav-about':     'About',
+        'nav-products':  'Products',
+        'nav-gallery':   'Gallery',
+        'nav-contact':   'Contact',
+
+        /* Hero */
+        'hero-badge':  "Shawville's #1 Sweet Spot since 1999",
+        'hero-h1a':    'Sweet Treats &amp;',
+        'hero-h1b':    'Happy Scoops',
+        'hero-h1c':    'for Everyone',
+        'hero-p':      "Brooklyn Place has been Shawville, Quebec's most beloved ice cream parlour and treat shop since 1999. Come in, scoop up a smile, and taste the love Bonnie bakes into every visit.",
+        'hero-cta1':   'Visit Us Today',
+        'hero-cta2':   'See Our Treats',
+        'stat-years':      'Years Open',
+        'stat-flavours':   'Dozens of Flavours',
+        'stat-community':  'Community Favourite',
+        'badge1':      'Made with love',
+        'badge2':      'Shawville, QC',
+
+        /* About */
+        'about-label': 'Our Story',
+        'about-title': 'A Family Legacy Born in Shawville',
+        'about-p1':    'Brooklyn Place has its roots in Shawville\'s community fabric going all the way back to 1999, when Bonnie Harris first opened its doors as Video One — a beloved local video rental shop that became a neighbourhood gathering place.',
+        'about-p2':    'As times changed, Bonnie\'s passion for community and bringing smiles to people\'s faces led her to transform the shop into what it is today: a vibrant ice cream parlour and treat destination right here on Rue Main in Shawville, Quebec.',
+        'about-quote': '"The name Brooklyn Place is close to my heart — it\'s named after my granddaughter Brooklyn. Every scoop we serve is a little tribute to the joy she brings to our family." — Bonnie Harris',
+        'about-p3':    'Today, Brooklyn Place is more than just an ice cream shop. It\'s a cherished piece of Shawville life, where locals come to celebrate milestones, beat the heat, pick up Fusion Mineral Paint for a home project, and simply enjoy the warmth of a true community space.',
+        'est':         'Est.',
+        'pill1':       'Ice Cream Parlour',
+        'pill2':       'Fusion Mineral Paint',
+        'pill3':       'Shawville, QC',
+        'pill4':       'Family-Owned',
+        'pill5':       'Since 1999',
+
+        /* Products */
+        'products-label':    'What We Offer',
+        'products-title':    'Something Sweet for Everyone',
+        'products-subtitle': 'From classic scoops to specialty sundaes, and even artisan paint — Brooklyn Place has a little something for every visit.',
+        'prod1-title': 'Ice Cream &amp; Cones',
+        'prod1-desc':  'Choose from a wide variety of delicious flavours served in a cone, cup, or waffle cone. Classic and creative options for every taste bud.',
+        'prod1-t1': 'Soft Serve', 'prod1-t2': 'Hard Scoop', 'prod1-t3': 'Waffle Cones', 'prod1-t4': 'Dipped Cones',
+        'prod2-title': 'Sundaes &amp; Specialty Treats',
+        'prod2-desc':  'Indulge in our handcrafted sundaes, floats, and seasonal specials. Every treat is made with care and heaped with toppings you\'ll love.',
+        'prod2-t1': 'Ice Cream Sundaes', 'prod2-t2': 'Root Beer Floats', 'prod2-t3': 'Milkshakes', 'prod2-t4': 'Banana Splits',
+        'prod3-title': 'Seasonal Offerings',
+        'prod3-desc':  'We bring special flavours and limited-time treats throughout the year. Check in with us for the latest seasonal sensations and holiday favourites.',
+        'prod3-t1': 'Seasonal Flavours', 'prod3-t2': 'Holiday Treats', 'prod3-t3': 'Summer Specials',
+        'prod4-title': 'Fusion Mineral Paint',
+        'prod4-desc':  'Beyond sweets, Brooklyn Place is your local destination for premium Fusion Mineral Paint. Transform your home with beautiful, durable colours you\'ll love.',
+        'prod4-t1': 'Full Colour Range', 'prod4-t2': 'In-Store Pickup', 'prod4-t3': 'Expert Advice',
+
+        /* Gallery */
+        'gallery-label':    'Our Sweet Moments',
+        'gallery-title':    'A Glimpse of Brooklyn Place',
+        'gallery-subtitle': 'Every visit is a memory in the making. Stop by and create yours at 359 Rue Main, Shawville.',
+        'gal1': 'Signature Soft Serve',
+        'gal2': 'Strawberry Sundae',
+        'gal3': 'Specialty Treats',
+        'gal4': 'Our Shawville Storefront',
+        'gal5': 'Classic Sundaes',
+        'gal6': 'Fusion Mineral Paint',
+
+        /* Contact */
+        'contact-label':       'Find Us',
+        'contact-title':       'Come Visit Us in Shawville',
+        'contact-p':           "We'd love to see you! Stop by Brooklyn Place on Rue Main in Shawville, Quebec for your favourite frozen treats and more.",
+        'contact-addr-label':  'Address',
+        'contact-phone-label': 'Phone',
+        'contact-owner-label': 'Owner',
+
+        /* Footer */
+        'footer-desc':         "Shawville, Quebec's sweetest destination since 1999. Ice cream, treats, and Fusion Mineral Paint — all under one roof, with love from Bonnie.",
+        'footer-nav-title':    'Quick Links',
+        'footer-contact-title':'Contact',
+        'footer-rights':       'All rights reserved.',
+        'footer-credit':       'Created by',
+      },
+
+      fr: {
+        /* Meta */
+        'page-title': 'Brooklyn Place | Crème Glacée & Gâteries – Shawville, Québec',
+
+        /* Header */
+        'logo-tagline':  'Crème glacée & gâteries · Shawville, QC',
+        'nav-home':      'Accueil',
+        'nav-about':     'À propos',
+        'nav-products':  'Produits',
+        'nav-gallery':   'Galerie',
+        'nav-contact':   'Contact',
+
+        /* Hero */
+        'hero-badge':  'Le meilleur endroit sucré de Shawville depuis 1999',
+        'hero-h1a':    'Gâteries sucrées &amp;',
+        'hero-h1b':    'Boules de bonheur',
+        'hero-h1c':    'pour tous',
+        'hero-p':      "Depuis 1999, Brooklyn Place est le salon de crème glacée et la boutique de gâteries préférés de Shawville, Québec. Venez savourer un sourire et goûter l'amour que Bonnie met dans chaque visite.",
+        'hero-cta1':   'Venez nous voir',
+        'hero-cta2':   'Voir nos gâteries',
+        'stat-years':      'Ans ouverts',
+        'stat-flavours':   'Des dizaines de saveurs',
+        'stat-community':  'Favori de la communauté',
+        'badge1':      'Fait avec amour',
+        'badge2':      'Shawville, QC',
+
+        /* About */
+        'about-label': 'Notre histoire',
+        'about-title': 'Un héritage familial né à Shawville',
+        'about-p1':    'Brooklyn Place est profondément enraciné dans le tissu communautaire de Shawville depuis 1999, quand Bonnie Harris a ouvert ses portes sous le nom de Video One — un club vidéo local adoré qui est devenu un lieu de rassemblement du quartier.',
+        'about-p2':    "Avec le temps, la passion de Bonnie pour la communauté et le désir de faire sourire les gens l'ont amenée à transformer la boutique en ce qu'elle est aujourd'hui : un salon de crème glacée vibrant et une destination de gâteries au cœur de la Rue Main à Shawville, Québec.",
+        'about-quote': '« Le nom Brooklyn Place me tient à cœur — il est nommé en l\'honneur de ma petite-fille Brooklyn. Chaque boule que nous servons est un petit hommage à la joie qu\'elle apporte à notre famille. » — Bonnie Harris',
+        'about-p3':    "Aujourd'hui, Brooklyn Place est bien plus qu'une simple crèmerie. C'est un endroit chéri de la vie à Shawville, où les habitants viennent célébrer des moments importants, se rafraîchir, acheter de la peinture minérale Fusion pour un projet maison, et profiter simplement de la chaleur d'un vrai espace communautaire.",
+        'est':         'Fondé',
+        'pill1':       'Salon de crème glacée',
+        'pill2':       'Peinture Fusion Mineral',
+        'pill3':       'Shawville, QC',
+        'pill4':       'Propriété familiale',
+        'pill5':       'Depuis 1999',
+
+        /* Products */
+        'products-label':    'Ce que nous offrons',
+        'products-title':    'Quelque chose de sucré pour tous',
+        'products-subtitle': 'Des boules classiques aux sundaes spéciaux, en passant par la peinture artisanale — Brooklyn Place a quelque chose à offrir à chaque visite.',
+        'prod1-title': 'Crème glacée &amp; cornets',
+        'prod1-desc':  'Choisissez parmi une large variété de délicieuses saveurs servies en cornet, en coupe ou en gaufrette. Des options classiques et créatives pour tous les goûts.',
+        'prod1-t1': 'Crème molle', 'prod1-t2': 'Boules dures', 'prod1-t3': 'Cornets gaufrés', 'prod1-t4': 'Cornets trempés',
+        'prod2-title': 'Sundaes &amp; gâteries spéciales',
+        'prod2-desc':  'Régalez-vous avec nos sundaes faits maison, nos floats et nos spéciaux saisonniers. Chaque gâterie est préparée avec soin et garnie de toppings que vous adorerez.',
+        'prod2-t1': 'Sundaes glacés', 'prod2-t2': 'Floats de bière de root', 'prod2-t3': 'Laits frappés', 'prod2-t4': 'Banana splits',
+        'prod3-title': 'Offres saisonnières',
+        'prod3-desc':  "Nous proposons des saveurs spéciales et des gâteries en édition limitée tout au long de l'année. Consultez-nous pour les dernières sensations saisonnières et les favoris des fêtes.",
+        'prod3-t1': 'Saveurs saisonnières', 'prod3-t2': 'Gâteries des fêtes', 'prod3-t3': 'Spéciaux estivaux',
+        'prod4-title': 'Peinture Fusion Mineral',
+        'prod4-desc':  "En plus des douceurs, Brooklyn Place est votre destination locale pour la peinture Fusion Mineral de première qualité. Transformez votre maison avec de belles couleurs durables.",
+        'prod4-t1': 'Gamme complète', 'prod4-t2': 'Ramassage en magasin', 'prod4-t3': 'Conseils d\'experts',
+
+        /* Gallery */
+        'gallery-label':    'Nos doux moments',
+        'gallery-title':    'Un aperçu de Brooklyn Place',
+        'gallery-subtitle': 'Chaque visite est un souvenir en devenir. Passez nous voir au 359 Rue Main, Shawville.',
+        'gal1': 'Crème molle signature',
+        'gal2': 'Sundae aux fraises',
+        'gal3': 'Gâteries spéciales',
+        'gal4': 'Notre vitrine de Shawville',
+        'gal5': 'Sundaes classiques',
+        'gal6': 'Peinture Fusion Mineral',
+
+        /* Contact */
+        'contact-label':       'Nous trouver',
+        'contact-title':       'Venez nous rendre visite à Shawville',
+        'contact-p':           "Nous serions ravis de vous accueillir ! Passez chez Brooklyn Place sur la Rue Main à Shawville, Québec pour vos gâteries glacées préférées et bien plus encore.",
+        'contact-addr-label':  'Adresse',
+        'contact-phone-label': 'Téléphone',
+        'contact-owner-label': 'Propriétaire',
+
+        /* Footer */
+        'footer-desc':         "La destination la plus sucrée de Shawville, Québec depuis 1999. Crème glacée, gâteries et peinture Fusion Mineral — tout sous un même toit, avec amour de la part de Bonnie.",
+        'footer-nav-title':    'Liens rapides',
+        'footer-contact-title':'Contact',
+        'footer-rights':       'Tous droits réservés.',
+        'footer-credit':       'Créé par',
+      }
+    };
+
+    /* ==========================================
+       CURRENT LANGUAGE STATE
+    ========================================== */
+    let currentLang = 'en';
+
+    /**
+     * Apply translations to all [data-i18n] elements.
+     * Uses innerHTML to handle &amp; entities correctly.
+     */
+    function applyLanguage(lang) {
+      currentLang = lang;
+      const t = translations[lang];
+
+      // Update all translatable elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) {
+          el.innerHTML = t[key];
+        }
+      });
+
+      // Update page title
+      document.title = t['page-title'] || document.title;
+
+      // Update html lang attribute
+      document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
+
+      // Sync all lang toggle buttons (header + mobile)
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const active = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+    }
+
+    /* ==========================================
+       STICKY HEADER
+    ========================================== */
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    /* ==========================================
+       HAMBURGER / MOBILE MENU
+    ========================================== */
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen.toString());
+      mobileNav.classList.toggle('open', isOpen);
+      mobileNav.setAttribute('aria-hidden', (!isOpen).toString());
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close mobile nav when a link is clicked
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        mobileNav.classList.remove('open');
+        mobileNav.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* ==========================================
+       LANGUAGE TOGGLE EVENT LISTENERS
+    ========================================== */
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        if (lang !== currentLang) {
+          applyLanguage(lang);
+        }
+      });
+    });
+
+    /* ==========================================
+       INTERSECTION OBSERVER – FADE IN
+    ========================================== */
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    /* ==========================================
+       FOOTER COPYRIGHT YEAR
+    ========================================== */
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    /* ==========================================
+       INIT
+    ========================================== */
+    // Apply English on load (default)
+    applyLanguage('en');
+  </script>
+
+</body>
+</html>

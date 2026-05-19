@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Internal demo showcase — Dolan Programming client site previews.">
+<title>Demo Showcase — Dolan Programming</title>
+<link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<!-- Shared styles from main site -->
+<link rel="stylesheet" href="../style.css">
+<!-- Demo-page specific styles -->
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+<div id="noise-overlay"></div>
+<div id="progress-bar"></div>
+
+<!-- HEADER (mirrors main site) -->
+<header id="main-header">
+  <a class="logo" href="../index.html">Dolan<span>Programming</span></a>
+  <nav>
+    <ul id="nav-menu">
+      <li><a class="nav-link" href="../index.html#home">Home</a></li>
+      <li><a class="nav-link" href="../index.html#about">About</a></li>
+      <li><a class="nav-link" href="../index.html#services">Services</a></li>
+      <li><a class="nav-link" href="../index.html#resume">Resume</a></li>
+      <li><a class="nav-link" href="../index.html#work">Portfolio</a></li>
+      <li><a class="nav-link" href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<div class="demo-page">
+
+  <!-- ── HERO ── -->
+  <div class="demo-hero">
+    <div class="demo-hero-grid"></div>
+    <div class="demo-hero-inner">
+      <div class="demo-hero-text">
+        <div class="section-label">Internal</div>
+        <h1>Demo <span>Showcase</span></h1>
+        <p>Live previews of sites built for prospective clients. Use the search and filters to find demos by industry or technology.</p>
+      </div>
+      <div class="demo-hero-count">
+        <div class="big-num"><span id="demo-total-count">0</span></div>
+        <small>Demos Live</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STICKY TOOLBAR ── -->
+  <div class="demo-toolbar">
+    <div class="demo-toolbar-inner">
+
+      <!-- Search -->
+      <div class="search-wrap">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input
+          id="demo-search"
+          type="search"
+          placeholder='Search demos… (or press "/")'
+          autocomplete="off"
+          spellcheck="false"
+        >
+        <button id="search-clear" aria-label="Clear search">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Tag filters -->
+      <div class="tag-filters" id="tag-filters">
+        <!-- Built by demo.js -->
+      </div>
+
+      <!-- Sort + View -->
+      <div class="sort-wrap">
+        <label for="demo-sort">Sort</label>
+        <select id="demo-sort">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="alpha">A → Z</option>
+          <option value="featured">Featured</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── RESULTS BAR ── -->
+  <div class="demo-results-bar">
+    <span class="results-count" id="results-count">Loading…</span>
+    <div class="view-toggles">
+      <button class="view-btn active" data-view="grid" title="Grid view">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+        </svg>
+      </button>
+      <button class="view-btn" data-view="list" title="List view">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+          <line x1="8" y1="18" x2="21" y2="18"/>
+          <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+          <line x1="3" y1="18" x2="3.01" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── DEMO GRID ── -->
+  <div class="demo-grid-wrap">
+    <div class="demo-grid" id="demo-grid">
+      <!-- Cards injected by demo.js -->
+    </div>
+
+    <!-- Empty state -->
+    <div class="demo-empty" id="demo-empty">
+      <div class="demo-empty-icon">🔍</div>
+      <h3>No demos found</h3>
+      <p>Try a different search term or clear the filters.</p>
+    </div>
+
+    <!-- Load more -->
+    <div class="load-more-wrap">
+      <button id="load-more-btn" class="btn btn-outline">Load More</button>
+    </div>
+  </div>
+
+</div><!-- /.demo-page -->
+
+<footer>
+  <div class="footer-social">
+    <a href="https://www.facebook.com/quyon.danny" target="_blank" aria-label="Facebook">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+    </a>
+    <a href="https://github.com/SwiftBanshee" target="_blank" aria-label="GitHub">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+    </a>
+  </div>
+  <p class="footer-copy">© 2026 Dolan Programming — Internal Use Only</p>
+</footer>
+
+<!-- Shared JS from main site (header scroll, progress bar, mobile nav) -->
+<script>
+  // ── Minimal shared header/scroll behaviour (subset of ../script.js) ──
+  // The full script.js has canvas + typed text tied to #home section
+  // elements that don't exist here, so we inline just what's needed.
+
+  // Header shrink + progress bar
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('main-header');
+    header.classList.toggle('scrolled', window.scrollY > 50);
+    const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progress-bar').style.width = pct + '%';
+  }, { passive: true });
+
+  // Mobile nav
+  document.getElementById('nav-toggle').addEventListener('click', function(){
+    this.classList.toggle('open');
+    document.getElementById('nav-menu').classList.toggle('open');
+  });
+</script>
+
+<!-- Demo page logic -->
+<script src="demo.js"></script>
+</body>
+</html>

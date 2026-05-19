@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0b1220"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="a" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#66e3ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect x="100" y="140" width="1000" height="620" rx="40" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)"/>
+  <g transform="translate(170,220)">
+    <rect x="0" y="0" width="860" height="250" rx="30" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+    <rect x="40" y="48" width="280" height="20" rx="10" fill="rgba(255,255,255,0.10)"/>
+    <rect x="40" y="86" width="460" height="20" rx="10" fill="rgba(255,255,255,0.08)"/>
+    <rect x="40" y="124" width="420" height="20" rx="10" fill="rgba(255,255,255,0.08)"/>
+    <rect x="40" y="162" width="320" height="20" rx="10" fill="rgba(255,255,255,0.08)"/>
+    <rect x="600" y="56" width="220" height="150" rx="26" fill="rgba(52,211,153,0.10)" stroke="rgba(255,255,255,0.12)"/>
+    <path d="M640 160 L720 92 L780 140" fill="none" stroke="url(#a)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="720" cy="92" r="14" fill="rgba(102,227,255,0.55)"/>
+  </g>
+  <g transform="translate(170,520)">
+    <rect x="0" y="0" width="860" height="170" rx="30" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.10)"/>
+    <rect x="40" y="46" width="520" height="22" rx="11" fill="rgba(255,255,255,0.10)"/>
+    <rect x="40" y="86" width="450" height="22" rx="11" fill="rgba(255,255,255,0.08)"/>
+    <rect x="40" y="126" width="380" height="22" rx="11" fill="rgba(255,255,255,0.08)"/>
+    <circle cx="740" cy="86" r="56" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/>
+    <path d="M740 54 L740 118" stroke="url(#a)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M710 86 L770 86" stroke="url(#a)" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <text x="56" y="92" fill="rgba(255,255,255,0.70)" font-family="system-ui,Segoe UI,Arial" font-size="28" font-weight="700">
+    Workshop & maintenance
+  </text>
+</svg>
+

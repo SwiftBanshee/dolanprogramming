@@ -5,6 +5,9 @@
 User-agent: *
 Allow: /
 
+# Block the hidden demo showcase page
+Disallow: /demo/
+
 # Block access to static assets crawlers don't need
 Disallow: /static/img/
 

@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deano's Chicken – Best Chicken in Shawville, QC</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Deano's Chicken – Shawville's favourite chicken spot. Fresh, locally beloved chicken in Shawville, Quebec. Call to order for Friday pickup. 305e Rue Main, Shawville, QC." />
+  <meta name="keywords" content="Deano's Chicken, chicken Shawville, Shawville restaurant, Quebec chicken, best chicken Shawville, Pontiac County food, Shawville takeout, chicken dinner Quebec" />
+  <meta name="author" content="Dolan Programming" />
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Shawville, Quebec" />
+  <meta name="geo.position" content="45.5986;-76.9840" />
+  <meta name="ICBM" content="45.5986, -76.9840" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Deano's Chicken – Best Chicken in Shawville, QC" />
+  <meta property="og:description" content="Come on in and find the best chicken in Shawville! Order by noon on Fridays." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Deano's Chicken",
+    "description": "The best chicken in Shawville, Quebec",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "305e Rue Main",
+      "addressLocality": "Shawville",
+      "addressRegion": "QC",
+      "addressCountry": "CA"
+    },
+    "telephone": "+1-819-647-3632",
+    "servesCuisine": "Chicken",
+    "priceRange": "$$",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.5986,
+      "longitude": -76.9840
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --cream: #FBF5E6;
+      --deep-red: #8B1A1A;
+      --golden: #D4841A;
+      --dark: #1A0F00;
+      --charcoal: #2D2416;
+      --warm-white: #FFF8EE;
+      --smoke: #F5EDD8;
+      --accent: #E8A020;
+      --text-body: #3A2C18;
+      --header-h: 72px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--cream);
+      color: var(--text-body);
+      overflow-x: hidden;
+    }
+
+    /* ===== STICKY HEADER ===== */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: var(--dark);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+      transition: background 0.3s;
+    }
+
+    header.scrolled { background: rgba(26,15,0,0.97); backdrop-filter: blur(8px); }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 44px; height: 44px;
+      background: var(--deep-red);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--accent);
+      border: 2px solid var(--golden);
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .logo-text span:first-child {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      color: var(--warm-white);
+      letter-spacing: 0.02em;
+    }
+
+    .logo-text span:last-child {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      color: var(--golden);
+      text-transform: uppercase;
+    }
+
+    nav.desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    nav.desktop-nav a {
+      color: var(--smoke);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.4rem 0.85rem;
+      border-radius: 2px;
+      transition: color 0.2s, background 0.2s;
+    }
+
+    nav.desktop-nav a:hover { color: var(--accent); background: rgba(212,132,26,0.1); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1.5px solid var(--golden);
+      color: var(--golden);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 0.3rem 0.75rem;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .lang-btn:hover { background: var(--golden); color: var(--dark); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--warm-white);
+      transition: all 0.3s;
+      transform-origin: center;
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav drawer */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: var(--charcoal);
+      z-index: 999;
+      padding: 1.5rem 2rem 2rem;
+      transform: translateY(-110%);
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .mobile-nav.open { transform: translateY(0); }
+
+    .mobile-nav a {
+      display: block;
+      color: var(--smoke);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      transition: color 0.2s;
+    }
+
+    .mobile-nav a:hover { color: var(--accent); }
+    .mobile-nav .lang-btn { margin-top: 1.25rem; width: 100%; padding: 0.65rem; font-size: 1rem; }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      padding-top: var(--header-h);
+      background: var(--dark);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 65% 50%, rgba(139,26,26,0.35) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 80% at 30% 80%, rgba(212,132,26,0.15) 0%, transparent 50%);
+    }
+
+    /* Animated flame/smoke particles */
+    .particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      bottom: -20px;
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--golden);
+      opacity: 0;
+      animation: rise var(--dur, 4s) ease-in var(--delay, 0s) infinite;
+    }
+
+    @keyframes rise {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-90vh) scale(0); opacity: 0; }
+    }
+
+    .hero-img-side {
+      position: absolute;
+      right: 0; top: 0; bottom: 0;
+      width: 50%;
+      overflow: hidden;
+    }
+
+    .hero-img-side img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+      filter: saturate(1.15) contrast(1.05);
+    }
+
+    .hero-img-side::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--dark) 0%, transparent 40%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 640px;
+      padding: 4rem 2rem 4rem 5vw;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      color: var(--golden);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.2s forwards;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 7vw, 6rem);
+      font-weight: 900;
+      color: var(--warm-white);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.4s forwards;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: rgba(255,248,238,0.75);
+      line-height: 1.6;
+      max-width: 440px;
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.6s forwards;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.7s ease 0.8s forwards;
+    }
+
+    .btn-primary {
+      background: var(--deep-red);
+      color: var(--warm-white);
+      border: 2px solid var(--deep-red);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-primary:hover { background: var(--golden); border-color: var(--golden); color: var(--dark); transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--warm-white);
+      border: 2px solid rgba(255,248,238,0.4);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: border-color 0.2s, color 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== FRIDAY SPECIAL BANNER ===== */
+    .friday-banner {
+      background: var(--deep-red);
+      padding: 1.25rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .friday-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 10px,
+        rgba(255,255,255,0.03) 10px,
+        rgba(255,255,255,0.03) 20px
+      );
+    }
+
+    .friday-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .friday-badge {
+      background: var(--accent);
+      color: var(--dark);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+      animation: pulse 2s ease infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    .friday-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--warm-white);
+      letter-spacing: 0.05em;
+    }
+
+    .friday-text strong { color: var(--accent); }
+
+    .friday-tel {
+      color: var(--warm-white);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: 1.5px solid rgba(255,248,238,0.5);
+      padding: 0.3rem 0.85rem;
+      border-radius: 2px;
+      transition: background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .friday-tel:hover { background: rgba(255,255,255,0.15); }
+
+    /* ===== SECTION LAYOUT ===== */
+    section { padding: 6rem 2rem; }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--golden);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      color: var(--charcoal);
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* divider */
+    .divider {
+      width: 60px; height: 3px;
+      background: var(--golden);
+      margin: 1.25rem 0;
+    }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--warm-white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-top: 3rem;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img-wrap img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px; right: 12px; bottom: 12px;
+      border: 2px solid var(--golden);
+      border-radius: 2px;
+      z-index: 0;
+    }
+
+    .about-img-wrap img { position: relative; z-index: 1; }
+
+    .rebrand-note {
+      display: inline-block;
+      background: var(--deep-red);
+      color: var(--warm-white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== WEEKLY SPECIAL ===== */
+    #special {
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #special::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(139,26,26,0.4) 0%, transparent 65%);
+    }
+
+    .special-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+    }
+
+    .special-label { color: var(--golden); }
+
+    .special-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 900;
+      color: var(--warm-white);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .special-title em { color: var(--accent); font-style: italic; }
+
+    .special-desc {
+      color: rgba(255,248,238,0.7);
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-top: 1rem;
+    }
+
+    .special-cta-box {
+      background: var(--deep-red);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem 1.75rem;
+      border-radius: 0 2px 2px 0;
+      margin-top: 2rem;
+    }
+
+    .special-cta-box p {
+      color: var(--warm-white);
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .special-cta-box strong { color: var(--accent); font-weight: 600; }
+
+    .special-cta-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: var(--warm-white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 2px;
+      transition: color 0.2s;
+    }
+
+    .special-cta-box a:hover { color: var(--accent); }
+
+    .special-img {
+      position: relative;
+    }
+
+    .special-img img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--deep-red);
+      box-shadow: 0 0 60px rgba(139,26,26,0.5);
+    }
+
+    /* Rotating ring */
+    .ring {
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 2px dashed rgba(212,132,26,0.4);
+      animation: spin 20s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ===== MENU ===== */
+    #menu { background: var(--smoke); }
+
+    .menu-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .tab-btn {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.25rem;
+      border: 2px solid var(--charcoal);
+      background: transparent;
+      color: var(--charcoal);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--charcoal);
+      color: var(--warm-white);
+    }
+
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .menu-card {
+      background: var(--warm-white);
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .menu-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,0.12); }
+
+    .menu-card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .menu-card-body {
+      padding: 1.25rem;
+    }
+
+    .menu-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 0.35rem;
+    }
+
+    .menu-card-desc {
+      font-size: 0.9rem;
+      color: #7A6B52;
+      line-height: 1.55;
+    }
+
+    /* ===== NEW RELEASES / CATALOG ===== */
+    #catalog { background: var(--cream); }
+
+    .catalog-scroll {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 2.5rem;
+    }
+
+    .catalog-scroll::-webkit-scrollbar { height: 4px; }
+    .catalog-scroll::-webkit-scrollbar-track { background: transparent; }
+    .catalog-scroll::-webkit-scrollbar-thumb { background: var(--golden); border-radius: 2px; }
+
+    .catalog-card {
+      flex: 0 0 260px;
+      scroll-snap-align: start;
+      background: var(--warm-white);
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      transition: transform 0.2s;
+    }
+
+    .catalog-card:hover { transform: translateY(-4px); }
+
+    .catalog-card-img {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      display: block;
+    }
+
+    .catalog-card-body { padding: 1.1rem; }
+
+    .new-badge {
+      display: inline-block;
+      background: var(--deep-red);
+      color: var(--warm-white);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.55rem;
+      border-radius: 2px;
+      margin-bottom: 0.6rem;
+    }
+
+    .catalog-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 0.3rem;
+    }
+
+    .catalog-card-note {
+      font-size: 0.85rem;
+      color: #7A6B52;
+      line-height: 1.5;
+    }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--charcoal); }
+
+    .services-title {
+      color: var(--warm-white);
+    }
+
+    .services-desc { color: rgba(255,248,238,0.65); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 3px solid var(--golden);
+      padding: 1.75rem 1.5rem;
+      border-radius: 0 0 2px 2px;
+      transition: background 0.2s;
+    }
+
+    .service-card:hover { background: rgba(255,255,255,0.07); }
+
+    .service-icon {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--golden);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      border: 1px solid rgba(212,132,26,0.5);
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+    }
+
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--warm-white);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-detail {
+      font-size: 0.9rem;
+      color: rgba(255,248,238,0.6);
+      line-height: 1.6;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--warm-white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .contact-info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .contact-info-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--golden);
+    }
+
+    .contact-info-value {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+
+    .contact-info-value a {
+      color: var(--charcoal);
+      text-decoration: none;
+      border-bottom: 1px solid var(--golden);
+      transition: color 0.2s;
+    }
+
+    .contact-info-value a:hover { color: var(--deep-red); }
+
+    .map-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #E5DEC9;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #8A7A60;
+      text-transform: uppercase;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .footer-brand p {
+      color: rgba(255,248,238,0.5);
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.7;
+      margin-top: 1rem;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--golden);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a, .footer-col p {
+      display: block;
+      color: rgba(255,248,238,0.55);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.8;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover { color: var(--warm-white); }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 2.5rem auto 0;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .footer-bottom p {
+      color: rgba(255,248,238,0.3);
+      font-size: 0.8rem;
+    }
+
+    .footer-bottom a {
+      color: var(--golden);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom a:hover { color: var(--accent); }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      nav.desktop-nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav { display: block; }
+
+      .about-grid,
+      .special-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+
+      .hero-img-side { opacity: 0.25; width: 100%; }
+      .hero-content { padding: 3rem 1.5rem; }
+
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      :root { --header-h: 60px; }
+      section { padding: 4rem 1.25rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .hero-cta-group { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="main-header">
+    <a href="#" class="logo">
+      <div class="logo-mark">D</div>
+      <div class="logo-text">
+        <span>Deano's Chicken</span>
+        <span data-en="Shawville, Quebec" data-fr="Shawville, Québec">Shawville, Quebec</span>
+      </div>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#about" data-en="About" data-fr="À propos">About</a>
+      <a href="#special" data-en="Weekly Special" data-fr="Spécial Semaine">Weekly Special</a>
+      <a href="#menu" data-en="Menu" data-fr="Menu">Menu</a>
+      <a href="#catalog" data-en="New Items" data-fr="Nouveautés">New Items</a>
+      <a href="#services" data-en="Services" data-fr="Services">Services</a>
+      <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-btn" id="lang-toggle">FR</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#about" data-en="About" data-fr="À propos">About</a>
+    <a href="#special" data-en="Weekly Special" data-fr="Spécial Semaine">Weekly Special</a>
+    <a href="#menu" data-en="Menu" data-fr="Menu">Menu</a>
+    <a href="#catalog" data-en="New Items" data-fr="Nouveautés">New Items</a>
+    <a href="#services" data-en="Services" data-fr="Services">Services</a>
+    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+    <button class="lang-btn" id="lang-toggle-mobile">FR</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="hero-img-side">
+      <!-- Replace src with actual hero food photo -->
+      <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=900&q=80" alt="Golden fried chicken" />
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-en="Shawville's Favourite Since Day One" data-fr="Le favori de Shawville depuis le début">Shawville's Favourite Since Day One</p>
+      <h1 class="hero-title" data-en="The Best <em>Chicken</em> in Shawville" data-fr="Le meilleur <em>Poulet</em> à Shawville">The Best <em>Chicken</em> in Shawville</h1>
+      <p class="hero-sub" data-en="Come on in and taste the difference. Freshly prepared, made with pride — right here in the heart of Shawville, Quebec." data-fr="Venez découvrir la différence. Préparé frais, avec fierté — ici même au coeur de Shawville, Québec.">Come on in and taste the difference. Freshly prepared, made with pride — right here in the heart of Shawville, Quebec.</p>
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn-primary" data-en="See Our Menu" data-fr="Voir le Menu">See Our Menu</a>
+        <a href="tel:+18196473632" class="btn-outline" data-en="Call to Order" data-fr="Appeler pour Commander">Call to Order</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FRIDAY BANNER -->
+  <div class="friday-banner">
+    <div class="friday-inner">
+      <span class="friday-badge" data-en="Friday Special" data-fr="Spécial Vendredi">Friday Special</span>
+      <p class="friday-text" data-en="Fridays are our biggest day — <strong>call by noon</strong> to book your chicken order and guarantee your spot!" data-fr="Le vendredi est notre plus grande journée — <strong>appelez avant midi</strong> pour réserver votre commande de poulet!">Fridays are our biggest day — <strong>call by noon</strong> to book your chicken order and guarantee your spot!</p>
+      <a href="tel:+18196473632" class="friday-tel">(819) 647-3632</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label" data-en="Our Story" data-fr="Notre Histoire">Our Story</p>
+        <h2 class="section-title" data-en="Rooted in Shawville,<br>Built on Flavour" data-fr="Enracinés à Shawville,<br>Construits sur la Saveur">Rooted in Shawville,<br>Built on Flavour</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <!-- Replace with an actual restaurant/food photo -->
+          <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=700&q=80" alt="Deano's Chicken kitchen" />
+        </div>
+        <div class="reveal">
+          <span class="rebrand-note" data-en="Freshly Rebranded" data-fr="Nouvellement Rebrandé">Freshly Rebranded</span>
+          <p class="section-desc" data-en="Deano's Chicken has been a cornerstone of the Shawville community. We recently refreshed our look — same great recipes, same dedication, now with a bold new identity. Located on Rue Main, we serve the Pontiac County area with chicken done right every single time." data-fr="Deano's Chicken est un pilier de la communauté de Shawville. Nous avons récemment rafraîchi notre image — mêmes excellentes recettes, même dévouement, avec une nouvelle identité audacieuse. Situé sur la Rue Main, nous servons le comté de Pontiac avec du poulet réussi à chaque fois.">Deano's Chicken has been a cornerstone of the Shawville community. We recently refreshed our look — same great recipes, same dedication, now with a bold new identity. Located on Rue Main, we serve the Pontiac County area with chicken done right every single time.</p>
+          <br />
+          <p class="section-desc" data-en="We are proud to be a local, community-focused spot where quality comes first. Whether you're picking up for the family or calling ahead for Friday's famous order — we are here for you." data-fr="Nous sommes fiers d'être un endroit local et communautaire où la qualité passe en premier. Que vous fassiez une commande pour la famille ou que vous appeliez pour la commande du vendredi — nous sommes là pour vous.">We are proud to be a local, community-focused spot where quality comes first. Whether you're picking up for the family or calling ahead for Friday's famous order — we are here for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEEKLY SPECIAL -->
+  <section id="special">
+    <div class="section-inner">
+      <div class="special-grid">
+        <div class="reveal">
+          <p class="section-label special-label" data-en="Don't Miss Out" data-fr="Ne Manquez Pas">Don't Miss Out</p>
+          <h2 class="special-title" data-en="The <em>Friday</em><br>Chicken Special" data-fr="Le Spécial Poulet<br><em>du Vendredi</em>">The <em>Friday</em><br>Chicken Special</h2>
+          <div class="divider"></div>
+          <p class="special-desc" data-en="Every Friday, we pull out all the stops for our most popular weekly offering. It sells out fast — this isn't just dinner, it's a Shawville tradition." data-fr="Chaque vendredi, nous donnons le meilleur pour notre offre hebdomadaire la plus populaire. Ça se vend vite — ce n'est pas juste un repas, c'est une tradition à Shawville.">Every Friday, we pull out all the stops for our most popular weekly offering. It sells out fast — this isn't just dinner, it's a Shawville tradition.</p>
+          <div class="special-cta-box">
+            <p data-en="To secure your order, <strong>call us by noon on Friday</strong>. Orders are limited and we fill up quickly. Don't be left without!" data-fr="Pour sécuriser votre commande, <strong>appelez-nous avant midi le vendredi</strong>. Les commandes sont limitées et on se remplit vite. Ne restez pas sans!">To secure your order, <strong>call us by noon on Friday</strong>. Orders are limited and we fill up quickly. Don't be left without!</p>
+            <a href="tel:+18196473632">(819) 647-3632</a>
+          </div>
+        </div>
+        <div class="special-img reveal">
+          <div class="ring"></div>
+          <!-- Replace with actual Friday special photo -->
+          <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=700&q=80" alt="Friday chicken special" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label" data-en="What We Serve" data-fr="Ce Que Nous Servons">What We Serve</p>
+        <h2 class="section-title" data-en="Our Menu" data-fr="Notre Menu">Our Menu</h2>
+        <div class="divider"></div>
+        <p class="section-desc" data-en="Simple. Quality. Chicken done right. Browse our offerings below — all freshly prepared." data-fr="Simple. Qualité. Poulet bien fait. Parcourez nos offres ci-dessous — tout fraîchement préparé.">Simple. Quality. Chicken done right. Browse our offerings below — all freshly prepared.</p>
+      </div>
+
+      <div class="menu-tabs reveal" style="margin-top: 2.5rem;">
+        <button class="tab-btn active" data-tab="chicken" data-en="Chicken" data-fr="Poulet">Chicken</button>
+        <button class="tab-btn" data-tab="sides" data-en="Sides" data-fr="Accompagnements">Sides</button>
+        <button class="tab-btn" data-tab="combos" data-en="Combos" data-fr="Combos">Combos</button>
+      </div>
+
+      <!-- Chicken -->
+      <div class="menu-panel active" id="panel-chicken">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <!-- Replace image -->
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1598103442097-8b74394b95c7?w=600&q=80" alt="Whole Rotisserie Chicken" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Whole Rotisserie Chicken" data-fr="Poulet Rôti Entier">Whole Rotisserie Chicken</h3>
+              <p class="menu-card-desc" data-en="A full bird, golden and juicy. Classic Deano's flavour that keeps people coming back." data-fr="Un poulet entier, doré et juteux. La saveur classique de Deano's qui fait revenir les gens.">A full bird, golden and juicy. Classic Deano's flavour that keeps people coming back.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600&q=80" alt="Half Chicken" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Half Chicken" data-fr="Demi-Poulet">Half Chicken</h3>
+              <p class="menu-card-desc" data-en="Perfect for one. Same great rotisserie taste in a single-serving portion." data-fr="Parfait pour une personne. Même excellent goût rôti en portion individuelle.">Perfect for one. Same great rotisserie taste in a single-serving portion.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1562967916-eb82221dfb92?w=600&q=80" alt="Chicken Pieces" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Chicken Pieces" data-fr="Morceaux de Poulet">Chicken Pieces</h3>
+              <p class="menu-card-desc" data-en="Pick your favourite cuts. Available by the piece or in packs." data-fr="Choisissez vos morceaux préférés. Disponibles à la pièce ou en paquets.">Pick your favourite cuts. Available by the piece or in packs.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Friday Special Order" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Friday Special" data-fr="Spécial Vendredi">Friday Special</h3>
+              <p class="menu-card-desc" data-en="Our most talked-about offering. Call by noon on Friday to reserve yours. Limited availability." data-fr="Notre offre la plus populaire. Appelez avant midi le vendredi pour réserver. Disponibilité limitée.">Our most talked-about offering. Call by noon on Friday to reserve yours. Limited availability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sides -->
+      <div class="menu-panel" id="panel-sides">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?w=600&q=80" alt="Roasted Potatoes" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Roasted Potatoes" data-fr="Pommes de Terre Rôties">Roasted Potatoes</h3>
+              <p class="menu-card-desc" data-en="Crispy on the outside, fluffy inside. The perfect companion." data-fr="Croustillant à l'extérieur, moelleux à l'intérieur. L'accompagnement parfait.">Crispy on the outside, fluffy inside. The perfect companion.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=600&q=80" alt="Coleslaw" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Coleslaw" data-fr="Salade de Chou">Coleslaw</h3>
+              <p class="menu-card-desc" data-en="Fresh, creamy and house-made. A classic pairing." data-fr="Frais, crémeux et fait maison. Un classique incontournable.">Fresh, creamy and house-made. A classic pairing.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=600&q=80" alt="Gravy" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Gravy" data-fr="Sauce Brune">Gravy</h3>
+              <p class="menu-card-desc" data-en="Rich, savoury gravy made from our chicken drippings. Don't skip this one." data-fr="Sauce riche et savoureuse faite à partir de nos jus de poulet. Ne manquez pas ça.">Rich, savoury gravy made from our chicken drippings. Don't skip this one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combos -->
+      <div class="menu-panel" id="panel-combos">
+        <div class="menu-grid">
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=600&q=80" alt="Family Feast" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Family Feast" data-fr="Festin Familial">Family Feast</h3>
+              <p class="menu-card-desc" data-en="A whole chicken, two sides, and gravy. Everything the family needs at the table." data-fr="Un poulet entier, deux accompagnements et sauce brune. Tout ce qu'il faut pour la famille.">A whole chicken, two sides, and gravy. Everything the family needs at the table.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1532980400857-e8d9d275d858?w=600&q=80" alt="Solo Combo" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Solo Combo" data-fr="Combo Solo">Solo Combo</h3>
+              <p class="menu-card-desc" data-en="Half chicken with your choice of one side. Great for a satisfying individual meal." data-fr="Demi-poulet avec votre choix d'un accompagnement. Parfait pour un repas individuel satisfaisant.">Half chicken with your choice of one side. Great for a satisfying individual meal.</p>
+            </div>
+          </div>
+          <div class="menu-card reveal">
+            <img class="menu-card-img" src="https://images.unsplash.com/photo-1606728035253-49e8a23146de?w=600&q=80" alt="Party Pack" />
+            <div class="menu-card-body">
+              <h3 class="menu-card-title" data-en="Party Pack" data-fr="Pack de Fête">Party Pack</h3>
+              <p class="menu-card-desc" data-en="For groups and gatherings. Multiple chickens with sides to keep the whole crowd happy. Call ahead." data-fr="Pour les groupes et rassemblements. Plusieurs poulets avec accompagnements. Appelez à l'avance.">For groups and gatherings. Multiple chickens with sides to keep the whole crowd happy. Call ahead.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW ITEMS CATALOG -->
+  <section id="catalog">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label" data-en="Fresh & New" data-fr="Frais et Nouveau">Fresh & New</p>
+        <h2 class="section-title" data-en="New Releases &amp; Seasonal Items" data-fr="Nouveautés et Produits Saisonniers">New Releases &amp; Seasonal Items</h2>
+        <div class="divider"></div>
+        <p class="section-desc" data-en="We are always experimenting. Here's what's new and rotating in our kitchen this season." data-fr="Nous expérimentons toujours. Voici les nouveautés et les rotations de notre cuisine cette saison.">We are always experimenting. Here's what's new and rotating in our kitchen this season.</p>
+      </div>
+
+      <div class="catalog-scroll reveal">
+
+        <div class="catalog-card">
+          <!-- Replace image -->
+          <img class="catalog-card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Spiced Whole Chicken" />
+          <div class="catalog-card-body">
+            <span class="new-badge" data-en="New" data-fr="Nouveau">New</span>
+            <h3 class="catalog-card-title" data-en="Smoky Spiced Whole Bird" data-fr="Poulet Entier Épicé Fumé">Smoky Spiced Whole Bird</h3>
+            <p class="catalog-card-note" data-en="A new spice rub with a smoky finish. Ask about availability." data-fr="Un nouveau mélange d'épices avec une finition fumée. Renseignez-vous sur la disponibilité.">A new spice rub with a smoky finish. Ask about availability.</p>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <img class="catalog-card-img" src="https://images.unsplash.com/photo-1532980400857-e8d9d275d858?w=500&q=80" alt="Herb Butter Chicken" />
+          <div class="catalog-card-body">
+            <span class="new-badge" data-en="New" data-fr="Nouveau">New</span>
+            <h3 class="catalog-card-title" data-en="Herb Butter Chicken" data-fr="Poulet au Beurre aux Herbes">Herb Butter Chicken</h3>
+            <p class="catalog-card-note" data-en="Slow-basted in herb butter for extra richness. A seasonal treat." data-fr="Arrosé lentement au beurre aux herbes pour plus de richesse. Un délice saisonnier.">Slow-basted in herb butter for extra richness. A seasonal treat.</p>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <img class="catalog-card-img" src="https://images.unsplash.com/photo-1519984388953-d2406bc725e1?w=500&q=80" alt="Seasonal Slaw" />
+          <div class="catalog-card-body">
+            <span class="new-badge" data-en="Seasonal" data-fr="Saisonnier">Seasonal</span>
+            <h3 class="catalog-card-title" data-en="Tangy Apple Slaw" data-fr="Salade de Chou à la Pomme">Tangy Apple Slaw</h3>
+            <p class="catalog-card-note" data-en="A crisp seasonal slaw with apple and a honey-mustard dressing." data-fr="Une salade croquante avec pomme et vinaigrette miel-moutarde.">A crisp seasonal slaw with apple and a honey-mustard dressing.</p>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <img class="catalog-card-img" src="https://images.unsplash.com/photo-1495214783159-3503fd1b572d?w=500&q=80" alt="Poutine Side" />
+          <div class="catalog-card-body">
+            <span class="new-badge" data-en="Limited" data-fr="Limité">Limited</span>
+            <h3 class="catalog-card-title" data-en="Chicken Poutine" data-fr="Poutine au Poulet">Chicken Poutine</h3>
+            <p class="catalog-card-note" data-en="Fries, gravy, and cheese curds topped with chicken pieces. Quebec comfort food at its best." data-fr="Frites, sauce brune et fromage en grains garnis de morceaux de poulet. Réconfort québécois.">Fries, gravy, and cheese curds topped with chicken pieces. Quebec comfort food at its best.</p>
+          </div>
+        </div>
+
+        <div class="catalog-card">
+          <img class="catalog-card-img" src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&q=80" alt="Sunday Bundle" />
+          <div class="catalog-card-body">
+            <span class="new-badge" data-en="New" data-fr="Nouveau">New</span>
+            <h3 class="catalog-card-title" data-en="Sunday Family Bundle" data-fr="Forfait Familial du Dimanche">Sunday Family Bundle</h3>
+            <p class="catalog-card-note" data-en="2 chickens, 3 sides, bread rolls. Made for Sunday dinners. Call ahead." data-fr="2 poulets, 3 accompagnements, petits pains. Fait pour les diners du dimanche. Appelez à l'avance.">2 chickens, 3 sides, bread rolls. Made for Sunday dinners. Call ahead.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</p>
+        <h2 class="section-title services-title" data-en="Our Services" data-fr="Nos Services">Our Services</h2>
+        <div class="divider"></div>
+        <p class="section-desc services-desc" data-en="From quick pickup to group orders, we are set up to serve the whole community." data-fr="De la collecte rapide aux commandes de groupe, nous sommes prêts à servir toute la communauté.">From quick pickup to group orders, we are set up to serve the whole community.</p>
+      </div>
+
+      <div class="services-grid reveal">
+        <div class="service-card">
+          <div class="service-icon" data-en="Takeout" data-fr="À Emporter">Takeout</div>
+          <h3 class="service-name" data-en="Takeout Orders" data-fr="Commandes à Emporter">Takeout Orders</h3>
+          <p class="service-detail" data-en="Call ahead or come in. Fresh chicken ready for pickup at 305e Rue Main." data-fr="Appelez à l'avance ou venez. Poulet frais prêt pour la collecte au 305e Rue Main.">Call ahead or come in. Fresh chicken ready for pickup at 305e Rue Main.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" data-en="Friday" data-fr="Vendredi">Friday</div>
+          <h3 class="service-name" data-en="Friday Pre-Orders" data-fr="Précommandes du Vendredi">Friday Pre-Orders</h3>
+          <p class="service-detail" data-en="Our biggest day. Call by noon on Friday to reserve your order before we sell out." data-fr="Notre plus grande journée. Appelez avant midi le vendredi pour réserver avant qu'on soit complet.">Our biggest day. Call by noon on Friday to reserve your order before we sell out.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" data-en="Groups" data-fr="Groupes">Groups</div>
+          <h3 class="service-name" data-en="Group & Party Orders" data-fr="Commandes de Groupe">Group & Party Orders</h3>
+          <p class="service-detail" data-en="Feeding a crowd? We can handle large orders for events, family gatherings, and parties. Call us." data-fr="Nourrir un groupe? Nous pouvons gérer de grandes commandes pour événements et rassemblements.">Feeding a crowd? We can handle large orders for events, family gatherings, and parties. Call us.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" data-en="Whole" data-fr="Entier">Whole</div>
+          <h3 class="service-name" data-en="Whole Chicken Sales" data-fr="Vente de Poulets Entiers">Whole Chicken Sales</h3>
+          <p class="service-detail" data-en="Buy by the whole bird. Great value and fresh every time. Ask about volume pricing." data-fr="Achetez par poulet entier. Excellent rapport qualité-prix, frais chaque fois.">Buy by the whole bird. Great value and fresh every time. Ask about volume pricing.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" data-en="Sides" data-fr="Accomp.">Sides</div>
+          <h3 class="service-name" data-en="Sides & Add-Ons" data-fr="Accompagnements">Sides & Add-Ons</h3>
+          <p class="service-detail" data-en="Complete your meal with our house-made sides. Potatoes, slaw, gravy and more." data-fr="Complétez votre repas avec nos accompagnements maison. Pommes de terre, salade de chou, sauce et plus.">Complete your meal with our house-made sides. Potatoes, slaw, gravy and more.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon" data-en="Local" data-fr="Local">Local</div>
+          <h3 class="service-name" data-en="Community First" data-fr="Communauté d'Abord">Community First</h3>
+          <p class="service-detail" data-en="We are a Shawville institution. Proudly local, proudly Quebec." data-fr="Nous sommes une institution de Shawville. Fièrement local, fièrement québécois.">We are a Shawville institution. Proudly local, proudly Quebec.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="reveal">
+        <p class="section-label" data-en="Find Us" data-fr="Trouvez-Nous">Find Us</p>
+        <h2 class="section-title" data-en="Come Visit Us" data-fr="Venez Nous Voir">Come Visit Us</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-info-item">
+            <span class="contact-info-label" data-en="Address" data-fr="Adresse">Address</span>
+            <span class="contact-info-value">305e Rue Main, Shawville, QC, Canada</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label" data-en="Phone" data-fr="Téléphone">Phone</span>
+            <span class="contact-info-value"><a href="tel:+18196473632">(819) 647-3632</a></span>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label" data-en="Friday Orders" data-fr="Commandes du Vendredi">Friday Orders</span>
+            <span class="contact-info-value" data-en="Call by noon to reserve your Friday chicken" data-fr="Appelez avant midi pour réserver votre poulet du vendredi">Call by noon to reserve your Friday chicken</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="contact-info-label" data-en="Find Us On" data-fr="Retrouvez-Nous Sur">Find Us On</span>
+            <span class="contact-info-value"><a href="https://www.facebook.com/DeanosChicken/" target="_blank" rel="noopener">Facebook – Deano's Chicken</a></span>
+          </div>
+          <br />
+          <a href="tel:+18196473632" class="btn-primary" data-en="Call Now to Order" data-fr="Appelez Maintenant">Call Now to Order</a>
+        </div>
+        <div class="reveal">
+          <!-- Replace with an actual embedded map or map screenshot -->
+          <div class="map-placeholder" data-en="Map: 305e Rue Main, Shawville QC" data-fr="Carte: 305e Rue Main, Shawville QC">Map: 305e Rue Main, Shawville QC</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo">
+          <div class="logo-mark">D</div>
+          <div class="logo-text">
+            <span>Deano's Chicken</span>
+            <span data-en="Shawville, Quebec" data-fr="Shawville, Québec">Shawville, Quebec</span>
+          </div>
+        </div>
+        <p data-en="The best chicken in Shawville. Come on in and taste the difference. We are proud to serve the Pontiac County community." data-fr="Le meilleur poulet à Shawville. Venez goûter la différence. Nous sommes fiers de servir la communauté du comté de Pontiac.">The best chicken in Shawville. Come on in and taste the difference. We are proud to serve the Pontiac County community.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h4>
+        <a href="#about" data-en="About Us" data-fr="À propos">About Us</a>
+        <a href="#special" data-en="Weekly Special" data-fr="Spécial Semaine">Weekly Special</a>
+        <a href="#menu" data-en="Menu" data-fr="Menu">Menu</a>
+        <a href="#catalog" data-en="New Items" data-fr="Nouveautés">New Items</a>
+        <a href="#services" data-en="Services" data-fr="Services">Services</a>
+        <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Contact" data-fr="Contact">Contact</h4>
+        <p>305e Rue Main</p>
+        <p>Shawville, QC</p>
+        <a href="tel:+18196473632">(819) 647-3632</a>
+        <a href="https://www.facebook.com/DeanosChicken/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-en="&copy; 2025 Deano's Chicken. All rights reserved." data-fr="&copy; 2025 Deano's Chicken. Tous droits réservés.">&copy; 2025 Deano's Chicken. All rights reserved.</p>
+      <p data-en="Website by <a href='https://www.dolanprogramming.ca' target='_blank' rel='noopener'>Dolan Programming</a>" data-fr="Site web par <a href='https://www.dolanprogramming.ca' target='_blank' rel='noopener'>Dolan Programming</a>">Website by <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== PARTICLES =====
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.setProperty('--dur', (3 + Math.random() * 5) + 's');
+      p.style.setProperty('--delay', (Math.random() * 5) + 's');
+      p.style.width = p.style.height = (4 + Math.random() * 6) + 'px';
+      p.style.background = Math.random() > 0.5 ? '#D4841A' : '#8B1A1A';
+      container.appendChild(p);
+    }
+
+    // ===== HEADER SCROLL =====
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 30);
+    });
+
+    // ===== HAMBURGER =====
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+    });
+
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+      });
+    });
+
+    // ===== MENU TABS =====
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // ===== LANGUAGE TOGGLE =====
+    let lang = 'en';
+
+    function applyLang(l) {
+      lang = l;
+      document.documentElement.lang = l === 'fr' ? 'fr' : 'en';
+
+      document.querySelectorAll('[data-en]').forEach(el => {
+        const val = el.dataset[l];
+        if (!val) return;
+        if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3') {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      });
+
+      const labelEn = document.getElementById('lang-toggle');
+      const labelFr = document.getElementById('lang-toggle-mobile');
+      const next = l === 'en' ? 'FR' : 'EN';
+      if (labelEn) labelEn.textContent = next;
+      if (labelFr) labelFr.textContent = next;
+
+      // re-apply tab button text
+      applyTabLang(l);
+    }
+
+    function applyTabLang(l) {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        if (btn.dataset[l]) btn.textContent = btn.dataset[l];
+      });
+    }
+
+    document.getElementById('lang-toggle').addEventListener('click', () => applyLang(lang === 'en' ? 'fr' : 'en'));
+    document.getElementById('lang-toggle-mobile').addEventListener('click', () => applyLang(lang === 'en' ? 'fr' : 'en'));
+
+    // ===== SCROLL REVEAL =====
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(r => observer.observe(r));
+  </script>
+</body>
+</html>

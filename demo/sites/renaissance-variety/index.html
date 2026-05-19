@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Renaissance Variety | Retro &amp; Modern Entertainment – Shawville, QC</title>
+  <meta name="description" content="Renaissance Variety – Shawville's entertainment destination. Video games, books, movies, music &amp; collectibles from antique to modern. 193 Rue Centre, Shawville, Quebec."/>
+  <meta name="keywords" content="Renaissance Variety, Shawville, Quebec, retro games, used books, vintage music, movies, collectibles, video games, Pontiac County, Outaouais, entertainment shop, QC"/>
+  <meta name="geo.region" content="CA-QC"/>
+  <meta name="geo.placename" content="Shawville, Quebec"/>
+  <meta property="og:title" content="Renaissance Variety | Entertainment Shop – Shawville, QC"/>
+  <meta property="og:description" content="Video games, books, movies, music &amp; collectibles – antique to modern. Visit us in Shawville, Quebec!"/>
+  <meta property="og:type" content="website"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Nunito:wght@400;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* ── VARIABLES ── */
+    :root {
+      --red:       #cc2222;
+      --red2:      #e03333;
+      --red-dark:  #991818;
+      --red-light: rgba(204,34,34,0.08);
+      --white:     #ffffff;
+      --off:       #faf7f4;
+      --cream:     #f5f0ea;
+      --black:     #18100e;
+      --ink:       #2e1f1a;
+      --gray:      #6b5c58;
+      --gray-mid:  #d4c8c2;
+      --gray-light:#ede8e3;
+      --serif:     'Playfair Display', Georgia, serif;
+      --sans:      'Nunito', sans-serif;
+      --condensed: 'Oswald', sans-serif;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{background:var(--white);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden}
+
+    /* ── HEADER ── */
+    header{position:sticky;top:0;z-index:1000;background:var(--red);box-shadow:0 3px 0 var(--red-dark);height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem}
+    .logo-wrap{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+    .logo-mark{width:34px;height:34px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .logo-mark svg{width:20px;height:20px;stroke:var(--red);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+    .logo-text{display:flex;flex-direction:column;line-height:1.1}
+    .logo-name{font-family:var(--serif);font-size:1.25rem;color:#fff;font-weight:700;letter-spacing:.01em}
+    .logo-loc{font-size:.6rem;color:rgba(255,255,255,.7);letter-spacing:.2em;text-transform:uppercase;font-family:var(--condensed)}
+    nav{display:flex;align-items:center;gap:1.75rem}
+    nav a{font-family:var(--condensed);font-weight:500;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s}
+    nav a:hover{color:#fff}
+    .lang-btn{font-family:var(--condensed);font-weight:600;font-size:.78rem;letter-spacing:.12em;background:#fff;border:none;color:var(--red);padding:.3rem .8rem;border-radius:3px;cursor:pointer;transition:all .2s}
+    .lang-btn:hover{background:#ffe8e8}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+    .hamburger span{display:block;width:24px;height:2px;background:#fff;transition:all .3s}
+    .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+    .mobile-nav{display:none;flex-direction:column;position:fixed;top:66px;left:0;right:0;background:var(--red-dark);padding:1.5rem 2rem;z-index:999;transform:translateY(-110%);transition:transform .35s ease}
+    .mobile-nav.open{transform:translateY(0)}
+    .mobile-nav a{font-family:var(--condensed);font-weight:500;font-size:1.05rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;text-decoration:none;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.15);display:block}
+    .mobile-nav a:last-of-type{border-bottom:none}
+    .mobile-nav .lang-btn{margin-top:1rem;align-self:flex-start}
+
+    /* ── HERO ── */
+    .hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;background:var(--off)}
+    .hero-bg{position:absolute;inset:0;pointer-events:none}
+    /* Large diagonal red stripe */
+    .hero-stripe{position:absolute;top:-10%;right:-5%;width:52%;height:130%;background:var(--red);transform:skewX(-8deg);transform-origin:top right;opacity:.07}
+    /* Subtle dot grid */
+    .hero-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(204,34,34,.18) 1px,transparent 1px);background-size:28px 28px;opacity:.5}
+    /* Red vertical bar, left side */
+    .hero-bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:var(--red)}
+    /* Photo area placeholder on right */
+    .hero-photo{position:absolute;right:0;top:0;bottom:0;width:45%;overflow:hidden}
+    .hero-photo-inner{width:100%;height:100%;background:var(--cream);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.75rem;color:var(--gray-mid);font-family:var(--condensed);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:2rem}
+    .hero-photo-inner svg{width:56px;height:56px;stroke:var(--gray-mid);fill:none;stroke-width:1}
+    .hero-photo::before{content:'';position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,var(--off),transparent);z-index:1}
+    .hero-content{position:relative;z-index:2;max-width:580px;padding:4rem 2rem 4rem 4rem}
+    .hero-kicker{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--condensed);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem;font-weight:600}
+    .hero-kicker::before{content:'';display:inline-block;width:32px;height:2px;background:var(--red)}
+    .hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,4.4rem);color:var(--black);line-height:1.05;margin-bottom:.75rem;font-weight:900}
+    .hero h1 em{font-style:italic;color:var(--red)}
+    .hero-sub{font-family:var(--condensed);font-size:clamp(1rem,2.5vw,1.35rem);letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-bottom:1.75rem;font-weight:400}
+    .hero p.body{font-size:1.05rem;color:var(--gray);max-width:460px;margin-bottom:2.5rem;line-height:1.75}
+    .hero-tags{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem}
+    .hero-tag{font-family:var(--condensed);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--red);color:#fff;padding:.3rem .85rem;font-weight:500}
+    .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+
+    /* ── BUTTONS ── */
+    .btn{font-family:var(--condensed);font-weight:600;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;padding:.8rem 2rem;text-decoration:none;border:none;cursor:pointer;transition:all .18s;display:inline-block;border-radius:2px}
+    .btn-red{background:var(--red);color:#fff;box-shadow:0 3px 0 var(--red-dark)}
+    .btn-red:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 5px 0 var(--red-dark)}
+    .btn-red:active{transform:translateY(1px);box-shadow:0 1px 0 var(--red-dark)}
+    .btn-outline{background:transparent;color:var(--red);border:2px solid var(--red)}
+    .btn-outline:hover{background:var(--red);color:#fff}
+    .btn-ghost{background:transparent;color:var(--gray);border:2px solid var(--gray-mid)}
+    .btn-ghost:hover{border-color:var(--gray);color:var(--ink)}
+    .btn-sm{font-size:.72rem;padding:.5rem 1.1rem}
+    .btn-green{background:#388e3c;color:#fff;box-shadow:0 3px 0 #1b5e20}
+    .btn-green:hover{background:#43a047;transform:translateY(-1px)}
+
+    /* ── PIXEL DIVIDER ── */
+    .pdiv{width:100%;height:6px;background:repeating-linear-gradient(90deg,var(--red) 0 14px,rgba(204,34,34,.25) 14px 28px)}
+
+    /* ── SECTIONS ── */
+    section{padding:5.5rem 2rem}
+    .container{max-width:1100px;margin:0 auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--condensed);font-size:.72rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red);margin-bottom:1rem;font-weight:600}
+    .eyebrow::before{content:'';display:inline-block;width:24px;height:2px;background:var(--red)}
+    .sec-title{font-family:var(--serif);font-size:clamp(2rem,5vw,2.9rem);color:var(--black);line-height:1.1;margin-bottom:.75rem;font-weight:900}
+    .sec-title em{font-style:italic;color:var(--red)}
+    .sec-desc{font-size:1rem;color:var(--gray);max-width:520px;line-height:1.7}
+
+    /* ── ABOUT ── */
+    #about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+    .about-imgwrap{position:relative}
+    .ph-img{width:100%;aspect-ratio:4/5;background:var(--gray-light);border:2px dashed var(--gray-mid);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--gray);font-size:.78rem;font-weight:700;font-family:var(--condensed);letter-spacing:.1em;text-align:center;padding:2rem}
+    .ph-img svg{width:52px;height:52px;stroke:var(--gray-mid);fill:none;stroke-width:1}
+    .ph-note{font-size:.68rem;font-weight:400;color:#aaa;letter-spacing:.06em;text-transform:none}
+    .about-badge{position:absolute;bottom:-16px;right:-16px;background:var(--red);color:#fff;font-family:var(--condensed);font-size:.95rem;letter-spacing:.05em;padding:.85rem 1.2rem;box-shadow:4px 4px 0 var(--red-dark);line-height:1.3;text-align:center;text-transform:uppercase}
+    .about-text p{font-size:1.05rem;color:var(--gray);margin-bottom:1rem;line-height:1.75}
+    .about-stats{display:flex;gap:2.5rem;flex-wrap:wrap;margin-top:2rem;padding-top:2rem;border-top:2px solid var(--gray-mid)}
+    .stat-n{font-family:var(--serif);font-size:2.4rem;color:var(--red);font-weight:900;line-height:1}
+    .stat-l{font-family:var(--condensed);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray);margin-top:.25rem}
+
+    /* ── SERVICES ── */
+    #services{background:var(--white)}
+    .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+    .svc-card{background:var(--off);border:1px solid var(--gray-light);padding:2rem 1.75rem;transition:all .25s;position:relative}
+    .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+    .svc-card:hover{border-color:var(--gray-mid);box-shadow:0 8px 32px rgba(0,0,0,.07);transform:translateY(-3px)}
+    .svc-card:hover::before{transform:scaleX(1)}
+    .svc-ico{width:48px;height:48px;background:var(--red);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;box-shadow:3px 3px 0 var(--red-dark)}
+    .svc-ico svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .svc-card h3{font-family:var(--serif);font-size:1.3rem;color:var(--black);margin-bottom:.5rem;font-weight:700}
+    .svc-card p{font-size:.95rem;color:var(--gray);line-height:1.65}
+    .svc-tag{display:inline-block;margin-top:1rem;font-family:var(--condensed);font-size:.65rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--red);background:var(--red-light);padding:.25rem .6rem}
+
+    /* ── CATALOG ── */
+    #catalog{background:var(--off)}
+    .cat-controls{margin-bottom:2rem}
+    .cat-searchrow{display:flex;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap}
+    .search-wrap{position:relative;flex:1;min-width:240px}
+    .search-wrap svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:17px;height:17px;stroke:var(--gray);fill:none;stroke-width:2;stroke-linecap:round;pointer-events:none}
+    #catalogSearch{width:100%;font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--ink);background:#fff;border:2px solid var(--gray-mid);padding:.68rem 1rem .68rem 2.6rem;outline:none;transition:border-color .2s;border-radius:2px}
+    #catalogSearch:focus{border-color:var(--red)}
+    .filter-row{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center}
+    .flbl{font-family:var(--condensed);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-right:.25rem;font-weight:600}
+    .fbtn{font-family:var(--condensed);font-weight:600;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;background:#fff;border:2px solid var(--gray-mid);color:var(--gray);padding:.32rem .85rem;cursor:pointer;transition:all .18s;border-radius:20px}
+    .fbtn:hover,.fbtn.active{background:var(--red);color:#fff;border-color:var(--red)}
+    .results-meta{font-family:var(--condensed);font-size:.78rem;color:var(--gray);letter-spacing:.08em;margin-bottom:1.25rem}
+    .results-meta strong{color:var(--red)}
+    #catalogGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1rem;min-height:180px}
+    .cat-item{background:#fff;border:1.5px solid var(--gray-light);overflow:hidden;transition:all .22s;cursor:pointer;position:relative;border-radius:2px}
+    .cat-item:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,.1);border-color:var(--red)}
+    .cat-thumb{width:100%;aspect-ratio:2/3;background:var(--gray-light);display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--gray-mid);font-size:.6rem;letter-spacing:.08em;text-align:center;gap:.4rem;padding:.75rem;border-bottom:1.5px solid var(--gray-light);position:relative;overflow:hidden}
+    .cat-thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .cat-thumb svg{width:34px;height:34px;stroke:var(--gray-mid);fill:none;stroke-width:1.25}
+    .ibadge{position:absolute;top:7px;left:7px;font-family:var(--condensed);font-size:.62rem;letter-spacing:.1em;padding:.18rem .45rem;z-index:1;font-weight:700}
+    .ib-new{background:var(--red);color:#fff}
+    .ib-hot{background:#f7c948;color:var(--black)}
+    .ib-rare{background:#3b7fc4;color:#fff}
+    .cat-info{padding:.75rem}
+    .cat-type{font-family:var(--condensed);font-size:.6rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.25rem}
+    .cat-info h4{font-family:var(--serif);font-size:.95rem;color:var(--black);line-height:1.2;margin-bottom:.2rem;font-weight:700}
+    .cat-sub2{font-size:.75rem;color:var(--gray)}
+    .cat-cond{display:inline-block;margin-top:.45rem;font-family:var(--condensed);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;background:var(--gray-light);color:var(--gray);padding:.15rem .42rem;font-weight:600}
+    .no-res{grid-column:1/-1;text-align:center;padding:4rem 2rem;color:var(--gray);font-family:var(--serif);font-size:1.1rem;font-style:italic}
+    .no-res small{display:block;font-family:var(--condensed);font-size:.72rem;letter-spacing:.1em;color:var(--gray-mid);margin-top:.5rem;font-style:normal}
+
+    /* Pagination */
+    .pagination{display:flex;justify-content:center;align-items:center;gap:.5rem;margin-top:2.5rem;flex-wrap:wrap}
+    .pg-btn{font-family:var(--condensed);font-size:.72rem;letter-spacing:.08em;background:#fff;border:2px solid var(--gray-mid);color:var(--gray);padding:.4rem .85rem;cursor:pointer;transition:all .18s;font-weight:600;border-radius:2px}
+    .pg-btn:hover{border-color:var(--red);color:var(--red)}
+    .pg-btn.active{background:var(--red);color:#fff;border-color:var(--red)}
+    .pg-btn:disabled{opacity:.35;cursor:not-allowed}
+    .pg-info{font-family:var(--condensed);font-size:.72rem;color:var(--gray);letter-spacing:.08em;padding:0 .5rem}
+
+    /* Loading spinner */
+    .loading{grid-column:1/-1;display:flex;justify-content:center;padding:4rem}
+    .spinner{width:36px;height:36px;border:3px solid var(--gray-light);border-top-color:var(--red);border-radius:50%;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    .cat-note{margin-top:2rem;padding:1.25rem 1.5rem;background:var(--red-light);border-left:4px solid var(--red);font-size:.95rem;color:var(--gray)}
+
+    /* ── ITEM DETAIL MODAL ── */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;pointer-events:none;transition:opacity .25s}
+    .modal-overlay.open{opacity:1;pointer-events:all}
+    .modal{background:#fff;max-width:620px;width:100%;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.3);border-radius:2px}
+    .modal-close{position:absolute;top:1rem;right:1rem;background:var(--gray-light);border:none;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%;font-size:1.2rem;color:var(--gray);transition:all .18s;z-index:1}
+    .modal-close:hover{background:var(--red);color:#fff}
+    .modal-img{width:100%;height:220px;object-fit:cover;background:var(--gray-light);display:flex;align-items:center;justify-content:center}
+    .modal-img img{width:100%;height:220px;object-fit:cover}
+    .modal-img-ph{width:100%;height:180px;background:var(--cream);display:flex;align-items:center;justify-content:center}
+    .modal-img-ph svg{width:60px;height:60px;stroke:var(--gray-mid);fill:none;stroke-width:1}
+    .modal-body{padding:1.75rem}
+    .modal-meta{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center}
+    .modal-cat{font-family:var(--condensed);font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--red);font-weight:700}
+    .modal-year{font-family:var(--condensed);font-size:.65rem;color:var(--gray);letter-spacing:.1em}
+    .modal-genre{font-family:var(--condensed);font-size:.65rem;color:var(--gray);letter-spacing:.08em;background:var(--gray-light);padding:.12rem .4rem}
+    .modal h2{font-family:var(--serif);font-size:1.6rem;color:var(--black);margin-bottom:.35rem;font-weight:900;line-height:1.2}
+    .modal-sub{font-size:.95rem;color:var(--gray);margin-bottom:1rem}
+    .modal-desc{font-size:.97rem;color:var(--gray);line-height:1.75;margin-bottom:1rem}
+    .modal-notes{background:var(--cream);border-left:3px solid var(--red);padding:.75rem 1rem;font-size:.9rem;color:var(--gray);font-style:italic;margin-bottom:1rem}
+    .modal-notes strong{font-style:normal;font-size:.68rem;font-family:var(--condensed);letter-spacing:.15em;text-transform:uppercase;color:var(--red);display:block;margin-bottom:.25rem;font-weight:700}
+    .modal-cond{display:inline-flex;align-items:center;gap:.4rem;font-family:var(--condensed);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);font-weight:600}
+    .cond-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-mid)}
+    .cond-dot.good{background:#4caf50} .cond-dot.like{background:#2196f3} .cond-dot.new2{background:#f7c948} .cond-dot.fair{background:#ff9800}
+    .modal-cta{margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--gray-light);font-size:.9rem;color:var(--gray)}
+    .modal-cta strong{color:var(--red)}
+
+    /* ── ADMIN PANEL ── */
+    .admin-toggle-wrap{text-align:center;margin-top:2rem}
+    .admin-toggle-btn{font-family:var(--condensed);font-size:.62rem;letter-spacing:.12em;background:transparent;border:1px dashed var(--gray-mid);color:var(--gray-mid);padding:.45rem 1rem;cursor:pointer;transition:all .2s;border-radius:2px}
+    .admin-toggle-btn:hover{border-color:var(--gray);color:var(--gray)}
+    #adminPanel{display:none;margin-top:2rem;background:#fff;border:2px solid var(--red);padding:2rem;border-radius:2px}
+    #adminPanel.vis{display:block}
+    .admin-login{text-align:center}
+    .admin-login h3{font-family:var(--serif);font-size:1.5rem;color:var(--red);margin-bottom:.5rem}
+    .admin-login p{font-size:.88rem;color:var(--gray);margin-bottom:1.25rem}
+    .ai{width:100%;max-width:320px;font-family:var(--sans);font-size:.92rem;color:var(--ink);background:var(--off);border:2px solid var(--gray-mid);padding:.62rem 1rem;outline:none;display:block;margin:.5rem auto;border-radius:2px;transition:border-color .2s}
+    .ai:focus{border-color:var(--red)}
+    .ag{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .ag .fg{display:flex;flex-direction:column;gap:.3rem}
+    .ag .fg.full{grid-column:1/-1}
+    .ag .fg label{font-family:var(--condensed);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gray)}
+    .ag .fg input,.ag .fg select,.ag .fg textarea{font-family:var(--sans);font-size:.9rem;color:var(--ink);background:var(--off);border:2px solid var(--gray-mid);padding:.58rem .85rem;outline:none;transition:border-color .2s;border-radius:2px;width:100%}
+    .ag .fg input:focus,.ag .fg select:focus,.ag .fg textarea:focus{border-color:var(--red)}
+    .ag .fg textarea{resize:vertical;min-height:80px}
+    .a-actions{display:flex;gap:.75rem;margin-top:1.25rem;flex-wrap:wrap;align-items:center}
+    .admin-msg{margin-top:.75rem;padding:.6rem 1rem;border-radius:2px;font-size:.85rem;font-weight:700;display:none;font-family:var(--condensed);letter-spacing:.06em}
+    .admin-msg.ok{background:rgba(76,175,80,.12);color:#2e7d32;display:block}
+    .admin-msg.err{background:rgba(204,34,34,.1);color:var(--red-dark);display:block}
+    .admin-sec{font-family:var(--serif);font-size:1.15rem;color:var(--black);margin:1.75rem 0 .85rem;padding-bottom:.5rem;border-bottom:2px solid var(--gray-light)}
+    .a-list{display:flex;flex-direction:column;gap:.55rem;max-height:420px;overflow-y:auto;padding-right:4px}
+    .a-row{display:flex;align-items:center;gap:.75rem;background:var(--off);border:1px solid var(--gray-light);padding:.55rem .85rem;border-radius:2px;transition:border-color .2s}
+    .a-row:hover{border-color:var(--red)}
+    .ar-type{font-family:var(--condensed);font-size:.6rem;font-weight:700;text-transform:uppercase;color:var(--red);min-width:68px;letter-spacing:.1em}
+    .ar-title{flex:1;font-size:.88rem;font-weight:700;color:var(--ink)}
+    .ar-sub{font-size:.75rem;color:var(--gray);min-width:90px;text-align:right}
+    .btn-del{background:transparent;border:1px solid var(--gray-mid);color:var(--gray);padding:.2rem .5rem;font-size:.65rem;cursor:pointer;transition:all .15s;font-family:var(--condensed);letter-spacing:.08em;border-radius:2px}
+    .btn-del:hover{border-color:var(--red);color:var(--red)}
+    .btn-edit2{background:transparent;border:1px solid var(--gray-mid);color:var(--gray);padding:.2rem .5rem;font-size:.65rem;cursor:pointer;transition:all .15s;font-family:var(--condensed);letter-spacing:.08em;border-radius:2px}
+    .btn-edit2:hover{border-color:var(--pb, #3b7fc4);color:#3b7fc4}
+    .a-ie{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1rem}
+    /* Lookup UI */
+    .lookup-box{background:var(--cream);border:1px solid var(--gray-mid);padding:1.25rem 1.5rem;margin-bottom:1.5rem;border-radius:2px}
+    .lookup-box h4{font-family:var(--condensed);font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.85rem;font-weight:700}
+    .lookup-row{display:flex;gap:.75rem;flex-wrap:wrap;align-items:flex-end}
+    .lookup-result{display:flex;gap:1rem;margin-top:1rem;padding:1rem;background:#fff;border:1px solid var(--gray-mid);border-radius:2px;align-items:flex-start}
+    .lookup-result img{width:60px;height:80px;object-fit:cover;flex-shrink:0;border:1px solid var(--gray-mid)}
+    .lookup-result-info h5{font-family:var(--serif);font-size:1rem;color:var(--black);margin-bottom:.25rem}
+    .lookup-result-info p{font-size:.82rem;color:var(--gray);margin-bottom:.5rem;line-height:1.55}
+    .lookup-not-found{margin-top:.75rem;padding:.75rem 1rem;background:rgba(204,34,34,.06);border-left:3px solid var(--red);font-size:.85rem;color:var(--gray)}
+    .lookup-loading{margin-top:.75rem;font-size:.82rem;color:var(--gray);display:flex;align-items:center;gap:.5rem;font-family:var(--condensed);letter-spacing:.1em}
+    .lookup-loading .spinner{width:16px;height:16px;border-width:2px}
+
+    /* ── WHY ── */
+    #why{background:var(--red)}
+    #why .eyebrow{color:rgba(255,255,255,.65)}
+    #why .eyebrow::before{background:rgba(255,255,255,.4)}
+    #why .sec-title{color:#fff}
+    #why .sec-title em{color:#f7c948}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:3rem}
+    .why-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:1.75rem;transition:all .2s;border-radius:2px}
+    .why-card:hover{background:rgba(255,255,255,.18);transform:translateY(-3px)}
+    .why-n{font-family:var(--condensed);font-size:.7rem;color:#f7c948;letter-spacing:.2em;margin-bottom:.75rem;font-weight:700}
+    .why-card strong{display:block;font-family:var(--serif);font-size:1.15rem;color:#fff;margin-bottom:.35rem;font-weight:700}
+    .why-card span{font-size:.93rem;color:rgba(255,255,255,.8);line-height:1.65}
+
+    /* ── SOCIAL ── */
+    #social{background:var(--black)}
+    #social .eyebrow{color:#e55}
+    #social .eyebrow::before{background:#e55}
+    #social .sec-title{color:#fff}
+    #social .sec-title em{color:#f7c948}
+    .social-inner{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+    .social-text p{color:rgba(255,255,255,.6);font-size:1.05rem;max-width:460px;margin-top:.75rem}
+    .social-btns{display:flex;gap:1rem;flex-wrap:wrap}
+    .sbtn{font-family:var(--condensed);font-weight:700;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;padding:.8rem 1.75rem;border-radius:2px;transition:all .2s;display:inline-block}
+    .sbtn.fb{background:#1877F2;color:#fff;box-shadow:0 3px 0 #0d5fc7}
+    .sbtn.fb:hover{background:#166fe5;transform:translateY(-2px)}
+    .sbtn.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af);color:#fff;box-shadow:0 3px 0 #5b1e82}
+    .sbtn.ig:hover{opacity:.9;transform:translateY(-2px)}
+
+    /* ── CONTACT ── */
+    #contact{background:var(--cream)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;margin-top:3rem}
+    .contact-card{background:#fff;border:1px solid var(--gray-light);padding:2rem;border-radius:2px}
+    .contact-card h3{font-family:var(--serif);font-size:1.35rem;color:var(--black);margin-bottom:1.5rem;font-weight:700}
+    .ci{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.25rem}
+    .ci-ico{width:36px;height:36px;background:var(--red-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;border-radius:50%}
+    .ci-ico svg{width:16px;height:16px;stroke:var(--red);fill:none;stroke-width:2;stroke-linecap:round}
+    .ci-lbl{font-family:var(--condensed);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--gray);margin-bottom:.2rem}
+    .ci-val{font-size:.98rem;font-weight:600;color:var(--ink)}
+    .ci-val a{color:var(--ink);text-decoration:none}
+    .ci-val a:hover{color:var(--red)}
+    .map-ph{background:var(--gray-light);border:2px dashed var(--gray-mid);min-height:280px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;color:var(--gray);font-size:.82rem;font-weight:700;text-align:center;padding:2rem;border-radius:2px}
+    .map-ph svg{width:40px;height:40px;stroke:var(--gray-mid);fill:none;stroke-width:1.5}
+    .map-ph small{font-size:.7rem;color:#bbb;font-weight:400;max-width:180px}
+
+    /* ── FOOTER ── */
+    footer{background:var(--black);padding:3.5rem 2rem 2rem;color:rgba(255,255,255,.6)}
+    .footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1.75rem}
+    .footer-logo{font-family:var(--serif);font-size:1.5rem;color:#fff;display:block;margin-bottom:.75rem;font-weight:900}
+    .footer-brand p{font-size:.9rem;line-height:1.65;max-width:260px}
+    .footer-col h4{font-family:var(--condensed);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:#e55;margin-bottom:1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul li a{font-size:.9rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+    .footer-col ul li a:hover{color:#fff}
+    .footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+    .footer-bottom p{font-family:var(--condensed);font-size:.7rem;letter-spacing:.06em}
+    .footer-bottom a{color:#e55;text-decoration:none}
+    .footer-bottom a:hover{text-decoration:underline}
+
+    /* ── REVEAL ── */
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .reveal.v{opacity:1;transform:none}
+    .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      nav{display:none}
+      .hamburger{display:flex}
+      .mobile-nav{display:flex}
+      .about-grid,.contact-grid{grid-template-columns:1fr}
+      .footer-inner{grid-template-columns:1fr 1fr}
+      .hero-photo{display:none}
+      .hero-content{padding:3rem 2rem}
+    }
+    @media(max-width:600px){
+      header{padding:0 1rem}
+      section{padding:4rem 1.25rem}
+      .hero-content{padding:3rem 1.25rem 4rem}
+      #catalogGrid{grid-template-columns:repeat(2,1fr)}
+      .footer-inner{grid-template-columns:1fr;gap:2rem}
+      .footer-bottom{flex-direction:column;align-items:flex-start}
+      .ag{grid-template-columns:1fr}
+      .modal{max-height:95vh}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HEADER ══ -->
+<header>
+  <a href="#" class="logo-wrap">
+    <div class="logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    </div>
+    <div class="logo-text">
+      <span class="logo-name">Renaissance Variety</span>
+      <span class="logo-loc">Shawville, QC</span>
+    </div>
+  </a>
+  <nav>
+    <a href="#about"    data-en="About"    data-fr="À Propos">About</a>
+    <a href="#services" data-en="Services" data-fr="Services">Services</a>
+    <a href="#catalog"  data-en="Catalog"  data-fr="Catalogue">Catalog</a>
+    <a href="#contact"  data-en="Contact"  data-fr="Contact">Contact</a>
+    <button class="lang-btn" id="langToggle">FR</button>
+  </nav>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about"    data-en="About"      data-fr="À Propos">About</a>
+  <a href="#services" data-en="Services"   data-fr="Services">Services</a>
+  <a href="#catalog"  data-en="Catalog"    data-fr="Catalogue">Catalog</a>
+  <a href="#social"   data-en="Follow Us"  data-fr="Suivez-nous">Follow Us</a>
+  <a href="#contact"  data-en="Contact"    data-fr="Contact">Contact</a>
+  <button class="lang-btn" id="langToggleMobile">FR</button>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-stripe"></div>
+    <div class="hero-dots"></div>
+    <div class="hero-bar"></div>
+    <div class="hero-photo">
+      <div class="hero-photo-inner">
+        <svg viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="3" stroke-width="1.5"/><circle cx="24" cy="24" r="8" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="currentColor" stroke="none"/></svg>
+        <span data-en="REPLACE WITH STORE PHOTO" data-fr="REMPLACER PAR PHOTO">REPLACE WITH STORE PHOTO</span>
+        <span class="ph-note" data-en="Ideal: show the mural on the building" data-fr="Idéal: montrer la fresque sur le bâtiment">Ideal: show the mural on the building</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-kicker" data-en="Shawville's Entertainment Shop" data-fr="La Boutique Divertissement de Shawville">Shawville's Entertainment Shop</p>
+    <h1 data-en="Your <em>Past</em> &amp;<br>Present<br>Lives Here." data-fr="Votre <em>Passé</em> &amp;<br>Présent<br>Vit Ici.">Your <em>Past</em> &amp;<br>Present<br>Lives Here.</h1>
+    <p class="hero-sub" data-en="Antique to Modern · All Great Prices" data-fr="Antique au Moderne · Toujours Bon Prix">Antique to Modern · All Great Prices</p>
+    <div class="hero-tags">
+      <span class="hero-tag" data-en="Video Games" data-fr="Jeux Vidéo">Video Games</span>
+      <span class="hero-tag" data-en="Books" data-fr="Livres">Books</span>
+      <span class="hero-tag" data-en="Movies" data-fr="Films">Movies</span>
+      <span class="hero-tag" data-en="Music" data-fr="Musique">Music</span>
+      <span class="hero-tag" data-en="Collectibles" data-fr="Objets de Collection">Collectibles</span>
+    </div>
+    <p class="body" data-en="From rare retro finds to the latest releases — one neighbourhood shop, every era. Come browse thousands of titles at prices that surprise you." data-fr="Des trouvailles rétro aux dernières sorties — une boutique de quartier, toutes les époques. Venez parcourir des milliers de titres à des prix qui vous surprendront.">From rare retro finds to the latest releases &mdash; one neighbourhood shop, every era. Come browse thousands of titles at prices that surprise you.</p>
+    <div class="hero-ctas">
+      <a href="#catalog" class="btn btn-red" data-en="Browse the Catalog" data-fr="Parcourir le Catalogue">Browse the Catalog</a>
+      <a href="#contact" class="btn btn-outline" data-en="Find Us" data-fr="Nous Trouver">Find Us</a>
+    </div>
+  </div>
+</section>
+
+<div class="pdiv"></div>
+
+<!-- ══ ABOUT ══ -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-imgwrap reveal">
+        <div class="ph-img">
+          <svg viewBox="0 0 48 48"><rect x="4" y="10" width="40" height="28" rx="3" stroke-width="1.5"/><circle cx="24" cy="24" r="8" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="currentColor" stroke="none"/></svg>
+          <strong data-en="REPLACE WITH STORE PHOTO" data-fr="REMPLACER PAR PHOTO">REPLACE WITH STORE PHOTO</strong>
+          <span class="ph-note" data-en="Recommended 800×1000px — show the building exterior or interior" data-fr="800×1000px recommandé — montrez l'extérieur ou l'intérieur">Recommended 800×1000px</span>
+        </div>
+        <div class="about-badge">193 Rue Centre<br>Shawville, QC</div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow" data-en="Our Story" data-fr="Notre Histoire">Our Story</p>
+        <h2 class="sec-title" data-en="More Than a Shop.<br><em>A Collection.</em>" data-fr="Plus qu'une Boutique.<br><em>Une Collection.</em>">More Than a Shop.<br><em>A Collection.</em></h2>
+        <p class="reveal d1" data-en="Renaissance Variety is Shawville's go-to entertainment destination — a treasure-packed universe of video games, books, movies, and music spanning every decade and every genre." data-fr="Renaissance Variety est la destination divertissement incontournable de Shawville — un univers rempli de trésors couvrant chaque décennie et chaque genre.">Renaissance Variety is Shawville&rsquo;s go-to entertainment destination &mdash; a treasure-packed universe of video games, books, movies, and music spanning every decade and every genre.</p>
+        <p class="reveal d2" data-en="Whether you're hunting for a rare NES cartridge, a first-edition novel, a vintage LP, or the latest release — we have it at prices that make it impossible to leave empty-handed." data-fr="Que vous cherchiez une rare cartouche NES, un roman en première édition, un vinyle vintage ou la dernière sortie — nous l'avons à des prix irrésistibles.">Whether you&rsquo;re hunting for a rare NES cartridge, a first-edition novel, a vintage LP, or the latest release &mdash; we have it at prices that make it impossible to leave empty-handed.</p>
+        <p class="reveal d3" data-en="Every visit is a new discovery. Come in and see what's landed on the floor this week." data-fr="Chaque visite est une nouvelle découverte. Venez voir ce qui est arrivé cette semaine.">Every visit is a new discovery. Come in and see what&rsquo;s landed on the floor this week.</p>
+        <div class="about-stats reveal">
+          <div><div class="stat-n" id="heroStatTotal">–</div><div class="stat-l" data-en="Items In Catalog" data-fr="Articles au Catalogue">Items In Catalog</div></div>
+          <div><div class="stat-n" data-en="All Eras" data-fr="Toutes Ères">All Eras</div><div class="stat-l" data-en="Retro to Recent" data-fr="Rétro au Récent">Retro to Recent</div></div>
+          <div><div class="stat-n">Local</div><div class="stat-l" data-en="Shawville Proud" data-fr="Fierté Shawville">Shawville Proud</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pdiv"></div>
+
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" data-en="What We Carry" data-fr="Ce Que Nous Vendons">What We Carry</p>
+      <h2 class="sec-title" data-en="Every Format,<br><em>Every Genre.</em>" data-fr="Chaque Format,<br><em>Chaque Genre.</em>">Every Format,<br><em>Every Genre.</em></h2>
+      <p class="sec-desc" data-en="From Atari cartridges to 4K Blu-rays, vinyl records to paperbacks — we carry it all." data-fr="Des cartouches Atari aux Blu-ray 4K, des vinyles aux romans de poche — nous avons tout.">From Atari cartridges to 4K Blu-rays, vinyl records to paperbacks &mdash; we carry it all.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="1"/><path d="M8 6V4h8v2"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3 data-en="Video Games" data-fr="Jeux Vidéo">Video Games</h3>
+        <p data-en="Atari to PlayStation 5. Nintendo classics, Sega gems, Xbox titles, and PC games. Every platform, every generation." data-fr="Atari à PlayStation 5. Classiques Nintendo, joyaux Sega, titres Xbox et jeux PC. Chaque plateforme, chaque génération.">Atari to PlayStation 5. Nintendo classics, Sega gems, Xbox titles, and PC games. Every platform, every generation.</p>
+        <span class="svc-tag" data-en="Retro &amp; Modern" data-fr="Rétro &amp; Moderne">Retro &amp; Modern</span>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M4 19V5a2 2 0 012-2h13a1 1 0 010 2H6a1 1 0 00-1 1v13"/><path d="M4 19a2 2 0 002 2h13a1 1 0 000-2H6a2 2 0 01-2-2z"/></svg></div>
+        <h3 data-en="Books" data-fr="Livres">Books</h3>
+        <p data-en="Fiction, non-fiction, sci-fi, romance, history and more. From rare first editions to popular paperbacks." data-fr="Fiction, non-fiction, sci-fi, romance, histoire et plus. Des premières éditions rares aux romans de poche populaires.">Fiction, non-fiction, sci-fi, romance, history and more. From rare first editions to popular paperbacks.</p>
+        <span class="svc-tag" data-en="All Genres" data-fr="Tous Genres">All Genres</span>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M15 10l4.553-2.07A1 1 0 0121 8.862V18a1 1 0 01-1.445.895L15 17"/><rect x="2" y="6" width="14" height="13" rx="2"/></svg></div>
+        <h3 data-en="Movies" data-fr="Films">Movies</h3>
+        <p data-en="VHS tapes, DVDs, Blu-rays, and 4K Ultra HD. Cult classics, blockbusters, foreign films, documentaries." data-fr="Cassettes VHS, DVD, Blu-ray et 4K Ultra HD. Classiques cultes, blockbusters, films étrangers, documentaires.">VHS tapes, DVDs, Blu-rays, and 4K Ultra HD. Cult classics, blockbusters, foreign films, documentaries.</p>
+        <span class="svc-tag" data-en="VHS to 4K" data-fr="VHS à 4K">VHS to 4K</span>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg></div>
+        <h3 data-en="Music" data-fr="Musique">Music</h3>
+        <p data-en="Vinyl records, cassette tapes, and CDs. Rock, jazz, country, classical, hip-hop — vintage pressings to recent releases." data-fr="Vinyles, cassettes et CD. Rock, jazz, country, classique, hip-hop — pressages vintage aux sorties récentes.">Vinyl records, cassette tapes, and CDs. Rock, jazz, country, classical, hip-hop.</p>
+        <span class="svc-tag" data-en="Vinyl &amp; More" data-fr="Vinyle &amp; Plus">Vinyl &amp; More</span>
+      </div>
+      <div class="svc-card reveal d1">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <h3 data-en="Collectibles" data-fr="Objets de Collection">Collectibles</h3>
+        <p data-en="Action figures, board games, trading cards, memorabilia, and unique finds that don't last long on the shelf." data-fr="Figurines, jeux de société, cartes à collectionner, objets souvenirs et trouvailles uniques.">Action figures, board games, trading cards, memorabilia, and unique finds.</p>
+        <span class="svc-tag" data-en="Rare Finds" data-fr="Trouvailles Rares">Rare Finds</span>
+      </div>
+      <div class="svc-card reveal d2">
+        <div class="svc-ico"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 data-en="Buy, Sell &amp; Trade" data-fr="Achat, Vente &amp; Échange">Buy, Sell &amp; Trade</h3>
+        <p data-en="Have something to sell? We buy and trade too. Bring in your collection — games, records, books — and let's make a deal." data-fr="Vous avez quelque chose à vendre? Nous achetons et échangeons aussi. Apportez votre collection — jeux, disques, livres.">Have something to sell? We buy and trade too. Bring in your collection and let&rsquo;s make a deal.</p>
+        <span class="svc-tag" data-en="Come In &amp; Trade" data-fr="Venez Échanger">Come In &amp; Trade</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pdiv"></div>
+
+<!-- ══ CATALOG ══ -->
+<section id="catalog">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" data-en="Browse In-Store Items" data-fr="Articles en Magasin">Browse In-Store Items</p>
+      <h2 class="sec-title" data-en="The <em>Catalog</em>" data-fr="Le <em>Catalogue</em>">The <em>Catalog</em></h2>
+      <p class="sec-desc" data-en="Search our full collection. Items are managed by our staff and updated regularly. Come in to purchase!" data-fr="Recherchez notre collection complète. Articles gérés par notre personnel. Venez acheter en magasin!">Search our full collection. Items are managed by our staff and updated regularly. Come in to purchase!</p>
+    </div>
+
+    <div class="cat-controls" style="margin-top:2rem">
+      <div class="cat-searchrow">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="catalogSearch" placeholder="Search titles, artists, genres…" autocomplete="off"/>
+        </div>
+      </div>
+      <div class="filter-row">
+        <span class="flbl" data-en="Category:" data-fr="Catégorie:">Category:</span>
+        <button class="fbtn active" data-filter="all" data-en="All" data-fr="Tout">All</button>
+        <button class="fbtn" data-filter="games"        data-en="Games"       data-fr="Jeux">Games</button>
+        <button class="fbtn" data-filter="books"        data-en="Books"       data-fr="Livres">Books</button>
+        <button class="fbtn" data-filter="music"        data-en="Music"       data-fr="Musique">Music</button>
+        <button class="fbtn" data-filter="movies"       data-en="Movies"      data-fr="Films">Movies</button>
+        <button class="fbtn" data-filter="collectibles" data-en="Collectibles" data-fr="Collection">Collectibles</button>
+        <button class="fbtn" data-filter="other"        data-en="Other"       data-fr="Autre">Other</button>
+      </div>
+    </div>
+
+    <div class="results-meta" id="resultsCount"></div>
+    <div id="catalogGrid"></div>
+    <div class="pagination" id="pagination"></div>
+
+    <p class="cat-note reveal" data-en="Stock changes daily. Follow us on Facebook and Instagram for the latest arrivals. All items are in-store only — visit us to purchase!" data-fr="Le stock change chaque jour. Suivez-nous sur Facebook et Instagram. Tous les articles sont en magasin seulement — venez nous rendre visite!">Stock changes daily. Follow us on Facebook and Instagram for the latest arrivals. All items are in-store only &mdash; visit us to purchase!</p>
+
+    <!-- Admin toggle -->
+    <div class="admin-toggle-wrap">
+      <button class="admin-toggle-btn" id="showAdminBtn" data-en="Staff Login" data-fr="Connexion Personnel">Staff Login</button>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel">
+      <div id="adminLogin" class="admin-login">
+        <h3 data-en="Staff Access" data-fr="Accès Personnel">Staff Access</h3>
+        <p data-en="Enter the admin password to manage the catalog." data-fr="Entrez le mot de passe pour gérer le catalogue.">Enter the admin password to manage the catalog.</p>
+        <input type="password" class="ai" id="adminPwInput" placeholder="Password"/>
+        <button class="btn btn-red" id="adminLoginBtn" data-en="Sign In" data-fr="Se Connecter">Sign In</button>
+        <p id="loginErr" style="color:var(--red);font-size:.82rem;margin-top:.75rem;display:none">Incorrect password.</p>
+      </div>
+
+      <div id="adminMgr" style="display:none">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem">
+          <h3 style="font-family:var(--serif);font-size:1.5rem;color:var(--red);font-weight:900" data-en="Catalog Manager" data-fr="Gestionnaire">Catalog Manager</h3>
+          <button class="btn btn-ghost btn-sm" id="adminLogoutBtn" data-en="Log Out" data-fr="Se Déconnecter">Log Out</button>
+        </div>
+
+        <!-- Lookup box -->
+        <div class="lookup-box">
+          <h4 data-en="Auto-Fill from Database (Movies / Books / Games)" data-fr="Remplissage Auto (Films / Livres / Jeux)">Auto-Fill from Database (Movies / Books / Games)</h4>
+          <div class="lookup-row">
+            <div style="flex:1;min-width:200px">
+              <input type="text" class="ai" id="lookupTitle" placeholder="Enter a title to look up…" style="margin:0;width:100%"/>
+            </div>
+            <select class="ai" id="lookupCat" style="margin:0;max-width:160px">
+              <option value="movies">Movie</option>
+              <option value="books">Book</option>
+              <option value="games">Game</option>
+            </select>
+            <button class="btn btn-red btn-sm" id="lookupBtn" data-en="Look Up" data-fr="Rechercher">Look Up</button>
+          </div>
+          <div id="lookupStatus"></div>
+          <div id="lookupResult" style="display:none"></div>
+        </div>
+
+        <h4 class="admin-sec" data-en="Add New Item" data-fr="Ajouter un Article">Add New Item</h4>
+        <div class="ag">
+          <div class="fg"><label data-en="Title *" data-fr="Titre *">Title *</label><input type="text" id="iTitle" placeholder="e.g. Pulp Fiction"/></div>
+          <div class="fg"><label data-en="Category *" data-fr="Catégorie *">Category *</label>
+            <select id="iCat">
+              <option value="games">Video Games</option><option value="books">Books</option>
+              <option value="music">Music</option><option value="movies">Movies</option>
+              <option value="collectibles">Collectibles</option><option value="other">Other</option>
+            </select>
+          </div>
+          <div class="fg"><label data-en="Subtitle / Platform / Format" data-fr="Sous-titre / Plateforme">Subtitle / Platform / Format</label><input type="text" id="iSub" placeholder="e.g. DVD · 1994"/></div>
+          <div class="fg"><label data-en="Year" data-fr="Année">Year</label><input type="text" id="iYear" placeholder="e.g. 1994"/></div>
+          <div class="fg"><label data-en="Genre" data-fr="Genre">Genre</label><input type="text" id="iGenre" placeholder="e.g. Drama, Thriller"/></div>
+          <div class="fg"><label data-en="Condition" data-fr="État">Condition</label>
+            <select id="iCond"><option value="New">New</option><option value="Like New" selected>Like New</option><option value="Good">Good</option><option value="Fair">Fair</option></select>
+          </div>
+          <div class="fg"><label>Badge</label>
+            <select id="iBadge"><option value="">None</option><option value="new">NEW</option><option value="hot">HOT</option><option value="rare">RARE</option></select>
+          </div>
+          <div class="fg"><label data-en="Image URL" data-fr="URL Image">Image URL</label><input type="text" id="iImg" placeholder="https://…"/></div>
+          <div class="fg full"><label data-en="Description (auto-filled if looked up)" data-fr="Description (remplie automatiquement)">Description</label><textarea id="iDesc" placeholder="Filled automatically when using Look Up, or enter manually…"></textarea></div>
+          <div class="fg full"><label data-en="Staff Notes (shown on item detail)" data-fr="Notes Personnel (affichées sur le détail)">Staff Notes (shown on item detail card)</label><textarea id="iNotes" placeholder="e.g. Original box included, light shelf wear, tested and working…"></textarea></div>
+        </div>
+        <div class="a-actions">
+          <button class="btn btn-green btn-sm" id="addItemBtn" data-en="Add to Catalog" data-fr="Ajouter au Catalogue">Add to Catalog</button>
+          <button class="btn btn-ghost btn-sm" id="clearFormBtn" data-en="Clear Form" data-fr="Effacer">Clear Form</button>
+        </div>
+        <div class="admin-msg" id="aMsg"></div>
+
+        <h4 class="admin-sec" data-en="Manage Items" data-fr="Gérer les Articles">Manage Items <span id="aItemCount" style="font-family:var(--sans);font-size:.82rem;color:var(--gray);font-weight:400"></span></h4>
+        <input type="text" class="ai" id="aSearch" placeholder="Filter items…" style="display:inline-block;max-width:320px;margin:0 0 .75rem"/>
+        <div class="a-list" id="aList"></div>
+
+        <div class="a-ie">
+          <button class="btn btn-ghost btn-sm" id="exportBtn" data-en="Export JSON Backup" data-fr="Exporter JSON">Export JSON Backup</button>
+          <button class="btn btn-ghost btn-sm" id="importBtn" data-en="Import JSON" data-fr="Importer JSON">Import JSON</button>
+          <input type="file" id="importFile" accept=".json" style="display:none"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pdiv"></div>
+
+<!-- ══ WHY ══ -->
+<section id="why">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" data-en="Why Renaissance" data-fr="Pourquoi Renaissance">Why Renaissance</p>
+      <h2 class="sec-title" data-en="Not Just Nostalgia.<br><em>Real Value.</em>" data-fr="Pas que la Nostalgie.<br><em>De la Vraie Valeur.</em>">Not Just Nostalgia.<br><em>Real Value.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-n">01</div><strong data-en="Unbeatable Prices" data-fr="Prix Imbattables">Unbeatable Prices</strong><span data-en="We keep overhead low so you can build your collection without breaking the bank." data-fr="Nous maintenons des coûts bas pour que vous puissiez développer votre collection sans vous ruiner.">We keep overhead low so you can build your collection without breaking the bank.</span></div>
+      <div class="why-card reveal d1"><div class="why-n">02</div><strong data-en="Something for Everyone" data-fr="Quelque Chose pour Tous">Something for Everyone</strong><span data-en="Kids, collectors, casual shoppers — formats and genres for all ages and tastes." data-fr="Enfants, collectionneurs, acheteurs occasionnels — formats et genres pour tous les âges.">Kids, collectors, casual shoppers &mdash; formats and genres for all ages and tastes.</span></div>
+      <div class="why-card reveal d2"><div class="why-n">03</div><strong data-en="Always Changing" data-fr="Toujours Renouvelé">Always Changing</strong><span data-en="New items arrive regularly. Every visit is a new treasure hunt — something always surprises you." data-fr="De nouveaux articles arrivent régulièrement. Chaque visite est une chasse au trésor.">New items arrive regularly. Every visit is a new treasure hunt.</span></div>
+      <div class="why-card reveal d3"><div class="why-n">04</div><strong data-en="Community-Driven" data-fr="Ancré dans la Communauté">Community-Driven</strong><span data-en="Active on Facebook with thousands of followers. New arrivals and deals posted constantly." data-fr="Actif sur Facebook avec des milliers d'abonnés. Nouvelles arrivées et offres publiées constamment.">Active on Facebook with thousands of followers. New arrivals and deals posted constantly.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SOCIAL ══ -->
+<section id="social">
+  <div class="container">
+    <div class="social-inner">
+      <div class="social-text">
+        <p class="eyebrow" data-en="Stay Connected" data-fr="Restez Connectés">Stay Connected</p>
+        <h2 class="sec-title" data-en="Follow the <em>Hunt.</em>" data-fr="Suivez la <em>Chasse.</em>">Follow the <em>Hunt.</em></h2>
+        <p data-en="We post new arrivals and deals on Facebook and Instagram every day. Join our group to see what just landed on the floor." data-fr="Nous publions de nouvelles arrivées et offres sur Facebook et Instagram chaque jour. Rejoignez notre groupe pour voir ce qui vient d'arriver.">We post new arrivals and deals on Facebook and Instagram every day. Join our group to see what just landed.</p>
+      </div>
+      <div class="social-btns">
+        <a href="https://www.facebook.com/HellZXpress/" target="_blank" rel="noopener" class="sbtn fb" data-en="Facebook Group" data-fr="Groupe Facebook">Facebook Group</a>
+        <a href="https://www.instagram.com/renaissancevariety/" target="_blank" rel="noopener" class="sbtn ig">Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact">
+  <div class="container">
+    <div class="reveal">
+      <p class="eyebrow" data-en="Visit Us" data-fr="Visitez-nous">Visit Us</p>
+      <h2 class="sec-title" data-en="Come Find <em>Your</em> Treasure." data-fr="Venez Trouver <em>Votre</em> Trésor.">Come Find <em>Your</em> Treasure.</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <h3 data-en="Get in Touch" data-fr="Contactez-nous">Get in Touch</h3>
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-lbl" data-en="Address" data-fr="Adresse">Address</div><div class="ci-val">193 Rue Centre<br>Shawville, QC, Canada</div></div></div>
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-.56a2 2 0 012.11.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="ci-lbl" data-en="Phone" data-fr="Téléphone">Phone</div><div class="ci-val"><a href="tel:+18196475086">(819) 647-5086</a></div></div></div>
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="ci-lbl" data-en="Email" data-fr="Courriel">Email</div><div class="ci-val"><a href="mailto:renaissancevariety@gmail.com">renaissancevariety@gmail.com</a></div></div></div>
+        <div class="ci"><div class="ci-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div><div><div class="ci-lbl" data-en="Hours" data-fr="Heures">Hours</div><div class="ci-val" style="font-size:.9rem" data-en="Hours may vary — check our Facebook or call us." data-fr="Les heures peuvent varier — consultez notre Facebook ou appelez-nous.">Hours may vary &mdash; check our Facebook or call us.</div></div></div>
+      </div>
+      <div class="map-ph reveal d1">
+        <svg viewBox="0 0 24 24" width="48" height="48"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <strong>193 Rue Centre<br>Shawville, QC</strong>
+        <small data-en="Replace this box with a Google Maps embed iframe from maps.google.com" data-fr="Remplacez cette boîte par un iframe Google Maps">Replace this box with a Google Maps embed iframe from maps.google.com</small>
+        <a href="https://www.google.com/maps/search/193+Rue+Centre+Shawville+QC" target="_blank" rel="noopener" class="btn btn-red btn-sm" style="margin-top:.5rem" data-en="Get Directions" data-fr="Obtenir l'Itinéraire">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo">Renaissance Variety</span>
+      <p data-en="Shawville's entertainment shop for video games, books, movies, music &amp; collectibles. Retro to modern — all at great prices." data-fr="La boutique de divertissement de Shawville pour jeux vidéo, livres, films, musique et objets de collection. Rétro au moderne — tous à super prix.">Shawville&rsquo;s entertainment shop for video games, books, movies, music &amp; collectibles. Retro to modern &mdash; all at great prices.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Navigate" data-fr="Navigation">Navigate</h4>
+      <ul>
+        <li><a href="#about" data-en="About Us" data-fr="À Propos">About Us</a></li>
+        <li><a href="#services" data-en="Services" data-fr="Services">Services</a></li>
+        <li><a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a></li>
+        <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Connect" data-fr="Connecter">Connect</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/HellZXpress/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/renaissancevariety/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:renaissancevariety@gmail.com">Email Us</a></li>
+        <li><a href="tel:+18196475086">(819) 647-5086</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Renaissance Variety &mdash; 193 Rue Centre, Shawville, QC</p>
+    <p data-en="Website by" data-fr="Site web par">Website by <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a></p>
+  </div>
+</footer>
+
+<!-- ══ ITEM DETAIL MODAL ══ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <button class="modal-close" id="modalClose">&#x2715;</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+// ════════════════════════════════════════════════════════
+// CONFIG — point this at your api.php file
+// ════════════════════════════════════════════════════════
+const API = 'api.php';  // Same folder. If in a subfolder: './subfolder/api.php'
+
+// ════════════════════════════════════════════════════════
+// STATE
+// ════════════════════════════════════════════════════════
+let curLang    = 'en';
+let curFilter  = 'all';
+let curQ       = '';
+let curPage    = 1;
+const PER_PAGE = 24;
+let adminToken = '';
+let adminLoggedIn = false;
+let searchTimer;
+let lookupData = null; // Holds last lookup result
+
+// ════════════════════════════════════════════════════════
+// API HELPER
+// ════════════════════════════════════════════════════════
+async function api(action, params = {}, method = 'GET', body = null) {
+  const url = new URL(API, location.href);
+  url.searchParams.set('action', action);
+  for (const [k,v] of Object.entries(params)) url.searchParams.set(k, v);
+
+  const opts = { method, headers: { 'Content-Type': 'application/json' } };
+  if (adminToken) opts.headers['X-Admin-Token'] = adminToken;
+  if (body) opts.body = JSON.stringify({ ...body, admin_token: adminToken });
+
+  const res = await fetch(url, opts);
+  return res.json();
+}
+
+// ════════════════════════════════════════════════════════
+// CATALOG — RENDER
+// ════════════════════════════════════════════════════════
+const catLabels = {
+  games:       { en:'Video Games',    fr:'Jeux Vidéo' },
+  books:       { en:'Books',          fr:'Livres' },
+  music:       { en:'Music',          fr:'Musique' },
+  movies:      { en:'Movies',         fr:'Films' },
+  collectibles:{ en:'Collectibles',   fr:'Collection' },
+  other:       { en:'Other',          fr:'Autre' },
+};
+const catIcons = {
+  games:        '<rect x="2" y="6" width="20" height="12" rx="1"/><circle cx="12" cy="12" r="2"/>',
+  books:        '<path d="M4 19V5a2 2 0 012-2h13"/><path d="M4 19a2 2 0 002 2h13"/>',
+  music:        '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/>',
+  movies:       '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 4v16M16 4v16"/>',
+  collectibles: '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 23 12 19.77 5.82 23 7 14.14 2 9.27l6.91-1.01z"/>',
+  other:        '<circle cx="12" cy="12" r="9"/>',
+};
+const badgeDefs = {
+  new:  { en:'NEW',       fr:'NOUVEAU',   cls:'ib-new' },
+  hot:  { en:'HOT',       fr:'POPULAIRE', cls:'ib-hot' },
+  rare: { en:'RARE',      fr:'RARE',      cls:'ib-rare' },
+};
+function esc(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+function catLabel(c,l) { return (catLabels[c]||{en:c,fr:c})[l]||c; }
+function badgeHTML(b,l) { const d=badgeDefs[b]; return d?`<span class="ibadge ${d.cls}">${d[l]||d.en}</span>`:''; }
+
+async function loadCatalog() {
+  const grid = document.getElementById('catalogGrid');
+  grid.innerHTML = '<div class="loading"><div class="spinner"></div></div>';
+  document.getElementById('pagination').innerHTML = '';
+
+  try {
+    const data = await api('get_items', {
+      page: curPage, per_page: PER_PAGE, q: curQ,
+      category: curFilter === 'all' ? '' : curFilter,
+    });
+    if (!data.ok) throw new Error(data.error);
+
+    const { items, total, page, total_pages } = data.data;
+    const meta = document.getElementById('resultsCount');
+    meta.innerHTML = curLang === 'fr'
+      ? `Affichage de <strong>${items.length}</strong> articles sur <strong>${total}</strong>`
+      : `Showing <strong>${items.length}</strong> of <strong>${total}</strong> items`;
+
+    if (!items.length) {
+      grid.innerHTML = `<div class="no-res">${curLang==='fr'?'Aucun article trouvé.':'No items found.'}<small>${curLang==='fr'?'Essayez une autre recherche.':'Try a different search or filter.'}</small></div>`;
+      return;
+    }
+
+    grid.innerHTML = items.map(item => {
+      const img = item.image
+        ? `<img src="${esc(item.image)}" alt="${esc(item.title)}" loading="lazy" onerror="this.style.display='none'">`
+        : `<svg viewBox="0 0 24 24">${catIcons[item.category]||catIcons.other}</svg>`;
+      return `<div class="cat-item" data-id="${item.id}" tabindex="0" role="button" aria-label="${esc(item.title)}">
+        <div class="cat-thumb">${badgeHTML(item.badge,curLang)}${img}</div>
+        <div class="cat-info">
+          <div class="cat-type">${catLabel(item.category,curLang)}</div>
+          <h4>${esc(item.title)}</h4>
+          ${item.sub?`<div class="cat-sub2">${esc(item.sub)}</div>`:''}
+          ${item.condition?`<span class="cat-cond">${esc(item.condition)}</span>`:''}
+        </div>
+      </div>`;
+    }).join('');
+
+    // Click handlers for modal
+    grid.querySelectorAll('.cat-item').forEach(el => {
+      const id = Number(el.dataset.id);
+      const item = items.find(i=>i.id==id);
+      el.addEventListener('click', () => openModal(item));
+      el.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' ') openModal(item); });
+    });
+
+    renderPagination(page, total_pages);
+  } catch(e) {
+    grid.innerHTML = `<div class="no-res">Could not load catalog. Check API connection.<small>${e.message}</small></div>`;
+  }
+}
+
+function renderPagination(page, total_pages) {
+  const pg = document.getElementById('pagination');
+  if (total_pages <= 1) { pg.innerHTML=''; return; }
+  let html = '';
+  html += `<button class="pg-btn" ${page<=1?'disabled':''} onclick="goPage(${page-1})" data-en="← Prev" data-fr="← Préc">← Prev</button>`;
+
+  const range = [];
+  for (let i=1; i<=total_pages; i++) {
+    if (i===1||i===total_pages||Math.abs(i-page)<=2) range.push(i);
+    else if (range[range.length-1]!=='…') range.push('…');
+  }
+  for (const r of range) {
+    if (r==='…') html+=`<span class="pg-info">…</span>`;
+    else html+=`<button class="pg-btn ${r===page?'active':''}" onclick="goPage(${r})">${r}</button>`;
+  }
+  html += `<button class="pg-btn" ${page>=total_pages?'disabled':''} onclick="goPage(${page+1})" data-en="Next →" data-fr="Suiv →">Next →</button>`;
+  pg.innerHTML = html;
+  applyLang();
+}
+
+function goPage(p) { curPage=p; loadCatalog(); document.getElementById('catalog').scrollIntoView({behavior:'smooth',block:'start'}); }
+
+// ════════════════════════════════════════════════════════
+// ITEM MODAL
+// ════════════════════════════════════════════════════════
+function condDot(c) {
+  if (!c) return '';
+  const map = {'New':'new2','Like New':'like','Good':'good','Fair':'fair'};
+  return `<div class="cond-dot ${map[c]||''}"></div>`;
+}
+function openModal(item) {
+  const ov = document.getElementById('modalOverlay');
+  const mc = document.getElementById('modalContent');
+
+  const imgBlock = item.image
+    ? `<div class="modal-img"><img src="${esc(item.image)}" alt="${esc(item.title)}"/></div>`
+    : `<div class="modal-img-ph"><svg viewBox="0 0 24 24" width="64" height="64">${catIcons[item.category]||catIcons.other}</svg></div>`;
+
+  mc.innerHTML = `
+    ${imgBlock}
+    <div class="modal-body">
+      <div class="modal-meta">
+        <span class="modal-cat">${catLabel(item.category,curLang)}</span>
+        ${item.year?`<span class="modal-year">· ${esc(item.year)}</span>`:''}
+        ${item.genre?`<span class="modal-genre">${esc(item.genre)}</span>`:''}
+      </div>
+      <h2>${esc(item.title)}</h2>
+      ${item.sub?`<div class="modal-sub">${esc(item.sub)}</div>`:''}
+      ${item.description?`<p class="modal-desc">${esc(item.description)}</p>`:''}
+      ${item.notes?`<div class="modal-notes"><strong>${curLang==='fr'?'Notes du personnel':'Staff Notes'}</strong>${esc(item.notes)}</div>`:''}
+      <div style="display:flex;align-items:center;gap:.75rem;margin-top:.75rem">
+        <span class="modal-cond">${condDot(item.condition)} ${esc(item.condition||'')}</span>
+        ${badgeHTML(item.badge,curLang)?`<span>${badgeHTML(item.badge,curLang)}</span>`:''}
+      </div>
+      <div class="modal-cta">
+        <strong>${curLang==='fr'?'Cet article est disponible en magasin uniquement.':'This item is available in-store only.'}</strong><br>
+        ${curLang==='fr'?'Visitez-nous au 193 Rue Centre, Shawville, QC pour l\'acheter.':'Visit us at 193 Rue Centre, Shawville, QC to purchase.'}
+      </div>
+    </div>`;
+
+  ov.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('modalOverlay').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
+
+// ════════════════════════════════════════════════════════
+// SEARCH & FILTER
+// ════════════════════════════════════════════════════════
+document.getElementById('catalogSearch').addEventListener('input', function() {
+  clearTimeout(searchTimer);
+  curQ = this.value;
+  curPage = 1;
+  searchTimer = setTimeout(loadCatalog, 350);
+});
+
+document.querySelectorAll('.fbtn').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.fbtn').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  curFilter = b.dataset.filter;
+  curPage = 1;
+  loadCatalog();
+}));
+
+// ════════════════════════════════════════════════════════
+// ADMIN
+// ════════════════════════════════════════════════════════
+document.getElementById('showAdminBtn').addEventListener('click', () => {
+  const panel = document.getElementById('adminPanel');
+  panel.classList.toggle('vis');
+  if (panel.classList.contains('vis') && adminLoggedIn) loadAdminList();
+});
+
+document.getElementById('adminLoginBtn').addEventListener('click', async () => {
+  const pw = document.getElementById('adminPwInput').value;
+  const res = await api('login', {}, 'POST', { password: pw });
+  if (res.ok) {
+    adminToken = pw;
+    adminLoggedIn = true;
+    document.getElementById('adminLogin').style.display = 'none';
+    document.getElementById('adminMgr').style.display = 'block';
+    loadAdminList();
+  } else {
+    document.getElementById('loginErr').style.display = 'block';
+  }
+});
+document.getElementById('adminPwInput').addEventListener('keydown', e => { if(e.key==='Enter') document.getElementById('adminLoginBtn').click(); });
+
+document.getElementById('adminLogoutBtn').addEventListener('click', () => {
+  adminToken=''; adminLoggedIn=false;
+  document.getElementById('adminLogin').style.display='block';
+  document.getElementById('adminMgr').style.display='none';
+  document.getElementById('adminPwInput').value='';
+  document.getElementById('loginErr').style.display='none';
+  document.getElementById('adminPanel').classList.remove('vis');
+});
+
+// LOOKUP
+document.getElementById('lookupBtn').addEventListener('click', async () => {
+  const title = document.getElementById('lookupTitle').value.trim();
+  const cat   = document.getElementById('lookupCat').value;
+  if (!title) return;
+
+  const status = document.getElementById('lookupStatus');
+  const result = document.getElementById('lookupResult');
+  result.style.display = 'none';
+  lookupData = null;
+
+  status.innerHTML = `<div class="lookup-loading"><div class="spinner"></div><span>${curLang==='fr'?'Recherche en cours…':'Looking up…'}</span></div>`;
+
+  try {
+    const res = await api('lookup', { title, category: cat });
+    status.innerHTML = '';
+    if (res.ok) {
+      lookupData = res.data;
+      const d = lookupData;
+      result.style.display = 'flex';
+      result.innerHTML = `
+        ${d.image?`<img src="${esc(d.image)}" alt="${esc(d.title)}" onerror="this.style.display='none'"/>`:''}
+        <div class="lookup-result-info">
+          <h5>${esc(d.title)}</h5>
+          <p>${d.description?esc(d.description.substring(0,180))+'…':curLang==='fr'?'Aucune description trouvée.':'No description found.'}</p>
+          <button class="btn btn-red btn-sm" id="useLookupBtn">${curLang==='fr'?'Utiliser ces informations':'Use This Info'}</button>
+        </div>`;
+      document.getElementById('useLookupBtn').addEventListener('click', fillFromLookup);
+    } else {
+      status.innerHTML = `<div class="lookup-not-found">${curLang==='fr'?'Titre non trouvé. Remplissez le formulaire manuellement.':'Title not found. Please fill in the form manually.'}</div>`;
+    }
+  } catch(e) {
+    status.innerHTML = `<div class="lookup-not-found">Lookup failed: ${e.message}. Check OMDB/RAWG API keys in api.php.</div>`;
+  }
+});
+
+function fillFromLookup() {
+  if (!lookupData) return;
+  const d = lookupData;
+  document.getElementById('iTitle').value    = d.title || '';
+  document.getElementById('iCat').value      = document.getElementById('lookupCat').value;
+  document.getElementById('iSub').value      = d.sub || '';
+  document.getElementById('iYear').value     = d.year || '';
+  document.getElementById('iGenre').value    = d.genre || '';
+  document.getElementById('iImg').value      = d.image || '';
+  document.getElementById('iDesc').value     = d.description || '';
+  document.getElementById('lookupResult').style.display = 'none';
+  document.getElementById('lookupStatus').innerHTML = `<div style="color:#2e7d32;font-size:.82rem;margin-top:.5rem;font-family:var(--condensed);letter-spacing:.08em">${curLang==='fr'?'✓ Formulaire rempli — vérifiez et ajoutez.':'✓ Form filled — review and click Add to Catalog.'}</div>`;
+}
+
+// ADD ITEM
+document.getElementById('addItemBtn').addEventListener('click', async () => {
+  const title = document.getElementById('iTitle').value.trim();
+  if (!title) { showAdminMsg(curLang==='fr'?'Entrez un titre.':'Please enter a title.', 'err'); return; }
+
+  const body = {
+    title,
+    category:    document.getElementById('iCat').value,
+    sub:         document.getElementById('iSub').value.trim(),
+    year:        document.getElementById('iYear').value.trim(),
+    genre:       document.getElementById('iGenre').value.trim(),
+    condition:   document.getElementById('iCond').value,
+    badge:       document.getElementById('iBadge').value,
+    image:       document.getElementById('iImg').value.trim(),
+    description: document.getElementById('iDesc').value.trim(),
+    notes:       document.getElementById('iNotes').value.trim(),
+  };
+
+  const res = await api('add_item', {}, 'POST', body);
+  if (res.ok) {
+    showAdminMsg(curLang==='fr'?'Article ajouté!':'Item added to catalog!', 'ok');
+    clearForm();
+    loadCatalog();
+    loadAdminList();
+    loadStats();
+  } else {
+    showAdminMsg('Error: ' + res.error, 'err');
+  }
+});
+
+document.getElementById('clearFormBtn').addEventListener('click', clearForm);
+function clearForm() {
+  ['iTitle','iSub','iYear','iGenre','iImg','iDesc','iNotes'].forEach(id => document.getElementById(id).value='');
+  document.getElementById('iCat').value='games';
+  document.getElementById('iCond').value='Like New';
+  document.getElementById('iBadge').value='';
+  document.getElementById('lookupTitle').value='';
+  document.getElementById('lookupStatus').innerHTML='';
+  document.getElementById('lookupResult').style.display='none';
+  lookupData=null;
+}
+
+function showAdminMsg(msg, type) {
+  const el = document.getElementById('aMsg');
+  el.textContent = msg; el.className = 'admin-msg '+type;
+  setTimeout(()=>el.className='admin-msg', 4000);
+}
+
+// ADMIN LIST
+let adminListTimer;
+document.getElementById('aSearch').addEventListener('input', () => {
+  clearTimeout(adminListTimer);
+  adminListTimer = setTimeout(loadAdminList, 300);
+});
+
+async function loadAdminList() {
+  const q = document.getElementById('aSearch').value.trim();
+  const list = document.getElementById('aList');
+  list.innerHTML = '<div style="padding:.75rem;font-size:.82rem;color:var(--gray)">Loading…</div>';
+
+  try {
+    const res = await api('get_items', { page:1, per_page:200, q });
+    const items = res.data?.items || [];
+    document.getElementById('aItemCount').textContent = `(${res.data?.total||0} total)`;
+
+    if (!items.length) {
+      list.innerHTML = `<div style="padding:.75rem;font-size:.82rem;color:var(--gray)">${curLang==='fr'?'Aucun article.':'No items found.'}</div>`;
+      return;
+    }
+
+    list.innerHTML = items.map(i => `
+      <div class="a-row">
+        <span class="ar-type">${catLabel(i.category,curLang)}</span>
+        <span class="ar-title">${esc(i.title)}</span>
+        <span class="ar-sub">${esc(i.sub||'').substring(0,30)}</span>
+        <button class="btn-del" data-id="${i.id}">${curLang==='fr'?'Supprimer':'Delete'}</button>
+      </div>`).join('');
+
+    list.querySelectorAll('.btn-del').forEach(btn => btn.addEventListener('click', async () => {
+      const id = Number(btn.dataset.id);
+      const title = btn.closest('.a-row').querySelector('.ar-title').textContent;
+      if (!confirm(`${curLang==='fr'?'Supprimer':'Delete'} "${title}"?`)) return;
+      const res = await api('delete_item', {}, 'DELETE', { id });
+      if (res.ok) { showAdminMsg(curLang==='fr'?'Article supprimé.':'Item deleted.','ok'); loadCatalog(); loadAdminList(); loadStats(); }
+      else showAdminMsg('Error: '+res.error,'err');
+    }));
+  } catch(e) { list.innerHTML = `<div style="padding:.75rem;color:var(--red)">${e.message}</div>`; }
+}
+
+// EXPORT / IMPORT
+document.getElementById('exportBtn').addEventListener('click', async () => {
+  const res = await api('get_items', { page:1, per_page:9999 });
+  const items = res.data?.items || [];
+  const blob = new Blob([JSON.stringify(items,null,2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='renaissance-catalog.json'; a.click();
+});
+document.getElementById('importBtn').addEventListener('click', () => document.getElementById('importFile').click());
+document.getElementById('importFile').addEventListener('change', async function() {
+  const file = this.files[0]; if(!file) return;
+  const reader = new FileReader();
+  reader.onload = async e => {
+    try {
+      const items = JSON.parse(e.target.result);
+      if (!Array.isArray(items)) throw new Error('Invalid format');
+      const res = await api('bulk_import', {}, 'POST', { items });
+      if (res.ok) { showAdminMsg(`Imported ${res.data.imported} items!`,'ok'); loadCatalog(); loadAdminList(); loadStats(); }
+      else showAdminMsg('Import error: '+res.error,'err');
+    } catch(err) { showAdminMsg('Import failed: '+err.message,'err'); }
+  };
+  reader.readAsText(file); this.value='';
+});
+
+// ════════════════════════════════════════════════════════
+// STATS (for hero counter)
+// ════════════════════════════════════════════════════════
+async function loadStats() {
+  try {
+    const res = await api('stats');
+    if (res.ok) document.getElementById('heroStatTotal').textContent = res.data.total.toLocaleString();
+  } catch(e) {}
+}
+
+// ════════════════════════════════════════════════════════
+// LANGUAGE
+// ════════════════════════════════════════════════════════
+function applyLang() {
+  const l = curLang;
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const v = el.getAttribute('data-'+l)||el.getAttribute('data-en');
+    if(v) el.innerHTML=v;
+  });
+  document.querySelectorAll('#langToggle,#langToggleMobile').forEach(b=>b.textContent=l==='en'?'FR':'EN');
+  document.documentElement.lang=l==='fr'?'fr':'en';
+  document.getElementById('catalogSearch').placeholder=l==='fr'?'Rechercher titres, artistes, genres…':'Search titles, artists, genres…';
+}
+
+function setLang(l) {
+  curLang=l; applyLang(); loadCatalog();
+  if(adminLoggedIn) loadAdminList();
+}
+document.getElementById('langToggle').addEventListener('click',()=>setLang(curLang==='en'?'fr':'en'));
+document.getElementById('langToggleMobile').addEventListener('click',()=>setLang(curLang==='en'?'fr':'en'));
+
+// ════════════════════════════════════════════════════════
+// HAMBURGER
+// ════════════════════════════════════════════════════════
+const ham=document.getElementById('hamburger'),mnav=document.getElementById('mobileNav');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mnav.classList.toggle('open');});
+mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mnav.classList.remove('open');}));
+
+// ════════════════════════════════════════════════════════
+// SCROLL REVEAL
+// ════════════════════════════════════════════════════════
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v');}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// ════════════════════════════════════════════════════════
+// INIT
+// ════════════════════════════════════════════════════════
+loadCatalog();
+loadStats();
+</script>
+</body>
+</html>
