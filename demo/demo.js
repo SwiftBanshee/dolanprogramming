@@ -85,7 +85,7 @@ const DEMOS = [
     desc: 'Bold trades contractor site with service areas, quotes, and reviews.',
     tag: 'other',
     tech: ['HTML', 'CSS', 'JS'],
-    url: 'sites/dolan-art-photopraphy/index.html',
+    url: 'sites/dolan-art-photography/index.html',
     date: '2026-03-10',
     featured: false,
   },
