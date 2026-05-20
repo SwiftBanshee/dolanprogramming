@@ -58,7 +58,7 @@ const DEMOS = [
   },
   {
     id: 'campbellsbay-ciment',
-    title: 'Campbells Bay Ciment',
+    title: 'Campbell&apos;s Bay Ciment',
     client: 'Demo Client — Trades',
     desc: 'Established ready-mix concrete and aggregates supplier in Campbell&apos;s Bay, QC, offering poured foundations, stamped concrete, stone slinging, and construction services across the Pontiac and Ottawa Valley since 1982.',
     tag: 'trades',
@@ -124,7 +124,7 @@ const DEMOS = [
   },
   {
     id: 'hurstys',
-    title: 'Hurstys',
+    title: 'Hursty&apos;s',
     client: 'Demo Client — Restaurant',
     desc: 'Popular local bar and grill on Main Street in Shawville, QC, serving all-day breakfast, hearty lunches, dinners, and homemade specials with a welcoming patio.',
     tag: 'restaurant',
@@ -157,7 +157,7 @@ const DEMOS = [
   },
   {
     id: 'kojacks',
-    title: 'Kojacks',
+    title: 'Kojack&apos;s',
     client: 'Demo Client — Restaurant',
     desc: 'Authentic Chinese restaurant in Shawville, QC, under new ownership, serving dine-in and takeout with lunch specials and classic favourites on Main Street.',
     tag: 'restaurant',
@@ -190,7 +190,7 @@ const DEMOS = [
   },
   {
     id: 'deanos',
-    title: 'Deanos Chicken',
+    title: 'Deano&apos;s Chicken',
     client: 'Demo Client — Restaurant',
     desc: 'Local favourite in Shawville, QC, known for fresh whole chickens, Friday specials, sides, and takeout chicken dinners.',
     tag: 'restaurant',
