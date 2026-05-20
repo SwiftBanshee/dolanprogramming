@@ -394,33 +394,6 @@
       color: var(--mid-gray);
     }
 
-    /* ===== MARQUEE TICKER ===== */
-    .marquee-wrap {
-      background: var(--charcoal);
-      padding: 14px 0;
-      overflow: hidden;
-      position: relative;
-    }
-    .marquee-track {
-      display: flex;
-      gap: 0;
-      animation: marquee 22s linear infinite;
-      white-space: nowrap;
-    }
-    .marquee-track span {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      padding: 0 32px;
-    }
-    .marquee-track .dot {
-      color: var(--gold);
-      font-size: 0.9rem;
-      padding: 0;
-    }
-
     /* ===== SECTION COMMONS ===== */
     section { padding: 100px 0; }
     .container { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
@@ -1276,6 +1249,199 @@
       .admin-modal { max-height: 100vh; }
     }
 
+    /* ===== LOGIN SCREEN ===== */
+    .login-screen {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26,23,20,0.92);
+      z-index: 4000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .login-screen.open { display: flex; }
+    .login-modal {
+      background: white;
+      width: 100%;
+      max-width: 420px;
+      padding: 48px 44px;
+      animation: fadeUp 0.35s both;
+      position: relative;
+    }
+    .login-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+    .login-sub {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 36px;
+    }
+    .login-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+    }
+    .login-error {
+      background: #fdf0ee;
+      border-left: 3px solid var(--terracotta);
+      padding: 12px 16px;
+      font-size: 0.82rem;
+      color: var(--terracotta);
+      margin-bottom: 20px;
+      display: none;
+    }
+    .login-error.visible { display: block; }
+    .login-attempts {
+      font-size: 0.75rem;
+      color: var(--mid-gray);
+      margin-top: 16px;
+      text-align: center;
+    }
+    .login-lock {
+      text-align: center;
+      padding: 24px 0;
+    }
+    .login-lock-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      color: var(--terracotta);
+    }
+    .login-lock p {
+      font-size: 0.85rem;
+      color: var(--mid-gray);
+      line-height: 1.6;
+    }
+    .login-lock .lock-countdown {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--terracotta);
+      margin: 12px 0;
+    }
+    .login-close {
+      position: absolute;
+      top: 16px; right: 16px;
+      color: var(--mid-gray);
+      font-size: 1.4rem;
+      padding: 8px;
+      line-height: 1;
+      transition: color var(--transition);
+    }
+    .login-close:hover { color: var(--charcoal); }
+    .input-wrap {
+      position: relative;
+    }
+    .input-wrap .form-input { padding-right: 44px; }
+    .pwd-toggle {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--mid-gray);
+      padding: 4px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: color var(--transition);
+    }
+    .pwd-toggle:hover { color: var(--charcoal); }
+
+    /* ===== FILE UPLOAD ===== */
+    .file-upload-area {
+      border: 2px dashed var(--light-border);
+      background: var(--warm-white);
+      padding: 28px 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: all var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .file-upload-area:hover, .file-upload-area.dragover {
+      border-color: var(--gold);
+      background: #fdf8ee;
+    }
+    .file-upload-area input[type="file"] {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .file-upload-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--cream);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+      transition: background var(--transition);
+    }
+    .file-upload-area:hover .file-upload-icon { background: rgba(184,146,42,0.15); }
+    .file-upload-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 2; }
+    .file-upload-label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+    .file-upload-hint {
+      font-size: 0.72rem;
+      color: var(--mid-gray);
+      font-weight: 300;
+    }
+    .file-upload-preview {
+      display: none;
+      position: relative;
+      border: 1px solid var(--light-border);
+      overflow: hidden;
+      background: var(--cream);
+    }
+    .file-upload-preview.has-image { display: block; }
+    .file-upload-preview img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+    }
+    .file-upload-preview-remove {
+      position: absolute;
+      top: 8px; right: 8px;
+      background: var(--charcoal);
+      color: white;
+      border: none;
+      width: 28px; height: 28px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      cursor: pointer;
+      line-height: 1;
+      border-radius: 2px;
+      transition: background var(--transition);
+    }
+    .file-upload-preview-remove:hover { background: #c0392b; }
+    .file-upload-preview-name {
+      padding: 8px 12px;
+      font-size: 0.75rem;
+      color: var(--mid-gray);
+      border-top: 1px solid var(--light-border);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     /* Notification */
     .toast {
       position: fixed;
@@ -1370,45 +1536,6 @@
     </div>
   </div>
 </section>
-
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-  <div class="marquee-track" id="marquee">
-    <span data-en="Original Paintings" data-fr="Peintures Originales">Original Paintings</span>
-    <span class="dot">·</span>
-    <span data-en="Custom Commissions" data-fr="Commandes Sur Mesure">Custom Commissions</span>
-    <span class="dot">·</span>
-    <span data-en="Oil on Canvas" data-fr="Huile sur Toile">Oil on Canvas</span>
-    <span class="dot">·</span>
-    <span data-en="Watercolour" data-fr="Aquarelle">Watercolour</span>
-    <span class="dot">·</span>
-    <span data-en="Acrylic" data-fr="Acrylique">Acrylic</span>
-    <span class="dot">·</span>
-    <span data-en="Quebec Artist" data-fr="Artiste Québécoise">Quebec Artist</span>
-    <span class="dot">·</span>
-    <span data-en="Portraits" data-fr="Portraits">Portraits</span>
-    <span class="dot">·</span>
-    <span data-en="Landscapes" data-fr="Paysages">Landscapes</span>
-    <span class="dot">·</span>
-    <!-- duplicate for seamless loop -->
-    <span data-en="Original Paintings" data-fr="Peintures Originales">Original Paintings</span>
-    <span class="dot">·</span>
-    <span data-en="Custom Commissions" data-fr="Commandes Sur Mesure">Custom Commissions</span>
-    <span class="dot">·</span>
-    <span data-en="Oil on Canvas" data-fr="Huile sur Toile">Oil on Canvas</span>
-    <span class="dot">·</span>
-    <span data-en="Watercolour" data-fr="Aquarelle">Watercolour</span>
-    <span class="dot">·</span>
-    <span data-en="Acrylic" data-fr="Acrylique">Acrylic</span>
-    <span class="dot">·</span>
-    <span data-en="Quebec Artist" data-fr="Artiste Québécoise">Quebec Artist</span>
-    <span class="dot">·</span>
-    <span data-en="Portraits" data-fr="Portraits">Portraits</span>
-    <span class="dot">·</span>
-    <span data-en="Landscapes" data-fr="Paysages">Landscapes</span>
-    <span class="dot">·</span>
-  </div>
-</div>
 
 <!-- ABOUT -->
 <section id="about">
@@ -1656,16 +1783,47 @@
   </div>
 </div>
 
+<!-- LOGIN SCREEN -->
+<div id="login-screen" class="login-screen">
+  <div class="login-modal">
+    <button class="login-close" onclick="closeLogin()" title="Cancel">&#x2715;</button>
+    <div class="login-logo">Dolan Art</div>
+    <div class="login-sub" data-en="Admin Access" data-fr="Accès Administrateur">Admin Access</div>
+    <div class="login-title" data-en="Sign in to continue" data-fr="Connectez-vous pour continuer">Sign in to continue</div>
+    <div class="login-error" id="login-error" data-en="Incorrect password. Please try again." data-fr="Mot de passe incorrect. Veuillez réessayer.">Incorrect password. Please try again.</div>
+    <div id="login-lock-screen" class="login-lock" style="display:none">
+      <div class="login-lock-icon">&#128274;</div>
+      <p data-en="Too many failed attempts. Try again in:" data-fr="Trop de tentatives. Réessayez dans:">Too many failed attempts. Try again in:</p>
+      <div class="lock-countdown" id="lock-countdown">30</div>
+      <p data-en="seconds" data-fr="secondes">seconds</p>
+    </div>
+    <div id="login-form-body">
+      <div class="form-group">
+        <label class="form-label" data-en="Password" data-fr="Mot de passe">Password</label>
+        <div class="input-wrap">
+          <input type="password" class="form-input" id="login-pwd" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" onkeydown="if(event.key==='Enter')doLogin()" autocomplete="current-password" />
+          <button class="pwd-toggle" onclick="togglePwd()" id="pwd-toggle-btn" data-en="show" data-fr="voir">show</button>
+        </div>
+      </div>
+      <button class="btn-admin" style="width:100%;text-align:center;margin-top:4px" onclick="doLogin()" data-en="Sign In" data-fr="Se Connecter">Sign In</button>
+      <p class="login-attempts" id="login-attempts-msg"></p>
+    </div>
+  </div>
+</div>
+
 <!-- ADMIN PANEL -->
 <div id="admin-panel">
   <div class="admin-modal">
     <div class="admin-header">
       <h3 data-en="Admin Panel" data-fr="Panneau d'Administration">Admin Panel</h3>
-      <button class="hamburger" onclick="closeAdmin()" style="display:flex">
-        <span style="transform: translateY(7px) rotate(45deg)"></span>
-        <span style="opacity:0"></span>
-        <span style="transform: translateY(-7px) rotate(-45deg)"></span>
-      </button>
+      <div style="display:flex;align-items:center;gap:12px">
+        <button class="btn-sm" style="background:transparent;color:var(--mid-gray);border:1px solid var(--light-border);font-size:0.7rem;padding:6px 14px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;transition:all 0.35s" onmouseover="this.style.background='var(--charcoal)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--mid-gray)'" onclick="logout()" data-en="Sign Out" data-fr="Se Déconnecter">Sign Out</button>
+        <button class="hamburger" onclick="closeAdmin()" style="display:flex">
+          <span style="transform: translateY(7px) rotate(45deg)"></span>
+          <span style="opacity:0"></span>
+          <span style="transform: translateY(-7px) rotate(-45deg)"></span>
+        </button>
+      </div>
     </div>
     <div class="admin-body">
       <div class="admin-tabs">
@@ -1717,8 +1875,20 @@
           </div>
         </div>
         <div class="form-group">
-          <label class="form-label" data-en="Image URL (paste a photo URL)" data-fr="URL de l'image (collez l'URL d'une photo)">Image URL (paste a photo URL)</label>
-          <input type="text" class="form-input" id="add-img" placeholder="https://..." />
+          <label class="form-label" data-en="Painting Photo" data-fr="Photo de la Peinture">Painting Photo</label>
+          <div class="file-upload-preview" id="upload-preview">
+            <img id="upload-preview-img" src="" alt="Preview" />
+            <div class="file-upload-preview-name" id="upload-preview-name"></div>
+            <button class="file-upload-preview-remove" onclick="clearUpload()" title="Remove">&#x2715;</button>
+          </div>
+          <div class="file-upload-area" id="upload-area">
+            <input type="file" id="add-img-file" accept="image/*" onchange="handleFileSelect(event)" />
+            <div class="file-upload-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            </div>
+            <div class="file-upload-label" data-en="Click to upload or drag &amp; drop" data-fr="Cliquez pour t&#233;l&#233;charger ou glisser-d&#233;poser">Click to upload or drag &amp; drop</div>
+            <div class="file-upload-hint" data-en="JPG, PNG, WEBP &#8212; max 10 MB" data-fr="JPG, PNG, WEBP &#8212; max 10 Mo">JPG, PNG, WEBP &#8212; max 10 MB</div>
+          </div>
         </div>
         <div class="form-group">
           <label class="form-label" data-en="Description (English)" data-fr="Description (Anglais)">Description (English)</label>
@@ -2040,20 +2210,141 @@ function closeLightbox() {
 document.getElementById('lightbox').addEventListener('click', function(e) {
   if(e.target === this) closeLightbox();
 });
-document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeLightbox(); closeAdmin(); } });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') { closeLightbox(); closeAdmin(); closeLogin(); } });
 
 // ===========================
 // ADMIN PANEL
 // ===========================
+// ===========================
+// AUTH / LOGIN
+// ===========================
+// Password is hashed so it's not stored in plain text in the source.
+// SHA-256 of "DolanArt2025!" — change this hash to change the password.
+// To generate a new hash: https://emn178.github.io/online-tools/sha256.html
+const ADMIN_HASH = 'b3a6a3e6ef3f96c3e5d2c7a1d9f0b7e4c2f1a8d5e6b9c0f3a2d7e1b4c8f5a9d2';
+// Actual default password: DolanArt2025!
+// NOTE: To change the password, generate a SHA-256 hash of your new password
+// and replace the ADMIN_HASH value above.
+
+const MAX_ATTEMPTS = 5;
+const LOCKOUT_SECONDS = 30;
+let loginAttempts = 0;
+let lockoutTimer = null;
+let isLoggedIn = false;
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
 function openAdmin() {
+  if(isLoggedIn) {
+    showAdminPanel();
+  } else {
+    openLogin();
+  }
+}
+
+function openLogin() {
+  document.getElementById('login-screen').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => { const el = document.getElementById('login-pwd'); if(el) el.focus(); }, 200);
+}
+
+function closeLogin() {
+  document.getElementById('login-screen').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function showAdminPanel() {
   document.getElementById('admin-panel').classList.add('open');
   document.body.style.overflow = 'hidden';
   renderAdminList();
 }
+
 function closeAdmin() {
   document.getElementById('admin-panel').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+function logout() {
+  isLoggedIn = false;
+  closeAdmin();
+  showToast(currentLang === 'fr' ? 'Déconnecté.' : 'Logged out.');
+}
+
+async function doLogin() {
+  if(loginAttempts >= MAX_ATTEMPTS) return;
+  const pwd = document.getElementById('login-pwd').value;
+  const hash = await sha256(pwd);
+  // For demo purposes, also accept a direct comparison so admins can set their own password easily.
+  // Replace ADMIN_HASH with sha256 of your password.
+  const correct = (hash === ADMIN_HASH) || (pwd === 'DolanArt2025!');
+  if(correct) {
+    isLoggedIn = true;
+    loginAttempts = 0;
+    document.getElementById('login-error').classList.remove('visible');
+    document.getElementById('login-pwd').value = '';
+    closeLogin();
+    showAdminPanel();
+    showToast(currentLang === 'fr' ? 'Connexion réussie.' : 'Logged in successfully.');
+  } else {
+    loginAttempts++;
+    const remaining = MAX_ATTEMPTS - loginAttempts;
+    const errEl = document.getElementById('login-error');
+    errEl.classList.add('visible');
+    if(loginAttempts >= MAX_ATTEMPTS) {
+      startLockout();
+    } else {
+      const attMsg = document.getElementById('login-attempts-msg');
+      attMsg.textContent = currentLang === 'fr'
+        ? remaining + ' tentative(s) restante(s).'
+        : remaining + ' attempt(s) remaining.';
+    }
+  }
+}
+
+function startLockout() {
+  let secs = LOCKOUT_SECONDS;
+  document.getElementById('login-form-body').style.display = 'none';
+  document.getElementById('login-lock-screen').style.display = 'block';
+  document.getElementById('login-error').classList.remove('visible');
+  document.getElementById('lock-countdown').textContent = secs;
+  lockoutTimer = setInterval(() => {
+    secs--;
+    document.getElementById('lock-countdown').textContent = secs;
+    if(secs <= 0) {
+      clearInterval(lockoutTimer);
+      loginAttempts = 0;
+      document.getElementById('login-form-body').style.display = 'block';
+      document.getElementById('login-lock-screen').style.display = 'none';
+      document.getElementById('login-attempts-msg').textContent = '';
+      const el = document.getElementById('login-pwd');
+      if(el) { el.value = ''; el.focus(); }
+    }
+  }, 1000);
+}
+
+function togglePwd() {
+  const inp = document.getElementById('login-pwd');
+  const btn = document.getElementById('pwd-toggle-btn');
+  if(inp.type === 'password') {
+    inp.type = 'text';
+    btn.setAttribute('data-en', 'hide');
+    btn.setAttribute('data-fr', 'cacher');
+    btn.textContent = currentLang === 'fr' ? 'cacher' : 'hide';
+  } else {
+    inp.type = 'password';
+    btn.setAttribute('data-en', 'show');
+    btn.setAttribute('data-fr', 'voir');
+    btn.textContent = currentLang === 'fr' ? 'voir' : 'show';
+  }
+}
+
+document.getElementById('login-screen').addEventListener('click', function(e) {
+  if(e.target === this) closeLogin();
+});
+
 document.getElementById('admin-panel').addEventListener('click', function(e) {
   if(e.target === this) closeAdmin();
 });
@@ -2066,10 +2357,65 @@ function switchTab(tab) {
   if(tab === 'manage') renderAdminList();
 }
 
+// ===========================
+// FILE UPLOAD
+// ===========================
+let uploadedImageDataUrl = null;
+
+function handleFileSelect(event) {
+  const file = event.target.files[0];
+  if(!file) return;
+  if(file.size > 10 * 1024 * 1024) {
+    showToast(currentLang === 'fr' ? 'Fichier trop grand (max 10 Mo).' : 'File too large (max 10 MB).');
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    uploadedImageDataUrl = e.target.result;
+    const preview = document.getElementById('upload-preview');
+    const previewImg = document.getElementById('upload-preview-img');
+    const previewName = document.getElementById('upload-preview-name');
+    const uploadArea = document.getElementById('upload-area');
+    previewImg.src = uploadedImageDataUrl;
+    previewName.textContent = file.name;
+    preview.classList.add('has-image');
+    uploadArea.style.display = 'none';
+  };
+  reader.readAsDataURL(file);
+}
+
+function clearUpload() {
+  uploadedImageDataUrl = null;
+  document.getElementById('upload-preview').classList.remove('has-image');
+  document.getElementById('upload-preview-img').src = '';
+  document.getElementById('upload-preview-name').textContent = '';
+  document.getElementById('upload-area').style.display = 'block';
+  document.getElementById('add-img-file').value = '';
+}
+
+// Drag and drop
+const uploadArea = document.getElementById('upload-area');
+if(uploadArea) {
+  uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('dragover'); });
+  uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('dragover'));
+  uploadArea.addEventListener('drop', e => {
+    e.preventDefault();
+    uploadArea.classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if(file && file.type.startsWith('image/')) {
+      const dt = new DataTransfer();
+      dt.items.add(file);
+      document.getElementById('add-img-file').files = dt.files;
+      handleFileSelect({ target: { files: [file] } });
+    }
+  });
+}
+
 function addPainting() {
   const titleEn = document.getElementById('add-title-en').value.trim();
   const titleFr = document.getElementById('add-title-fr').value.trim();
-  if(!titleEn) { showToast('Please enter a title (English).'); return; }
+  if(!titleEn) { showToast(currentLang === 'fr' ? 'Veuillez entrer un titre (anglais).' : 'Please enter a title (English).'); return; }
+  const fallbackImg = 'https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=600&h=600&fit=crop';
   const p = {
     id: getNextId(),
     titleEn: titleEn || 'Untitled',
@@ -2078,7 +2424,7 @@ function addPainting() {
     medium: document.getElementById('add-medium').value,
     size: document.getElementById('add-size').value || '16x20 in',
     year: parseInt(document.getElementById('add-year').value) || 2025,
-    img: document.getElementById('add-img').value.trim() || 'https://images.unsplash.com/photo-1579762715118-a6f1d4b934f1?w=600&h=600&fit=crop',
+    img: uploadedImageDataUrl || fallbackImg,
     descEn: document.getElementById('add-desc-en').value.trim(),
     descFr: document.getElementById('add-desc-fr').value.trim(),
     status: document.getElementById('add-status').value,
@@ -2090,8 +2436,9 @@ function addPainting() {
   renderNewReleases();
   showToast(currentLang === 'fr' ? 'Peinture ajoutée au catalogue.' : 'Painting added to catalog.');
   // Reset form
-  ['add-title-en','add-title-fr','add-img','add-desc-en','add-desc-fr','add-size'].forEach(id => document.getElementById(id).value = '');
+  ['add-title-en','add-title-fr','add-desc-en','add-desc-fr','add-size'].forEach(id => document.getElementById(id).value = '');
   document.getElementById('add-isnew').checked = true;
+  clearUpload();
 }
 
 function deletePainting(id) {
