@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tracy Crane Service | Local Lifting Experts – Shawville, QC</title>
+<meta name="description" content="Tracy Crane Service – Your local and reliable lifting experts in Shawville, Quebec. Crane rentals, rigging, heavy lifting, and more serving the Pontiac region and Outaouais area."/>
+<meta name="keywords" content="crane service Shawville, crane rental Quebec, lifting experts Pontiac, heavy lift Outaouais, grue Shawville, service de grue Quebec, Tracy Crane"/>
+<meta name="geo.region" content="CA-QC"/>
+<meta name="geo.placename" content="Shawville, Quebec"/>
+<meta property="og:title" content="Tracy Crane Service | Shawville, QC"/>
+<meta property="og:description" content="Your local and reliable lifting experts. Serving Shawville, Pontiac, and the Outaouais region."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --black: #0a0a0a;
+  --steel: #1a1e24;
+  --steel-mid: #252b34;
+  --steel-light: #343d4a;
+  --accent: #e8a020;
+  --accent-dark: #b87a10;
+  --accent-light: #f0b840;
+  --white: #f5f0e8;
+  --off-white: #d8d0c0;
+  --gray: #8a8f96;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;}
+
+/* ── HEADER ─────────────────────────────────── */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:rgba(10,10,10,0.97);
+  border-bottom:3px solid var(--accent);
+  backdrop-filter:blur(10px);
+  transition:box-shadow 0.3s;
+}
+.header-inner{
+  max-width:1320px;margin:0 auto;padding:0 28px;
+  height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.logo{display:flex;align-items:center;gap:13px;text-decoration:none;flex-shrink:0;cursor:pointer;}
+.logo-icon{width:46px;height:46px;flex-shrink:0;}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.3rem;color:var(--white);text-transform:uppercase;letter-spacing:0.04em;}
+.logo-tagline{font-size:0.63rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;margin-top:3px;}
+nav{display:flex;align-items:center;gap:2px;}
+nav a{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.88rem;
+  text-transform:uppercase;letter-spacing:0.09em;color:var(--off-white);
+  text-decoration:none;padding:8px 12px;white-space:nowrap;
+  border-bottom:2px solid transparent;transition:color 0.2s,border-color 0.2s;cursor:pointer;
+}
+nav a:hover,nav a.active{color:var(--accent);border-bottom-color:var(--accent);}
+.lang-btn{
+  font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;
+  text-transform:uppercase;letter-spacing:0.1em;background:transparent;
+  border:2px solid var(--accent);color:var(--accent);padding:6px 16px;
+  cursor:pointer;transition:background 0.2s,color 0.2s;white-space:nowrap;margin-left:12px;
+}
+.lang-btn:hover{background:var(--accent);color:var(--black);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;}
+.hamburger span{display:block;width:26px;height:2px;background:var(--white);transition:all 0.3s ease;transform-origin:center;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.mobile-menu{display:none;flex-direction:column;background:var(--steel);border-top:1px solid var(--steel-light);padding:16px 28px 24px;gap:0;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{
+  font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.15rem;
+  text-transform:uppercase;letter-spacing:0.08em;color:var(--off-white);
+  text-decoration:none;padding:12px 0;border-bottom:1px solid var(--steel-light);
+  transition:color 0.2s;cursor:pointer;
+}
+.mobile-menu a:hover,mobile-menu a.active{color:var(--accent);}
+.mobile-lang{margin-top:14px;align-self:flex-start;}
+
+/* ── PAGE SYSTEM ─────────────────────────────── */
+.page{display:none;padding-top:72px;min-height:100vh;animation:pageFade 0.4s ease;}
+.page.active{display:block;}
+@keyframes pageFade{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SHARED COMPONENTS ───────────────────────── */
+.container{max-width:1320px;margin:0 auto;padding:0 28px;}
+.section-label{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.section-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(2.4rem,5vw,4rem);text-transform:uppercase;letter-spacing:-0.01em;line-height:0.93;color:var(--white);margin-bottom:22px;}
+.section-title span{color:var(--accent);}
+.section-body{font-size:1rem;color:var(--gray);font-weight:400;line-height:1.75;max-width:600px;}
+.btn-primary{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;background:var(--accent);color:var(--black);border:none;padding:14px 34px;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s,transform 0.15s;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,10px 100%,0 calc(100% - 10px));}
+.btn-primary:hover{background:var(--accent-light);transform:translateY(-2px);}
+.btn-outline{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.1em;background:transparent;color:var(--white);border:2px solid rgba(255,255,255,0.3);padding:14px 34px;cursor:pointer;text-decoration:none;display:inline-block;transition:border-color 0.2s,color 0.2s,transform 0.15s;}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
+.reveal-delay-4{transition-delay:0.4s;}
+
+/* ── PHOTO PLACEHOLDER ───────────────────────── */
+.photo-slot{background:var(--steel-mid);border:2px dashed var(--steel-light);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;overflow:hidden;position:relative;}
+.photo-slot svg{color:var(--steel-light);}
+.photo-slot .slot-label{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--steel-light);text-align:center;padding:0 12px;}
+.photo-slot img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* ── SECTION BG VARIANTS ─────────────────────── */
+.bg-steel{background:var(--steel);}
+.bg-black{background:var(--black);}
+.bg-steel-mid{background:var(--steel-mid);}
+.section-pad{padding:90px 0;}
+.section-pad-sm{padding:60px 0;}
+.section-grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;}
+.pos-rel{position:relative;}
+
+/* ─────────────────────────────────────────────
+   PAGE: HOME
+───────────────────────────────────────────── */
+
+/* HERO */
+.hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1fr 1fr;align-items:stretch;position:relative;overflow:hidden;}
+.hero-left{background:var(--steel);padding:80px 60px 80px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;}
+.hero-left::after{content:'';position:absolute;right:-40px;top:0;bottom:0;width:80px;background:var(--steel);clip-path:polygon(0 0,0 100%,100% 100%);z-index:3;}
+.hero-badge{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:18px;opacity:0;animation:fadeUp 0.7s 0.2s forwards;}
+.hero-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(3.8rem,7vw,6.5rem);line-height:0.9;text-transform:uppercase;color:var(--white);opacity:0;animation:fadeUp 0.7s 0.35s forwards;}
+.hero-title em{color:var(--accent);font-style:normal;display:block;}
+.hero-sub{font-size:1.05rem;color:var(--off-white);font-weight:300;line-height:1.7;margin-top:22px;max-width:420px;opacity:0;animation:fadeUp 0.7s 0.5s forwards;}
+.hero-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s 0.65s forwards;}
+.hero-stats{display:flex;gap:40px;margin-top:52px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.7s 0.8s forwards;}
+.stat-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.6rem;color:var(--accent);line-height:1;}
+.stat-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--gray);margin-top:4px;font-weight:600;}
+
+.hero-right{position:relative;overflow:hidden;}
+.hero-right .photo-slot{width:100%;height:100%;min-height:500px;border:none;}
+.hero-right .photo-slot svg{width:72px;height:72px;}
+
+.hero-accent-strip{position:absolute;bottom:0;left:0;right:0;height:5px;background:var(--accent);z-index:10;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+/* INTRO BAND */
+.intro-band{background:var(--accent);padding:28px 0;}
+.intro-band-inner{max-width:1320px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;}
+.intro-band-inner > div{padding:4px 28px;border-right:2px solid rgba(0,0,0,0.15);}
+.intro-band-inner > div:last-child{border-right:none;}
+.ib-label{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:rgba(0,0,0,0.55);}
+.ib-value{font-family:'Barlow Condensed',sans-serif;font-size:1.25rem;font-weight:900;color:var(--black);margin-top:2px;}
+
+/* FEATURED SERVICES on HOME */
+.home-services{padding:90px 0;background:var(--black);}
+.home-services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:52px;}
+.hs-card{background:var(--steel);padding:40px 32px;position:relative;overflow:hidden;transition:background 0.25s;}
+.hs-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);transition:width 0.3s ease;}
+.hs-card:hover{background:var(--steel-mid);}
+.hs-card:hover::before{width:4px;}
+.hs-icon{width:52px;height:52px;color:var(--accent);margin-bottom:22px;}
+.hs-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.4rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:10px;}
+.hs-desc{font-size:0.9rem;color:var(--gray);line-height:1.65;}
+.hs-link{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-top:18px;display:inline-block;cursor:pointer;transition:letter-spacing 0.2s;}
+.hs-link:hover{letter-spacing:0.2em;}
+
+/* HOME PHOTO SHOWCASE */
+.photo-showcase{padding:0;background:var(--steel);}
+.showcase-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:280px 280px;}
+.showcase-grid .photo-slot{border:none;border-radius:0;}
+.sg-1{grid-column:span 5;grid-row:span 2;}
+.sg-2{grid-column:span 4;}
+.sg-3{grid-column:span 3;}
+.sg-4{grid-column:span 3;}
+.sg-5{grid-column:span 4;}
+.sg-6{grid-column:span 5;}
+.showcase-grid .photo-slot svg{width:48px;height:48px;}
+
+/* WHY CHOOSE US */
+.why-section{padding:90px 0;background:var(--black);position:relative;overflow:hidden;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:52px;}
+.why-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:220px 220px;gap:6px;}
+.why-photos .photo-slot{border:none;}
+.why-photos .photo-slot:first-child{grid-column:span 2;}
+.why-photos .photo-slot svg{width:44px;height:44px;}
+.why-list{display:flex;flex-direction:column;gap:20px;}
+.why-item{display:flex;gap:18px;align-items:flex-start;}
+.why-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2rem;color:var(--accent);line-height:1;width:44px;flex-shrink:0;}
+.why-text h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;text-transform:uppercase;color:var(--white);margin-bottom:4px;}
+.why-text p{font-size:0.9rem;color:var(--gray);line-height:1.6;}
+
+/* TESTIMONIAL STRIP */
+.testimonial-strip{background:var(--steel-mid);border-top:3px solid var(--accent);border-bottom:3px solid var(--steel-light);padding:60px 0;}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.testi-card{background:var(--steel);padding:36px 32px;}
+.testi-quote{font-size:0.95rem;color:var(--off-white);line-height:1.7;font-style:italic;margin-bottom:20px;}
+.testi-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);}
+.testi-loc{font-size:0.78rem;color:var(--gray);margin-top:2px;}
+
+/* ─────────────────────────────────────────────
+   PAGE: SERVICES
+───────────────────────────────────────────── */
+.page-hero{padding:80px 0 60px;background:var(--steel);position:relative;overflow:hidden;border-bottom:3px solid var(--accent);}
+.page-hero .section-grid-bg{opacity:0.6;}
+.page-hero-inner{max-width:1320px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+.page-hero-inner .section-title{font-size:clamp(3rem,6vw,5rem);}
+
+.services-page-layout{padding:80px 0;background:var(--black);}
+.service-full-card{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:4px;overflow:hidden;}
+.service-full-card:nth-child(even){direction:rtl;}
+.service-full-card:nth-child(even) > *{direction:ltr;}
+.sfc-photo{position:relative;}
+.sfc-photo .photo-slot{width:100%;height:100%;min-height:340px;border:none;}
+.sfc-photo .photo-slot svg{width:56px;height:56px;}
+.sfc-content{background:var(--steel);padding:52px 48px;display:flex;flex-direction:column;justify-content:center;}
+.sfc-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:5rem;color:rgba(255,255,255,0.05);line-height:1;margin-bottom:-16px;}
+.sfc-name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:14px;}
+.sfc-desc{font-size:0.95rem;color:var(--gray);line-height:1.7;margin-bottom:20px;}
+.sfc-features{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.sfc-features li{display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--off-white);}
+.sfc-features li::before{content:'';width:6px;height:6px;background:var(--accent);flex-shrink:0;}
+
+/* ─────────────────────────────────────────────
+   PAGE: EQUIPMENT
+───────────────────────────────────────────── */
+.equipment-page{padding:80px 0;background:var(--black);}
+.equipment-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:80px;}
+.equip-intro-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:4px;}
+.equip-intro-photos .photo-slot{border:none;}
+.equip-intro-photos .photo-slot:first-child{grid-row:span 2;}
+.equip-intro-photos .photo-slot svg{width:40px;height:40px;}
+
+.equip-catalog-label{font-family:'Barlow Condensed',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;}
+.equip-section-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(1.8rem,3.5vw,2.8rem);text-transform:uppercase;color:var(--white);margin-bottom:32px;padding-bottom:16px;border-bottom:2px solid var(--steel-light);}
+
+.equip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.equip-card{background:var(--steel);overflow:hidden;transition:transform 0.2s;}
+.equip-card:hover{transform:translateY(-4px);}
+.equip-photo{position:relative;}
+.equip-photo .photo-slot{width:100%;height:220px;border:none;}
+.equip-photo .photo-slot svg{width:48px;height:48px;}
+.equip-tag{position:absolute;top:14px;left:14px;background:var(--accent);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;}
+.equip-info{padding:24px;}
+.equip-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.25rem;text-transform:uppercase;letter-spacing:0.04em;color:var(--white);margin-bottom:8px;}
+.equip-spec{font-size:0.85rem;color:var(--gray);line-height:1.6;margin-bottom:14px;}
+.equip-cta{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);cursor:pointer;transition:letter-spacing 0.2s;}
+.equip-cta:hover{letter-spacing:0.2em;}
+
+.equip-banner{margin:60px 0;background:var(--accent);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;}
+.equip-banner-photo .photo-slot{width:100%;height:260px;border:none;}
+.equip-banner-photo .photo-slot svg{width:52px;height:52px;}
+.equip-banner-text{padding:48px 48px;display:flex;flex-direction:column;justify-content:center;}
+.equip-banner-text h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:2.2rem;text-transform:uppercase;color:var(--black);line-height:0.95;margin-bottom:14px;}
+.equip-banner-text p{font-size:0.95rem;color:rgba(0,0,0,0.7);line-height:1.6;margin-bottom:24px;}
+.btn-dark{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.1em;background:var(--black);color:var(--white);border:none;padding:14px 32px;cursor:pointer;text-decoration:none;display:inline-block;transition:background 0.2s;}
+.btn-dark:hover{background:var(--steel);}
+
+/* ─────────────────────────────────────────────
+   PAGE: ABOUT
+───────────────────────────────────────────── */
+.about-page{padding:80px 0;background:var(--black);}
+.about-story-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;margin-bottom:80px;}
+.about-story-photos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:280px 180px;gap:5px;}
+.about-story-photos .photo-slot{border:none;}
+.about-story-photos .photo-slot:first-child{grid-column:span 2;}
+.about-story-photos .photo-slot svg{width:48px;height:48px;}
+.about-story-text .section-body{max-width:100%;}
+.about-story-text .section-body + .section-body{margin-top:16px;}
+.about-feature-list{margin-top:32px;display:flex;flex-direction:column;gap:16px;}
+.afl-item{display:flex;align-items:flex-start;gap:14px;}
+.afl-dot{width:8px;height:8px;background:var(--accent);flex-shrink:0;margin-top:7px;}
+.afl-text{font-size:0.95rem;color:var(--off-white);line-height:1.55;}
+
+.about-numbers{background:var(--steel);padding:60px 0;margin-bottom:80px;}
+.about-numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;}
+.an-cell{background:var(--steel-mid);padding:40px 32px;}
+.an-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:3.5rem;color:var(--accent);line-height:1;}
+.an-label{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--gray);margin-top:8px;font-weight:600;}
+
+.about-team-section{padding:0 0 80px;}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-top:48px;}
+.team-card{background:var(--steel);overflow:hidden;}
+.team-photo .photo-slot{width:100%;height:240px;border:none;}
+.team-photo .photo-slot svg{width:44px;height:44px;}
+.team-info{padding:20px 22px;}
+.team-name{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.1rem;text-transform:uppercase;color:var(--white);margin-bottom:4px;}
+.team-role{font-size:0.8rem;color:var(--accent);text-transform:uppercase;letter-spacing:0.1em;font-weight:600;}
+
+.about-wide-photo{width:100%;height:400px;}
+.about-wide-photo .photo-slot{width:100%;height:100%;border:none;}
+.about-wide-photo .photo-slot svg{width:64px;height:64px;}
+
+/* ─────────────────────────────────────────────
+   PAGE: GALLERY
+───────────────────────────────────────────── */
+.gallery-page{padding:80px 0;background:var(--black);}
+.gallery-filter{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px;margin-bottom:48px;}
+.filter-btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;background:var(--steel);color:var(--gray);border:none;padding:8px 20px;cursor:pointer;transition:background 0.2s,color 0.2s;}
+.filter-btn:hover,.filter-btn.active{background:var(--accent);color:var(--black);}
+.gallery-masonry{columns:3;column-gap:4px;}
+.gallery-brick{break-inside:avoid;margin-bottom:4px;overflow:hidden;position:relative;cursor:pointer;}
+.gallery-brick .photo-slot{border:none;width:100%;}
+.gallery-brick:nth-child(1) .photo-slot{height:360px;}
+.gallery-brick:nth-child(2) .photo-slot{height:240px;}
+.gallery-brick:nth-child(3) .photo-slot{height:300px;}
+.gallery-brick:nth-child(4) .photo-slot{height:220px;}
+.gallery-brick:nth-child(5) .photo-slot{height:340px;}
+.gallery-brick:nth-child(6) .photo-slot{height:260px;}
+.gallery-brick:nth-child(7) .photo-slot{height:200px;}
+.gallery-brick:nth-child(8) .photo-slot{height:320px;}
+.gallery-brick:nth-child(9) .photo-slot{height:280px;}
+.gallery-brick:nth-child(10) .photo-slot{height:240px;}
+.gallery-brick:nth-child(11) .photo-slot{height:300px;}
+.gallery-brick:nth-child(12) .photo-slot{height:360px;}
+.gallery-brick .photo-slot svg{width:40px;height:40px;}
+.gallery-overlay{position:absolute;inset:0;background:rgba(232,160,32,0.0);transition:background 0.3s;}
+.gallery-brick:hover .gallery-overlay{background:rgba(232,160,32,0.15);}
+
+.gallery-wide-banner{margin:60px 0 0;display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;}
+.gallery-wide-banner .photo-slot{height:220px;border:none;}
+.gallery-wide-banner .photo-slot svg{width:44px;height:44px;}
+
+/* ─────────────────────────────────────────────
+   PAGE: CONTACT
+───────────────────────────────────────────── */
+.contact-page{padding:80px 0;background:var(--black);}
+.contact-main-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:70px;margin-top:52px;}
+.contact-info-col{display:flex;flex-direction:column;gap:0;}
+.contact-item{display:flex;gap:18px;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--steel-light);}
+.contact-item:first-child{padding-top:0;}
+.ci-icon{width:48px;height:48px;background:var(--steel);border-left:3px solid var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.ci-icon svg{width:20px;height:20px;color:var(--accent);}
+.ci-label{font-family:'Barlow Condensed',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);margin-bottom:5px;}
+.ci-value{font-size:1rem;color:var(--white);font-weight:500;text-decoration:none;transition:color 0.2s;}
+a.ci-value:hover{color:var(--accent);}
+.contact-photo-strip{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:28px;}
+.contact-photo-strip .photo-slot{height:160px;border:none;}
+.contact-photo-strip .photo-slot svg{width:36px;height:36px;}
+.map-box{margin-top:24px;width:100%;height:220px;overflow:hidden;border:2px solid var(--steel-light);}
+.map-box iframe{width:100%;height:100%;border:none;filter:grayscale(50%);}
+.contact-form{background:var(--steel);padding:44px 40px;}
+.form-title{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1.8rem;text-transform:uppercase;color:var(--white);margin-bottom:28px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.form-group{display:flex;flex-direction:column;gap:7px;margin-bottom:16px;}
+.form-group label{font-family:'Barlow Condensed',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--gray);}
+.form-group input,.form-group textarea,.form-group select{background:var(--steel-mid);border:1px solid var(--steel-light);color:var(--white);font-family:'Barlow',sans-serif;font-size:0.95rem;padding:12px 14px;outline:none;width:100%;-webkit-appearance:none;transition:border-color 0.2s;}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--accent);}
+.form-group textarea{resize:vertical;min-height:120px;}
+.form-group select option{background:var(--steel-mid);}
+
+/* ── FOOTER ─────────────────────────────────── */
+footer{background:var(--black);border-top:2px solid var(--steel-light);padding:64px 0 32px;}
+.footer-inner{max-width:1320px;margin:0 auto;padding:0 28px;}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px;}
+.footer-brand p{font-size:0.9rem;color:var(--gray);line-height:1.7;margin-top:16px;max-width:340px;}
+.footer-col h4{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.22em;color:var(--accent);margin-bottom:18px;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:11px;}
+.footer-col ul li a{font-size:0.9rem;color:var(--gray);text-decoration:none;cursor:pointer;transition:color 0.2s;}
+.footer-col ul li a:hover{color:var(--white);}
+.footer-bottom{border-top:1px solid var(--steel-light);padding-top:26px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.footer-copy{font-size:0.8rem;color:var(--gray);}
+.footer-credit{font-size:0.8rem;color:var(--gray);}
+.footer-credit a{color:var(--accent);text-decoration:none;font-weight:600;transition:color 0.2s;}
+.footer-credit a:hover{color:var(--accent-light);}
+
+/* ── FLOAT CTA ───────────────────────────────── */
+.float-cta{position:fixed;bottom:28px;right:28px;background:var(--accent);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;padding:13px 22px;text-decoration:none;z-index:900;display:flex;align-items:center;gap:9px;box-shadow:0 4px 28px rgba(232,160,32,0.4);transition:background 0.2s,transform 0.2s;clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,8px 100%,0 calc(100% - 8px));}
+.float-cta:hover{background:var(--accent-light);transform:translateY(-2px);}
+
+/* ── RESPONSIVE ──────────────────────────────── */
+@media(max-width:1024px){
+  .hero{grid-template-columns:1fr;}
+  .hero-right{display:none;}
+  .hero-left{padding:70px 28px;}
+  .hero-left::after{display:none;}
+  .home-services-grid{grid-template-columns:1fr 1fr;}
+  .showcase-grid{grid-template-rows:200px 200px;}
+  .sg-1{grid-column:span 6;grid-row:span 2;}
+  .sg-2{grid-column:span 6;}
+  .sg-3{grid-column:span 6;}
+  .sg-4{grid-column:span 4;}
+  .sg-5{grid-column:span 4;}
+  .sg-6{grid-column:span 4;}
+  .why-grid{grid-template-columns:1fr;}
+  .testimonial-grid{grid-template-columns:1fr 1fr;}
+  .service-full-card{grid-template-columns:1fr;}
+  .service-full-card:nth-child(even){direction:ltr;}
+  .sfc-photo .photo-slot{min-height:260px;}
+  .equipment-intro-grid{grid-template-columns:1fr;}
+  .equip-grid{grid-template-columns:1fr 1fr;}
+  .equip-banner{grid-template-columns:1fr;}
+  .equip-banner-photo{display:none;}
+  .about-story-grid{grid-template-columns:1fr;}
+  .about-numbers-grid{grid-template-columns:repeat(2,1fr);}
+  .team-grid{grid-template-columns:repeat(2,1fr);}
+  .gallery-masonry{columns:2;}
+  .contact-main-grid{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr 1fr;gap:40px;}
+  .intro-band-inner{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  nav{display:none;}
+  .lang-btn{display:none;}
+  .hamburger{display:flex;}
+  .home-services-grid{grid-template-columns:1fr;}
+  .showcase-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;}
+  .sg-1{grid-column:span 2;min-height:220px;}
+  .sg-2,.sg-3,.sg-4,.sg-5,.sg-6{grid-column:span 1;min-height:160px;}
+  .why-photos{grid-template-columns:1fr;grid-template-rows:180px 140px 140px;}
+  .why-photos .photo-slot:first-child{grid-column:span 1;}
+  .testimonial-grid{grid-template-columns:1fr;}
+  .equip-grid{grid-template-columns:1fr;}
+  .gallery-masonry{columns:1;}
+  .gallery-wide-banner{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr 1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .footer-top{grid-template-columns:1fr;}
+  .contact-photo-strip{grid-template-columns:1fr;}
+  .about-numbers-grid{grid-template-columns:1fr 1fr;}
+  .float-cta{bottom:18px;right:18px;}
+  .intro-band{display:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════ -->
+<header id="mainHeader">
+  <div class="header-inner">
+    <div class="logo" onclick="showPage('home')">
+      <svg class="logo-icon" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="46" height="46" fill="#e8a020"/>
+        <rect x="7" y="33" width="4" height="9" fill="#0a0a0a"/>
+        <rect x="35" y="33" width="4" height="9" fill="#0a0a0a"/>
+        <rect x="7" y="28" width="32" height="6" fill="#0a0a0a"/>
+        <rect x="9" y="8" width="5" height="22" fill="#0a0a0a"/>
+        <rect x="9" y="8" width="22" height="5" fill="#0a0a0a"/>
+        <rect x="29" y="8" width="5" height="14" fill="#0a0a0a"/>
+        <line x1="11" y1="13" x2="31" y2="22" stroke="#0a0a0a" stroke-width="2"/>
+        <rect x="29" y="21" width="4" height="7" fill="#0a0a0a"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-name" data-en="Tracy Crane Service" data-fr="Service de Grue Tracy">Tracy Crane Service</span>
+        <span class="logo-tagline" data-en="Lifting Experts — Shawville, QC" data-fr="Experts en Levage — Shawville, QC">Lifting Experts — Shawville, QC</span>
+      </div>
+    </div>
+    <nav>
+      <a onclick="showPage('home')" data-page="home" class="active" data-en="Home" data-fr="Accueil">Home</a>
+      <a onclick="showPage('services')" data-page="services" data-en="Services" data-fr="Services">Services</a>
+      <a onclick="showPage('equipment')" data-page="equipment" data-en="Equipment" data-fr="Équipement">Equipment</a>
+      <a onclick="showPage('about')" data-page="about" data-en="About" data-fr="À Propos">About</a>
+      <a onclick="showPage('gallery')" data-page="gallery" data-en="Gallery" data-fr="Galerie">Gallery</a>
+      <a onclick="showPage('contact')" data-page="contact" data-en="Contact" data-fr="Contact">Contact</a>
+      <button class="lang-btn" id="langToggle" onclick="toggleLang()">FR</button>
+    </nav>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a onclick="showPage('home');closeMenu();" data-en="Home" data-fr="Accueil">Home</a>
+    <a onclick="showPage('services');closeMenu();" data-en="Services" data-fr="Services">Services</a>
+    <a onclick="showPage('equipment');closeMenu();" data-en="Equipment" data-fr="Équipement">Equipment</a>
+    <a onclick="showPage('about');closeMenu();" data-en="About" data-fr="À Propos">About</a>
+    <a onclick="showPage('gallery');closeMenu();" data-en="Gallery" data-fr="Galerie">Gallery</a>
+    <a onclick="showPage('contact');closeMenu();" data-en="Contact" data-fr="Contact">Contact</a>
+    <button class="lang-btn mobile-lang" onclick="toggleLang();closeMenu();" id="mobileLangToggle">FR</button>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: HOME
+════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-left">
+      <p class="hero-badge" data-en="Shawville, QC — Pontiac Region — Outaouais" data-fr="Shawville, QC — Région du Pontiac — Outaouais">Shawville, QC — Pontiac Region — Outaouais</p>
+      <h1 class="hero-title">
+        <span data-en="Your Local" data-fr="Vos Experts">Your Local</span>
+        <em data-en="Lifting" data-fr="En">Lifting</em>
+        <span data-en="Experts" data-fr="Levage">Experts</span>
+      </h1>
+      <p class="hero-sub" data-en="Tracy Crane Service delivers dependable, precision lifting solutions across the Pontiac and Outaouais region. When it needs to go up — we get it done right." data-fr="Tracy Crane Service offre des solutions de levage fiables et précises dans la région du Pontiac et de l'Outaouais. Quand ça doit monter — on le fait bien.">Tracy Crane Service delivers dependable, precision lifting solutions across the Pontiac and Outaouais region. When it needs to go up — we get it done right.</p>
+      <div class="hero-actions">
+        <span class="btn-primary" onclick="showPage('contact')" data-en="Request a Quote" data-fr="Demander un Devis">Request a Quote</span>
+        <span class="btn-outline" onclick="showPage('services')" data-en="Our Services" data-fr="Nos Services">Our Services</span>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">20+</div><div class="stat-label" data-en="Years Local" data-fr="Ans Locaux">Years Local</div></div>
+        <div><div class="stat-num">24/7</div><div class="stat-label" data-en="Available" data-fr="Disponible">Available</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label" data-en="Insured" data-fr="Assuré">Insured</div></div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="photo-slot">
+        <svg width="72" height="72" viewBox="0 0 72 72" fill="none"><rect x="10" y="56" width="52" height="8" fill="currentColor" opacity=".3"/><rect x="14" y="14" width="8" height="44" fill="currentColor" opacity=".5"/><rect x="14" y="14" width="36" height="8" fill="currentColor" opacity=".5"/><rect x="46" y="14" width="8" height="22" fill="currentColor" opacity=".35"/><line x1="18" y1="22" x2="50" y2="38" stroke="currentColor" stroke-width="3" opacity=".4"/><rect x="46" y="35" width="8" height="12" fill="currentColor" opacity=".5"/></svg>
+        <span class="slot-label" data-en="Hero / job site photo" data-fr="Photo principale / chantier">Hero / job site photo</span>
+      </div>
+    </div>
+    <div class="hero-accent-strip"></div>
+  </div>
+
+  <!-- INTRO BAND -->
+  <div class="intro-band">
+    <div class="intro-band-inner">
+      <div>
+        <div class="ib-label" data-en="Phone" data-fr="Téléphone">Phone</div>
+        <div class="ib-value">(819) 593-7975</div>
+      </div>
+      <div>
+        <div class="ib-label" data-en="Location" data-fr="Adresse">Location</div>
+        <div class="ib-value">HWY 148, Shawville, QC</div>
+      </div>
+      <div>
+        <div class="ib-label" data-en="Email" data-fr="Courriel">Email</div>
+        <div class="ib-value">Tracycraneservice@gmail.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED SERVICES -->
+  <section class="home-services">
+    <div class="container">
+      <p class="section-label reveal" data-en="What We Do" data-fr="Ce Que Nous Faisons">What We Do</p>
+      <h2 class="section-title reveal reveal-delay-1" data-en="Core Services" data-fr="Services Principaux">Core <span data-en="Services" data-fr="Services">Services</span></h2>
+      <div class="home-services-grid">
+        <div class="hs-card reveal">
+          <svg class="hs-icon" viewBox="0 0 52 52" fill="none"><rect x="8" y="40" width="36" height="8" fill="currentColor" opacity=".3"/><rect x="12" y="12" width="6" height="30" fill="currentColor"/><rect x="12" y="12" width="26" height="6" fill="currentColor"/><rect x="36" y="12" width="6" height="18" fill="currentColor" opacity=".6"/><line x1="15" y1="18" x2="39" y2="32" stroke="currentColor" stroke-width="2"/><rect x="37" y="31" width="4" height="8" fill="currentColor" opacity=".7"/></svg>
+          <p class="hs-name" data-en="Mobile Crane Rental" data-fr="Location de Grue Mobile">Mobile Crane Rental</p>
+          <p class="hs-desc" data-en="Flexible crane solutions for any project size. Our maintained fleet delivers safe, reliable performance on every lift." data-fr="Solutions de grue flexibles pour tout projet. Notre flotte entretenue assure performance et sécurité à chaque levage.">Flexible crane solutions for any project size. Our maintained fleet delivers safe, reliable performance on every lift.</p>
+          <span class="hs-link" onclick="showPage('services')" data-en="Learn More" data-fr="En Savoir Plus">Learn More</span>
+        </div>
+        <div class="hs-card reveal reveal-delay-1">
+          <svg class="hs-icon" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="20" r="10" stroke="currentColor" stroke-width="3" fill="none"/><rect x="22" y="30" width="8" height="16" fill="currentColor" opacity=".5"/><rect x="14" y="44" width="24" height="4" fill="currentColor" opacity=".3"/><rect x="22" y="17" width="8" height="7" fill="currentColor"/><line x1="26" y1="10" x2="26" y2="12" stroke="currentColor" stroke-width="2.5"/></svg>
+          <p class="hs-name" data-en="Rigging &amp; Hoisting" data-fr="Gréage et Levage">Rigging &amp; Hoisting</p>
+          <p class="hs-desc" data-en="Expert rigging for heavy, oversized, and delicate loads. Every lift is planned, secured, and executed with precision." data-fr="Gréage expert pour charges lourdes et délicates. Chaque levage est planifié, sécurisé et exécuté avec précision.">Expert rigging for heavy, oversized, and delicate loads. Every lift is planned, secured, and executed with precision.</p>
+          <span class="hs-link" onclick="showPage('services')" data-en="Learn More" data-fr="En Savoir Plus">Learn More</span>
+        </div>
+        <div class="hs-card reveal reveal-delay-2">
+          <svg class="hs-icon" viewBox="0 0 52 52" fill="none"><rect x="4" y="30" width="44" height="11" rx="2" fill="currentColor" opacity=".3"/><rect x="4" y="22" width="32" height="10" fill="currentColor" opacity=".5"/><rect x="6" y="14" width="22" height="10" fill="currentColor"/><circle cx="14" cy="43" r="5" fill="currentColor" opacity=".5"/><circle cx="38" cy="43" r="5" fill="currentColor" opacity=".5"/><rect x="36" y="23" width="12" height="9" fill="currentColor" opacity=".4"/></svg>
+          <p class="hs-name" data-en="Heavy Equipment Transport" data-fr="Transport d'Équipement Lourd">Heavy Equipment Transport</p>
+          <p class="hs-desc" data-en="Safe and efficient transportation of heavy machinery and oversized loads throughout the region by experienced operators." data-fr="Transport sécuritaire de machinerie lourde et de charges surdimensionnées dans toute la région.">Safe and efficient transportation of heavy machinery and oversized loads throughout the region by experienced operators.</p>
+          <span class="hs-link" onclick="showPage('services')" data-en="Learn More" data-fr="En Savoir Plus">Learn More</span>
+        </div>
+        <div class="hs-card reveal reveal-delay-3">
+          <svg class="hs-icon" viewBox="0 0 52 52" fill="none"><rect x="8" y="8" width="36" height="36" rx="1" stroke="currentColor" stroke-width="3" fill="none"/><line x1="8" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="2"/><line x1="22" y1="20" x2="22" y2="44" stroke="currentColor" stroke-width="2"/><rect x="26" y="24" width="12" height="16" fill="currentColor" opacity=".4"/><rect x="11" y="24" width="8" height="8" fill="currentColor" opacity=".4"/></svg>
+          <p class="hs-name" data-en="Construction Lifting" data-fr="Levage de Construction">Construction Lifting</p>
+          <p class="hs-desc" data-en="From steel erection to concrete placement, our operators work seamlessly with construction crews to keep projects on schedule." data-fr="De l'érection d'acier à la mise en place de béton, nos opérateurs collaborent avec les équipes de construction.">From steel erection to concrete placement, our operators work seamlessly with construction crews to keep projects on schedule.</p>
+          <span class="hs-link" onclick="showPage('services')" data-en="Learn More" data-fr="En Savoir Plus">Learn More</span>
+        </div>
+        <div class="hs-card reveal">
+          <svg class="hs-icon" viewBox="0 0 52 52" fill="none"><path d="M12 40 L26 14 L40 40 Z" stroke="currentColor" stroke-width="3" fill="none"/><line x1="26" y1="24" x2="26" y2="34" stroke="currentColor" stroke-width="2.5"/><circle cx="26" cy="37" r="2.5" fill="currentColor"/><line x1="16" y1="40" x2="36" y2="40" stroke="currentColor" stroke-width="2.5"/></svg>
+          <p class="hs-name" data-en="Emergency Lifts" data-fr="Levages d'Urgence">Emergency Lifts</p>
+          <p class="hs-desc" data-en="When the unexpected happens, we're ready. Quick response to emergency crane and lifting needs throughout Pontiac County." data-fr="Quand l'inattendu arrive, nous sommes prêts. Réponse rapide aux besoins d'urgence dans tout le comté de Pontiac.">When the unexpected happens, we're ready. Quick response to emergency crane and lifting needs throughout Pontiac County.</p>
+          <span class="hs-link" onclick="showPage('services')" data-en="Learn More" data-fr="En Savoir Plus">Learn More</span>
+        </div>
+        <div class="hs-card reveal reveal-delay-1">
+          <svg class="hs-icon" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="18" stroke="currentColor" stroke-width="3" fill="none"/><path d="M26 14 L29 23 L38 23 L31 29 L34 38 L26 32 L18 38 L21 29 L14 23 L23 23 Z" fill="currentColor" opacity=".7"/></svg>
+          <p class="hs-name" data-en="Lift Planning &amp; Consulting" data-fr="Planification de Levage">Lift Planning &amp; Consulting</p>
+          <p class="hs-desc" data-en="Complex projects require careful planning. Site assessments, lift studies, and full consulting to ensure every project succeeds." data-fr="Les projets complexes exigent une planification rigoureuse. Évaluation de site et consultation complète pour chaque projet.">Complex projects require careful planning. Site assessments, lift studies, and full consulting to ensure every project succeeds.</p>
+          <span class="hs-link" onclick="showPage('services')" data-en="Learn More" data-fr="En Savoir Plus">Learn More</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO SHOWCASE GRID -->
+  <div class="photo-showcase">
+    <div class="showcase-grid">
+      <div class="photo-slot sg-1">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="8" y="46" width="40" height="6" fill="currentColor" opacity=".3"/><rect x="12" y="12" width="7" height="36" fill="currentColor" opacity=".5"/><rect x="12" y="12" width="28" height="7" fill="currentColor" opacity=".5"/><rect x="38" y="12" width="7" height="22" fill="currentColor" opacity=".35"/><line x1="15" y1="19" x2="41" y2="34" stroke="currentColor" stroke-width="3" opacity=".4"/></svg>
+        <span class="slot-label" data-en="Large feature photo" data-fr="Grande photo principale">Large feature photo</span>
+      </div>
+      <div class="photo-slot sg-2">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="4" y="32" width="36" height="8" fill="currentColor" opacity=".3"/><rect x="6" y="18" width="28" height="16" fill="currentColor" opacity=".4"/><rect x="8" y="10" width="18" height="10" fill="currentColor" opacity=".5"/><circle cx="12" cy="42" r="4" fill="currentColor" opacity=".4"/><circle cx="34" cy="42" r="4" fill="currentColor" opacity=".4"/></svg>
+        <span class="slot-label" data-en="Equipment photo" data-fr="Photo d'équipement">Equipment photo</span>
+      </div>
+      <div class="photo-slot sg-3">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="6" y="30" width="32" height="10" fill="currentColor" opacity=".3"/><rect x="10" y="12" width="24" height="20" fill="currentColor" opacity=".2"/><rect x="14" y="6" width="16" height="12" fill="currentColor" opacity=".4"/></svg>
+        <span class="slot-label" data-en="Job site photo" data-fr="Photo de chantier">Job site photo</span>
+      </div>
+      <div class="photo-slot sg-4">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="20" r="12" stroke="currentColor" stroke-width="3" fill="none" opacity=".4"/><rect x="19" y="32" width="6" height="10" fill="currentColor" opacity=".3"/></svg>
+        <span class="slot-label" data-en="Rigging photo" data-fr="Photo de gréage">Rigging photo</span>
+      </div>
+      <div class="photo-slot sg-5">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="4" y="22" width="36" height="16" fill="currentColor" opacity=".3"/><rect x="6" y="12" width="24" height="12" fill="currentColor" opacity=".5"/><rect x="8" y="6" width="16" height="8" fill="currentColor" opacity=".6"/></svg>
+        <span class="slot-label" data-en="Team / crew photo" data-fr="Photo d'équipe">Team / crew photo</span>
+      </div>
+      <div class="photo-slot sg-6">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><path d="M6 38 L22 8 L38 38 Z" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><line x1="22" y1="20" x2="22" y2="30" stroke="currentColor" stroke-width="2" opacity=".5"/></svg>
+        <span class="slot-label" data-en="Aerial / wide shot" data-fr="Vue aérienne / large">Aerial / wide shot</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-photos reveal">
+          <div class="photo-slot">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><rect x="6" y="42" width="40" height="6" fill="currentColor" opacity=".3"/><rect x="10" y="10" width="7" height="34" fill="currentColor" opacity=".5"/><rect x="10" y="10" width="28" height="7" fill="currentColor" opacity=".5"/><rect x="36" y="10" width="7" height="20" fill="currentColor" opacity=".35"/><line x1="13" y1="17" x2="39" y2="30" stroke="currentColor" stroke-width="2" opacity=".4"/></svg>
+            <span class="slot-label" data-en="Wide action photo" data-fr="Photo d'action large">Wide action photo</span>
+          </div>
+          <div class="photo-slot">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="28" width="32" height="8" fill="currentColor" opacity=".3"/><rect x="6" y="14" width="28" height="16" fill="currentColor" opacity=".4"/></svg>
+            <span class="slot-label" data-en="Detail / close-up" data-fr="Détail / gros plan">Detail / close-up</span>
+          </div>
+          <div class="photo-slot">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><rect x="17" y="28" width="6" height="10" fill="currentColor" opacity=".3"/></svg>
+            <span class="slot-label" data-en="Team / operator photo" data-fr="Photo d'opérateur">Team / operator photo</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="section-label" data-en="Why Choose Us" data-fr="Pourquoi Nous Choisir">Why Choose Us</p>
+          <h2 class="section-title"><span data-en="Local Trust." data-fr="Confiance Locale.">Local Trust.</span><br><span data-en="Professional" data-fr="Standards">Professional</span> <span data-en="Standards." data-fr="Professionnels.">Standards.</span></h2>
+          <div class="why-list">
+            <div class="why-item"><div class="why-num">01</div><div class="why-text"><h4 data-en="Fully Licensed &amp; Insured" data-fr="Licenciés et Assurés">Fully Licensed &amp; Insured</h4><p data-en="All operators hold current certifications. Every job site is fully covered — protecting you and your project." data-fr="Tous les opérateurs détiennent leurs certifications. Chaque chantier est entièrement couvert.">All operators hold current certifications. Every job site is fully covered — protecting you and your project.</p></div></div>
+            <div class="why-item"><div class="why-num">02</div><div class="why-text"><h4 data-en="Well-Maintained Fleet" data-fr="Flotte Bien Entretenue">Well-Maintained Fleet</h4><p data-en="Our equipment is regularly inspected and serviced to the highest safety standards. No surprises on your job site." data-fr="Notre équipement est régulièrement inspecté selon les normes de sécurité les plus élevées.">Our equipment is regularly inspected and serviced to the highest safety standards. No surprises on your job site.</p></div></div>
+            <div class="why-item"><div class="why-num">03</div><div class="why-text"><h4 data-en="Bilingual Team" data-fr="Équipe Bilingue">Bilingual Team</h4><p data-en="Serving both English and French-speaking clients across Quebec with equal care and professionalism." data-fr="Desservant les clients anglophones et francophones à travers le Québec avec le même souci du professionnel.">Serving both English and French-speaking clients across Quebec with equal care and professionalism.</p></div></div>
+            <div class="why-item"><div class="why-num">04</div><div class="why-text"><h4 data-en="On-Time, Every Time" data-fr="Toujours à Temps">On-Time, Every Time</h4><p data-en="We show up when we say we will, prepared and ready. Your schedule matters to us." data-fr="Nous arrivons quand nous le disons, préparés et prêts. Votre horaire compte pour nous.">We show up when we say we will, prepared and ready. Your schedule matters to us.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonial-strip">
+    <div class="container">
+      <p class="section-label" data-en="What Clients Say" data-fr="Ce Que Disent les Clients">What Clients Say</p>
+      <div class="testimonial-grid" style="margin-top:36px;">
+        <div class="testi-card reveal">
+          <p class="testi-quote" data-en="Tracy Crane showed up on time, handled a very tricky residential lift, and left the property exactly as they found it. Couldn't ask for better service." data-fr="Tracy Crane est arrivé à l'heure, a géré un levage résidentiel très délicat et a laissé la propriété telle qu'ils l'ont trouvée. Impossible de demander mieux.">"Tracy Crane showed up on time, handled a very tricky residential lift, and left the property exactly as they found it. Couldn't ask for better service."</p>
+          <p class="testi-name">Robert M.</p>
+          <p class="testi-loc">Shawville, QC</p>
+        </div>
+        <div class="testi-card reveal reveal-delay-1">
+          <p class="testi-quote" data-en="We've used Tracy for several commercial projects in the Pontiac area. Professional, skilled, and always safe. Our go-to crane company." data-fr="Nous avons utilisé Tracy pour plusieurs projets commerciaux dans la région du Pontiac. Professionnel, qualifié et toujours sécuritaire. Notre compagnie de grue de référence.">"We've used Tracy for several commercial projects in the Pontiac area. Professional, skilled, and always safe. Our go-to crane company."</p>
+          <p class="testi-name">Diane L.</p>
+          <p class="testi-loc" data-en="General Contractor, Pontiac County" data-fr="Entrepreneur Général, Comté de Pontiac">General Contractor, Pontiac County</p>
+        </div>
+        <div class="testi-card reveal reveal-delay-2">
+          <p class="testi-quote" data-en="Called them for an emergency lift on a Saturday. They were there within hours. That kind of reliability is hard to find — especially locally." data-fr="Je les ai appelés pour un levage d'urgence un samedi. Ils étaient là en quelques heures. Ce genre de fiabilité est rare — surtout localement.">"Called them for an emergency lift on a Saturday. They were there within hours. That kind of reliability is hard to find — especially locally."</p>
+          <p class="testi-name">Marc T.</p>
+          <p class="testi-loc" data-en="Farm Owner, Clarendon, QC" data-fr="Propriétaire agricole, Clarendon, QC">Farm Owner, Clarendon, QC</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+<!-- ═══════════════════════════════════════════
+     PAGE: SERVICES
+════════════════════════════════════════════ -->
+<div class="page" id="page-services">
+  <div class="page-hero">
+    <div class="section-grid-bg"></div>
+    <div class="page-hero-inner">
+      <p class="section-label" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</p>
+      <h1 class="section-title"><span data-en="Our" data-fr="Nos">Our</span> <span data-en="Services" data-fr="Services">Services</span></h1>
+      <p class="section-body" data-en="From small residential lifts to large-scale industrial projects, Tracy Crane Service has the expertise and equipment to handle any job safely and on time across the Pontiac and Outaouais region." data-fr="Des petits travaux résidentiels aux projets industriels de grande envergure, Tracy Crane Service possède l'expertise et l'équipement pour réaliser chaque travail en toute sécurité.">From small residential lifts to large-scale industrial projects, Tracy Crane Service has the expertise and equipment to handle any job safely and on time across the Pontiac and Outaouais region.</p>
+    </div>
+  </div>
+
+  <div class="services-page-layout">
+    <div class="container">
+
+      <div class="service-full-card reveal">
+        <div class="sfc-photo">
+          <div class="photo-slot">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="8" y="46" width="40" height="6" fill="currentColor" opacity=".3"/><rect x="12" y="12" width="7" height="36" fill="currentColor" opacity=".5"/><rect x="12" y="12" width="28" height="7" fill="currentColor" opacity=".5"/><rect x="38" y="12" width="7" height="22" fill="currentColor" opacity=".35"/><line x1="15" y1="19" x2="41" y2="34" stroke="currentColor" stroke-width="3" opacity=".4"/></svg>
+            <span class="slot-label" data-en="Mobile crane in action" data-fr="Grue mobile en action">Mobile crane in action</span>
+          </div>
+        </div>
+        <div class="sfc-content">
+          <div class="sfc-num">01</div>
+          <p class="sfc-name" data-en="Mobile Crane Rental" data-fr="Location de Grue Mobile">Mobile Crane Rental</p>
+          <p class="sfc-desc" data-en="Our modern mobile crane fleet is available for rental with or without a certified operator. We match the right equipment to your project requirements, whether it's a small residential placement or a major industrial lift." data-fr="Notre flotte de grues mobiles modernes est disponible en location avec ou sans opérateur certifié. Nous associons l'équipement adéquat aux exigences de votre projet.">Our modern mobile crane fleet is available for rental with or without a certified operator. We match the right equipment to your project requirements, whether it's a small residential placement or a major industrial lift.</p>
+          <ul class="sfc-features">
+            <li data-en="Certified operators available" data-fr="Opérateurs certifiés disponibles">Certified operators available</li>
+            <li data-en="Various tonnage capacities" data-fr="Diverses capacités de tonnage">Various tonnage capacities</li>
+            <li data-en="All-terrain and rough terrain options" data-fr="Options tout-terrain et terrain accidenté">All-terrain and rough terrain options</li>
+            <li data-en="Daily, weekly, and project rates" data-fr="Tarifs journaliers, hebdomadaires et par projet">Daily, weekly, and project rates</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-full-card reveal">
+        <div class="sfc-photo">
+          <div class="photo-slot">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="22" r="12" stroke="currentColor" stroke-width="3" fill="none" opacity=".5"/><rect x="24" y="34" width="8" height="18" fill="currentColor" opacity=".3"/><rect x="18" y="48" width="20" height="4" fill="currentColor" opacity=".25"/><rect x="24" y="19" width="8" height="7" fill="currentColor"/></svg>
+            <span class="slot-label" data-en="Rigging / hoisting photo" data-fr="Photo de gréage / levage">Rigging / hoisting photo</span>
+          </div>
+        </div>
+        <div class="sfc-content">
+          <div class="sfc-num">02</div>
+          <p class="sfc-name" data-en="Rigging &amp; Hoisting" data-fr="Gréage et Levage">Rigging &amp; Hoisting</p>
+          <p class="sfc-desc" data-en="Precision rigging for any load type. Our rigging specialists plan each lift carefully, accounting for load weight, centre of gravity, site conditions, and safety clearances to execute a smooth, controlled hoist every time." data-fr="Gréage de précision pour tout type de charge. Nos spécialistes planifient chaque levage soigneusement, en tenant compte du poids, du centre de gravité et des conditions du chantier.">Precision rigging for any load type. Our rigging specialists plan each lift carefully, accounting for load weight, centre of gravity, site conditions, and safety clearances to execute a smooth, controlled hoist every time.</p>
+          <ul class="sfc-features">
+            <li data-en="Heavy and oversized load specialists" data-fr="Spécialistes des charges lourdes et surdimensionnées">Heavy and oversized load specialists</li>
+            <li data-en="Custom rigging design" data-fr="Conception de gréage personnalisé">Custom rigging design</li>
+            <li data-en="Spreader bars and lifting frames" data-fr="Barres d'écartement et cadres de levage">Spreader bars and lifting frames</li>
+            <li data-en="Safety-first methodology" data-fr="Méthodologie axée sur la sécurité">Safety-first methodology</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-full-card reveal">
+        <div class="sfc-photo">
+          <div class="photo-slot">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="4" y="36" width="48" height="12" rx="2" fill="currentColor" opacity=".3"/><rect x="6" y="24" width="36" height="14" fill="currentColor" opacity=".4"/><rect x="8" y="15" width="24" height="11" fill="currentColor" opacity=".6"/><circle cx="16" cy="50" r="5" fill="currentColor" opacity=".5"/><circle cx="42" cy="50" r="5" fill="currentColor" opacity=".5"/></svg>
+            <span class="slot-label" data-en="Heavy transport photo" data-fr="Photo de transport lourd">Heavy transport photo</span>
+          </div>
+        </div>
+        <div class="sfc-content">
+          <div class="sfc-num">03</div>
+          <p class="sfc-name" data-en="Heavy Equipment Transport" data-fr="Transport d'Équipement Lourd">Heavy Equipment Transport</p>
+          <p class="sfc-desc" data-en="We move heavy and oversized equipment across the region efficiently and safely. Our transport services include permit handling, route planning, and experienced flagging — so your equipment arrives on time and undamaged." data-fr="Nous déplaçons l'équipement lourd et surdimensionné dans toute la région efficacement et en toute sécurité. Nos services incluent la gestion des permis et la planification d'itinéraire.">We move heavy and oversized equipment across the region efficiently and safely. Our transport services include permit handling, route planning, and experienced flagging — so your equipment arrives on time and undamaged.</p>
+          <ul class="sfc-features">
+            <li data-en="Excavators, bulldozers, machinery" data-fr="Excavatrices, bouteurs, machinerie">Excavators, bulldozers, machinery</li>
+            <li data-en="Oversized load permits" data-fr="Permis de charges surdimensionnées">Oversized load permits</li>
+            <li data-en="Route surveys available" data-fr="Levés d'itinéraire disponibles">Route surveys available</li>
+            <li data-en="Serving Pontiac and Outaouais" data-fr="Desservant Pontiac et Outaouais">Serving Pontiac and Outaouais</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-full-card reveal">
+        <div class="sfc-photo">
+          <div class="photo-slot">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="8" y="8" width="40" height="40" rx="1" stroke="currentColor" stroke-width="3" fill="none" opacity=".4"/><line x1="8" y1="22" x2="48" y2="22" stroke="currentColor" stroke-width="2"/><line x1="24" y1="22" x2="24" y2="48" stroke="currentColor" stroke-width="2"/><rect x="28" y="26" width="14" height="18" fill="currentColor" opacity=".4"/><rect x="11" y="26" width="9" height="9" fill="currentColor" opacity=".4"/></svg>
+            <span class="slot-label" data-en="Construction site photo" data-fr="Photo de chantier construction">Construction site photo</span>
+          </div>
+        </div>
+        <div class="sfc-content">
+          <div class="sfc-num">04</div>
+          <p class="sfc-name" data-en="Construction Lifting" data-fr="Levage de Construction">Construction Lifting</p>
+          <p class="sfc-desc" data-en="Crane support for construction projects of all scales. Steel erection, concrete placement, mechanical equipment installation, and precast lifts — our operators integrate with your crew and keep the schedule moving." data-fr="Soutien de grue pour des projets de construction de toutes envergures. Érection d'acier, mise en place de béton, installation d'équipements mécaniques — nos opérateurs s'intègrent à votre équipe.">Crane support for construction projects of all scales. Steel erection, concrete placement, mechanical equipment installation, and precast lifts — our operators integrate with your crew and keep the schedule moving.</p>
+          <ul class="sfc-features">
+            <li data-en="Steel and structural erection" data-fr="Érection d'acier et structurale">Steel and structural erection</li>
+            <li data-en="Precast and tilt-up panel lifts" data-fr="Levages de préfabriqués et panneaux basculants">Precast and tilt-up panel lifts</li>
+            <li data-en="Mechanical equipment placement" data-fr="Mise en place d'équipements mécaniques">Mechanical equipment placement</li>
+            <li data-en="ICI and residential construction" data-fr="Construction ICI et résidentielle">ICI and residential construction</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-full-card reveal">
+        <div class="sfc-photo">
+          <div class="photo-slot">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="6" y="24" width="44" height="28" rx="2" stroke="currentColor" stroke-width="3" fill="none" opacity=".4"/><rect x="18" y="34" width="20" height="14" fill="currentColor" opacity=".3"/><path d="M16 24 V16 Q16 8 28 8 Q40 8 40 16 V24" stroke="currentColor" stroke-width="3" fill="none"/><circle cx="28" cy="40" r="4" fill="currentColor" opacity=".6"/></svg>
+            <span class="slot-label" data-en="Residential lift photo" data-fr="Photo de levage résidentiel">Residential lift photo</span>
+          </div>
+        </div>
+        <div class="sfc-content">
+          <div class="sfc-num">05</div>
+          <p class="sfc-name" data-en="Residential Lifts" data-fr="Levages Résidentiels">Residential Lifts</p>
+          <p class="sfc-desc" data-en="Rooftop HVAC units, modular home placement, garage packages, timber frames, hot tubs — if it needs to be lifted at your home, we handle it carefully. We respect your property and work efficiently to minimize disruption." data-fr="Unités CVAC, maisons modulaires, charpentes en bois, bains à remous — si ça doit être soulevé chez vous, nous le faisons avec soin. Nous respectons votre propriété et travaillons efficacement.">Rooftop HVAC units, modular home placement, garage packages, timber frames, hot tubs — if it needs to be lifted at your home, we handle it carefully. We respect your property and work efficiently to minimize disruption.</p>
+          <ul class="sfc-features">
+            <li data-en="HVAC and rooftop placements" data-fr="Placements CVAC et toiture">HVAC and rooftop placements</li>
+            <li data-en="Modular and prefab home setting" data-fr="Pose de maisons modulaires et préfabriquées">Modular and prefab home setting</li>
+            <li data-en="Timber frame lifts" data-fr="Levages de charpentes en bois">Timber frame lifts</li>
+            <li data-en="Minimal property disruption" data-fr="Perturbation minimale de la propriété">Minimal property disruption</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-full-card reveal">
+        <div class="sfc-photo">
+          <div class="photo-slot">
+            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="4" y="36" width="48" height="12" fill="currentColor" opacity=".3"/><rect x="8" y="12" width="40" height="26" fill="currentColor" opacity=".15"/><rect x="12" y="16" width="14" height="24" fill="currentColor" opacity=".5"/><rect x="30" y="22" width="14" height="18" fill="currentColor" opacity=".4"/></svg>
+            <span class="slot-label" data-en="Industrial / commercial site photo" data-fr="Photo de site industriel / commercial">Industrial / commercial site photo</span>
+          </div>
+        </div>
+        <div class="sfc-content">
+          <div class="sfc-num">06</div>
+          <p class="sfc-name" data-en="Industrial &amp; Commercial" data-fr="Industriel &amp; Commercial">Industrial &amp; Commercial</p>
+          <p class="sfc-desc" data-en="Specialized lifting for plants, mills, warehouses, and large commercial developments. We understand the demands of industrial environments — tight deadlines, complex loads, and zero tolerance for downtime." data-fr="Levage spécialisé pour usines, moulins, entrepôts et grands développements commerciaux. Nous comprenons les exigences des environnements industriels — délais serrés, charges complexes, zéro tolérance pour les arrêts.">Specialized lifting for plants, mills, warehouses, and large commercial developments. We understand the demands of industrial environments — tight deadlines, complex loads, and zero tolerance for downtime.</p>
+          <ul class="sfc-features">
+            <li data-en="Plant maintenance and shutdown lifts" data-fr="Levages d'entretien et d'arrêt d'usine">Plant maintenance and shutdown lifts</li>
+            <li data-en="Large commercial steel erection" data-fr="Érection d'acier commercial de grande envergure">Large commercial steel erection</li>
+            <li data-en="Tank and vessel placements" data-fr="Placements de réservoirs et cuves">Tank and vessel placements</li>
+            <li data-en="Infrastructure projects" data-fr="Projets d'infrastructure">Infrastructure projects</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /page-services -->
+
+<!-- ═══════════════════════════════════════════
+     PAGE: EQUIPMENT
+════════════════════════════════════════════ -->
+<div class="page" id="page-equipment">
+  <div class="page-hero">
+    <div class="section-grid-bg"></div>
+    <div class="page-hero-inner">
+      <p class="section-label" data-en="What We Run" data-fr="Notre Flotte">What We Run</p>
+      <h1 class="section-title"><span data-en="Equipment" data-fr="Catalogue">Equipment</span> <span data-en="Catalog" data-fr="d'Équipement">Catalog</span></h1>
+      <p class="section-body" data-en="Browse our fleet of cranes, transport, and rigging equipment. Contact us to check current availability, confirm specifications, or get a project quote." data-fr="Parcourez notre flotte de grues, de transport et d'équipement de gréage. Contactez-nous pour vérifier la disponibilité, confirmer les spécifications ou obtenir un devis.">Browse our fleet of cranes, transport, and rigging equipment. Contact us to check current availability, confirm specifications, or get a project quote.</p>
+    </div>
+  </div>
+
+  <div class="equipment-page">
+    <div class="container">
+
+      <!-- intro photo block -->
+      <div class="equipment-intro-grid">
+        <div class="equip-intro-photos reveal">
+          <div class="photo-slot">
+            <svg width="44" height="44" viewBox="0 0 44 44" fill="none"><rect x="6" y="36" width="32" height="5" fill="currentColor" opacity=".3"/><rect x="10" y="10" width="5" height="28" fill="currentColor" opacity=".5"/><rect x="10" y="10" width="22" height="5" fill="currentColor" opacity=".5"/><rect x="30" y="10" width="5" height="16" fill="currentColor" opacity=".35"/></svg>
+            <span class="slot-label" data-en="Fleet overview photo" data-fr="Photo de la flotte">Fleet overview photo</span>
+          </div>
+          <div class="photo-slot">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="26" width="32" height="10" fill="currentColor" opacity=".3"/><rect x="6" y="14" width="22" height="14" fill="currentColor" opacity=".4"/><rect x="8" y="8" width="14" height="8" fill="currentColor" opacity=".5"/></svg>
+            <span class="slot-label" data-en="Equipment side profile" data-fr="Profil latéral d'équipement">Equipment side profile</span>
+          </div>
+          <div class="photo-slot">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><rect x="17" y="28" width="6" height="10" fill="currentColor" opacity=".3"/></svg>
+            <span class="slot-label" data-en="Hook / rigging close-up" data-fr="Gros plan du crochet">Hook / rigging close-up</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="section-label" data-en="Our Fleet" data-fr="Notre Flotte">Our Fleet</p>
+          <h2 class="section-title" data-en="Built for Every Job" data-fr="Conçu pour Chaque Travail">Built for <span data-en="Every Job" data-fr="Chaque Travail">Every Job</span></h2>
+          <p class="section-body" data-en="Tracy Crane Service maintains a diverse fleet of modern, well-serviced equipment. From compact city cranes to heavy-capacity lifters and low-boy transport trailers, we have what your project needs." data-fr="Tracy Crane Service entretient une flotte diversifiée d'équipements modernes et bien entretenus. Des grues urbaines compactes aux leveurs à grande capacité et aux remorques de transport surbaissées.">Tracy Crane Service maintains a diverse fleet of modern, well-serviced equipment. From compact city cranes to heavy-capacity lifters and low-boy transport trailers, we have what your project needs.</p>
+          <div style="margin-top:28px;"><span class="btn-primary" onclick="showPage('contact')" data-en="Check Availability" data-fr="Vérifier la Disponibilité">Check Availability</span></div>
+        </div>
+      </div>
+
+      <!-- Cranes -->
+      <p class="equip-catalog-label" data-en="Cranes" data-fr="Grues">Cranes</p>
+      <h3 class="equip-section-title" data-en="Mobile Crane Fleet" data-fr="Flotte de Grues Mobiles">Mobile Crane Fleet</h3>
+      <div class="equip-grid">
+        <div class="equip-card reveal">
+          <div class="equip-photo">
+            <div class="photo-slot">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="38" width="32" height="6" fill="currentColor" opacity=".3"/><rect x="10" y="10" width="6" height="30" fill="currentColor" opacity=".5"/><rect x="10" y="10" width="24" height="6" fill="currentColor" opacity=".5"/><rect x="32" y="10" width="6" height="18" fill="currentColor" opacity=".35"/><line x1="13" y1="16" x2="35" y2="28" stroke="currentColor" stroke-width="2" opacity=".4"/></svg>
+              <span class="slot-label" data-en="25T crane photo" data-fr="Photo grue 25T">25T crane photo</span>
+            </div>
+            <span class="equip-tag" data-en="AVAILABLE" data-fr="DISPONIBLE">AVAILABLE</span>
+          </div>
+          <div class="equip-info">
+            <p class="equip-name" data-en="25-Tonne City Crane" data-fr="Grue Urbaine 25 Tonnes">25-Tonne City Crane</p>
+            <p class="equip-spec" data-en="Capacity: 25T | Boom reach: 28m | Compact footprint | Ideal for residential and tight urban job sites with limited access." data-fr="Capacité: 25T | Portée: 28m | Encombrement compact | Idéal pour chantiers résidentiels et zones urbaines à accès limité.">Capacity: 25T | Boom reach: 28m | Compact footprint | Ideal for residential and tight urban job sites with limited access.</p>
+            <span class="equip-cta" onclick="showPage('contact')" data-en="Inquire About Availability" data-fr="Renseignez-vous sur la Disponibilité">Inquire About Availability</span>
+          </div>
+        </div>
+        <div class="equip-card reveal reveal-delay-1">
+          <div class="equip-photo">
+            <div class="photo-slot">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="6" y="40" width="36" height="5" fill="currentColor" opacity=".3"/><rect x="10" y="10" width="6" height="32" fill="currentColor" opacity=".5"/><rect x="10" y="10" width="26" height="6" fill="currentColor" opacity=".5"/><rect x="34" y="10" width="6" height="20" fill="currentColor" opacity=".35"/><line x1="13" y1="16" x2="37" y2="30" stroke="currentColor" stroke-width="2" opacity=".4"/></svg>
+              <span class="slot-label" data-en="50T crane photo" data-fr="Photo grue 50T">50T crane photo</span>
+            </div>
+            <span class="equip-tag" data-en="FEATURED" data-fr="EN VEDETTE">FEATURED</span>
+          </div>
+          <div class="equip-info">
+            <p class="equip-name" data-en="50-Tonne Mobile Crane" data-fr="Grue Mobile 50 Tonnes">50-Tonne Mobile Crane</p>
+            <p class="equip-spec" data-en="Capacity: 50T | Boom reach: 42m | All-terrain mobility | Ideal for mid to large construction and industrial projects." data-fr="Capacité: 50T | Portée: 42m | Mobilité tout-terrain | Idéal pour projets de construction et industriels de taille moyenne à grande.">Capacity: 50T | Boom reach: 42m | All-terrain mobility | Ideal for mid to large construction and industrial projects.</p>
+            <span class="equip-cta" onclick="showPage('contact')" data-en="Inquire About Availability" data-fr="Renseignez-vous sur la Disponibilité">Inquire About Availability</span>
+          </div>
+        </div>
+        <div class="equip-card reveal reveal-delay-2">
+          <div class="equip-photo">
+            <div class="photo-slot">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="40" width="40" height="5" fill="currentColor" opacity=".3"/><rect x="8" y="8" width="7" height="34" fill="currentColor" opacity=".5"/><rect x="8" y="8" width="30" height="7" fill="currentColor" opacity=".5"/><rect x="36" y="8" width="7" height="24" fill="currentColor" opacity=".35"/><line x1="11" y1="15" x2="39" y2="32" stroke="currentColor" stroke-width="2.5" opacity=".4"/></svg>
+              <span class="slot-label" data-en="100T crane photo" data-fr="Photo grue 100T">100T crane photo</span>
+            </div>
+            <span class="equip-tag" data-en="NEW" data-fr="NOUVEAU">NEW</span>
+          </div>
+          <div class="equip-info">
+            <p class="equip-name" data-en="100T Heavy Lift Crane" data-fr="Grue de Levage Lourd 100T">100T Heavy Lift Crane</p>
+            <p class="equip-spec" data-en="Capacity: 100T | Extended boom: 60m | For large industrial, infrastructure, and specialized heavy-lift projects across the region." data-fr="Capacité: 100T | Flèche étendue: 60m | Pour projets industriels, d'infrastructure et de levage lourd spécialisé.">Capacity: 100T | Extended boom: 60m | For large industrial, infrastructure, and specialized heavy-lift projects across the region.</p>
+            <span class="equip-cta" onclick="showPage('contact')" data-en="Inquire About Availability" data-fr="Renseignez-vous sur la Disponibilité">Inquire About Availability</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Equipment banner with photo -->
+      <div class="equip-banner reveal" style="margin:60px 0;">
+        <div class="equip-banner-photo">
+          <div class="photo-slot">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><rect x="6" y="42" width="40" height="6" fill="currentColor" opacity=".3"/><rect x="10" y="10" width="6" height="34" fill="currentColor" opacity=".5"/><rect x="10" y="10" width="26" height="6" fill="currentColor" opacity=".5"/><rect x="34" y="10" width="6" height="20" fill="currentColor" opacity=".35"/></svg>
+            <span class="slot-label" data-en="Fleet / yard photo" data-fr="Photo de la cour / flotte">Fleet / yard photo</span>
+          </div>
+        </div>
+        <div class="equip-banner-text">
+          <h3 data-en="Need a Custom Lift Plan?" data-fr="Besoin d'un Plan de Levage Personnalisé?">Need a Custom Lift Plan?</h3>
+          <p data-en="Not sure which equipment fits your project? Our team will assess your site, review the load requirements, and recommend the right crane and rigging solution." data-fr="Pas sûr quel équipement convient à votre projet? Notre équipe évaluera votre site, examinera les exigences de charge et recommandera la bonne solution.">Not sure which equipment fits your project? Our team will assess your site, review the load requirements, and recommend the right crane and rigging solution.</p>
+          <span class="btn-dark" onclick="showPage('contact')" data-en="Talk to Our Team" data-fr="Parler à Notre Équipe">Talk to Our Team</span>
+        </div>
+      </div>
+
+      <!-- Transport & Rigging -->
+      <p class="equip-catalog-label" data-en="Transport &amp; Rigging" data-fr="Transport et Gréage">Transport &amp; Rigging</p>
+      <h3 class="equip-section-title" data-en="Supporting Equipment" data-fr="Équipement de Support">Supporting Equipment</h3>
+      <div class="equip-grid">
+        <div class="equip-card reveal">
+          <div class="equip-photo">
+            <div class="photo-slot">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="32" width="40" height="10" rx="1" fill="currentColor" opacity=".3"/><rect x="4" y="22" width="30" height="12" fill="currentColor" opacity=".4"/><rect x="6" y="14" width="20" height="10" fill="currentColor" opacity=".5"/><circle cx="12" cy="44" r="4" fill="currentColor" opacity=".5"/><circle cx="36" cy="44" r="4" fill="currentColor" opacity=".5"/></svg>
+              <span class="slot-label" data-en="Low-boy trailer photo" data-fr="Photo remorque surbaissée">Low-boy trailer photo</span>
+            </div>
+            <span class="equip-tag" data-en="AVAILABLE" data-fr="DISPONIBLE">AVAILABLE</span>
+          </div>
+          <div class="equip-info">
+            <p class="equip-name" data-en="Low-Boy Transport Trailer" data-fr="Remorque de Transport Surbaissée">Low-Boy Transport Trailer</p>
+            <p class="equip-spec" data-en="Payload: 80,000 lbs | Permits handled | For excavators, bulldozers, and oversized freight. Serving Pontiac and Outaouais." data-fr="Charge utile: 80 000 lb | Permis inclus | Pour excavatrices, bulldozers et marchandises surdimensionnées.">Payload: 80,000 lbs | Permits handled | For excavators, bulldozers, and oversized freight. Serving Pontiac and Outaouais.</p>
+            <span class="equip-cta" onclick="showPage('contact')" data-en="Inquire About Availability" data-fr="Renseignez-vous sur la Disponibilité">Inquire About Availability</span>
+          </div>
+        </div>
+        <div class="equip-card reveal reveal-delay-1">
+          <div class="equip-photo">
+            <div class="photo-slot">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".5"/><rect x="21" y="30" width="6" height="14" fill="currentColor" opacity=".3"/><rect x="14" y="40" width="20" height="4" fill="currentColor" opacity=".25"/><rect x="21" y="17" width="6" height="6" fill="currentColor"/></svg>
+              <span class="slot-label" data-en="Rigging hardware photo" data-fr="Photo du matériel de gréage">Rigging hardware photo</span>
+            </div>
+          </div>
+          <div class="equip-info">
+            <p class="equip-name" data-en="Complete Rigging Hardware" data-fr="Matériel de Gréage Complet">Complete Rigging Hardware</p>
+            <p class="equip-spec" data-en="Full kits: slings, shackles, hooks, spreader bars, and lifting frames. Available with operator or as standalone rental." data-fr="Kits complets: élingues, manilles, crochets, barres d'écartement et cadres de levage. Avec ou sans opérateur.">Full kits: slings, shackles, hooks, spreader bars, and lifting frames. Available with operator or as standalone rental.</p>
+            <span class="equip-cta" onclick="showPage('contact')" data-en="Inquire About Availability" data-fr="Renseignez-vous sur la Disponibilité">Inquire About Availability</span>
+          </div>
+        </div>
+        <div class="equip-card reveal reveal-delay-2">
+          <div class="equip-photo">
+            <div class="photo-slot">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="10" width="32" height="28" rx="1" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><line x1="8" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="2" opacity=".3"/><line x1="24" y1="10" x2="24" y2="38" stroke="currentColor" stroke-width="2" opacity=".3"/><rect x="14" y="30" width="8" height="6" fill="currentColor" opacity=".4"/></svg>
+              <span class="slot-label" data-en="Lift planning / paperwork photo" data-fr="Photo de planification de levage">Lift planning / paperwork photo</span>
+            </div>
+            <span class="equip-tag" data-en="SERVICE" data-fr="SERVICE">SERVICE</span>
+          </div>
+          <div class="equip-info">
+            <p class="equip-name" data-en="Lift Planning &amp; Engineering" data-fr="Planification et Ingénierie de Levage">Lift Planning &amp; Engineering</p>
+            <p class="equip-spec" data-en="Engineered lift plans, site assessments, load charts, and rigging studies. Compliant with Quebec safety regulations." data-fr="Plans de levage, évaluations de site, tableaux de charge et études de gréage. Conforme aux règlements de sécurité du Québec.">Engineered lift plans, site assessments, load charts, and rigging studies. Compliant with Quebec safety regulations.</p>
+            <span class="equip-cta" onclick="showPage('contact')" data-en="Inquire About Availability" data-fr="Renseignez-vous sur la Disponibilité">Inquire About Availability</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /page-equipment -->
+
+<!-- ═══════════════════════════════════════════
+     PAGE: ABOUT
+════════════════════════════════════════════ -->
+<div class="page" id="page-about">
+  <div class="page-hero">
+    <div class="section-grid-bg"></div>
+    <div class="page-hero-inner">
+      <p class="section-label" data-en="Who We Are" data-fr="Qui Nous Sommes">Who We Are</p>
+      <h1 class="section-title"><span data-en="About" data-fr="À Propos de">About</span> <span data-en="Tracy Crane" data-fr="Tracy Crane">Tracy Crane</span></h1>
+      <p class="section-body" data-en="A local, family-oriented lifting company built on decades of trust, safety, and results in the Pontiac and Outaouais region." data-fr="Une entreprise de levage locale et familiale bâtie sur des décennies de confiance, de sécurité et de résultats dans la région du Pontiac et de l'Outaouais.">A local, family-oriented lifting company built on decades of trust, safety, and results in the Pontiac and Outaouais region.</p>
+    </div>
+  </div>
+
+  <!-- Wide photo banner -->
+  <div class="about-wide-photo">
+    <div class="photo-slot">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none"><rect x="8" y="52" width="48" height="6" fill="currentColor" opacity=".3"/><rect x="12" y="12" width="8" height="42" fill="currentColor" opacity=".5"/><rect x="12" y="12" width="34" height="8" fill="currentColor" opacity=".5"/><rect x="44" y="12" width="8" height="26" fill="currentColor" opacity=".35"/><line x1="16" y1="20" x2="48" y2="38" stroke="currentColor" stroke-width="3" opacity=".4"/></svg>
+      <span class="slot-label" data-en="Full-width team or job site banner photo" data-fr="Photo de bannière équipe ou chantier pleine largeur">Full-width team or job site banner photo</span>
+    </div>
+  </div>
+
+  <div class="about-page">
+    <div class="container">
+
+      <!-- Story -->
+      <div class="about-story-grid">
+        <div class="about-story-photos reveal">
+          <div class="photo-slot">
+            <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><rect x="6" y="42" width="40" height="6" fill="currentColor" opacity=".3"/><rect x="10" y="10" width="6" height="34" fill="currentColor" opacity=".5"/><rect x="10" y="10" width="26" height="6" fill="currentColor" opacity=".5"/><rect x="34" y="10" width="6" height="20" fill="currentColor" opacity=".35"/></svg>
+            <span class="slot-label" data-en="Team / founder photo" data-fr="Photo d'équipe / fondateur">Team / founder photo</span>
+          </div>
+          <div class="photo-slot">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="28" width="32" height="8" fill="currentColor" opacity=".3"/><rect x="6" y="14" width="28" height="16" fill="currentColor" opacity=".4"/></svg>
+            <span class="slot-label" data-en="Early years / history photo" data-fr="Photo des débuts / historique">Early years / history photo</span>
+          </div>
+          <div class="photo-slot">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><rect x="17" y="28" width="6" height="10" fill="currentColor" opacity=".3"/></svg>
+            <span class="slot-label" data-en="Current operations photo" data-fr="Photo des opérations actuelles">Current operations photo</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="section-label" data-en="Our Story" data-fr="Notre Histoire">Our Story</p>
+          <h2 class="section-title"><span data-en="Built on" data-fr="Fondés sur la">Built on</span> <span data-en="Trust" data-fr="Confiance">Trust</span></h2>
+          <p class="section-body" data-en="Tracy Crane Service has been the go-to lifting and rigging company in Shawville, Quebec for over two decades. We are a local, family-oriented operation that takes pride in showing up prepared, working safely, and getting the job done right — every single time." data-fr="Tracy Crane Service est l'entreprise de levage et de gréage de référence à Shawville, Québec depuis plus de deux décennies. Nous sommes une entreprise locale et familiale fière d'arriver préparée, de travailler en sécurité et de bien faire le travail — à chaque fois.">Tracy Crane Service has been the go-to lifting and rigging company in Shawville, Quebec for over two decades. We are a local, family-oriented operation that takes pride in showing up prepared, working safely, and getting the job done right — every single time.</p>
+          <p class="section-body" style="margin-top:16px;" data-en="From our first residential lifts to complex industrial projects, our commitment to the community and to safety has never wavered. We know the Pontiac region because we live and work here — and that makes all the difference." data-fr="De nos premiers levages résidentiels aux projets industriels complexes, notre engagement envers la communauté et la sécurité n'a jamais faibli. Nous connaissons la région du Pontiac parce que nous y vivons et travaillons.">From our first residential lifts to complex industrial projects, our commitment to the community and to safety has never wavered. We know the Pontiac region because we live and work here — and that makes all the difference.</p>
+          <div class="about-feature-list">
+            <div class="afl-item"><div class="afl-dot"></div><p class="afl-text" data-en="Fully licensed and insured operators serving all of Pontiac County and surrounding areas." data-fr="Opérateurs entièrement licenciés et assurés desservant tout le comté de Pontiac et les environs.">Fully licensed and insured operators serving all of Pontiac County and surrounding areas.</p></div>
+            <div class="afl-item"><div class="afl-dot"></div><p class="afl-text" data-en="Well-maintained fleet with current safety certifications and regular inspection records." data-fr="Flotte bien entretenue avec certifications de sécurité actuelles et dossiers d'inspection réguliers.">Well-maintained fleet with current safety certifications and regular inspection records.</p></div>
+            <div class="afl-item"><div class="afl-dot"></div><p class="afl-text" data-en="Bilingual team ready to serve both English and French-speaking clients across Quebec." data-fr="Équipe bilingue prête à servir les clients anglophones et francophones à travers le Québec.">Bilingual team ready to serve both English and French-speaking clients across Quebec.</p></div>
+            <div class="afl-item"><div class="afl-dot"></div><p class="afl-text" data-en="On-time delivery, transparent pricing, and safety-first culture on every job site." data-fr="Livraison ponctuelle, prix transparents et culture de sécurité d'abord sur chaque chantier.">On-time delivery, transparent pricing, and safety-first culture on every job site.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Numbers -->
+      <div class="about-numbers">
+        <div class="about-numbers-grid">
+          <div class="an-cell reveal"><div class="an-num">20+</div><div class="an-label" data-en="Years in Business" data-fr="Ans en Affaires">Years in Business</div></div>
+          <div class="an-cell reveal reveal-delay-1"><div class="an-num">100%</div><div class="an-label" data-en="Licensed &amp; Insured" data-fr="Licenciés et Assurés">Licensed &amp; Insured</div></div>
+          <div class="an-cell reveal reveal-delay-2"><div class="an-num">24/7</div><div class="an-label" data-en="Emergency Response" data-fr="Réponse d'Urgence">Emergency Response</div></div>
+          <div class="an-cell reveal reveal-delay-3"><div class="an-num">2</div><div class="an-label" data-en="Languages Served" data-fr="Langues Desservies">Languages Served</div></div>
+        </div>
+      </div>
+
+      <!-- Team -->
+      <div class="about-team-section">
+        <p class="section-label reveal" data-en="Our People" data-fr="Notre Équipe">Our People</p>
+        <h2 class="section-title reveal reveal-delay-1"><span data-en="The Team" data-fr="L'Équipe">The Team</span></h2>
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <div class="team-photo"><div class="photo-slot"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><path d="M6 42 Q6 30 22 30 Q38 30 38 42" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Team member photo" data-fr="Photo du membre">Team member photo</span></div></div>
+            <div class="team-info"><p class="team-name" data-en="Tracy" data-fr="Tracy">Tracy</p><p class="team-role" data-en="Owner / Operator" data-fr="Propriétaire / Opérateur">Owner / Operator</p></div>
+          </div>
+          <div class="team-card reveal reveal-delay-1">
+            <div class="team-photo"><div class="photo-slot"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><path d="M6 42 Q6 30 22 30 Q38 30 38 42" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Team member photo" data-fr="Photo du membre">Team member photo</span></div></div>
+            <div class="team-info"><p class="team-name" data-en="Team Member" data-fr="Membre d'Équipe">Team Member</p><p class="team-role" data-en="Crane Operator" data-fr="Opérateur de Grue">Crane Operator</p></div>
+          </div>
+          <div class="team-card reveal reveal-delay-2">
+            <div class="team-photo"><div class="photo-slot"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><path d="M6 42 Q6 30 22 30 Q38 30 38 42" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Team member photo" data-fr="Photo du membre">Team member photo</span></div></div>
+            <div class="team-info"><p class="team-name" data-en="Team Member" data-fr="Membre d'Équipe">Team Member</p><p class="team-role" data-en="Rigger / Operator" data-fr="Gréeur / Opérateur">Rigger / Operator</p></div>
+          </div>
+          <div class="team-card reveal reveal-delay-3">
+            <div class="team-photo"><div class="photo-slot"><svg width="44" height="44" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="18" r="10" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/><path d="M6 42 Q6 30 22 30 Q38 30 38 42" stroke="currentColor" stroke-width="2.5" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Team member photo" data-fr="Photo du membre">Team member photo</span></div></div>
+            <div class="team-info"><p class="team-name" data-en="Team Member" data-fr="Membre d'Équipe">Team Member</p><p class="team-role" data-en="Transport Operator" data-fr="Opérateur de Transport">Transport Operator</p></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /page-about -->
+
+<!-- ═══════════════════════════════════════════
+     PAGE: GALLERY
+════════════════════════════════════════════ -->
+<div class="page" id="page-gallery">
+  <div class="page-hero">
+    <div class="section-grid-bg"></div>
+    <div class="page-hero-inner">
+      <p class="section-label" data-en="Our Work" data-fr="Nos Travaux">Our Work</p>
+      <h1 class="section-title"><span data-en="Project" data-fr="Galerie de">Project</span> <span data-en="Gallery" data-fr="Projets">Gallery</span></h1>
+      <p class="section-body" data-en="A selection of recent lifts and projects completed across the Pontiac and Outaouais region. Replace these placeholders with your own job site photography." data-fr="Une sélection de levages et projets récents complétés dans la région du Pontiac et de l'Outaouais. Remplacez ces espaces réservés par vos propres photos de chantier.">A selection of recent lifts and projects completed across the Pontiac and Outaouais region. Replace these placeholders with your own job site photography.</p>
+    </div>
+  </div>
+
+  <div class="gallery-page">
+    <div class="container">
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-en="All Projects" data-fr="Tous les Projets">All Projects</button>
+        <button class="filter-btn" data-en="Crane Lifts" data-fr="Levages de Grue">Crane Lifts</button>
+        <button class="filter-btn" data-en="Residential" data-fr="Résidentiel">Residential</button>
+        <button class="filter-btn" data-en="Industrial" data-fr="Industriel">Industrial</button>
+        <button class="filter-btn" data-en="Transport" data-fr="Transport">Transport</button>
+      </div>
+      <div class="gallery-masonry">
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="32" width="32" height="5" fill="currentColor" opacity=".3"/><rect x="6" y="8" width="5" height="26" fill="currentColor" opacity=".5"/><rect x="6" y="8" width="20" height="5" fill="currentColor" opacity=".5"/></svg><span class="slot-label" data-en="Job site photo 1" data-fr="Photo de chantier 1">Job site photo 1</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="28" width="32" height="8" fill="currentColor" opacity=".3"/><rect x="6" y="12" width="28" height="18" fill="currentColor" opacity=".2"/></svg><span class="slot-label" data-en="Job site photo 2" data-fr="Photo de chantier 2">Job site photo 2</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="10" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><rect x="17" y="26" width="6" height="10" fill="currentColor" opacity=".3"/></svg><span class="slot-label" data-en="Rigging photo 1" data-fr="Photo de gréage 1">Rigging photo 1</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="30" width="32" height="6" fill="currentColor" opacity=".3"/><rect x="6" y="16" width="24" height="16" fill="currentColor" opacity=".3"/><rect x="8" y="8" width="16" height="10" fill="currentColor" opacity=".4"/></svg><span class="slot-label" data-en="Transport photo 1" data-fr="Photo de transport 1">Transport photo 1</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="32" width="32" height="5" fill="currentColor" opacity=".3"/><rect x="8" y="10" width="5" height="24" fill="currentColor" opacity=".5"/><rect x="8" y="10" width="22" height="5" fill="currentColor" opacity=".5"/></svg><span class="slot-label" data-en="Crane lift photo 1" data-fr="Photo de levage de grue 1">Crane lift photo 1</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="6" y="8" width="28" height="24" rx="1" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><line x1="6" y1="20" x2="34" y2="20" stroke="currentColor" stroke-width="1.5" opacity=".3"/><line x1="20" y1="8" x2="20" y2="32" stroke="currentColor" stroke-width="1.5" opacity=".3"/></svg><span class="slot-label" data-en="Residential lift photo 1" data-fr="Photo levage résidentiel 1">Residential lift photo 1</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M4 36 L20 8 L36 36 Z" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Aerial / wide photo" data-fr="Photo aérienne / large">Aerial / wide photo</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="28" width="32" height="8" fill="currentColor" opacity=".3"/><rect x="8" y="14" width="24" height="16" fill="currentColor" opacity=".4"/></svg><span class="slot-label" data-en="Industrial lift photo 1" data-fr="Photo levage industriel 1">Industrial lift photo 1</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="32" width="32" height="5" fill="currentColor" opacity=".3"/><rect x="6" y="8" width="5" height="26" fill="currentColor" opacity=".5"/></svg><span class="slot-label" data-en="Crane lift photo 2" data-fr="Photo de levage de grue 2">Crane lift photo 2</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="28" width="32" height="8" fill="currentColor" opacity=".3"/><rect x="6" y="12" width="28" height="18" fill="currentColor" opacity=".2"/></svg><span class="slot-label" data-en="Job site photo 3" data-fr="Photo de chantier 3">Job site photo 3</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="10" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Rigging photo 2" data-fr="Photo de gréage 2">Rigging photo 2</span></div><div class="gallery-overlay"></div></div>
+        <div class="gallery-brick"><div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="30" width="32" height="6" fill="currentColor" opacity=".3"/><rect x="6" y="16" width="24" height="16" fill="currentColor" opacity=".3"/></svg><span class="slot-label" data-en="Industrial lift photo 2" data-fr="Photo levage industriel 2">Industrial lift photo 2</span></div><div class="gallery-overlay"></div></div>
+      </div>
+
+      <div class="gallery-wide-banner" style="margin-top:4px;">
+        <div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="30" width="32" height="6" fill="currentColor" opacity=".3"/><rect x="6" y="10" width="28" height="22" fill="currentColor" opacity=".2"/></svg><span class="slot-label" data-en="Site photo A" data-fr="Photo de site A">Site photo A</span></div>
+        <div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="4" y="32" width="32" height="5" fill="currentColor" opacity=".3"/><rect x="6" y="8" width="5" height="26" fill="currentColor" opacity=".5"/><rect x="6" y="8" width="22" height="5" fill="currentColor" opacity=".5"/></svg><span class="slot-label" data-en="Crane photo B" data-fr="Photo grue B">Crane photo B</span></div>
+        <div class="photo-slot"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M4 36 L20 8 L36 36 Z" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/></svg><span class="slot-label" data-en="Wide shot C" data-fr="Vue large C">Wide shot C</span></div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- /page-gallery -->
+
+<!-- ═══════════════════════════════════════════
+     PAGE: CONTACT
+════════════════════════════════════════════ -->
+<div class="page" id="page-contact">
+  <div class="page-hero">
+    <div class="section-grid-bg"></div>
+    <div class="page-hero-inner">
+      <p class="section-label" data-en="Get in Touch" data-fr="Nous Contacter">Get in Touch</p>
+      <h1 class="section-title"><span data-en="Request a" data-fr="Demander">Request a</span> <span data-en="Quote" data-fr="un Devis">Quote</span></h1>
+      <p class="section-body" data-en="Reach out by phone, email, or using the form below. We'll get back to you promptly with a quote or to discuss your project." data-fr="Contactez-nous par téléphone, courriel ou via le formulaire ci-dessous. Nous vous répondrons rapidement avec un devis ou pour discuter de votre projet.">Reach out by phone, email, or using the form below. We'll get back to you promptly with a quote or to discuss your project.</p>
+    </div>
+  </div>
+
+  <div class="contact-page">
+    <div class="container">
+      <div class="contact-main-grid">
+
+        <div class="contact-info-col">
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><p class="ci-label" data-en="Address" data-fr="Adresse">Address</p><p class="ci-value">HWY 148, Shawville, QC, Canada</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg></div>
+            <div><p class="ci-label" data-en="Phone" data-fr="Téléphone">Phone</p><a href="tel:+18195937975" class="ci-value">(819) 593-7975</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><p class="ci-label" data-en="Email" data-fr="Courriel">Email</p><a href="mailto:Tracycraneservice@gmail.com" class="ci-value">Tracycraneservice@gmail.com</a></div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+            <div><p class="ci-label" data-en="Social" data-fr="Réseaux Sociaux">Social</p><a href="https://www.facebook.com/TracyCraneService/" target="_blank" rel="noopener" class="ci-value">Facebook Page</a></div>
+          </div>
+
+          <div class="contact-photo-strip">
+            <div class="photo-slot">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="4" y="28" width="28" height="5" fill="currentColor" opacity=".3"/><rect x="6" y="8" width="4" height="22" fill="currentColor" opacity=".5"/><rect x="6" y="8" width="18" height="4" fill="currentColor" opacity=".5"/></svg>
+              <span class="slot-label" data-en="Office / equipment yard" data-fr="Bureau / cour d'équipement">Office / equipment yard</span>
+            </div>
+            <div class="photo-slot">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="16" r="8" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/><path d="M4 34 Q4 24 18 24 Q32 24 32 34" stroke="currentColor" stroke-width="2" fill="none" opacity=".4"/></svg>
+              <span class="slot-label" data-en="Team contact photo" data-fr="Photo de contact d'équipe">Team contact photo</span>
+            </div>
+          </div>
+
+          <div class="map-box">
+            <iframe src="https://maps.google.com/maps?q=HWY+148+Shawville+QC+Canada&output=embed" title="Tracy Crane Service Location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal-delay-1">
+          <h3 class="form-title" data-en="Send a Request" data-fr="Envoyer une Demande">Send a Request</h3>
+          <div class="form-row">
+            <div class="form-group"><label data-en="First Name" data-fr="Prénom">First Name</label><input type="text" placeholder="John"/></div>
+            <div class="form-group"><label data-en="Last Name" data-fr="Nom de Famille">Last Name</label><input type="text" placeholder="Smith"/></div>
+          </div>
+          <div class="form-group"><label data-en="Email Address" data-fr="Adresse Courriel">Email Address</label><input type="email" placeholder="john@example.com"/></div>
+          <div class="form-group"><label data-en="Phone Number" data-fr="Numéro de Téléphone">Phone Number</label><input type="tel" placeholder="(819) 000-0000"/></div>
+          <div class="form-group">
+            <label data-en="Service Required" data-fr="Service Requis">Service Required</label>
+            <select>
+              <option data-en="Select a service..." data-fr="Choisir un service...">Select a service...</option>
+              <option data-en="Mobile Crane Rental" data-fr="Location de Grue Mobile">Mobile Crane Rental</option>
+              <option data-en="Rigging &amp; Hoisting" data-fr="Gréage et Levage">Rigging &amp; Hoisting</option>
+              <option data-en="Heavy Equipment Transport" data-fr="Transport d'Équipement Lourd">Heavy Equipment Transport</option>
+              <option data-en="Construction Lifting" data-fr="Levage de Construction">Construction Lifting</option>
+              <option data-en="Emergency Lift" data-fr="Levage d'Urgence">Emergency Lift</option>
+              <option data-en="Residential Lift" data-fr="Levage Résidentiel">Residential Lift</option>
+              <option data-en="Industrial/Commercial" data-fr="Industriel/Commercial">Industrial/Commercial</option>
+              <option data-en="Lift Planning/Consulting" data-fr="Planification de Levage">Lift Planning/Consulting</option>
+            </select>
+          </div>
+          <div class="form-group"><label data-en="Project Details" data-fr="Détails du Projet">Project Details</label><textarea placeholder="Describe your project, load weight, site location, and preferred dates..."></textarea></div>
+          <div class="form-group"><label data-en="How did you hear about us?" data-fr="Comment nous avez-vous trouvés?">How did you hear about us?</label><input type="text" placeholder="Facebook, referral, Google..."/></div>
+          <button class="btn-primary" style="width:100%;padding:16px;font-size:1rem;" data-en="Send Request" data-fr="Envoyer la Demande" onclick="alert(window.currentLang==='fr'?'Merci! Nous vous contacterons bientôt.':'Thank you! We will be in touch shortly.')">Send Request</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div><!-- /page-contact -->
+
+<!-- ═══════════════════════════════════════════
+     FOOTER (always visible)
+════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo" onclick="showPage('home')" style="cursor:pointer;">
+          <svg class="logo-icon" viewBox="0 0 46 46" fill="none"><rect width="46" height="46" fill="#e8a020"/><rect x="7" y="33" width="4" height="9" fill="#0a0a0a"/><rect x="35" y="33" width="4" height="9" fill="#0a0a0a"/><rect x="7" y="28" width="32" height="6" fill="#0a0a0a"/><rect x="9" y="8" width="5" height="22" fill="#0a0a0a"/><rect x="9" y="8" width="22" height="5" fill="#0a0a0a"/><rect x="29" y="8" width="5" height="14" fill="#0a0a0a"/><line x1="11" y1="13" x2="31" y2="22" stroke="#0a0a0a" stroke-width="2"/><rect x="29" y="21" width="4" height="7" fill="#0a0a0a"/></svg>
+          <div class="logo-text"><span class="logo-name" data-en="Tracy Crane Service" data-fr="Service de Grue Tracy">Tracy Crane Service</span><span class="logo-tagline" data-en="Lifting Experts — Shawville, QC" data-fr="Experts en Levage — Shawville, QC">Lifting Experts — Shawville, QC</span></div>
+        </div>
+        <p data-en="Your local and reliable lifting experts serving Shawville, Pontiac County, and the greater Outaouais region. Licensed, insured, and ready." data-fr="Vos experts locaux en levage desservant Shawville, le comté de Pontiac et la grande région de l'Outaouais. Licenciés, assurés et prêts.">Your local and reliable lifting experts serving Shawville, Pontiac County, and the greater Outaouais region. Licensed, insured, and ready.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Services" data-fr="Services">Services</h4>
+        <ul>
+          <li><a onclick="showPage('services')" data-en="Mobile Crane Rental" data-fr="Location de Grue Mobile">Mobile Crane Rental</a></li>
+          <li><a onclick="showPage('services')" data-en="Rigging &amp; Hoisting" data-fr="Gréage et Levage">Rigging &amp; Hoisting</a></li>
+          <li><a onclick="showPage('services')" data-en="Heavy Transport" data-fr="Transport Lourd">Heavy Transport</a></li>
+          <li><a onclick="showPage('services')" data-en="Construction Lifts" data-fr="Levage Construction">Construction Lifts</a></li>
+          <li><a onclick="showPage('services')" data-en="Emergency Lifts" data-fr="Levages d'Urgence">Emergency Lifts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-en="Company" data-fr="Entreprise">Company</h4>
+        <ul>
+          <li><a onclick="showPage('about')" data-en="About Us" data-fr="À Propos">About Us</a></li>
+          <li><a onclick="showPage('equipment')" data-en="Equipment" data-fr="Équipement">Equipment</a></li>
+          <li><a onclick="showPage('gallery')" data-en="Gallery" data-fr="Galerie">Gallery</a></li>
+          <li><a onclick="showPage('contact')" data-en="Contact" data-fr="Contact">Contact</a></li>
+          <li><a href="https://www.facebook.com/TracyCraneService/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy" data-en="&copy; 2025 Tracy Crane Service. All rights reserved. HWY 148, Shawville, QC | (819) 593-7975" data-fr="&copy; 2025 Service de Grue Tracy. Tous droits réservés. HWY 148, Shawville, QC | (819) 593-7975">&copy; 2025 Tracy Crane Service. All rights reserved. HWY 148, Shawville, QC | (819) 593-7975</p>
+      <p class="footer-credit">Website by <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOAT CTA -->
+<a href="tel:+18195937975" class="float-cta">
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.02 1.18 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+  <span data-en="Call Now" data-fr="Appeler">Call Now</span>
+</a>
+
+<script>
+// ── PAGE SYSTEM ──────────────────────────────────
+window.currentLang = 'en';
+
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.querySelectorAll('nav a[data-page]').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === name);
+  });
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  setTimeout(initReveal, 50);
+}
+
+// ── LANGUAGE ─────────────────────────────────────
+function toggleLang() {
+  window.currentLang = window.currentLang === 'en' ? 'fr' : 'en';
+  applyLang(window.currentLang);
+  document.getElementById('langToggle').textContent = window.currentLang === 'en' ? 'FR' : 'EN';
+  document.getElementById('mobileLangToggle').textContent = window.currentLang === 'en' ? 'FR' : 'EN';
+  document.documentElement.lang = window.currentLang;
+}
+
+function applyLang(lang) {
+  document.querySelectorAll('[data-en]').forEach(el => {
+    const val = el.getAttribute('data-' + lang);
+    if (!val) return;
+    if (val.includes('<') || (val.includes('&') && val.includes(';'))) {
+      el.innerHTML = val;
+    } else {
+      el.textContent = val;
+    }
+  });
+  const pmap = {
+    en: { t: 'John', s: 'Smith', e: 'john@example.com', p: '(819) 000-0000', tx: 'Describe your project, load weight, site location, and preferred dates...', h: 'Facebook, referral, Google...' },
+    fr: { t: 'Jean', s: 'Dupont', e: 'jean@exemple.com', p: '(819) 000-0000', tx: 'Décrivez votre projet, le poids de la charge, le lieu du chantier et les dates souhaitées...', h: 'Facebook, référence, Google...' }
+  };
+  const m = pmap[lang];
+  const inputs = document.querySelectorAll('input[type=text], input[type=email], input[type=tel], textarea');
+  if (inputs[0]) inputs[0].placeholder = m.t;
+  if (inputs[1]) inputs[1].placeholder = m.s;
+  if (inputs[2]) inputs[2].placeholder = m.e;
+  if (inputs[3]) inputs[3].placeholder = m.p;
+  const ta = document.querySelector('textarea');
+  if (ta) ta.placeholder = m.tx;
+  if (inputs[4]) inputs[4].placeholder = m.h;
+}
+
+// ── MOBILE MENU ───────────────────────────────────
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+// ── GALLERY FILTER ────────────────────────────────
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  });
+});
+
+// ── SCROLL REVEAL ─────────────────────────────────
+function initReveal() {
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.page.active .reveal:not(.visible)').forEach(el => obs.observe(el));
+}
+initReveal();
+
+// ── HEADER SHADOW ─────────────────────────────────
+window.addEventListener('scroll', () => {
+  document.getElementById('mainHeader').style.boxShadow = window.scrollY > 30 ? '0 4px 32px rgba(0,0,0,0.7)' : 'none';
+});
+</script>
+</body>
+</html>

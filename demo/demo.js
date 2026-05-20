@@ -46,6 +46,17 @@ const DEMOS = [
     featured: true,
   },
   {
+	id: 'tracy-crane',
+	title: 'Tracy Crane',
+	client: 'Demo Client — Trades',
+	desc: 'need a desc',
+	tag: 'trades',
+	tech: ['HTML', 'CSS', 'JS'],
+	url: 'sites/tracy-crane/',
+	date: '2026-05-01',
+	featured: true,
+  },
+  {
     id: 'cafe-349',
     title: 'Cafe 349',
     client: 'Demo Client — Restaurant',

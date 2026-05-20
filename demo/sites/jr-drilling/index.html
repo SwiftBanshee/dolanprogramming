@@ -1,562 +1,1631 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JR Drilling | Water Well & Geothermal Drilling – Quebec, Canada</title>
 
-    <title>JR Drilling | Drilling Services in Quebec</title>
-    <meta
-      name="description"
-      content="JR Drilling provides professional drilling services across Quebec. Water wells, geotechnical & environmental drilling, and more. Request a quote today."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0b1220" />
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="JR Drilling offers professional water well drilling, geothermal drilling, and pump installation services across Quebec. Serving Laurentides, Lanaudière, Outaouais, and beyond." />
+  <meta name="keywords" content="drilling Quebec, water well drilling Quebec, forage puits Quebec, géothermie Quebec, JR Drilling, forage Laurentides, puits artésien, well pump installation, forage eau Quebec" />
+  <meta name="author" content="JR Drilling" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="JR Drilling | Quebec Drilling Experts" />
+  <meta property="og:description" content="Professional water well, geothermal, and pump services across Quebec since 1995." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+  <link rel="canonical" href="https://www.dolanprogramming.ca/demo/sites/jr-drilling/" />
 
-    <!-- Local SEO hints -->
-    <meta name="geo.region" content="CA-QC" />
-    <meta name="geo.placename" content="Quebec" />
-    <meta name="keywords" content="JR Drilling, drilling Quebec, forage Québec, water well drilling, puits artésien, geotechnical drilling, environmental drilling" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="JR Drilling | Drilling Services in Quebec" />
-    <meta
-      property="og:description"
-      content="Professional drilling services across Quebec. Mobile-ready, fast response, and quality workmanship."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_CA" />
-    <meta property="og:locale:alternate" content="fr_CA" />
+  <style>
+    /* ============================================================
+       DESIGN TOKENS
+    ============================================================ */
+    :root {
+      --rust:      #C0440A;
+      --rust-dk:   #8F2E04;
+      --rust-lt:   #E05A1A;
+      --steel:     #1C2433;
+      --steel-mid: #2C3647;
+      --steel-lt:  #3D4F66;
+      --sand:      #F0E6D3;
+      --sand-dk:   #D9C9B0;
+      --offwhite:  #FAFAF8;
+      --white:     #FFFFFF;
+      --text-body: #2A2A2A;
+      --text-muted:#6A6A6A;
+      --border:    rgba(255,255,255,0.08);
+      --shadow:    0 8px 40px rgba(0,0,0,0.18);
+      --r-sm: 4px;
+      --r-md: 8px;
+      --r-lg: 16px;
+      --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Barlow', sans-serif;
+      --header-h: 72px;
+    }
 
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="./styles.css" />
+    /* ============================================================
+       RESET & BASE
+    ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--offwhite);
+      color: var(--text-body);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    ul { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-    <link rel="alternate" href="./?lang=en" hreflang="en-ca" />
-    <link rel="alternate" href="./?lang=fr" hreflang="fr-ca" />
-    <link rel="alternate" href="./" hreflang="x-default" />
+    /* ============================================================
+       HEADER
+    ============================================================ */
+    #header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: var(--header-h);
+      background: rgba(28,36,51,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center;
+      padding: 0 clamp(1.2rem, 4vw, 3rem);
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    #header.scrolled {
+      background: rgba(28,36,51,0.99);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+    }
+    .header-inner {
+      width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+    }
+    .logo {
+      display: flex; align-items: center; gap: 0.75rem; flex-shrink: 0;
+    }
+    .logo-mark {
+      width: 44px; height: 44px;
+      background: var(--rust);
+      display: flex; align-items: center; justify-content: center;
+      clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+      transition: transform var(--transition);
+    }
+    .logo:hover .logo-mark { transform: rotate(15deg); }
+    .logo-mark svg { width: 22px; height: 22px; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .logo-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--white); letter-spacing: 0.04em;
+    }
+    .logo-sub {
+      font-size: 0.62rem; font-weight: 500; letter-spacing: 0.15em;
+      color: var(--rust-lt); text-transform: uppercase;
+    }
+    nav.desktop-nav { display: flex; align-items: center; gap: 0.25rem; }
+    nav.desktop-nav a {
+      font-family: var(--font-display);
+      font-size: 0.95rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: rgba(255,255,255,0.75);
+      padding: 0.45rem 0.85rem; border-radius: var(--r-sm);
+      transition: color var(--transition), background var(--transition);
+      position: relative;
+    }
+    nav.desktop-nav a::after {
+      content: ''; position: absolute; bottom: 2px; left: 50%; right: 50%;
+      height: 2px; background: var(--rust);
+      transition: left var(--transition), right var(--transition);
+    }
+    nav.desktop-nav a:hover { color: var(--white); }
+    nav.desktop-nav a:hover::after { left: 0.85rem; right: 0.85rem; }
 
-    <script type="application/ld+json" id="jr-ld-json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "JR Drilling",
-        "areaServed": [
-          {
-            "@type": "AdministrativeArea",
-            "name": "Quebec"
-          }
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Shawville",
-          "addressRegion": "QC",
-          "addressCountry": "CA"
-        },
-        "url": "./",
-        "image": "./favicon.svg",
-        "description": "Trusted name for quality water well drilling service and exceptional customer care in Shawville, Quebec and beyond."
+    .header-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .lang-btn {
+      font-family: var(--font-display);
+      font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em;
+      color: var(--rust-lt);
+      border: 1.5px solid var(--rust);
+      padding: 0.3rem 0.75rem; border-radius: 2px;
+      transition: all var(--transition); text-transform: uppercase;
+    }
+    .lang-btn:hover { background: var(--rust); color: var(--white); }
+    .cta-btn-sm {
+      font-family: var(--font-display);
+      font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--rust); color: var(--white);
+      padding: 0.45rem 1.1rem; border-radius: 2px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .cta-btn-sm:hover { background: var(--rust-lt); transform: translateY(-1px); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      width: 32px; padding: 4px;
+    }
+    .hamburger span {
+      display: block; height: 2px; background: var(--white);
+      transition: all var(--transition); transform-origin: center;
+      border-radius: 2px;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none; position: fixed; top: var(--header-h); left: 0; right: 0;
+      background: rgba(20,28,42,0.98); backdrop-filter: blur(16px);
+      z-index: 999; flex-direction: column;
+      padding: 1.5rem 1.5rem 2rem;
+      border-bottom: 2px solid var(--rust);
+      transform: translateY(-10px); opacity: 0;
+      transition: opacity var(--transition), transform var(--transition);
+      pointer-events: none;
+    }
+    .mobile-nav.open {
+      display: flex; opacity: 1; transform: translateY(0); pointer-events: all;
+    }
+    .mobile-nav a {
+      font-family: var(--font-display);
+      font-size: 1.3rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: rgba(255,255,255,0.8);
+      padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: color var(--transition), padding-left var(--transition);
+    }
+    .mobile-nav a:hover { color: var(--rust-lt); padding-left: 0.5rem; }
+    .mobile-nav-actions { display: flex; gap: 1rem; margin-top: 1.5rem; }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; align-items: center;
+      overflow: hidden;
+      background: var(--steel);
+    }
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    /* Animated diagonal stripes */
+    .hero-stripes {
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        -55deg,
+        transparent, transparent 60px,
+        rgba(192,68,10,0.04) 60px, rgba(192,68,10,0.04) 62px
+      );
+      animation: stripeScroll 20s linear infinite;
+    }
+    @keyframes stripeScroll {
+      from { background-position: 0 0; }
+      to { background-position: 200px 200px; }
+    }
+    .hero-img-wrap {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, #0e1620 0%, #1C2433 50%, #2C3647 100%);
+    }
+    /* Template image placeholder */
+    .hero-photo {
+      position: absolute; right: 0; top: 0; bottom: 0; width: 55%;
+      overflow: hidden; z-index: 1;
+    }
+    .hero-photo::before {
+      content: ''; position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(90deg, var(--steel) 0%, transparent 40%);
+    }
+    .img-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.75rem;
+      font-family: var(--font-display);
+      font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.2);
+    }
+    .img-placeholder svg { opacity: 0.15; }
+    .img-placeholder.dark { color: rgba(0,0,0,0.25); }
+    .img-placeholder.dark svg { opacity: 0.1; }
+    /* Geometric accent */
+    .hero-geo {
+      position: absolute; bottom: -60px; right: 30%;
+      width: 280px; height: 280px; z-index: 0;
+      border: 1px solid rgba(192,68,10,0.2);
+      border-radius: 50%;
+      animation: geoRotate 30s linear infinite;
+    }
+    .hero-geo::after {
+      content: ''; position: absolute; inset: 20px;
+      border: 1px solid rgba(192,68,10,0.12);
+      border-radius: 50%;
+    }
+    @keyframes geoRotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      position: relative; z-index: 10;
+      padding: calc(var(--header-h) + 2rem) clamp(1.5rem, 5vw, 5rem) 4rem;
+      max-width: 680px;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.8rem;
+      font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--rust-lt); margin-bottom: 1.25rem;
+    }
+    .hero-tag::before {
+      content: ''; display: block; width: 28px; height: 2px; background: var(--rust);
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 900; line-height: 0.92;
+      color: var(--white); letter-spacing: -0.01em;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    .hero-title em {
+      font-style: normal; color: var(--rust-lt);
+      position: relative; display: inline-block;
+    }
+    .hero-title em::after {
+      content: ''; position: absolute; left: 0; bottom: 4px; right: 0;
+      height: 3px; background: var(--rust); transform: scaleX(0);
+      transform-origin: left; animation: underlineIn 0.8s 1s forwards ease-out;
+    }
+    @keyframes underlineIn { to { transform: scaleX(1); } }
+    .hero-desc {
+      font-size: 1.1rem; color: rgba(255,255,255,0.65);
+      max-width: 480px; margin-bottom: 2.5rem; font-weight: 300;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 3rem; }
+    .btn-primary {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--rust); color: var(--white);
+      padding: 0.9rem 2.2rem; border-radius: 2px;
+      transition: all var(--transition); display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-primary:hover { background: var(--rust-lt); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(192,68,10,0.4); }
+    .btn-secondary {
+      font-family: var(--font-display);
+      font-size: 1.05rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white); border: 1.5px solid rgba(255,255,255,0.3);
+      padding: 0.9rem 2.2rem; border-radius: 2px;
+      transition: all var(--transition); display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .btn-secondary:hover { border-color: var(--white); background: rgba(255,255,255,0.07); }
+    .hero-stats {
+      display: flex; gap: 2.5rem; flex-wrap: wrap;
+    }
+    .stat { display: flex; flex-direction: column; }
+    .stat-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem; font-weight: 900; color: var(--rust-lt); line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45); margin-top: 0.2rem;
+    }
+
+    /* Scroll indicator */
+    .scroll-cue {
+      position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+      z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
+    }
+    .scroll-cue span {
+      font-family: var(--font-display); font-size: 0.7rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(255,255,255,0.35);
+    }
+    .scroll-cue-line {
+      width: 1px; height: 40px; background: linear-gradient(var(--rust), transparent);
+      animation: scrollPulse 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; transform: scaleY(1); }
+      50% { opacity: 0.4; transform: scaleY(0.6); }
+    }
+
+    /* ============================================================
+       SECTIONS SHARED
+    ============================================================ */
+    section { padding: clamp(3.5rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem); }
+    .section-tag {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: var(--font-display); font-size: 0.75rem;
+      font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--rust); margin-bottom: 0.85rem;
+    }
+    .section-tag::before {
+      content: ''; width: 20px; height: 2px; background: var(--rust);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900; text-transform: uppercase; line-height: 1;
+      letter-spacing: -0.01em; color: var(--steel);
+    }
+    .section-title.light { color: var(--white); }
+    .section-desc {
+      font-size: 1.05rem; color: var(--text-muted);
+      max-width: 580px; margin-top: 1rem; font-weight: 300;
+    }
+    .section-desc.light { color: rgba(255,255,255,0.6); }
+    .section-header { margin-bottom: 3rem; }
+
+    /* Fade-in observer */
+    .reveal {
+      opacity: 0; transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============================================================
+       ABOUT / INTRO STRIP
+    ============================================================ */
+    #about {
+      background: var(--white);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .about-img {
+      position: relative; height: 480px; overflow: hidden;
+      border-radius: var(--r-sm);
+    }
+    .about-img::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 60%; height: 5px; background: var(--rust);
+    }
+    .about-badges {
+      position: absolute; top: 1.5rem; left: 1.5rem;
+      display: flex; flex-direction: column; gap: 0.5rem;
+    }
+    .badge {
+      background: var(--steel); color: var(--white);
+      font-family: var(--font-display); font-size: 0.72rem;
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem; border-radius: 2px;
+    }
+    .badge.accent { background: var(--rust); }
+    .about-content .section-tag { margin-top: 0; }
+    .about-features { margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .feature-row {
+      display: flex; gap: 1rem; align-items: flex-start;
+    }
+    .feature-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--sand); border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .feature-icon svg { color: var(--rust); }
+    .feature-text h4 {
+      font-family: var(--font-display); font-size: 1rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--steel);
+    }
+    .feature-text p { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.15rem; }
+
+    /* ============================================================
+       SERVICES
+    ============================================================ */
+    #services { background: var(--steel); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5px;
+      background: rgba(255,255,255,0.06);
+      border: 1.5px solid rgba(255,255,255,0.06);
+    }
+    .service-card {
+      background: var(--steel-mid);
+      padding: 2.5rem 2rem;
+      position: relative; overflow: hidden;
+      cursor: default;
+      transition: background var(--transition);
+    }
+    .service-card::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(192,68,10,0.12), transparent);
+      opacity: 0; transition: opacity var(--transition);
+    }
+    .service-card:hover { background: var(--steel-lt); }
+    .service-card:hover::before { opacity: 1; }
+    .service-num {
+      font-family: var(--font-display);
+      font-size: 4rem; font-weight: 900;
+      color: rgba(255,255,255,0.04); position: absolute;
+      top: 0.5rem; right: 1rem; line-height: 1; user-select: none;
+    }
+    .service-icon-wrap {
+      width: 52px; height: 52px; margin-bottom: 1.5rem;
+      border: 1.5px solid rgba(192,68,10,0.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .service-card:hover .service-icon-wrap {
+      border-color: var(--rust); background: rgba(192,68,10,0.15);
+    }
+    .service-icon-wrap svg { color: var(--rust-lt); transition: color var(--transition); }
+    .service-card:hover .service-icon-wrap svg { color: var(--white); }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.35rem; font-weight: 800; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--white); margin-bottom: 0.75rem;
+    }
+    .service-card p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
+    .service-card ul { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.4rem; }
+    .service-card ul li {
+      font-size: 0.85rem; color: rgba(255,255,255,0.45);
+      padding-left: 1rem; position: relative;
+    }
+    .service-card ul li::before {
+      content: ''; position: absolute; left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 4px; height: 4px; background: var(--rust); border-radius: 50%;
+    }
+    .service-link {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      margin-top: 1.5rem;
+      font-family: var(--font-display); font-size: 0.8rem;
+      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--rust-lt);
+      transition: gap var(--transition), color var(--transition);
+    }
+    .service-card:hover .service-link { gap: 0.7rem; color: var(--rust-lt); }
+
+    /* ============================================================
+       REGION STRIP
+    ============================================================ */
+    #regions {
+      background: var(--rust);
+      padding: 2.5rem clamp(1.5rem, 5vw, 5rem);
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .regions-label {
+      font-family: var(--font-display);
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+      white-space: nowrap;
+    }
+    .regions-list {
+      display: flex; flex-wrap: wrap; gap: 0.75rem 2rem;
+    }
+    .regions-list span {
+      font-family: var(--font-display); font-size: 1.05rem;
+      font-weight: 700; letter-spacing: 0.05em; color: var(--white);
+      opacity: 0.85;
+    }
+    .regions-list span:hover { opacity: 1; }
+
+    /* ============================================================
+       CATALOG / NEW ITEMS
+    ============================================================ */
+    #catalog { background: var(--sand); }
+    .catalog-filter {
+      display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .filter-btn {
+      font-family: var(--font-display); font-size: 0.8rem;
+      font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.4rem 1rem; border-radius: 2px;
+      border: 1.5px solid var(--sand-dk);
+      color: var(--steel-mid); background: transparent;
+      transition: all var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--steel); color: var(--white); border-color: var(--steel);
+    }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .catalog-card {
+      background: var(--white); border-radius: var(--r-sm);
+      overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative;
+    }
+    .catalog-card:hover {
+      transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+    .catalog-img { height: 200px; position: relative; overflow: hidden; }
+    .catalog-img .img-placeholder { background: var(--sand-dk); }
+    .new-badge {
+      position: absolute; top: 1rem; left: 1rem; z-index: 2;
+      background: var(--rust); color: var(--white);
+      font-family: var(--font-display); font-size: 0.7rem;
+      font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+      padding: 0.2rem 0.6rem; border-radius: 2px;
+    }
+    .catalog-body { padding: 1.25rem 1.5rem 1.5rem; }
+    .catalog-category {
+      font-family: var(--font-display); font-size: 0.7rem;
+      font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--rust); margin-bottom: 0.4rem;
+    }
+    .catalog-card h4 {
+      font-family: var(--font-display); font-size: 1.2rem;
+      font-weight: 800; text-transform: uppercase; letter-spacing: 0.03em;
+      color: var(--steel); line-height: 1.15; margin-bottom: 0.5rem;
+    }
+    .catalog-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.55; }
+    .catalog-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 1rem; }
+    .tag {
+      font-family: var(--font-display); font-size: 0.7rem;
+      font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      background: var(--sand); color: var(--steel-mid);
+      padding: 0.2rem 0.6rem; border-radius: 2px;
+    }
+
+    /* ============================================================
+       WHY US
+    ============================================================ */
+    #why {
+      background: var(--white);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+    }
+    .why-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .why-item {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 1.25rem; border-left: 3px solid transparent;
+      transition: border-color var(--transition), background var(--transition);
+      border-radius: 0 var(--r-sm) var(--r-sm) 0;
+    }
+    .why-item:hover { border-color: var(--rust); background: var(--sand); }
+    .why-num {
+      font-family: var(--font-display); font-size: 1.8rem; font-weight: 900;
+      color: var(--sand-dk); line-height: 1; flex-shrink: 0; width: 2.5rem;
+      transition: color var(--transition);
+    }
+    .why-item:hover .why-num { color: var(--rust); }
+    .why-text h4 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.05em; color: var(--steel);
+    }
+    .why-text p { font-size: 0.9rem; color: var(--text-muted); margin-top: 0.3rem; }
+    .why-visual { position: relative; height: 520px; }
+    .why-photo { height: 100%; border-radius: var(--r-sm); overflow: hidden; }
+    .why-accent {
+      position: absolute; bottom: -1.5rem; right: -1.5rem;
+      width: 140px; height: 140px;
+      background: var(--rust); border-radius: var(--r-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.2rem;
+      padding: 1.5rem;
+    }
+    .why-accent-num {
+      font-family: var(--font-display); font-size: 2.8rem; font-weight: 900;
+      color: var(--white); line-height: 1;
+    }
+    .why-accent-label {
+      font-family: var(--font-display); font-size: 0.68rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.75);
+      text-align: center;
+    }
+
+    /* ============================================================
+       PROCESS
+    ============================================================ */
+    #process { background: var(--steel); }
+    .process-steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0; position: relative;
+    }
+    .process-steps::before {
+      content: ''; position: absolute;
+      top: 2rem; left: 0; right: 0; height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+    .process-step {
+      padding: 2rem 1.5rem;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      position: relative;
+    }
+    .process-step:last-child { border-right: none; }
+    .step-dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--rust); margin-bottom: 1.5rem;
+      box-shadow: 0 0 0 4px rgba(192,68,10,0.2);
+      position: relative; z-index: 1;
+    }
+    .step-num {
+      font-family: var(--font-display); font-size: 0.75rem;
+      font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.3); margin-bottom: 0.5rem;
+    }
+    .process-step h4 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.04em;
+      color: var(--white); margin-bottom: 0.6rem;
+    }
+    .process-step p { font-size: 0.88rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+    /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    #testimonials { background: var(--sand); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .testimonial-card {
+      background: var(--white); padding: 2rem;
+      border-radius: var(--r-sm);
+      border-top: 3px solid transparent;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .testimonial-card:hover { border-color: var(--rust); transform: translateY(-3px); }
+    .quote-mark {
+      font-family: var(--font-display); font-size: 4rem; font-weight: 900;
+      color: var(--rust); line-height: 0.6; margin-bottom: 1rem; display: block;
+    }
+    .testimonial-card blockquote {
+      font-size: 0.95rem; color: var(--text-body); line-height: 1.7;
+      font-style: italic; margin-bottom: 1.5rem;
+    }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+    .author-avatar {
+      width: 42px; height: 42px; border-radius: 50%; overflow: hidden;
+      background: var(--sand-dk); flex-shrink: 0;
+    }
+    .author-name {
+      font-family: var(--font-display); font-size: 0.95rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.04em; color: var(--steel);
+    }
+    .author-loc { font-size: 0.8rem; color: var(--text-muted); }
+    .stars { display: flex; gap: 2px; margin-bottom: 0.25rem; }
+    .star { width: 12px; height: 12px; background: var(--rust); clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); }
+
+    /* ============================================================
+       CONTACT
+    ============================================================ */
+    #contact {
+      background: var(--steel);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+    }
+    .contact-info .section-title.light { margin-bottom: 2rem; }
+    .contact-item {
+      display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem;
+    }
+    .contact-icon {
+      width: 44px; height: 44px; flex-shrink: 0;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-icon svg { color: var(--rust-lt); }
+    .contact-label {
+      font-family: var(--font-display); font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: rgba(255,255,255,0.4); margin-bottom: 0.2rem;
+    }
+    .contact-value { font-size: 1rem; color: var(--white); font-weight: 500; }
+    .contact-value a { color: var(--rust-lt); transition: color var(--transition); }
+    .contact-value a:hover { color: var(--white); }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label {
+      font-family: var(--font-display); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.5);
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--r-sm);
+      padding: 0.75rem 1rem; color: var(--white); font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: border-color var(--transition), background var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-color: var(--rust); background: rgba(255,255,255,0.08);
+    }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .form-group select option { background: var(--steel); color: var(--white); }
+    .submit-btn {
+      font-family: var(--font-display); font-size: 1rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      background: var(--rust); color: var(--white);
+      padding: 0.9rem 2rem; border-radius: 2px;
+      transition: all var(--transition); align-self: flex-start;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .submit-btn:hover { background: var(--rust-lt); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(192,68,10,0.4); }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #0d1420;
+      color: rgba(255,255,255,0.5);
+      padding: 4rem clamp(1.5rem, 5vw, 5rem) 2rem;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; margin-bottom: 3rem;
+    }
+    .footer-brand .logo { margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.875rem; line-height: 1.7; max-width: 280px; }
+    .footer-col h5 {
+      font-family: var(--font-display); font-size: 0.75rem; font-weight: 800;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--white); margin-bottom: 1rem;
+    }
+    .footer-col ul li { margin-bottom: 0.6rem; }
+    .footer-col ul li a {
+      font-size: 0.875rem; transition: color var(--transition);
+    }
+    .footer-col ul li a:hover { color: var(--rust-lt); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.5rem; display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: 0.8rem;
+    }
+    .footer-bottom a { color: var(--rust-lt); transition: color var(--transition); }
+    .footer-bottom a:hover { color: var(--white); }
+    .cert-badges { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .cert-badge {
+      font-family: var(--font-display); font-size: 0.65rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.5);
+      padding: 0.2rem 0.6rem; border-radius: 2px;
+    }
+
+    /* ============================================================
+       ANIMATED TICKER
+    ============================================================ */
+    .ticker-wrap {
+      background: var(--rust); overflow: hidden;
+      padding: 0.7rem 0; white-space: nowrap;
+    }
+    .ticker {
+      display: inline-flex; gap: 0;
+      animation: ticker 24s linear infinite;
+    }
+    .ticker-item {
+      font-family: var(--font-display); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: rgba(255,255,255,0.85); padding: 0 2.5rem;
+      display: inline-flex; align-items: center; gap: 1rem;
+    }
+    .ticker-item::after {
+      content: ''; width: 5px; height: 5px; background: rgba(255,255,255,0.4);
+      border-radius: 50%; flex-shrink: 0;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+    ============================================================ */
+    @media (max-width: 1024px) {
+      #about, #why, #contact {
+        grid-template-columns: 1fr;
       }
-    </script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main" data-i18n="skipToContent">Skip to content</a>
+      .about-img { height: 320px; }
+      .why-visual { height: 340px; }
+      .why-accent { bottom: -1rem; right: -0.5rem; width: 110px; height: 110px; }
+      .why-accent-num { font-size: 2.2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav.desktop-nav, .cta-btn-sm { display: none; }
+      .hamburger { display: flex; }
+      .hero-photo { display: none; }
+      .hero-content { padding-top: calc(var(--header-h) + 1.5rem); max-width: 100%; }
+      .form-row { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero-stats { gap: 1.5rem; }
+      .stat-num { font-size: 2rem; }
+      .process-steps { grid-template-columns: 1fr; }
+      #regions { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
 
-    <header class="site-header" data-header>
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="JR Drilling home">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">JR Drilling</span>
-        </a>
-
-        <nav class="nav" aria-label="Primary navigation" data-nav>
-          <a class="nav-link" href="#services" data-i18n="navServices">Services</a>
-          <a class="nav-link" href="#gallery" data-i18n="navGallery">Gallery</a>
-          <a class="nav-link" href="#about" data-i18n="navAbout">About</a>
-          <a class="nav-link" href="#faq" data-i18n="navFaq">FAQs</a>
-          <a class="nav-link" href="#areas" data-i18n="navAreas">Service area</a>
-          <a class="nav-link nav-cta" href="#contact" data-i18n="navQuote">Get a quote</a>
-        </nav>
-
-        <div class="header-actions">
-          <button class="lang-btn" type="button" data-lang-toggle aria-label="Switch language">
-            <span class="lang-pill" data-lang-pill>EN</span>
-            <span class="lang-sep" aria-hidden="true">/</span>
-            <span class="lang-pill is-muted" data-lang-pill-alt>FR</span>
-          </button>
-
-          <button class="menu-btn" type="button" data-menu-button aria-expanded="false" aria-controls="mobile-menu">
-            <span class="sr-only" data-i18n="openMenu">Open menu</span>
-            <span class="burger" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-
-      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
-        <div class="mobile-menu-inner">
-          <a class="mobile-link" href="#services" data-mobile-link data-i18n="navServices">Services</a>
-          <a class="mobile-link" href="#gallery" data-mobile-link data-i18n="navGallery">Gallery</a>
-          <a class="mobile-link" href="#about" data-mobile-link data-i18n="navAbout">About</a>
-          <a class="mobile-link" href="#faq" data-mobile-link data-i18n="navFaq">FAQs</a>
-          <a class="mobile-link" href="#areas" data-mobile-link data-i18n="navAreas">Service area</a>
-          <a class="mobile-link mobile-cta" href="#contact" data-mobile-link data-i18n="navQuote">Get a quote</a>
-        </div>
-      </div>
-    </header>
-
-    <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-bg" aria-hidden="true">
-          <div class="grid-glow"></div>
-          <div class="orb orb-1"></div>
-          <div class="orb orb-2"></div>
-          <div class="orb orb-3"></div>
-        </div>
-
-        <div class="container hero-content">
-          <div class="hero-left">
-            <div class="kicker" data-reveal>
-              <span class="pulse-dot" aria-hidden="true"></span>
-              <span data-i18n="heroKicker">Quebec drilling — done right</span>
-            </div>
-
-            <h1 class="hero-title" data-reveal data-i18n="heroTitle">
-              Precision drilling services across Quebec.
-            </h1>
-
-            <p class="hero-subtitle" data-reveal data-i18n="heroSubtitle">
-              From planning to completion, we deliver dependable work, clean sites, and clear communication—backed by experience.
-            </p>
-
-            <div class="hero-actions" data-reveal>
-              <a class="btn primary" href="#contact" data-i18n="heroPrimaryCta">Request a quote</a>
-              <a class="btn secondary" href="#services" data-i18n="heroSecondaryCta">Explore services</a>
-            </div>
-
-            <div class="hero-stats" data-reveal>
-              <div class="stat">
-                <div class="stat-value"><span data-counter="24">24</span><span class="stat-suffix">h</span></div>
-                <div class="stat-label" data-i18n="statResponse">Response window</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value"><span data-counter="0">0</span><span class="stat-suffix">%</span></div>
-                <div class="stat-label" data-i18n="statMess">No-mess mindset</div>
-              </div>
-              <div class="stat">
-                <div class="stat-value"><span data-counter="100">100</span><span class="stat-suffix">%</span></div>
-                <div class="stat-label" data-i18n="statSafety">Safety focused</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-right" data-reveal>
-            <div class="hero-card" role="group" aria-label="Highlights">
-              <div class="card-top">
-                <div class="chip" data-i18n="chipInsured">Licensed & insured</div>
-                <div class="chip" data-i18n="chipQuebec">Serving QC</div>
-              </div>
-
-              <div class="card-mid">
-                <div class="meter">
-                  <div class="meter-label" data-i18n="meterLabel">Project readiness</div>
-                  <div class="meter-track" aria-hidden="true">
-                    <div class="meter-bar"></div>
-                  </div>
-                </div>
-
-                <ul class="checklist">
-                  <li><span class="check" aria-hidden="true"></span><span data-i18n="check1">Fast scheduling</span></li>
-                  <li><span class="check" aria-hidden="true"></span><span data-i18n="check2">Clear site plan</span></li>
-                  <li><span class="check" aria-hidden="true"></span><span data-i18n="check3">Accurate drilling logs</span></li>
-                </ul>
-              </div>
-
-              <div class="card-bottom">
-                <p class="micro" data-i18n="microNote">
-                  Need French documentation? Switch to FR—everything updates instantly.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="wave" aria-hidden="true">
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path
-              d="M0,64 C160,92 320,92 480,70 C640,48 800,6 960,26 C1120,46 1280,122 1440,74 L1440,120 L0,120 Z"
-            ></path>
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#hero" class="logo" aria-label="JR Drilling Home">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="2" x2="12" y2="22"/>
+            <polyline points="6 8 12 2 18 8"/>
+            <line x1="8" y1="14" x2="16" y2="14"/>
+            <line x1="10" y1="18" x2="14" y2="18"/>
           </svg>
         </div>
-      </section>
+        <div class="logo-text">
+          <span class="logo-name">JR Drilling</span>
+          <span class="logo-sub" data-en="Quebec Drilling Experts" data-fr="Experts en Forage Quebec">Quebec Drilling Experts</span>
+        </div>
+      </a>
 
-      <section class="section" id="services">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title" data-reveal data-i18n="servicesTitle">Services</h2>
-            <p class="section-subtitle" data-reveal data-i18n="servicesSubtitle">
-              Built for Quebec conditions—rock, clay, and everything in between.
-            </p>
-          </div>
+      <nav class="desktop-nav">
+        <a href="#about" data-en="About" data-fr="A Propos">About</a>
+        <a href="#services" data-en="Services" data-fr="Services">Services</a>
+        <a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a>
+        <a href="#why" data-en="Why Us" data-fr="Pourquoi Nous">Why Us</a>
+        <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+      </nav>
 
-          <div class="cards">
-            <article class="card" data-reveal>
-              <div class="card-icon" aria-hidden="true">💧</div>
-              <h3 data-i18n="svc1Title">Water well drilling</h3>
-              <p data-i18n="svc1Body">
-                Residential and commercial wells with attention to cleanliness, yield, and long-term performance.
-              </p>
-            </article>
+      <div class="header-actions">
+        <button class="lang-btn" id="langToggle" aria-label="Switch language">FR</button>
+        <a href="#contact" class="cta-btn-sm" data-en="Get a Quote" data-fr="Demander un Devis">Get a Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
 
-            <article class="card" data-reveal>
-              <div class="card-icon" aria-hidden="true">🧭</div>
-              <h3 data-i18n="svc2Title">Geotechnical drilling</h3>
-              <p data-i18n="svc2Body">
-                Soil/rock investigation support for construction planning, foundations, and site development.
-              </p>
-            </article>
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav" role="navigation">
+    <a href="#about" data-en="About" data-fr="A Propos">About</a>
+    <a href="#services" data-en="Services" data-fr="Services">Services</a>
+    <a href="#catalog" data-en="Catalog" data-fr="Catalogue">Catalog</a>
+    <a href="#why" data-en="Why Us" data-fr="Pourquoi Nous">Why Us</a>
+    <a href="#process" data-en="Our Process" data-fr="Notre Processus">Our Process</a>
+    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+    <div class="mobile-nav-actions">
+      <a href="#contact" class="btn-primary" style="font-size:0.9rem;padding:0.6rem 1.5rem;" data-en="Get a Quote" data-fr="Demander un Devis">Get a Quote</a>
+    </div>
+  </nav>
 
-            <article class="card" data-reveal>
-              <div class="card-icon" aria-hidden="true">🧪</div>
-              <h3 data-i18n="svc3Title">Environmental drilling & sampling</h3>
-              <p data-i18n="svc3Body">
-                Boreholes and sampling support for environmental assessments, monitoring, and remediation projects.
-              </p>
-            </article>
+  <!-- ============================================================
+       TICKER
+  ============================================================ -->
+  <div class="ticker-wrap" style="margin-top:var(--header-h)">
+    <div class="ticker" id="ticker">
+      <!-- Items duplicated in JS -->
+    </div>
+  </div>
 
-            <article class="card" data-reveal>
-              <div class="card-icon" aria-hidden="true">♨️</div>
-              <h3 data-i18n="svc4Title">Geothermal drilling</h3>
-              <p data-i18n="svc4Body">
-                Drilling support for geothermal loop installations—quiet, efficient heating and cooling systems.
-              </p>
-            </article>
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="hero" style="padding:0; min-height:calc(100vh - var(--header-h));">
+    <div class="hero-bg">
+      <div class="hero-img-wrap"></div>
+      <div class="hero-stripes"></div>
+      <div class="hero-geo"></div>
+      <div class="hero-photo">
+        <div class="img-placeholder">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span data-en="Replace with hero photo" data-fr="Remplacer par une photo principale">Replace with hero photo</span>
+          <span style="opacity:0.5;font-size:0.65rem;" data-en="1600 x 900 recommended" data-fr="1600 x 900 recommande">1600 x 900 recommended</span>
+        </div>
+      </div>
+    </div>
 
-            <article class="card" data-reveal>
-              <div class="card-icon" aria-hidden="true">⚙️</div>
-              <h3 data-i18n="svc5Title">Pump installation</h3>
-              <p data-i18n="svc5Body">
-                Practical pump installation support and guidance so your well system runs reliably.
-              </p>
-            </article>
+    <div class="hero-content">
+      <div class="hero-tag" data-en="Quebec Drilling Specialists" data-fr="Specialistes en Forage au Quebec">Quebec Drilling Specialists</div>
+      <h1 class="hero-title">
+        <span data-en="Drilling" data-fr="Forage">Drilling</span><br>
+        <em data-en="Done Right" data-fr="Bien Fait">Done Right</em><br>
+        <span data-en="Every Time" data-fr="Chaque Fois">Every Time</span>
+      </h1>
+      <p class="hero-desc" data-en="Water wells, geothermal systems, and pump installations across Quebec. Trusted by homeowners and contractors since 1995." data-fr="Puits d'eau, systemes geothermiques et installations de pompes partout au Quebec. La confiance des proprietaires et des entrepreneurs depuis 1995.">
+        Water wells, geothermal systems, and pump installations across Quebec. Trusted by homeowners and contractors since 1995.
+      </p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary" data-en="Request a Quote" data-fr="Demander un Devis">Request a Quote</a>
+        <a href="#services" class="btn-secondary" data-en="Our Services" data-fr="Nos Services">Our Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">30+</span>
+          <span class="stat-label" data-en="Years Experience" data-fr="Ans d'Experience">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2,000+</span>
+          <span class="stat-label" data-en="Wells Drilled" data-fr="Puits Fores">Wells Drilled</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">12+</span>
+          <span class="stat-label" data-en="Regions Served" data-fr="Regions Desservies">Regions Served</span>
+        </div>
+      </div>
+    </div>
 
-            <article class="card" data-reveal>
-              <div class="card-icon" aria-hidden="true">🛠️</div>
-              <h3 data-i18n="svc6Title">Well rehabilitation & abandonment</h3>
-              <p data-i18n="svc6Body">
-                Restore performance when possible, or properly abandon wells to protect your property and groundwater.
-              </p>
-            </article>
-          </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span data-en="Scroll" data-fr="Defiler">Scroll</span>
+      <div class="scroll-cue-line"></div>
+    </div>
+  </section>
 
-          <div class="note" data-reveal>
-            <p class="note-text" data-i18n="servicesNote">
-              Not sure which service you need? Tell us about your site and timeline—we’ll point you to the right approach.
-            </p>
-            <a class="note-link" href="#contact" data-i18n="servicesNoteCta">Talk to us</a>
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about">
+    <div class="about-img reveal">
+      <div class="img-placeholder dark" style="background:#e8dece;height:100%;">
+        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span data-en="Team or equipment photo" data-fr="Photo equipe ou equipement">Team or equipment photo</span>
+        <span style="opacity:0.4;font-size:0.65rem;" data-en="800 x 900 recommended" data-fr="800 x 900 recommande">800 x 900 recommended</span>
+      </div>
+      <div class="about-badges">
+        <span class="badge accent" data-en="Est. 1995" data-fr="Fond. 1995">Est. 1995</span>
+        <span class="badge" data-en="RBQ Certified" data-fr="Certifie RBQ">RBQ Certified</span>
+      </div>
+    </div>
+    <div class="about-content reveal">
+      <div class="section-tag" data-en="Who We Are" data-fr="Qui Sommes-Nous">Who We Are</div>
+      <h2 class="section-title" data-en="A Family Business Built on Depth" data-fr="Une Entreprise Familiale Batie en Profondeur">A Family Business Built on Depth</h2>
+      <p class="section-desc" data-en="JR Drilling has served Quebec families and contractors for over three decades. From rural water wells to commercial geothermal installations, we bring modern equipment and old-fashioned reliability to every project." data-fr="JR Drilling sert les familles et entrepreneurs du Quebec depuis plus de trente ans. Des puits d'eau ruraux aux installations geothermiques commerciales, nous apportons un equipement moderne et une fiabilite traditionnelle a chaque projet.">
+        JR Drilling has served Quebec families and contractors for over three decades. From rural water wells to commercial geothermal installations, we bring modern equipment and old-fashioned reliability to every project.
+      </p>
+      <div class="about-features">
+        <div class="feature-row">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div class="feature-text">
+            <h4 data-en="Modern Drilling Equipment" data-fr="Equipement de Forage Moderne">Modern Drilling Equipment</h4>
+            <p data-en="Our fleet is updated regularly to ensure efficient, precise drilling on every terrain." data-fr="Notre flotte est mise a jour regulierement pour un forage efficace et precis sur tous les terrains.">Our fleet is updated regularly to ensure efficient, precise drilling on every terrain.</p>
           </div>
         </div>
-      </section>
-
-      <section class="section" id="gallery">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title" data-reveal data-i18n="galleryTitle">Gallery</h2>
-            <p class="section-subtitle" data-reveal data-i18n="gallerySubtitle">
-              A quick look at equipment, worksites, and clean finishes.
-            </p>
-          </div>
-
-          <div class="gallery" data-reveal>
-            <button class="gallery-item" type="button" data-gallery-item data-full="./images/gallery-01.svg" data-i18n-aria="gal1a" aria-label="Drilling rig on site">
-              <img src="./images/gallery-01.svg" alt="" loading="lazy" />
-            </button>
-            <button class="gallery-item" type="button" data-gallery-item data-full="./images/gallery-02.svg" data-i18n-aria="gal2a" aria-label="Core samples and logs">
-              <img src="./images/gallery-02.svg" alt="" loading="lazy" />
-            </button>
-            <button class="gallery-item" type="button" data-gallery-item data-full="./images/gallery-03.svg" data-i18n-aria="gal3a" aria-label="Clean access and setup">
-              <img src="./images/gallery-03.svg" alt="" loading="lazy" />
-            </button>
-            <button class="gallery-item" type="button" data-gallery-item data-full="./images/gallery-04.svg" data-i18n-aria="gal4a" aria-label="Geothermal loop drilling">
-              <img src="./images/gallery-04.svg" alt="" loading="lazy" />
-            </button>
-            <button class="gallery-item" type="button" data-gallery-item data-full="./images/gallery-05.svg" data-i18n-aria="gal5a" aria-label="Water well drilling in Quebec">
-              <img src="./images/gallery-05.svg" alt="" loading="lazy" />
-            </button>
-            <button class="gallery-item" type="button" data-gallery-item data-full="./images/gallery-06.svg" data-i18n-aria="gal6a" aria-label="Workshop and maintenance">
-              <img src="./images/gallery-06.svg" alt="" loading="lazy" />
-            </button>
+        <div class="feature-row">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+          <div class="feature-text">
+            <h4 data-en="Licensed and Insured" data-fr="Licence et Assure">Licensed and Insured</h4>
+            <p data-en="Fully certified by the RBQ and compliant with all Quebec drilling regulations." data-fr="Entierement certifie par la RBQ et conforme a tous les reglements de forage du Quebec.">Fully certified by the RBQ and compliant with all Quebec drilling regulations.</p>
           </div>
         </div>
-      </section>
-
-      <section class="section alt" id="about">
-        <div class="container two-col">
-          <div>
-            <h2 class="section-title" data-reveal data-i18n="aboutTitle">About JR Drilling</h2>
-            <p class="lead" data-reveal data-i18n="aboutLead">
-              Trusted name for quality water well drilling service and exceptional customer care—based in Shawville, Quebec.
-            </p>
-
-            <p class="para" data-reveal data-i18n="aboutP1">
-              We take pride in customer satisfaction and exceptional water well quality. Our clients range from small homesteads to large commercial applications—from hobby farms to high production dairy farms.
-            </p>
-
-            <p class="para" data-reveal data-i18n="aboutP2">
-              We can drill between 6” and 12” diameter wells and are capable of drilling to depths of over 1000’. For homeowners, the average well is 6” diameter and typically ranges from 50 to 500 feet in depth.
-            </p>
-
-            <p class="para" data-reveal data-i18n="aboutP3">
-              We also offer geothermal drilling, pump installation, well rehabilitation, and well abandonment—so you can get the full picture from one team.
-            </p>
-
-            <div class="pill-row" data-reveal>
-              <span class="pill" data-i18n="pill1">Safety-first</span>
-              <span class="pill" data-i18n="pill2">Clean sites</span>
-              <span class="pill" data-i18n="pill3">Clear timelines</span>
-              <span class="pill" data-i18n="pill4">Local knowledge</span>
-              <span class="pill" data-i18n="pill5">Eco-minded</span>
-            </div>
-          </div>
-
-          <div class="feature" data-reveal>
-            <div class="feature-inner">
-              <h3 class="feature-title" data-i18n="featureTitle">Built for local conditions</h3>
-              <p class="feature-body" data-i18n="featureBody">
-                Quebec terrain can change quickly. We plan for access, groundwater, and seasonal conditions so the job stays on track.
-              </p>
-
-                <div class="eco" data-reveal>
-                  <div class="eco-k" data-i18n="ecoK">Environment</div>
-                  <div class="eco-v" data-i18n="ecoV">
-                    JR Drilling is an environmentally friendly company. We actively reduce and recycle, and we use geothermal heating in our homes and workshop.
-                  </div>
-                </div>
-
-              <div class="feature-grid">
-                <div class="mini">
-                  <div class="mini-k" data-i18n="mini1K">Planning</div>
-                  <div class="mini-v" data-i18n="mini1V">Site-ready checklists</div>
-                </div>
-                <div class="mini">
-                  <div class="mini-k" data-i18n="mini2K">Execution</div>
-                  <div class="mini-v" data-i18n="mini2V">Precision + consistency</div>
-                </div>
-                <div class="mini">
-                  <div class="mini-k" data-i18n="mini3K">Wrap-up</div>
-                  <div class="mini-v" data-i18n="mini3V">Clean finish + reporting</div>
-                </div>
-                <div class="mini">
-                  <div class="mini-k" data-i18n="mini4K">Support</div>
-                  <div class="mini-v" data-i18n="mini4V">Clear next steps</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="faq">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title" data-reveal data-i18n="faqTitle">FAQs</h2>
-            <p class="section-subtitle" data-reveal data-i18n="faqSubtitle">
-              Quick answers to common questions. If you don’t see yours, send us a note.
-            </p>
-          </div>
-
-          <div class="faq" data-reveal>
-            <details class="faq-item">
-              <summary class="faq-q" data-i18n="faq1q">How deep is a typical water well?</summary>
-              <div class="faq-a" data-i18n="faq1a">
-                For many homeowners, wells are commonly 50–500 feet deep depending on geology and required yield.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q" data-i18n="faq2q">What well diameters can you drill?</summary>
-              <div class="faq-a" data-i18n="faq2a">
-                We can drill 6”–12” diameter wells. The most common homeowner well is 6”.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q" data-i18n="faq3q">Do you handle pump installation?</summary>
-              <div class="faq-a" data-i18n="faq3a">
-                Yes—pump installation is one of our offered services, along with guidance on system setup.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q" data-i18n="faq4q">Can you drill geothermal boreholes?</summary>
-              <div class="faq-a" data-i18n="faq4a">
-                We offer geothermal drilling support for loop installations and coordinate around your project needs.
-              </div>
-            </details>
-
-            <details class="faq-item">
-              <summary class="faq-q" data-i18n="faq5q">Do you rehabilitate or abandon old wells?</summary>
-              <div class="faq-a" data-i18n="faq5a">
-                Yes—when appropriate we rehabilitate wells, and we can also handle proper well abandonment to protect groundwater.
-              </div>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="areas">
-        <div class="container">
-          <div class="section-head">
-            <h2 class="section-title" data-reveal data-i18n="areasTitle">Service area (Quebec)</h2>
-            <p class="section-subtitle" data-reveal data-i18n="areasSubtitle">
-              We work across Quebec. If you’re outside our usual range, we can still advise and coordinate.
-            </p>
-          </div>
-
-          <div class="area-grid" data-reveal>
-            <div class="area">
-              <div class="area-name" data-i18n="area1">Greater Montréal</div>
-              <div class="area-desc" data-i18n="area1d">Residential & commercial drilling support</div>
-            </div>
-            <div class="area">
-              <div class="area-name" data-i18n="area2">Laval & North Shore</div>
-              <div class="area-desc" data-i18n="area2d">Geotechnical & site investigation</div>
-            </div>
-            <div class="area">
-              <div class="area-name" data-i18n="area3">Montérégie</div>
-              <div class="area-desc" data-i18n="area3d">Water wells & project coordination</div>
-            </div>
-            <div class="area">
-              <div class="area-name" data-i18n="area4">Laurentians</div>
-              <div class="area-desc" data-i18n="area4d">Terrain-ready drilling for seasonal conditions</div>
-            </div>
-            <div class="area">
-              <div class="area-name" data-i18n="area5">Eastern Townships</div>
-              <div class="area-desc" data-i18n="area5d">Environmental drilling & sampling support</div>
-            </div>
-            <div class="area">
-              <div class="area-name" data-i18n="area6">Quebec City region</div>
-              <div class="area-desc" data-i18n="area6d">Project-based scheduling</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section alt" id="contact">
-        <div class="container">
-          <div class="contact">
-            <div class="contact-left" data-reveal>
-              <h2 class="section-title" data-i18n="contactTitle">Request a quote</h2>
-              <p class="section-subtitle" data-i18n="contactSubtitle">
-                Tell us your location, service type, and timeline. We’ll respond quickly with next steps.
-              </p>
-
-              <div class="contact-points">
-                <div class="point">
-                  <div class="point-k" data-i18n="point1k">Typical reply</div>
-                  <div class="point-v" data-i18n="point1v">Within 24 hours</div>
-                </div>
-                <div class="point">
-                  <div class="point-k" data-i18n="point2k">Where we work</div>
-                  <div class="point-v" data-i18n="point2v">Across Quebec</div>
-                </div>
-                <div class="point">
-                  <div class="point-k" data-i18n="point3k">Languages</div>
-                  <div class="point-v" data-i18n="point3v">English / Français</div>
-                </div>
-              </div>
-            </div>
-
-            <form class="contact-form" data-reveal>
-              <div class="form-row">
-                <label>
-                  <span data-i18n="formName">Name</span>
-                  <input type="text" name="name" autocomplete="name" placeholder="Jane Doe" data-i18n-placeholder="phName" />
-                </label>
-                <label>
-                  <span data-i18n="formPhone">Phone</span>
-                  <input type="tel" name="phone" autocomplete="tel" placeholder="(555) 555-5555" data-i18n-placeholder="phPhone" />
-                </label>
-              </div>
-
-              <label>
-                <span data-i18n="formEmail">Email</span>
-                <input type="email" name="email" autocomplete="email" placeholder="you@example.com" data-i18n-placeholder="phEmail" />
-              </label>
-
-              <div class="form-row">
-                <label>
-                  <span data-i18n="formLocation">Location (Quebec)</span>
-                  <input type="text" name="location" placeholder="City / region" data-i18n-placeholder="phLocation" />
-                </label>
-                <label>
-                  <span data-i18n="formService">Service</span>
-                  <select name="service" data-i18n-select="serviceOptions">
-                    <option value="waterwell" data-i18n="serviceOpt1">Water well drilling</option>
-                    <option value="geotech" data-i18n="serviceOpt2">Geotechnical drilling</option>
-                    <option value="environmental" data-i18n="serviceOpt3">Environmental drilling & sampling</option>
-                    <option value="geothermal" data-i18n="serviceOpt4">Geothermal drilling</option>
-                    <option value="posts" data-i18n="serviceOpt5">Posts & foundations</option>
-                    <option value="other" data-i18n="serviceOpt6">Other / not sure</option>
-                  </select>
-                </label>
-              </div>
-
-              <label>
-                <span data-i18n="formDetails">Project details</span>
-                <textarea
-                  name="details"
-                  rows="5"
-                  placeholder="Tell us what you need, access constraints, timeline, and any site notes."
-                  data-i18n-placeholder="phDetails"
-                ></textarea>
-              </label>
-
-              <button class="btn primary full" type="button" data-i18n="formSubmit" data-fake-submit>
-                Send request
-              </button>
-
-              <p class="form-note" data-i18n="formNote">
-                This demo form doesn’t send email yet. Hook it to your preferred contact method (email, CRM, or a form backend) when deploying.
-              </p>
-            </form>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="footer-left">
-          <div class="footer-brand">JR Drilling</div>
-          <div class="footer-sub" data-i18n="footerSub">Drilling services across Quebec.</div>
-        </div>
-
-        <div class="footer-right">
-          <div class="footer-credit">
-            <span data-i18n="createdBy">Created by</span>
-            <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener noreferrer">Dolan Programming</a>
-          </div>
-          <div class="footer-meta">
-            <a href="#top" class="to-top" data-i18n="backToTop">Back to top</a>
+        <div class="feature-row">
+          <div class="feature-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+          <div class="feature-text">
+            <h4 data-en="24/7 Emergency Service" data-fr="Service d'Urgence 24/7">24/7 Emergency Service</h4>
+            <p data-en="Pump failures don't wait for business hours. We are on call around the clock." data-fr="Les pannes de pompe n'attendent pas les heures d'ouverture. Nous sommes disponibles 24h/24.">Pump failures don't wait for business hours. We are on call around the clock.</p>
           </div>
         </div>
       </div>
-    </footer>
-
-    <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast>
-      <span data-toast-text></span>
-      <button class="toast-close" type="button" aria-label="Close" data-toast-close>×</button>
     </div>
+  </section>
 
-    <div class="lightbox" aria-hidden="true" data-lightbox>
-      <div class="lightbox-backdrop" data-lightbox-close></div>
-      <figure class="lightbox-figure" role="dialog" aria-modal="true" aria-label="Gallery image">
-        <img class="lightbox-img" alt="" data-lightbox-img />
-        <figcaption class="lightbox-cap" data-lightbox-cap></figcaption>
-        <button class="lightbox-x" type="button" data-lightbox-close aria-label="Close">×</button>
-      </figure>
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services">
+    <div class="section-header reveal">
+      <div class="section-tag" data-en="What We Do" data-fr="Ce Que Nous Faisons">What We Do</div>
+      <h2 class="section-title light" data-en="Our Services" data-fr="Nos Services">Our Services</h2>
+      <p class="section-desc light" data-en="Complete drilling and water systems solutions for residential, agricultural, and commercial projects across Quebec." data-fr="Solutions completes de forage et de systemes d'eau pour les projets residentiels, agricoles et commerciaux au Quebec.">Complete drilling and water systems solutions for residential, agricultural, and commercial projects across Quebec.</p>
     </div>
+    <div class="services-grid reveal">
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><polyline points="6 8 12 2 18 8"/><line x1="8" y1="14" x2="16" y2="14"/></svg>
+        </div>
+        <h3 data-en="Water Well Drilling" data-fr="Forage de Puits d'Eau">Water Well Drilling</h3>
+        <p data-en="Residential and commercial artesian water well drilling to meet your property's water supply needs. We drill to the right depth for safe, reliable water." data-fr="Forage de puits artesiens residentiels et commerciaux pour repondre aux besoins en eau de votre propriete. Nous forons a la bonne profondeur.">Residential and commercial artesian water well drilling to meet your property's water supply needs. We drill to the right depth for safe, reliable water.</p>
+        <ul>
+          <li data-en="Artesian wells" data-fr="Puits artesiens">Artesian wells</li>
+          <li data-en="Residential &amp; farm wells" data-fr="Puits residentiels et agricoles">Residential &amp; farm wells</li>
+          <li data-en="Water quality testing" data-fr="Test de qualite d'eau">Water quality testing</li>
+          <li data-en="Well records &amp; permits" data-fr="Dossiers et permis de puits">Well records &amp; permits</li>
+        </ul>
+        <span class="service-link" data-en="Learn more" data-fr="En savoir plus">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg>
+        </div>
+        <h3 data-en="Geothermal Drilling" data-fr="Forage Geothermique">Geothermal Drilling</h3>
+        <p data-en="Closed-loop geothermal borehole drilling for heating and cooling systems. Reduce your energy bills with a sustainable ground-source heat pump system." data-fr="Forage de puits geothermiques en boucle fermee pour les systemes de chauffage et de climatisation. Reduisez vos factures d'energie.">Closed-loop geothermal borehole drilling for heating and cooling systems. Reduce your energy bills with a sustainable ground-source heat pump system.</p>
+        <ul>
+          <li data-en="Residential geothermal" data-fr="Geothermie residentielle">Residential geothermal</li>
+          <li data-en="Commercial installations" data-fr="Installations commerciales">Commercial installations</li>
+          <li data-en="Vertical &amp; horizontal loops" data-fr="Boucles verticales et horizontales">Vertical &amp; horizontal loops</li>
+          <li data-en="System design assistance" data-fr="Aide a la conception du systeme">System design assistance</li>
+        </ul>
+        <span class="service-link" data-en="Learn more" data-fr="En savoir plus">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3-3a1 1 0 000-1.4l-1.6-1.6a1 1 0 00-1.4 0l-3 3z"/><path d="M5 20L2 22l2-5 9.5-9.5"/><line x1="11" y1="11" x2="2" y2="20"/></svg>
+        </div>
+        <h3 data-en="Pump Installation &amp; Service" data-fr="Installation et Service de Pompe">Pump Installation &amp; Service</h3>
+        <p data-en="Supply, install, and repair submersible and jet pumps. We ensure proper sizing, pressure tank setup, and long-term system reliability." data-fr="Fourniture, installation et reparation de pompes submersibles et de surface. Nous assurons un dimensionnement correct et la fiabilite a long terme.">Supply, install, and repair submersible and jet pumps. We ensure proper sizing, pressure tank setup, and long-term system reliability.</p>
+        <ul>
+          <li data-en="Submersible pump install" data-fr="Installation de pompe immergee">Submersible pump install</li>
+          <li data-en="Pressure tank installation" data-fr="Installation de reservoir sous pression">Pressure tank installation</li>
+          <li data-en="Emergency pump repair" data-fr="Reparation d'urgence de pompe">Emergency pump repair</li>
+          <li data-en="Annual system inspection" data-fr="Inspection annuelle du systeme">Annual system inspection</li>
+        </ul>
+        <span class="service-link" data-en="Learn more" data-fr="En savoir plus">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+      <!-- Service 4 -->
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h3 data-en="Well Rehabilitation" data-fr="Rehabilitation de Puits">Well Rehabilitation</h3>
+        <p data-en="Low water yield? Poor water quality? We diagnose and rehabilitate existing wells through hydrofracturing, cleaning, and re-development techniques." data-fr="Faible rendement d'eau? Mauvaise qualite? Nous diagnostiquons et rehabilitons les puits existants par hydrofracturation, nettoyage et redeveloppement.">Low water yield? Poor water quality? We diagnose and rehabilitate existing wells through hydrofracturing, cleaning, and re-development techniques.</p>
+        <ul>
+          <li data-en="Hydrofracturing" data-fr="Hydrofracturation">Hydrofracturing</li>
+          <li data-en="Well cleaning &amp; disinfection" data-fr="Nettoyage et desinfection">Well cleaning &amp; disinfection</li>
+          <li data-en="Flow rate testing" data-fr="Test de debit">Flow rate testing</li>
+          <li data-en="Camera inspection" data-fr="Inspection par camera">Camera inspection</li>
+        </ul>
+        <span class="service-link" data-en="Learn more" data-fr="En savoir plus">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+      <!-- Service 5 -->
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3 data-en="Residential Well Systems" data-fr="Systemes de Puits Residentiels">Residential Well Systems</h3>
+        <p data-en="Complete turnkey water supply systems for new construction and existing homes. From drilling to inside connections, we handle the whole project." data-fr="Systemes d'alimentation en eau cles en main pour les nouvelles constructions et les maisons existantes. Du forage aux raccordements interieurs.">Complete turnkey water supply systems for new construction and existing homes. From drilling to inside connections, we handle the whole project.</p>
+        <ul>
+          <li data-en="New construction wells" data-fr="Puits pour nouvelles constructions">New construction wells</li>
+          <li data-en="Indoor plumbing hookup" data-fr="Raccordement plomberie interieure">Indoor plumbing hookup</li>
+          <li data-en="Water treatment systems" data-fr="Systemes de traitement d'eau">Water treatment systems</li>
+          <li data-en="UV &amp; filtration systems" data-fr="Systemes UV et filtration">UV &amp; filtration systems</li>
+        </ul>
+        <span class="service-link" data-en="Learn more" data-fr="En savoir plus">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+      <!-- Service 6 -->
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-icon-wrap">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3H8a2 2 0 00-2 2v2h12V5a2 2 0 00-2-2z"/><line x1="12" y1="12" x2="12" y2="17"/><line x1="9.5" y1="14.5" x2="14.5" y2="14.5"/></svg>
+        </div>
+        <h3 data-en="Agricultural &amp; Commercial" data-fr="Agricole et Commercial">Agricultural &amp; Commercial</h3>
+        <p data-en="High-capacity water supply solutions for farms, municipalities, and commercial operations. We drill larger diameter wells for high-volume water needs." data-fr="Solutions d'alimentation en eau a haute capacite pour les exploitations agricoles, les municipalites et les operations commerciales.">High-capacity water supply solutions for farms, municipalities, and commercial operations. We drill larger diameter wells for high-volume water needs.</p>
+        <ul>
+          <li data-en="Farm &amp; irrigation wells" data-fr="Puits agricoles et d'irrigation">Farm &amp; irrigation wells</li>
+          <li data-en="Municipal supply wells" data-fr="Puits d'alimentation municipaux">Municipal supply wells</li>
+          <li data-en="Industrial drilling" data-fr="Forage industriel">Industrial drilling</li>
+          <li data-en="Large capacity pumps" data-fr="Pompes grande capacite">Large capacity pumps</li>
+        </ul>
+        <span class="service-link" data-en="Learn more" data-fr="En savoir plus">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </div>
+  </section>
 
-    <script src="./script.js" defer></script>
-  </body>
+  <!-- ============================================================
+       REGIONS STRIP
+  ============================================================ -->
+  <div id="regions">
+    <div class="regions-label" data-en="Regions Served" data-fr="Regions Desservies">Regions Served</div>
+    <div class="regions-list">
+      <span>Laurentides</span>
+      <span>Lanaudiere</span>
+      <span>Outaouais</span>
+      <span>Abitibi-Temiscamingue</span>
+      <span>Capitale-Nationale</span>
+      <span>Estrie</span>
+      <span>Monteregie</span>
+      <span data-en="+ More" data-fr="+ Plus">+ More</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CATALOG
+  ============================================================ -->
+  <section id="catalog">
+    <div class="section-header reveal">
+      <div class="section-tag" data-en="New Arrivals" data-fr="Nouveautes">New Arrivals</div>
+      <h2 class="section-title" data-en="Equipment &amp; Products" data-fr="Equipements et Produits">Equipment &amp; Products</h2>
+      <p class="section-desc" data-en="Browse our latest pumps, pressure systems, filtration units, and accessories now available. Contact us for pricing and availability." data-fr="Parcourez nos dernieres pompes, systemes de pression, unites de filtration et accessoires. Contactez-nous pour les prix et la disponibilite.">Browse our latest pumps, pressure systems, filtration units, and accessories now available. Contact us for pricing and availability.</p>
+    </div>
+    <div class="catalog-filter reveal">
+      <button class="filter-btn active" data-filter="all" data-en="All Items" data-fr="Tous">All Items</button>
+      <button class="filter-btn" data-filter="pump" data-en="Pumps" data-fr="Pompes">Pumps</button>
+      <button class="filter-btn" data-filter="pressure" data-en="Pressure Systems" data-fr="Systemes de Pression">Pressure Systems</button>
+      <button class="filter-btn" data-filter="filter" data-en="Filtration" data-fr="Filtration">Filtration</button>
+      <button class="filter-btn" data-filter="geo" data-en="Geothermal" data-fr="Geothermique">Geothermal</button>
+    </div>
+    <div class="catalog-grid reveal" id="catalogGrid">
+      <!-- Cards injected by JS -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WHY US
+  ============================================================ -->
+  <section id="why">
+    <div class="why-list reveal">
+      <div class="section-tag" data-en="Why Choose JR" data-fr="Pourquoi Choisir JR">Why Choose JR</div>
+      <h2 class="section-title" data-en="Experience You Can Count On" data-fr="L'Experience Sur Laquelle Vous Pouvez Compter">Experience You Can Count On</h2>
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <div class="why-text">
+          <h4 data-en="Deep Local Knowledge" data-fr="Connaissance Locale Approfondie">Deep Local Knowledge</h4>
+          <p data-en="We know Quebec's geology intimately. Every region drills differently and our crews adapt their approach to the terrain for better results." data-fr="Nous connaissons intimement la geologie du Quebec. Chaque region se fore differemment et nos equipes adaptent leur approche au terrain.">We know Quebec's geology intimately. Every region drills differently and our crews adapt their approach to the terrain for better results.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-text">
+          <h4 data-en="Transparent Pricing" data-fr="Prix Transparents">Transparent Pricing</h4>
+          <p data-en="No hidden fees or surprise invoices. We provide detailed quotes upfront so you always know exactly what you are paying for." data-fr="Aucun frais cache ni factures surprises. Nous fournissons des devis detailles a l'avance pour que vous sachiez toujours exactement ce que vous payez.">No hidden fees or surprise invoices. We provide detailed quotes upfront so you always know exactly what you are paying for.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-text">
+          <h4 data-en="Fast Project Turnaround" data-fr="Delais de Realisation Rapides">Fast Project Turnaround</h4>
+          <p data-en="Our modern fleet and experienced crews mean most residential wells are completed in a single day. We respect your time." data-fr="Notre flotte moderne et nos equipes experimentees signifient que la plupart des puits residentiels sont completes en une seule journee.">Our modern fleet and experienced crews mean most residential wells are completed in a single day. We respect your time.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <div class="why-text">
+          <h4 data-en="Full Project Management" data-fr="Gestion Complete de Projet">Full Project Management</h4>
+          <p data-en="We handle permits, RBQ compliance, water testing, and final reports so you don't have to coordinate multiple contractors." data-fr="Nous nous occupons des permis, de la conformite RBQ, des tests d'eau et des rapports finaux pour que vous n'ayez pas a coordonner plusieurs entrepreneurs.">We handle permits, RBQ compliance, water testing, and final reports so you don't have to coordinate multiple contractors.</p>
+        </div>
+      </div>
+    </div>
+    <div class="why-visual reveal">
+      <div class="why-photo">
+        <div class="img-placeholder dark" style="background:#d9c9b0;height:100%;">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span data-en="Drilling rig in action" data-fr="Foreuse en action">Drilling rig in action</span>
+          <span style="opacity:0.4;font-size:0.65rem;" data-en="700 x 800 recommended" data-fr="700 x 800 recommande">700 x 800 recommended</span>
+        </div>
+      </div>
+      <div class="why-accent">
+        <span class="why-accent-num">30+</span>
+        <span class="why-accent-label" data-en="Years in Quebec" data-fr="Ans au Quebec">Years in Quebec</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROCESS
+  ============================================================ -->
+  <section id="process">
+    <div class="section-header reveal">
+      <div class="section-tag" data-en="How It Works" data-fr="Comment Ca Marche">How It Works</div>
+      <h2 class="section-title light" data-en="Our Process" data-fr="Notre Processus">Our Process</h2>
+      <p class="section-desc light" data-en="A straightforward, proven process from first contact to running water on your property." data-fr="Un processus simple et eprouve, du premier contact jusqu'a l'eau courante sur votre propriete.">A straightforward, proven process from first contact to running water on your property.</p>
+    </div>
+    <div class="process-steps reveal">
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-num" data-en="Step 01" data-fr="Etape 01">Step 01</div>
+        <h4 data-en="Site Assessment" data-fr="Evaluation du Site">Site Assessment</h4>
+        <p data-en="We visit your property to assess terrain, local geology, and permit requirements before any work begins." data-fr="Nous visitons votre propriete pour evaluer le terrain, la geologie locale et les exigences de permis avant tout travail.">We visit your property to assess terrain, local geology, and permit requirements before any work begins.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-num" data-en="Step 02" data-fr="Etape 02">Step 02</div>
+        <h4 data-en="Quote &amp; Permitting" data-fr="Devis et Permis">Quote &amp; Permitting</h4>
+        <p data-en="You receive a detailed written quote. We file for all required RBQ and municipal permits on your behalf." data-fr="Vous recevez un devis ecrit detaille. Nous deposons toutes les demandes de permis RBQ et municipaux en votre nom.">You receive a detailed written quote. We file for all required RBQ and municipal permits on your behalf.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-num" data-en="Step 03" data-fr="Etape 03">Step 03</div>
+        <h4 data-en="Drilling Day" data-fr="Jour du Forage">Drilling Day</h4>
+        <p data-en="Our crew arrives with full equipment. Most residential wells are drilled, cased, and completed in a single day." data-fr="Notre equipe arrive avec tout l'equipement. La plupart des puits residentiels sont fores, tubes et termines en une seule journee.">Our crew arrives with full equipment. Most residential wells are drilled, cased, and completed in a single day.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-num" data-en="Step 04" data-fr="Etape 04">Step 04</div>
+        <h4 data-en="Pump &amp; System Install" data-fr="Pompe et Installation Systeme">Pump &amp; System Install</h4>
+        <p data-en="We install your submersible pump, pressure tank, and any treatment systems required, fully tested and connected." data-fr="Nous installons votre pompe immergee, votre reservoir sous pression et tout systeme de traitement necessaire, completement teste et connecte.">We install your submersible pump, pressure tank, and any treatment systems required, fully tested and connected.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-dot"></div>
+        <div class="step-num" data-en="Step 05" data-fr="Etape 05">Step 05</div>
+        <h4 data-en="Water Testing" data-fr="Test de Qualite d'Eau">Water Testing</h4>
+        <p data-en="Water quality samples are submitted to a certified lab. Results and recommendations are shared with you in a clear report." data-fr="Des echantillons de qualite d'eau sont soumis a un laboratoire certifie. Les resultats vous sont communiques dans un rapport clair.">Water quality samples are submitted to a certified lab. Results and recommendations are shared with you in a clear report.</p>
+      </div>
+      <div class="process-step" style="border-right:none;">
+        <div class="step-dot"></div>
+        <div class="step-num" data-en="Step 06" data-fr="Etape 06">Step 06</div>
+        <h4 data-en="Final Handoff" data-fr="Remise Finale">Final Handoff</h4>
+        <p data-en="We walk you through your system, provide all documentation, and register the well with provincial authorities." data-fr="Nous vous faisons visiter votre systeme, vous fournissons toute la documentation et enregistrons le puits aupres des autorites provinciales.">We walk you through your system, provide all documentation, and register the well with provincial authorities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section id="testimonials" style="background:var(--sand);">
+    <div class="section-header reveal">
+      <div class="section-tag" data-en="Client Stories" data-fr="Temoignages">Client Stories</div>
+      <h2 class="section-title" data-en="What Our Clients Say" data-fr="Ce Que Disent Nos Clients">What Our Clients Say</h2>
+    </div>
+    <div class="testimonials-grid reveal">
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <blockquote data-en="The crew arrived at 7am and by 3pm we had water running to the house. Professional, clean site, and a clear final report. Could not ask for more." data-fr="L'equipe est arrivee a 7h et a 15h nous avions l'eau courante dans la maison. Professionnel, site propre et rapport final clair. On ne pourrait pas demander mieux.">
+          The crew arrived at 7am and by 3pm we had water running to the house. Professional, clean site, and a clear final report. Could not ask for more.
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar"><div class="img-placeholder dark" style="background:#c8b898;"></div></div>
+          <div>
+            <div class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+            <div class="author-name">Michel Tremblay</div>
+            <div class="author-loc">Saint-Donat, Laurentides</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <blockquote data-en="We needed an emergency pump replacement in January. JR had someone out the same day. Excellent service and the price was completely fair." data-fr="Nous avions besoin d'un remplacement de pompe d'urgence en janvier. JR avait quelqu'un le jour meme. Service excellent et prix completement juste.">
+          We needed an emergency pump replacement in January. JR had someone out the same day. Excellent service and the price was completely fair.
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar"><div class="img-placeholder dark" style="background:#c8b898;"></div></div>
+          <div>
+            <div class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+            <div class="author-name">Julie Gagnon</div>
+            <div class="author-loc">Hawkesbury, Outaouais</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <span class="quote-mark">"</span>
+        <blockquote data-en="Had JR drill two geothermal boreholes for our new build. The project came in on time and on budget. The team clearly knows what they are doing." data-fr="Nous avons fait forer deux puits geothermiques par JR pour notre nouvelle construction. Le projet s'est termine dans les delais et le budget. L'equipe sait ce qu'elle fait.">
+          Had JR drill two geothermal boreholes for our new build. The project came in on time and on budget. The team clearly knows what they are doing.
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="author-avatar"><div class="img-placeholder dark" style="background:#c8b898;"></div></div>
+          <div>
+            <div class="stars"><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span><span class="star"></span></div>
+            <div class="author-name">Pierre-Luc Beaumont</div>
+            <div class="author-loc">Mont-Tremblant, Laurentides</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="contact-info reveal">
+      <div class="section-tag" data-en="Get In Touch" data-fr="Contactez-Nous">Get In Touch</div>
+      <h2 class="section-title light" data-en="Request a Free Quote" data-fr="Demandez un Devis Gratuit">Request a Free Quote</h2>
+      <p class="section-desc light" data-en="Fill out the form or reach us directly. We respond to all inquiries within one business day." data-fr="Remplissez le formulaire ou contactez-nous directement. Nous repondons a toutes les demandes dans un jour ouvrable.">Fill out the form or reach us directly. We respond to all inquiries within one business day.</p>
+      <div style="margin-top:2.5rem;">
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+          <div>
+            <div class="contact-label" data-en="Phone" data-fr="Telephone">Phone</div>
+            <div class="contact-value"><a href="tel:+18191234567">(819) 123-4567</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div class="contact-label" data-en="Email" data-fr="Courriel">Email</div>
+            <div class="contact-value"><a href="mailto:info@jrdrilling.ca">info@jrdrilling.ca</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="contact-label" data-en="Service Area" data-fr="Zone de Service">Service Area</div>
+            <div class="contact-value" data-en="Quebec Province, Canada" data-fr="Province de Quebec, Canada">Quebec Province, Canada</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <div class="contact-label" data-en="Hours" data-fr="Heures">Hours</div>
+            <div class="contact-value" data-en="Mon–Sat: 7am – 6pm | Emergency: 24/7" data-fr="Lun–Sam: 7h – 18h | Urgence: 24/7">Mon–Sat: 7am – 6pm | Emergency: 24/7</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <form class="contact-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-en="First Name" data-fr="Prenom">First Name</label>
+            <input type="text" placeholder="Jean" />
+          </div>
+          <div class="form-group">
+            <label data-en="Last Name" data-fr="Nom de Famille">Last Name</label>
+            <input type="text" placeholder="Tremblay" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-en="Email Address" data-fr="Adresse Courriel">Email Address</label>
+          <input type="email" placeholder="jean@example.com" />
+        </div>
+        <div class="form-group">
+          <label data-en="Phone Number" data-fr="Numero de Telephone">Phone Number</label>
+          <input type="tel" placeholder="(819) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label data-en="Service Needed" data-fr="Service Requis">Service Needed</label>
+          <select>
+            <option value="" data-en="Select a service..." data-fr="Selectionnez un service...">Select a service...</option>
+            <option data-en="Water Well Drilling" data-fr="Forage de Puits d'Eau">Water Well Drilling</option>
+            <option data-en="Geothermal Drilling" data-fr="Forage Geothermique">Geothermal Drilling</option>
+            <option data-en="Pump Installation / Repair" data-fr="Installation / Reparation de Pompe">Pump Installation / Repair</option>
+            <option data-en="Well Rehabilitation" data-fr="Rehabilitation de Puits">Well Rehabilitation</option>
+            <option data-en="Agricultural / Commercial" data-fr="Agricole / Commercial">Agricultural / Commercial</option>
+            <option data-en="Other" data-fr="Autre">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-en="Project Details" data-fr="Details du Projet">Project Details</label>
+          <textarea placeholder="" id="contactTextarea" data-en-placeholder="Describe your project, location, and any relevant details..." data-fr-placeholder="Decrivez votre projet, votre emplacement et tous les details pertinents..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn" data-en="Send Request" data-fr="Envoyer la Demande">
+          Send Request
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <div class="logo-mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="2" x2="12" y2="22"/><polyline points="6 8 12 2 18 8"/><line x1="8" y1="14" x2="16" y2="14"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">JR Drilling</span>
+            <span class="logo-sub" data-en="Quebec Drilling Experts" data-fr="Experts en Forage Quebec">Quebec Drilling Experts</span>
+          </div>
+        </a>
+        <p style="margin-top:1rem;" data-en="Serving Quebec homeowners, contractors, and farmers with professional drilling and water system services since 1995." data-fr="Au service des proprietaires, entrepreneurs et agriculteurs du Quebec avec des services professionnels de forage et de systemes d'eau depuis 1995.">
+          Serving Quebec homeowners, contractors, and farmers with professional drilling and water system services since 1995.
+        </p>
+        <div class="cert-badges" style="margin-top:1.25rem;">
+          <span class="cert-badge">RBQ Certified</span>
+          <span class="cert-badge" data-en="MDDELCC Compliant" data-fr="Conforme MDDELCC">MDDELCC Compliant</span>
+          <span class="cert-badge" data-en="Est. 1995" data-fr="Fond. 1995">Est. 1995</span>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Services" data-fr="Services">Services</h5>
+        <ul>
+          <li><a href="#services" data-en="Water Well Drilling" data-fr="Forage de Puits d'Eau">Water Well Drilling</a></li>
+          <li><a href="#services" data-en="Geothermal Drilling" data-fr="Forage Geothermique">Geothermal Drilling</a></li>
+          <li><a href="#services" data-en="Pump Services" data-fr="Services de Pompe">Pump Services</a></li>
+          <li><a href="#services" data-en="Well Rehabilitation" data-fr="Rehabilitation de Puits">Well Rehabilitation</a></li>
+          <li><a href="#services" data-en="Residential Systems" data-fr="Systemes Residentiels">Residential Systems</a></li>
+          <li><a href="#services" data-en="Agricultural Drilling" data-fr="Forage Agricole">Agricultural Drilling</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Company" data-fr="Entreprise">Company</h5>
+        <ul>
+          <li><a href="#about" data-en="About Us" data-fr="A Propos de Nous">About Us</a></li>
+          <li><a href="#why" data-en="Why Choose Us" data-fr="Pourquoi Nous Choisir">Why Choose Us</a></li>
+          <li><a href="#process" data-en="Our Process" data-fr="Notre Processus">Our Process</a></li>
+          <li><a href="#catalog" data-en="Product Catalog" data-fr="Catalogue de Produits">Product Catalog</a></li>
+          <li><a href="#testimonials" data-en="Testimonials" data-fr="Temoignages">Testimonials</a></li>
+          <li><a href="#contact" data-en="Contact Us" data-fr="Contactez-Nous">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-en="Contact" data-fr="Contact">Contact</h5>
+        <ul>
+          <li><a href="tel:+18191234567">(819) 123-4567</a></li>
+          <li><a href="mailto:info@jrdrilling.ca">info@jrdrilling.ca</a></li>
+          <li><span data-en="Quebec, Canada" data-fr="Quebec, Canada">Quebec, Canada</span></li>
+          <li style="margin-top:0.5rem;"><a href="#contact" data-en="Emergency: 24/7" data-fr="Urgence: 24/7">Emergency: 24/7</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-en="&copy; 2025 JR Drilling. All rights reserved." data-fr="&copy; 2025 JR Drilling. Tous droits reserves.">&copy; 2025 JR Drilling. All rights reserved.</span>
+      <span data-en="Website by" data-fr="Site web par">Website by</span>
+      <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>
+  // ── CATALOG DATA ──────────────────────────────────────────────
+  const catalogItems = [
+    { id:1, category:'pump', new:true,
+      en:{ title:'ProWell 4" Submersible Pump', cat:'Pumps', desc:'High-efficiency 4-inch submersible pump ideal for residential wells up to 300 feet. Stainless steel casing with 5-year warranty.', tags:['Residential','2HP','Stainless Steel'] },
+      fr:{ title:'Pompe Submersible ProWell 4"', cat:'Pompes', desc:'Pompe submersible 4 pouces haute efficacite, ideale pour les puits residentiels jusqu\'a 90 metres. Boitier en acier inoxydable avec garantie 5 ans.', tags:['Residentiel','2HP','Acier Inox'] }
+    },
+    { id:2, category:'pressure', new:true,
+      en:{ title:'AquaForce 44-Gallon Pressure Tank', cat:'Pressure Systems', desc:'Pre-charged diaphragm pressure tank. Prevents pump cycling and maintains consistent water pressure throughout the home.', tags:['44 Gallon','Pre-Charged','NSF Listed'] },
+      fr:{ title:'Reservoir de Pression AquaForce 44 Gal', cat:'Systemes de Pression', desc:'Reservoir de pression a membrane pre-charge. Empeche le cyclage de la pompe et maintient une pression d\'eau constante dans toute la maison.', tags:['44 Gallons','Pre-charge','Certifie NSF'] }
+    },
+    { id:3, category:'filter', new:false,
+      en:{ title:'ClearFlow UV Disinfection System', cat:'Filtration', desc:'Whole-home UV sterilizer rated at 12 GPM. Eliminates 99.9% of bacteria and viruses without chemicals. Easy lamp replacement.', tags:['UV','12 GPM','No Chemicals'] },
+      fr:{ title:'Systeme UV ClearFlow', cat:'Filtration', desc:'Sterilisateur UV pour maison entiere, evalue a 12 GPM. Elimine 99,9% des bacteries et virus sans produits chimiques. Remplacement facile de la lampe.', tags:['UV','12 GPM','Sans Produits Chimiques'] }
+    },
+    { id:4, category:'pump', new:true,
+      en:{ title:'JetMax Surface Pump 1HP', cat:'Pumps', desc:'Reliable shallow-well jet pump for wells under 25 feet. Cast iron housing, integrated pressure switch, easy field service.', tags:['Shallow Well','1HP','Cast Iron'] },
+      fr:{ title:'Pompe de Surface JetMax 1HP', cat:'Pompes', desc:'Pompe a jet fiable pour puits peu profonds de moins de 7,5 metres. Boitier en fonte, pressostat integre, entretien facile sur le terrain.', tags:['Puits peu profond','1HP','Fonte'] }
+    },
+    { id:5, category:'geo', new:true,
+      en:{ title:'GeoLoop HD HDPE Pipe Bundle', cat:'Geothermal', desc:'High-density polyethylene pipe bundle for vertical geothermal loops. Available in 400ft and 600ft lengths, fusion-welded ends.', tags:['HDPE','Vertical Loop','Fusion Welded'] },
+      fr:{ title:'Faisceau Tuyaux GeoLoop HD PEHD', cat:'Geothermique', desc:'Faisceau de tuyaux polyethylene haute densite pour boucles geothermiques verticales. Disponible en longueurs de 120 et 180 metres, extremites soudees par fusion.', tags:['PEHD','Boucle Verticale','Soude par Fusion'] }
+    },
+    { id:6, category:'filter', new:false,
+      en:{ title:'IronShield Pro Filtration System', cat:'Filtration', desc:'Whole-house iron, manganese, and hydrogen sulfide removal system. Self-cleaning backwash filter with digital controller.', tags:['Iron Removal','Auto Backwash','Digital Control'] },
+      fr:{ title:'Systeme de Filtration IronShield Pro', cat:'Filtration', desc:'Systeme de filtration maison entiere pour eliminer le fer, le manganese et le sulfure d\'hydrogene. Filtre autolavant avec controleur numerique.', tags:['Elimination du Fer','Auto-lavage','Controle Numerique'] }
+    },
+    { id:7, category:'pressure', new:false,
+      en:{ title:'ConstantPro VFD Pump Controller', cat:'Pressure Systems', desc:'Variable frequency drive controller for constant water pressure on demand. Extends pump life and reduces energy use by up to 40%.', tags:['VFD','Constant Pressure','Energy Saving'] },
+      fr:{ title:'Controleur de Pompe VFD ConstantPro', cat:'Systemes de Pression', desc:'Controleur a frequence variable pour une pression d\'eau constante a la demande. Prolonge la duree de vie de la pompe et reduit la consommation d\'energie jusqu\'a 40%.', tags:['VFD','Pression Constante','Economie d\'Energie'] }
+    },
+    { id:8, category:'geo', new:false,
+      en:{ title:'ThermoGrout Geothermal Grout', cat:'Geothermal', desc:'High thermal conductivity grout for geothermal borehole sealing. Premixed formula, easy installation, meets all Quebec standards.', tags:['High Conductivity','Premixed','QC Approved'] },
+      fr:{ title:'Coulis Geothermique ThermoGrout', cat:'Geothermique', desc:'Coulis a haute conductivite thermique pour le scellement des puits geothermiques. Formule premixee, installation facile, conforme aux normes du Quebec.', tags:['Haute Conductivite','Premixe','Approuve QC'] }
+    },
+  ];
+
+  // ── LANGUAGE ──────────────────────────────────────────────────
+  let currentLang = 'en';
+
+  function applyLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'fr' ? 'fr-CA' : 'en-CA';
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'FR' : 'EN';
+
+    // Text nodes
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const txt = el.getAttribute('data-' + lang);
+      if (txt) el.textContent = txt;
+    });
+
+    // Textarea placeholders
+    document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+      const ph = el.getAttribute('data-' + lang + '-placeholder');
+      if (ph) el.placeholder = ph;
+    });
+
+    // Select options
+    document.querySelectorAll('select option[data-en]').forEach(opt => {
+      const txt = opt.getAttribute('data-' + lang);
+      if (txt) opt.textContent = txt;
+    });
+
+    // Rebuild catalog in new language
+    renderCatalog('all');
+  }
+
+  document.getElementById('langToggle').addEventListener('click', () => {
+    applyLang(currentLang === 'en' ? 'fr' : 'en');
+  });
+
+  // ── HAMBURGER ────────────────────────────────────────────────
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = hamburger.classList.toggle('open');
+    hamburger.setAttribute('aria-expanded', isOpen);
+    if (isOpen) {
+      mobileNav.classList.add('open');
+    } else {
+      mobileNav.style.opacity = '0';
+      mobileNav.style.transform = 'translateY(-10px)';
+      setTimeout(() => { mobileNav.classList.remove('open'); mobileNav.style.opacity = ''; mobileNav.style.transform = ''; }, 300);
+    }
+  });
+
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  // ── HEADER SCROLL ────────────────────────────────────────────
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive:true });
+
+  // ── TICKER ───────────────────────────────────────────────────
+  const tickerItems = [
+    { en:'Water Well Drilling', fr:'Forage de Puits d\'Eau' },
+    { en:'Geothermal Solutions', fr:'Solutions Geothermiques' },
+    { en:'Pump Installation', fr:'Installation de Pompe' },
+    { en:'Well Rehabilitation', fr:'Rehabilitation de Puits' },
+    { en:'Emergency Service 24/7', fr:'Service d\'Urgence 24/7' },
+    { en:'Serving All of Quebec', fr:'Desservant Tout le Quebec' },
+    { en:'RBQ Certified Crews', fr:'Equipes Certifiees RBQ' },
+    { en:'Free Estimates', fr:'Estimations Gratuites' },
+  ];
+
+  function buildTicker() {
+    const ticker = document.getElementById('ticker');
+    // duplicate for seamless loop
+    const all = [...tickerItems, ...tickerItems];
+    ticker.innerHTML = all.map(i => `<span class="ticker-item" data-en="${i.en}" data-fr="${i.fr}">${i.en}</span>`).join('');
+  }
+  buildTicker();
+
+  // ── CATALOG ──────────────────────────────────────────────────
+  function renderCatalog(filter) {
+    const grid = document.getElementById('catalogGrid');
+    const items = filter === 'all' ? catalogItems : catalogItems.filter(i => i.category === filter);
+    const l = currentLang;
+    grid.innerHTML = items.map(item => {
+      const d = item[l];
+      return `
+        <div class="catalog-card" data-cat="${item.category}">
+          <div class="catalog-img">
+            ${item.new ? `<span class="new-badge" data-en="New" data-fr="Nouveau">${l==='fr'?'Nouveau':'New'}</span>` : ''}
+            <div class="img-placeholder dark" style="background:#d0c0a0;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.5rem;color:rgba(0,0,0,0.22);">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span style="font-family:var(--font-display);font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;">${l==='fr'?'Photo produit':'Product photo'}</span>
+            </div>
+          </div>
+          <div class="catalog-body">
+            <div class="catalog-category">${d.cat}</div>
+            <h4>${d.title}</h4>
+            <p>${d.desc}</p>
+            <div class="catalog-tags">${d.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+  renderCatalog('all');
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      renderCatalog(this.dataset.filter);
+    });
+  });
+
+  // ── SCROLL REVEAL ────────────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── STAGGER INIT ────────────────────────────────────────────
+  document.querySelectorAll('.service-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.06) + 's';
+  });
+  </script>
+</body>
 </html>
-
