@@ -624,6 +624,10 @@ footer{
   nav ul li:last-child a{border-bottom:none;}
   nav ul li a:hover{color:var(--orange);}
   #proj-header .proj-nav-links{display:none;}
+  #main-header.scrolled {
+  height: var(--header-h, 70px) !important;
+  background: rgba(8, 8, 8, 0.75) !important;
+  }
 }
 @media(max-width:768px){
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:2.5rem;}
