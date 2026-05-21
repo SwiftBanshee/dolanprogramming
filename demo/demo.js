@@ -123,7 +123,7 @@ const DEMOS = [
     featured: true,
   },
   {
-    id: 'dolan-art-photopraphy',
+    id: 'dolan-art-photography',
     title: 'Dolan Art & Photography',
     client: 'Demo Client — Other',
     desc: 'Quebec-based fine art studio featuring original oil, acrylic, and watercolor paintings, custom commissions, pet portraits, and landscapes by artist Cheryl Dolan.',
