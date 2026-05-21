@@ -1,0 +1,2116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO - Local Quebec / Pontiac Region -->
+  <title>Gavan's Hotel | Pub & Live Music | Quyon, Pontiac, Quebec</title>
+  <meta name="description" content="Gavan's Hotel — Quyon's beloved pub since 1946. Live music, hearty food, ice-cold drinks and a true Pontiac, Quebec tradition. Cain's Pub and Shamrock Lounge." />
+  <meta name="keywords" content="Gavan's Hotel, Quyon pub, Pontiac Quebec bar, live music Quyon, restaurant Quyon QC, Cain's Pub, Shamrock Lounge, Gateway to the Pontiac, pub Outaouais, brasserie Quyon" />
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Quyon, Pontiac, Quebec, Canada" />
+  <meta name="geo.position" content="45.5292;-76.2301" />
+  <meta name="ICBM" content="45.5292, -76.2301" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gavanshotel.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Gavan's Hotel | Pub & Live Music | Quyon, Pontiac, Quebec" />
+  <meta property="og:description" content="Since 1946, Gavan's Hotel has been the heart of Quyon — food, drinks, live music and the Pontiac spirit." />
+  <meta property="og:url" content="https://www.gavanshotel.com" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+
+  <!-- Schema.org Local Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BarOrPub",
+    "name": "Gavan's Hotel",
+    "description": "Family-owned pub and local gathering place in Quyon, QC, serving the Pontiac region since 1946.",
+    "url": "https://www.gavanshotel.com",
+    "telephone": "",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1157 Rue de Clarendon",
+      "addressLocality": "Quyon",
+      "addressRegion": "QC",
+      "postalCode": "J0X 2V0",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 45.5292,
+      "longitude": -76.2301
+    },
+    "openingHours": "Mo-Su 11:00-02:00",
+    "servesCuisine": ["Canadian", "Pub Food", "Pizza", "Fish and Chips"],
+    "priceRange": "$$"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --black: #0a0805;
+      --dark: #121008;
+      --brown-deep: #1e1408;
+      --amber: #c8861a;
+      --amber-light: #e6a831;
+      --amber-pale: #f5c96b;
+      --cream: #f5eedc;
+      --cream-dark: #e8dfc8;
+      --white: #fdf9f0;
+      --text-muted: #8a7d68;
+      --border: rgba(200,134,26,0.2);
+      --header-h: 72px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Karla', sans-serif;
+      background: var(--black);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== ANIMATED GRAIN OVERLAY ===== */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* ===== STICKY HEADER ===== */
+    #site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--header-h);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(10,8,5,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+
+    #site-header.scrolled {
+      background: rgba(10,8,5,0.97);
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo img {
+      height: 44px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    /* Desktop nav */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Karla', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream-dark);
+      position: relative;
+      padding-bottom: 4px;
+      transition: color 0.2s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--amber);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover { color: var(--amber-light); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* Lang toggle */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+      margin-left: 16px;
+    }
+
+    .lang-toggle button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Karla', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+
+    .lang-toggle button.active {
+      background: var(--amber);
+      color: var(--black);
+    }
+
+    .lang-toggle button:not(.active):hover {
+      color: var(--amber-light);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--cream);
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Mobile menu drawer */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0;
+      right: 0;
+      background: rgba(10,8,5,0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      padding: 32px 40px;
+      border-bottom: 1px solid var(--border);
+      transform: translateY(-20px);
+      opacity: 0;
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .mobile-menu a {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream-dark);
+    }
+
+    .mobile-lang {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      gap: 12px;
+    }
+
+    .mobile-lang button {
+      background: none;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-family: 'Karla', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      color: var(--text-muted);
+      transition: all 0.2s;
+      border-radius: 2px;
+    }
+
+    .mobile-lang button.active {
+      background: var(--amber);
+      color: var(--black);
+      border-color: var(--amber);
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      height: 100vh;
+      min-height: 640px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-slides {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+
+    .hero-slide.active { opacity: 1; }
+
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      animation: slowzoom 8s ease-out forwards;
+    }
+
+    @keyframes slowzoom {
+      from { transform: scale(1.08); }
+      to   { transform: scale(1.0); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(10,8,5,0.95) 0%,
+        rgba(10,8,5,0.5) 40%,
+        rgba(10,8,5,0.2) 70%,
+        rgba(10,8,5,0.05) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 60px 80px;
+      max-width: 780px;
+    }
+
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 16px;
+      animation: fadeUp 1s ease 0.2s both;
+    }
+
+    .hero-title {
+      font-size: clamp(52px, 7vw, 96px);
+      font-weight: 900;
+      line-height: 0.95;
+      color: var(--white);
+      margin-bottom: 20px;
+      animation: fadeUp 1s ease 0.4s both;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+
+    .hero-sub {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--cream-dark);
+      max-width: 500px;
+      margin-bottom: 36px;
+      animation: fadeUp 1s ease 0.6s both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeUp 1s ease 0.8s both;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--amber);
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border: 1px solid var(--amber);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--amber-light);
+      border-color: var(--amber-light);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--cream);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border: 1px solid rgba(245,238,220,0.4);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--amber);
+      color: var(--amber-light);
+    }
+
+    /* Slide dots */
+    .hero-dots {
+      position: absolute;
+      bottom: 30px;
+      right: 60px;
+      display: flex;
+      gap: 8px;
+      z-index: 3;
+    }
+
+    .hero-dots button {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(245,238,220,0.3);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      padding: 0;
+    }
+
+    .hero-dots button.active {
+      width: 24px;
+      border-radius: 3px;
+      background: var(--amber);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== TICKER ===== */
+    .ticker-wrap {
+      background: var(--amber);
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 12px 0;
+    }
+
+    .ticker-track {
+      display: inline-block;
+      animation: ticker 30s linear infinite;
+    }
+
+    .ticker-track span {
+      font-family: 'Karla', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin: 0 40px;
+    }
+
+    .ticker-track span::before {
+      content: 'x';
+      margin-right: 40px;
+      color: rgba(0,0,0,0.3);
+      font-style: normal;
+    }
+
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      padding: 100px 60px;
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(36px, 4vw, 56px);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--amber-light);
+    }
+
+    .section-body {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.75;
+      color: var(--cream-dark);
+      max-width: 540px;
+    }
+
+    /* ===== OUR STORY ===== */
+    #story {
+      background: var(--brown-deep);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #story::before {
+      content: '1946';
+      position: absolute;
+      right: -40px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 280px;
+      font-weight: 900;
+      color: rgba(200,134,26,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .story-image-stack {
+      position: relative;
+      height: 520px;
+    }
+
+    .story-img-main {
+      width: 75%;
+      height: 420px;
+      object-fit: cover;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .story-img-accent {
+      width: 55%;
+      height: 280px;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 4px solid var(--black);
+    }
+
+    .story-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      background: var(--amber);
+      color: var(--black);
+      padding: 20px;
+      text-align: center;
+      width: 100px;
+    }
+
+    .story-badge strong {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 900;
+      display: block;
+      line-height: 1;
+    }
+
+    .story-badge span {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ===== SERVICES ===== */
+    #services {
+      background: var(--black);
+    }
+
+    .services-header {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: default;
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+      filter: brightness(0.5);
+    }
+
+    .service-card:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.35);
+    }
+
+    .service-card-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+
+    .service-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+
+    .service-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+
+    .service-desc {
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--cream-dark);
+      opacity: 0;
+      transform: translateY(12px);
+      transition: all 0.4s ease;
+      max-height: 0;
+    }
+
+    .service-card:hover .service-desc {
+      opacity: 1;
+      transform: translateY(0);
+      max-height: 80px;
+    }
+
+    /* ===== WEEKLY SPECIALS ===== */
+    #specials {
+      background: var(--brown-deep);
+    }
+
+    .specials-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .specials-header {
+      margin-bottom: 48px;
+    }
+
+    .specials-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .special-item {
+      background: var(--dark);
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .special-item:hover {
+      background: var(--brown-deep);
+    }
+
+    .special-day {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 12px;
+    }
+
+    .special-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .special-price {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--amber-light);
+      margin-bottom: 12px;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .special-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== MENU ===== */
+    #menu {
+      background: var(--black);
+    }
+
+    .menu-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Tab row */
+    .menu-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .menu-tabs::-webkit-scrollbar { display: none; }
+
+    .menu-tab {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      cursor: pointer;
+      font-family: 'Karla', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 12px 24px;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .menu-tab:hover { color: var(--cream); }
+
+    .menu-tab.active {
+      color: var(--amber-light);
+      border-bottom-color: var(--amber);
+    }
+
+    /* Panels */
+    .menu-panel {
+      display: none;
+    }
+    .menu-panel.active {
+      display: block;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    /* Category label inside a panel */
+    .menu-category-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 20px;
+      margin-top: 40px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .menu-category-label:first-child { margin-top: 0; }
+
+    /* Item row */
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(200,134,26,0.08);
+      transition: background 0.2s;
+    }
+
+    .menu-item:last-child { border-bottom: none; }
+
+    .menu-item-left { flex: 1; min-width: 0; }
+
+    .menu-item-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .menu-item-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .menu-item-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--amber-light);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Two-column layout for larger screens */
+    .menu-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 60px;
+    }
+
+    .menu-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 768px) {
+      .menu-cols { grid-template-columns: 1fr; }
+      .menu-tab { padding: 12px 16px; font-size: 10px; }
+    }
+
+    /* ===== EVENTS ===== */
+    #events {
+      background: var(--brown-deep);
+    }
+
+    .events-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .events-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-top: 48px;
+    }
+
+    .event-row {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 32px;
+      align-items: center;
+      padding: 28px 32px;
+      background: var(--dark);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .event-row::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--amber);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.3s ease;
+    }
+
+    .event-row:hover { background: rgba(30,20,8,0.9); }
+    .event-row:hover::before { transform: scaleY(1); }
+
+    .event-date-block {
+      text-align: center;
+      border-right: 1px solid var(--border);
+      padding-right: 32px;
+    }
+
+    .event-month {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+
+    .event-day {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .event-info {}
+
+    .event-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .event-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .event-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .event-label.free {
+      border-color: rgba(200,134,26,0.5);
+      color: var(--amber);
+    }
+
+    /* ===== SPACES ===== */
+    #spaces {
+      background: var(--black);
+      padding-bottom: 0;
+    }
+
+    .spaces-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .spaces-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-top: 60px;
+    }
+
+    .space-panel {
+      position: relative;
+      height: 480px;
+      overflow: hidden;
+    }
+
+    .space-panel img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+      filter: brightness(0.45);
+    }
+
+    .space-panel:hover img {
+      transform: scale(1.05);
+    }
+
+    .space-panel-content {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px;
+      background: linear-gradient(to top, rgba(10,8,5,0.85) 0%, transparent 60%);
+    }
+
+    .space-panel-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+
+    .space-panel-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .space-panel-desc {
+      font-size: 14px;
+      color: var(--cream-dark);
+      line-height: 1.6;
+      max-width: 360px;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    #newsletter {
+      background: var(--amber);
+      padding: 80px 60px;
+      text-align: center;
+    }
+
+    #newsletter .section-eyebrow {
+      color: rgba(0,0,0,0.5);
+    }
+
+    #newsletter .section-title {
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    #newsletter .section-body {
+      color: rgba(0,0,0,0.65);
+      margin: 0 auto 36px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: rgba(0,0,0,0.15);
+      border: 1px solid rgba(0,0,0,0.2);
+      border-right: none;
+      color: var(--black);
+      font-family: 'Karla', sans-serif;
+      font-size: 14px;
+      padding: 14px 18px;
+      outline: none;
+    }
+
+    .newsletter-form input::placeholder {
+      color: rgba(0,0,0,0.4);
+    }
+
+    .newsletter-form button {
+      background: var(--black);
+      color: var(--amber);
+      border: 1px solid var(--black);
+      font-family: 'Karla', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 24px;
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .newsletter-form button:hover {
+      background: var(--brown-deep);
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      background: var(--dark);
+    }
+
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .contact-block strong {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contact-block p, .contact-block a {
+      font-size: 16px;
+      color: var(--cream-dark);
+      line-height: 1.6;
+    }
+
+    .contact-block a:hover { color: var(--amber-light); }
+
+    .contact-map {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--brown-deep);
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-map iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: grayscale(80%) contrast(1.1);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--black);
+      border-top: 1px solid var(--border);
+      padding: 48px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo img {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.5;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .footer-copy a {
+      color: var(--amber);
+      text-decoration: none;
+    }
+
+    .footer-copy a:hover { text-decoration: underline; }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--text-muted);
+      transition: all 0.2s;
+    }
+
+    .footer-social a:hover {
+      border-color: var(--amber);
+      color: var(--amber);
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      section { padding: 80px 40px; }
+      .story-grid { gap: 50px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .specials-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-inner { gap: 48px; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --header-h: 60px; }
+
+      #site-header { padding: 0 20px; }
+      .nav-links { display: none; }
+      .lang-toggle { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: block; }
+
+      section { padding: 64px 20px; }
+      #hero { min-height: 100svh; }
+      .hero-content { padding: 0 20px 64px; }
+      .hero-dots { right: 20px; }
+
+      .story-grid { grid-template-columns: 1fr; }
+      .story-image-stack { height: 320px; }
+      .story-img-main { width: 70%; height: 240px; }
+      .story-img-accent { width: 50%; height: 180px; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { aspect-ratio: 16/9; }
+
+      .specials-grid { grid-template-columns: 1fr 1fr; }
+
+
+      .event-row { grid-template-columns: 80px 1fr; gap: 16px; }
+      .event-label { display: none; }
+      .event-date-block { padding-right: 16px; }
+      .event-day { font-size: 32px; }
+
+      .spaces-split { grid-template-columns: 1fr; }
+      .space-panel { height: 320px; }
+
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form input { border-right: 1px solid rgba(0,0,0,0.2); border-bottom: none; }
+      .newsletter-form button { padding: 16px; }
+
+      .contact-inner { grid-template-columns: 1fr; }
+
+      footer { flex-direction: column; text-align: center; }
+
+      .services-header { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .specials-grid { grid-template-columns: 1fr; }
+      .hero-title { font-size: 44px; }
+      .hero-ctas { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== STICKY HEADER ===== -->
+<header id="site-header">
+  <div class="header-logo">
+    <img
+      src="https://static.wixstatic.com/media/67406f_808d12793ff64c58aa58f67c365728ed~mv2.png/v1/fill/w_264,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gavans%20Horizonal%20Logo%20BW%20MAIN%20BRAND%20Revised%20MARCH%202025.png"
+      alt="Gavan's Hotel"
+    />
+  </div>
+
+  <nav aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="#story"   data-en="Our Story"   data-fr="Notre Histoire">Our Story</a></li>
+      <li><a href="#services" data-en="Services"    data-fr="Services">Services</a></li>
+      <li><a href="#specials" data-en="Specials"    data-fr="Spéciaux">Specials</a></li>
+      <li><a href="#menu"     data-en="Menu"        data-fr="Menu">Menu</a></li>
+      <li><a href="#events"   data-en="What's On"   data-fr="À l'Affiche">What's On</a></li>
+      <li><a href="#contact"  data-en="Contact"     data-fr="Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="lang-toggle">
+      <button id="lang-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="lang-fr" onclick="setLang('fr')">FR</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#story"    onclick="closeMenu()" data-en="Our Story"   data-fr="Notre Histoire">Our Story</a></li>
+    <li><a href="#services" onclick="closeMenu()" data-en="Services"    data-fr="Services">Services</a></li>
+    <li><a href="#specials" onclick="closeMenu()" data-en="Specials"    data-fr="Spéciaux">Specials</a></li>
+    <li><a href="#menu"     onclick="closeMenu()" data-en="Menu"        data-fr="Menu">Menu</a></li>
+    <li><a href="#events"   onclick="closeMenu()" data-en="What's On"   data-fr="À l'Affiche">What's On</a></li>
+    <li><a href="#contact"  onclick="closeMenu()" data-en="Contact"     data-fr="Contact">Contact</a></li>
+  </ul>
+  <div class="mobile-lang">
+    <button id="m-lang-en" class="active" onclick="setLang('en')">EN</button>
+    <button id="m-lang-fr" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<section id="hero" style="padding:0;">
+  <div class="hero-slides" id="heroSlides">
+    <div class="hero-slide active">
+      <img src="https://static.wixstatic.com/media/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg/v1/fill/w_1440,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg" alt="Gavan's Hotel atmosphere" />
+    </div>
+    <div class="hero-slide">
+      <img src="https://static.wixstatic.com/media/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg/v1/fill/w_1440,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg" alt="Fish and chips at Gavan's" />
+    </div>
+    <div class="hero-slide">
+      <img src="https://static.wixstatic.com/media/11062b_230ad47ea67d43d7b3a9a1550a4903c5~mv2.jpg/v1/fill/w_1440,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_230ad47ea67d43d7b3a9a1550a4903c5~mv2.jpg" alt="Shamrock Lounge at Gavan's" />
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-en="Quyon, Pontiac — Since 1946" data-fr="Quyon, Pontiac — Depuis 1946">Quyon, Pontiac &mdash; Since 1946</p>
+    <h1 class="hero-title" data-en="<em>Gavan's</em> Hotel" data-fr="<em>L'Hôtel</em> Gavan's"><em>Gavan's</em> Hotel</h1>
+    <p class="hero-sub" data-en="The heart of Quyon — where music plays, tables fill, and the Pontiac spirit never fades." data-fr="Le coeur de Quyon — où la musique joue, les tables se remplissent et l'esprit du Pontiac ne s'éteint jamais.">The heart of Quyon &mdash; where music plays, tables fill, and the Pontiac spirit never fades.</p>
+    <div class="hero-ctas">
+      <a href="#events" class="btn-primary" data-en="See What's On" data-fr="Voir l'Affiche">See What's On</a>
+      <a href="#services" class="btn-outline" data-en="Explore Services" data-fr="Nos Services">Explore Services</a>
+    </div>
+  </div>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track" id="ticker">
+    <span data-en="Live Music Every Weekend" data-fr="Musique Live Chaque Weekend">Live Music Every Weekend</span>
+    <span data-en="Fish &amp; Chips Friday to Sunday" data-fr="Fish &amp; Chips Vendredi au Dimanche">Fish &amp; Chips Friday to Sunday</span>
+    <span data-en="Wing Day Every Thursday" data-fr="Journée Ailes Chaque Jeudi">Wing Day Every Thursday</span>
+    <span data-en="Pizza Served Daily" data-fr="Pizza Servie Tous les Jours">Pizza Served Daily</span>
+    <span data-en="Club Sandwiches Every Tuesday" data-fr="Clubs Chaque Mardi">Club Sandwiches Every Tuesday</span>
+    <span data-en="Gateway to the Pontiac" data-fr="La Porte du Pontiac">Gateway to the Pontiac</span>
+    <span data-en="Live Music Every Weekend" data-fr="Musique Live Chaque Weekend">Live Music Every Weekend</span>
+    <span data-en="Fish &amp; Chips Friday to Sunday" data-fr="Fish &amp; Chips Vendredi au Dimanche">Fish &amp; Chips Friday to Sunday</span>
+    <span data-en="Wing Day Every Thursday" data-fr="Journée Ailes Chaque Jeudi">Wing Day Every Thursday</span>
+    <span data-en="Pizza Served Daily" data-fr="Pizza Servie Tous les Jours">Pizza Served Daily</span>
+    <span data-en="Club Sandwiches Every Tuesday" data-fr="Clubs Chaque Mardi">Club Sandwiches Every Tuesday</span>
+    <span data-en="Gateway to the Pontiac" data-fr="La Porte du Pontiac">Gateway to the Pontiac</span>
+  </div>
+</div>
+
+<!-- ===== OUR STORY ===== -->
+<section id="story">
+  <div class="story-grid">
+    <div class="story-image-stack reveal">
+      <img class="story-img-main" src="https://static.wixstatic.com/media/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg" alt="Inside Gavan's Hotel pub" />
+      <img class="story-img-accent" src="https://static.wixstatic.com/media/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg/v1/fill/w_600,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg" alt="Gavan's food" />
+      <div class="story-badge">
+        <strong>78</strong>
+        <span data-en="Years" data-fr="Ans">Years</span>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:0.15s;">
+      <p class="section-eyebrow" data-en="Our Story" data-fr="Notre Histoire">Our Story</p>
+      <h2 class="section-title" data-en="A Tradition <em>Runs Deep</em>" data-fr="Une Tradition <em>Ancrée</em>">A Tradition <em>Runs Deep</em></h2>
+      <p class="section-body" style="margin-bottom:20px;" data-en="For over seven decades, Gavan's Hotel has been the heart of Quyon — a place where friends, families, and travelers come together. Originally dubbed the &quot;Gateway to the Pontiac&quot; by founder Lennox Gavan, this beloved establishment has been a proud ambassador of the region's rich music, food, and culture since 1946." data-fr="Depuis plus de sept décennies, l'Hôtel Gavan's est le coeur de Quyon — un endroit où amis, familles et voyageurs se retrouvent. Baptisé &quot;La Porte du Pontiac&quot; par le fondateur Lennox Gavan, cet établissement célèbre est un ambassadeur fier de la riche culture musicale et culinaire de la région depuis 1946.">For over seven decades, Gavan's Hotel has been the heart of Quyon &mdash; a place where friends, families, and travelers come together. Originally dubbed the &ldquo;Gateway to the Pontiac&rdquo; by founder Lennox Gavan, this beloved establishment has been a proud ambassador of the region&rsquo;s rich music, food, and culture since 1946.</p>
+      <p class="section-body" data-en="Still family-owned and deeply rooted in tradition, Gavan's continues to welcome generations of guests who gather for ice-cold drinks, hearty meals, unforgettable live shows, and cherished memories. Make Gavan's your tradition — because here, you are family." data-fr="Toujours en mains familiales et profondément ancrée dans la tradition, la maison Gavan's accueille des générations de convives réunis autour de boissons bien froides, de repas généreux, de spectacles inoubliables et de souvenirs précieux. Faites de Gavan's votre tradition — ici, vous êtes en famille.">Still family-owned and deeply rooted in tradition, Gavan&rsquo;s continues to welcome generations of guests who gather for ice-cold drinks, hearty meals, unforgettable live shows, and cherished memories. Make Gavan&rsquo;s your tradition &mdash; because here, you are family.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="services-header reveal">
+    <div>
+      <p class="section-eyebrow" data-en="What We Offer" data-fr="Ce Que Nous Offrons">What We Offer</p>
+      <h2 class="section-title" data-en="Our <em>Services</em>" data-fr="Nos <em>Services</em>">Our <em>Services</em></h2>
+    </div>
+    <a href="#contact" class="btn-outline" data-en="Get in Touch" data-fr="Nous Contacter">Get in Touch</a>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <img src="https://static.wixstatic.com/media/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg" alt="Pub food at Gavan's" />
+      <div class="service-card-content">
+        <p class="service-tag" data-en="Cain's Pub" data-fr="Pub Cain's">Cain's Pub</p>
+        <h3 class="service-name" data-en="Pub Dining" data-fr="Restauration Pub">Pub Dining</h3>
+        <p class="service-desc" data-en="Hearty pub-style meals including our legendary Fish &amp; Chips, club sandwiches, pizza, wings and daily specials." data-fr="Repas copieux de style pub incluant notre légendaire Fish &amp; Chips, clubs, pizza, ailes et spéciaux du jour.">Hearty pub-style meals including our legendary Fish &amp; Chips, club sandwiches, pizza, wings and daily specials.</p>
+      </div>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.1s;">
+      <img src="https://static.wixstatic.com/media/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg" alt="Bar at Gavan's" />
+      <div class="service-card-content">
+        <p class="service-tag" data-en="Full Bar" data-fr="Bar Complet">Full Bar</p>
+        <h3 class="service-name" data-en="Drinks &amp; Pints" data-fr="Boissons &amp; Pintes">Drinks &amp; Pints</h3>
+        <p class="service-desc" data-en="Ice-cold draft beers, cocktails, wine, spirits and non-alcoholic options. A full bar to match every occasion." data-fr="Bières pression glacées, cocktails, vins, spiritueux et options sans alcool. Un bar complet pour toutes les occasions.">Ice-cold draft beers, cocktails, wine, spirits and non-alcoholic options. A full bar to match every occasion.</p>
+      </div>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.2s;">
+      <img src="https://static.wixstatic.com/media/11062b_230ad47ea67d43d7b3a9a1550a4903c5~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_230ad47ea67d43d7b3a9a1550a4903c5~mv2.jpg" alt="Shamrock Lounge" />
+      <div class="service-card-content">
+        <p class="service-tag" data-en="Shamrock Lounge" data-fr="Salon Shamrock">Shamrock Lounge</p>
+        <h3 class="service-name" data-en="Lounge &amp; Relaxation" data-fr="Lounge &amp; Détente">Lounge &amp; Relaxation</h3>
+        <p class="service-desc" data-en="A relaxed lounge atmosphere perfect for unwinding, catching up with friends or enjoying a quiet drink." data-fr="Une atmosphère de salon détendue, idéale pour se détendre, retrouver des amis ou savourer une boisson tranquille.">A relaxed lounge atmosphere perfect for unwinding, catching up with friends or enjoying a quiet drink.</p>
+      </div>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.0s;">
+      <img src="https://static.wixstatic.com/media/4ea565_bf9b5e2ce3624827afbb941cd95ce921~mv2.png/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gavan's_Socials_Pub%20Night_Jessica%20Lavallee_May%2029%20(1).png" alt="Live music at Gavan's" />
+      <div class="service-card-content">
+        <p class="service-tag" data-en="Entertainment" data-fr="Divertissement">Entertainment</p>
+        <h3 class="service-name" data-en="Live Music" data-fr="Musique Live">Live Music</h3>
+        <p class="service-desc" data-en="Regular live performances from local and regional artists — folk, rock, country and more. Free admission most nights." data-fr="Spectacles réguliers d'artistes locaux et régionaux — folk, rock, country et plus. Entrée gratuite la plupart des soirs.">Regular live performances from local and regional artists &mdash; folk, rock, country and more. Free admission most nights.</p>
+      </div>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.1s;">
+      <img src="https://static.wixstatic.com/media/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_98d45edeb0ab4c02a5ed07b06e86d62f~mv2.jpg" alt="Private events Gavan's" />
+      <div class="service-card-content">
+        <p class="service-tag" data-en="Events" data-fr="Événements">Events</p>
+        <h3 class="service-name" data-en="Private Events" data-fr="Événements Privés">Private Events</h3>
+        <p class="service-desc" data-en="Host your gathering, celebration or community event at Gavan's. We accommodate groups large and small." data-fr="Organisez votre rassemblement, célébration ou événement communautaire chez Gavan's. Nous accueillons les groupes grands et petits.">Host your gathering, celebration or community event at Gavan&rsquo;s. We accommodate groups large and small.</p>
+      </div>
+    </div>
+    <div class="service-card reveal" style="transition-delay:0.2s;">
+      <img src="https://static.wixstatic.com/media/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg/v1/fill/w_800,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg" alt="Community gathering at Gavan's" />
+      <div class="service-card-content">
+        <p class="service-tag" data-en="Community" data-fr="Communauté">Community</p>
+        <h3 class="service-name" data-en="Community Hub" data-fr="Coeur de Communauté">Community Hub</h3>
+        <p class="service-desc" data-en="Since 1946, a gathering place for Quyon and the Pontiac region — welcoming locals, travelers and everyone in between." data-fr="Depuis 1946, un lieu de rassemblement pour Quyon et la région du Pontiac — accueillant résidents, voyageurs et tous ceux qui passent par ici.">Since 1946, a gathering place for Quyon and the Pontiac region &mdash; welcoming locals, travelers and everyone in between.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WEEKLY SPECIALS ===== -->
+<section id="specials">
+  <div class="specials-inner">
+    <div class="specials-header reveal">
+      <p class="section-eyebrow" data-en="Weekly Specials" data-fr="Spéciaux de la Semaine">Weekly Specials</p>
+      <h2 class="section-title" data-en="Something <em>Every Day</em>" data-fr="Quelque Chose <em>Chaque Jour</em>">Something <em>Every Day</em></h2>
+    </div>
+    <div class="specials-grid">
+      <div class="special-item reveal">
+        <p class="special-day" data-en="Tuesday" data-fr="Mardi">Tuesday</p>
+        <h3 class="special-name" data-en="Club Sandwich" data-fr="Club Sandwich">Club Sandwich</h3>
+        <p class="special-price">$16.99</p>
+        <p class="special-desc" data-en="A classic stacked club with all the fixings — a midweek must." data-fr="Un club classique bien garni — un incontournable en milieu de semaine.">A classic stacked club with all the fixings &mdash; a midweek must.</p>
+      </div>
+      <div class="special-item reveal" style="transition-delay:0.1s;">
+        <p class="special-day" data-en="Thursday" data-fr="Jeudi">Thursday</p>
+        <h3 class="special-name" data-en="Wing Day" data-fr="Journée Ailes">Wing Day</h3>
+        <p class="special-price" data-en="From 12 PM" data-fr="Dès 12h">From 12 PM</p>
+        <p class="special-desc" data-en="Fresh, crispy wings packed with flavour — all day long." data-fr="Ailes fraîches et croustillantes, pleines de saveur — toute la journée.">Fresh, crispy wings packed with flavour &mdash; all day long.</p>
+      </div>
+      <div class="special-item reveal" style="transition-delay:0.2s;">
+        <p class="special-day" data-en="Friday to Sunday" data-fr="Vendredi au Dimanche">Friday to Sunday</p>
+        <h3 class="special-name" data-en="Fish &amp; Chips" data-fr="Fish &amp; Chips">Fish &amp; Chips</h3>
+        <p class="special-price">$17.99</p>
+        <p class="special-desc" data-en="Tender haddock, hand-cut fries, coleslaw &amp; house-made tartar sauce. While supplies last." data-fr="Aiglefin tendre, frites coupées main, salade de chou et sauce tartare maison. Quantités limitées.">Tender haddock, hand-cut fries, coleslaw &amp; house-made tartar sauce. While supplies last.</p>
+      </div>
+      <div class="special-item reveal" style="transition-delay:0.3s;">
+        <p class="special-day" data-en="Every Day" data-fr="Tous les Jours">Every Day</p>
+        <h3 class="special-name" data-en="Pizza Night" data-fr="Soirée Pizza">Pizza Night</h3>
+        <p class="special-price" data-en="Daily" data-fr="Quotidien">Daily</p>
+        <p class="special-desc" data-en="Pizza is now served every single day. Pull up a chair, grab a pint, make it a pizza night." data-fr="La pizza est maintenant servie tous les jours. Prenez une place, commandez une pinte, faites-en une soirée pizza.">Pizza is now served every single day. Pull up a chair, grab a pint, make it a pizza night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENU ===== -->
+<section id="menu">
+  <div class="menu-inner">
+    <div class="menu-header reveal">
+      <div>
+        <p class="section-eyebrow" data-en="Cain's Pub" data-fr="Pub Cain's">Cain's Pub</p>
+        <h2 class="section-title" data-en="Our <em>Menu</em>" data-fr="Notre <em>Menu</em>">Our <em>Menu</em></h2>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="menu-tabs" role="tablist">
+      <button class="menu-tab active" role="tab" onclick="switchTab('starters')" data-en="Starters" data-fr="Entrées">Starters</button>
+      <button class="menu-tab" role="tab" onclick="switchTab('mains')" data-en="Mains" data-fr="Plats Principaux">Mains</button>
+      <button class="menu-tab" role="tab" onclick="switchTab('pizza')" data-en="Pizza" data-fr="Pizza">Pizza</button>
+      <button class="menu-tab" role="tab" onclick="switchTab('sides')" data-en="Sides &amp; Extras" data-fr="Accompagnements">Sides &amp; Extras</button>
+      <button class="menu-tab" role="tab" onclick="switchTab('drinks')" data-en="Drinks" data-fr="Boissons">Drinks</button>
+    </div>
+
+    <!-- STARTERS -->
+    <div class="menu-panel active" id="panel-starters">
+      <div class="menu-cols">
+        <div>
+          <p class="menu-category-label" data-en="To Start" data-fr="Pour Commencer">To Start</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Soup of the Day" data-fr="Soupe du Jour">Soup of the Day</p>
+              <p class="menu-item-desc" data-en="Ask your server for today's selection. Served with bread." data-fr="Demandez à votre serveur la sélection du jour. Servi avec pain.">Ask your server for today's selection. Served with bread.</p>
+            </div>
+            <p class="menu-item-price" data-en="Market" data-fr="Du Marché">Market</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Nachos" data-fr="Nachos">Nachos</p>
+              <p class="menu-item-desc" data-en="Tortilla chips loaded with cheese, salsa, sour cream and jalapeños." data-fr="Chips de tortilla garnies de fromage, salsa, crème sure et jalapeños.">Tortilla chips loaded with cheese, salsa, sour cream and jalapeños.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Mozzarella Sticks" data-fr="Bâtonnets de Mozzarella">Mozzarella Sticks</p>
+              <p class="menu-item-desc" data-en="Golden fried, served with marinara dipping sauce." data-fr="Dorés à la friture, servis avec sauce marinara.">Golden fried, served with marinara dipping sauce.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+        <div>
+          <p class="menu-category-label" data-en="Salads" data-fr="Salades">Salads</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Garden Salad" data-fr="Salade Jardinière">Garden Salad</p>
+              <p class="menu-item-desc" data-en="Fresh mixed greens, tomato, cucumber and your choice of dressing." data-fr="Mesclun frais, tomate, concombre et vinaigrette au choix.">Fresh mixed greens, tomato, cucumber and your choice of dressing.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Caesar Salad" data-fr="Salade César">Caesar Salad</p>
+              <p class="menu-item-desc" data-en="Romaine, house Caesar dressing, croutons, shaved Parmesan." data-fr="Romaine, vinaigrette César maison, croûtons, parmesan râpé.">Romaine, house Caesar dressing, croutons, shaved Parmesan.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+      </div>
+      <p class="menu-note" data-en="Prices marked $[—] are to be filled in by Gavan's. All items subject to availability." data-fr="Les prix marqués $[—] doivent être remplis par Gavan's. Tous les articles sont sous réserve de disponibilité.">Prices marked $[—] are to be filled in by Gavan&rsquo;s. All items subject to availability.</p>
+    </div>
+
+    <!-- MAINS -->
+    <div class="menu-panel" id="panel-mains">
+      <div class="menu-cols">
+        <div>
+          <p class="menu-category-label" data-en="Pub Favourites" data-fr="Favoris du Pub">Pub Favourites</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Fish &amp; Chips" data-fr="Fish &amp; Chips">Fish &amp; Chips</p>
+              <p class="menu-item-desc" data-en="Tender haddock in a light batter, hand-cut fries, coleslaw &amp; house-made tartar sauce. Available Fri–Sun." data-fr="Aiglefin tendre en légère panure, frites coupées main, salade de chou et sauce tartare maison. Disponible ven–dim.">Tender haddock in a light batter, hand-cut fries, coleslaw &amp; house-made tartar sauce. Available Fri&ndash;Sun.</p>
+            </div>
+            <p class="menu-item-price">$17.99</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Club Sandwich" data-fr="Club Sandwich">Club Sandwich</p>
+              <p class="menu-item-desc" data-en="Triple-decker with turkey, bacon, lettuce, tomato and mayo on toasted bread. Served with fries." data-fr="Triple-étage avec dinde, bacon, laitue, tomate et mayo sur pain grillé. Servi avec frites.">Triple-decker with turkey, bacon, lettuce, tomato and mayo on toasted bread. Served with fries.</p>
+            </div>
+            <p class="menu-item-price">$16.99</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Chicken Wings" data-fr="Ailes de Poulet">Chicken Wings</p>
+              <p class="menu-item-desc" data-en="Fresh and crispy, served with your choice of sauce. Wing Day every Thursday from noon." data-fr="Fraîches et croustillantes, servies avec sauce au choix. Journée ailes chaque jeudi dès midi.">Fresh and crispy, served with your choice of sauce. Wing Day every Thursday from noon.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Burger" data-fr="Burger">Burger</p>
+              <p class="menu-item-desc" data-en="Classic beef patty with lettuce, tomato, onion and pickles. Served with fries." data-fr="Galette de boeuf classique avec laitue, tomate, oignon et cornichons. Servi avec frites.">Classic beef patty with lettuce, tomato, onion and pickles. Served with fries.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+        <div>
+          <p class="menu-category-label" data-en="From the Grill" data-fr="Du Grill">From the Grill</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Grilled Chicken Sandwich" data-fr="Sandwich Poulet Grillé">Grilled Chicken Sandwich</p>
+              <p class="menu-item-desc" data-en="Seasoned grilled chicken breast, lettuce, tomato, and garlic aioli on a toasted bun." data-fr="Poitrine de poulet grillée assaisonnée, laitue, tomate et aïoli à l'ail sur pain grillé.">Seasoned grilled chicken breast, lettuce, tomato, and garlic aioli on a toasted bun.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Steak &amp; Fries" data-fr="Steak &amp; Frites">Steak &amp; Fries</p>
+              <p class="menu-item-desc" data-en="[Replace with your cut &amp; preparation]. Served with hand-cut fries and seasonal vegetables." data-fr="[Remplacer avec votre coupe &amp; préparation]. Servi avec frites maison et légumes de saison.">[Replace with your cut &amp; preparation]. Served with hand-cut fries and seasonal vegetables.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Daily Special" data-fr="Spécial du Jour">Daily Special</p>
+              <p class="menu-item-desc" data-en="Ask your server what's on today — fresh and seasonal." data-fr="Demandez à votre serveur le plat du jour — frais et de saison.">Ask your server what&rsquo;s on today &mdash; fresh and seasonal.</p>
+            </div>
+            <p class="menu-item-price" data-en="Ask Us" data-fr="Demandez">Ask Us</p>
+          </div>
+        </div>
+      </div>
+      <p class="menu-note" data-en="Prices marked $[—] are to be filled in by Gavan's. Consuming raw or undercooked meat may increase risk of foodborne illness." data-fr="Les prix marqués $[—] doivent être remplis par Gavan's. La consommation de viande crue ou insuffisamment cuite peut augmenter le risque de maladie d'origine alimentaire.">Prices marked $[—] are to be filled in by Gavan&rsquo;s.</p>
+    </div>
+
+    <!-- PIZZA -->
+    <div class="menu-panel" id="panel-pizza">
+      <div class="menu-cols">
+        <div>
+          <p class="menu-category-label" data-en="Classic Pizzas — Served Daily" data-fr="Pizzas Classiques — Servies Tous les Jours">Classic Pizzas &mdash; Served Daily</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Margherita" data-fr="Margherita">Margherita</p>
+              <p class="menu-item-desc" data-en="Tomato sauce, fresh mozzarella, basil." data-fr="Sauce tomate, mozzarella fraîche, basilic.">Tomato sauce, fresh mozzarella, basil.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Pepperoni" data-fr="Pepperoni">Pepperoni</p>
+              <p class="menu-item-desc" data-en="Tomato sauce, mozzarella, generous pepperoni." data-fr="Sauce tomate, mozzarella, généreux pepperoni.">Tomato sauce, mozzarella, generous pepperoni.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="BBQ Chicken" data-fr="Poulet BBQ">BBQ Chicken</p>
+              <p class="menu-item-desc" data-en="BBQ sauce base, grilled chicken, red onion, mozzarella." data-fr="Base sauce BBQ, poulet grillé, oignon rouge, mozzarella.">BBQ sauce base, grilled chicken, red onion, mozzarella.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+        <div>
+          <p class="menu-category-label" data-en="House Specialties" data-fr="Spécialités Maison">House Specialties</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="The Pontiac" data-fr="Le Pontiac">The Pontiac</p>
+              <p class="menu-item-desc" data-en="[Replace with your signature pizza description and toppings.]" data-fr="[Remplacer avec votre description de pizza signature et garnitures.]">[Replace with your signature pizza description and toppings.]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Meat Lovers" data-fr="Amateurs de Viande">Meat Lovers</p>
+              <p class="menu-item-desc" data-en="Pepperoni, sausage, ham, bacon on tomato and mozzarella." data-fr="Pepperoni, saucisse, jambon, bacon sur tomate et mozzarella.">Pepperoni, sausage, ham, bacon on tomato and mozzarella.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Veggie" data-fr="Végétarienne">Veggie</p>
+              <p class="menu-item-desc" data-en="Bell peppers, mushrooms, red onion, olives, tomato and mozzarella." data-fr="Poivrons, champignons, oignon rouge, olives, tomate et mozzarella.">Bell peppers, mushrooms, red onion, olives, tomato and mozzarella.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+      </div>
+      <p class="menu-note" data-en="Gluten-free crust available — ask your server. Prices to be filled in by Gavan's." data-fr="Croûte sans gluten disponible — demandez à votre serveur. Prix à remplir par Gavan's.">Gluten-free crust available &mdash; ask your server. Prices to be filled in by Gavan&rsquo;s.</p>
+    </div>
+
+    <!-- SIDES -->
+    <div class="menu-panel" id="panel-sides">
+      <div class="menu-cols">
+        <div>
+          <p class="menu-category-label" data-en="Sides" data-fr="Accompagnements">Sides</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Hand-Cut Fries" data-fr="Frites Maison">Hand-Cut Fries</p>
+              <p class="menu-item-desc" data-en="Fresh-cut and fried golden. Served with your choice of dipping sauce." data-fr="Coupées fraîches et dorées à la friture. Servies avec sauce au choix.">Fresh-cut and fried golden. Served with your choice of dipping sauce.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Coleslaw" data-fr="Salade de Chou">Coleslaw</p>
+              <p class="menu-item-desc" data-en="Creamy house-made coleslaw." data-fr="Salade de chou crémeuse maison.">Creamy house-made coleslaw.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Onion Rings" data-fr="Rondelles d'Oignon">Onion Rings</p>
+              <p class="menu-item-desc" data-en="Crispy battered onion rings with dipping sauce." data-fr="Rondelles d'oignon croustillantes panées avec sauce.">Crispy battered onion rings with dipping sauce.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+        <div>
+          <p class="menu-category-label" data-en="Extras" data-fr="Extras">Extras</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Add Chicken" data-fr="Ajouter Poulet">Add Chicken</p>
+              <p class="menu-item-desc" data-en="Grilled or crispy chicken added to any salad or side." data-fr="Poulet grillé ou croustillant ajouté à toute salade ou accompagnement.">Grilled or crispy chicken added to any salad or side.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Extra Sauce" data-fr="Sauce Supplémentaire">Extra Sauce</p>
+              <p class="menu-item-desc" data-en="Tartar, gravy, ranch, BBQ, honey mustard — ask your server." data-fr="Tartare, sauce, ranch, BBQ, moutarde miel — demandez à votre serveur.">Tartar, gravy, ranch, BBQ, honey mustard &mdash; ask your server.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="menu-panel" id="panel-drinks">
+      <div class="menu-cols">
+        <div>
+          <p class="menu-category-label" data-en="Draft Beer" data-fr="Bières Pression">Draft Beer</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Draft 1]" data-fr="[Remplacer: Pression 1]">[Replace: Draft 1]</p>
+              <p class="menu-item-desc" data-en="[Brewery / style / ABV]" data-fr="[Brasserie / style / degré]">[Brewery / style / ABV]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Draft 2]" data-fr="[Remplacer: Pression 2]">[Replace: Draft 2]</p>
+              <p class="menu-item-desc" data-en="[Brewery / style / ABV]" data-fr="[Brasserie / style / degré]">[Brewery / style / ABV]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Draft 3]" data-fr="[Remplacer: Pression 3]">[Replace: Draft 3]</p>
+              <p class="menu-item-desc" data-en="[Brewery / style / ABV]" data-fr="[Brasserie / style / degré]">[Brewery / style / ABV]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <p class="menu-category-label" style="margin-top:32px;" data-en="Bottles &amp; Cans" data-fr="Bouteilles &amp; Canettes">Bottles &amp; Cans</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Bottle/Can 1]" data-fr="[Remplacer: Bouteille/Canette 1]">[Replace: Bottle/Can 1]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Bottle/Can 2]" data-fr="[Remplacer: Bouteille/Canette 2]">[Replace: Bottle/Can 2]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+        <div>
+          <p class="menu-category-label" data-en="Spirits &amp; Cocktails" data-fr="Spiritueux &amp; Cocktails">Spirits &amp; Cocktails</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Cocktail 1]" data-fr="[Remplacer: Cocktail 1]">[Replace: Cocktail 1]</p>
+              <p class="menu-item-desc" data-en="[Ingredients / style]" data-fr="[Ingrédients / style]">[Ingredients / style]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="[Replace: Cocktail 2]" data-fr="[Remplacer: Cocktail 2]">[Replace: Cocktail 2]</p>
+              <p class="menu-item-desc" data-en="[Ingredients / style]" data-fr="[Ingrédients / style]">[Ingredients / style]</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <p class="menu-category-label" style="margin-top:32px;" data-en="Non-Alcoholic" data-fr="Sans Alcool">Non-Alcoholic</p>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Soft Drinks" data-fr="Boissons Gazeuses">Soft Drinks</p>
+              <p class="menu-item-desc" data-en="Pepsi, Diet Pepsi, 7UP, ginger ale, orange juice, cranberry." data-fr="Pepsi, Pepsi diète, 7UP, ginger ale, jus d'orange, canneberge.">Pepsi, Diet Pepsi, 7UP, ginger ale, orange juice, cranberry.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+          <div class="menu-item reveal">
+            <div class="menu-item-left">
+              <p class="menu-item-name" data-en="Coffee &amp; Tea" data-fr="Café &amp; Thé">Coffee &amp; Tea</p>
+              <p class="menu-item-desc" data-en="Regular or decaf coffee, assorted teas." data-fr="Café régulier ou décaféiné, thés assortis.">Regular or decaf coffee, assorted teas.</p>
+            </div>
+            <p class="menu-item-price">$[—]</p>
+          </div>
+        </div>
+      </div>
+      <p class="menu-note" data-en="Drink menu subject to seasonal availability. Must be 18+ to consume alcohol in Quebec." data-fr="Menu des boissons sous réserve de disponibilité saisonnière. 18 ans et plus pour consommer de l'alcool au Québec.">Drink menu subject to seasonal availability. Must be 18+ to consume alcohol in Quebec.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== EVENTS ===== -->
+<section id="events">
+  <div class="events-inner">
+    <div class="reveal">
+      <p class="section-eyebrow" data-en="Live Entertainment" data-fr="Divertissement Live">Live Entertainment</p>
+      <h2 class="section-title" data-en="What's <em>On</em>" data-fr="À <em>l'Affiche</em>">What's <em>On</em></h2>
+    </div>
+    <div class="events-list">
+      <div class="event-row reveal">
+        <div class="event-date-block">
+          <p class="event-month" data-en="Jun" data-fr="Juin">Jun</p>
+          <p class="event-day">06</p>
+        </div>
+        <div class="event-info">
+          <h3 class="event-title" data-en="[Replace: Artist Name]" data-fr="[Remplacer: Nom Artiste]">[Replace: Artist Name]</h3>
+          <p class="event-meta" data-en="Music in the Pub — 8 PM | Gavan's Hotel, Quyon" data-fr="Musique au Pub — 20 h | Hôtel Gavan's, Quyon">Music in the Pub &mdash; 8 PM | Gavan&rsquo;s Hotel, Quyon</p>
+        </div>
+        <span class="event-label free" data-en="Free Admission" data-fr="Entrée Gratuite">Free Admission</span>
+      </div>
+      <div class="event-row reveal" style="transition-delay:0.1s;">
+        <div class="event-date-block">
+          <p class="event-month" data-en="Jun" data-fr="Juin">Jun</p>
+          <p class="event-day">13</p>
+        </div>
+        <div class="event-info">
+          <h3 class="event-title" data-en="[Replace: Artist Name]" data-fr="[Remplacer: Nom Artiste]">[Replace: Artist Name]</h3>
+          <p class="event-meta" data-en="Music in the Pub — 8 PM | Gavan's Hotel, Quyon" data-fr="Musique au Pub — 20 h | Hôtel Gavan's, Quyon">Music in the Pub &mdash; 8 PM | Gavan&rsquo;s Hotel, Quyon</p>
+        </div>
+        <span class="event-label free" data-en="Free Admission" data-fr="Entrée Gratuite">Free Admission</span>
+      </div>
+      <div class="event-row reveal" style="transition-delay:0.2s;">
+        <div class="event-date-block">
+          <p class="event-month" data-en="Jun" data-fr="Juin">Jun</p>
+          <p class="event-day">20</p>
+        </div>
+        <div class="event-info">
+          <h3 class="event-title" data-en="[Replace: Artist Name]" data-fr="[Remplacer: Nom Artiste]">[Replace: Artist Name]</h3>
+          <p class="event-meta" data-en="Music in the Pub — Doors 8 PM | Show 9 PM" data-fr="Musique au Pub — Portes 20h | Spectacle 21h">Music in the Pub &mdash; Doors 8 PM | Show 9 PM</p>
+        </div>
+        <span class="event-label" data-en="$15 Tickets" data-fr="15$ Billets">$15 Tickets</span>
+      </div>
+      <div class="event-row reveal" style="transition-delay:0.3s;">
+        <div class="event-date-block">
+          <p class="event-month" data-en="Jun" data-fr="Juin">Jun</p>
+          <p class="event-day">27</p>
+        </div>
+        <div class="event-info">
+          <h3 class="event-title" data-en="[Replace: Artist Name]" data-fr="[Remplacer: Nom Artiste]">[Replace: Artist Name]</h3>
+          <p class="event-meta" data-en="Music in the Pub — 8 PM | Gavan's Hotel, Quyon" data-fr="Musique au Pub — 20 h | Hôtel Gavan's, Quyon">Music in the Pub &mdash; 8 PM | Gavan&rsquo;s Hotel, Quyon</p>
+        </div>
+        <span class="event-label free" data-en="Free Admission" data-fr="Entrée Gratuite">Free Admission</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SPACES ===== -->
+<section id="spaces">
+  <div class="spaces-inner">
+    <div class="reveal">
+      <p class="section-eyebrow" data-en="Our Spaces" data-fr="Nos Espaces">Our Spaces</p>
+      <h2 class="section-title" data-en="Two Venues, <em>One Spirit</em>" data-fr="Deux Salles, <em>Un Esprit</em>">Two Venues, <em>One Spirit</em></h2>
+    </div>
+  </div>
+  <div class="spaces-split" style="max-width:100%;">
+    <div class="space-panel reveal">
+      <img src="https://static.wixstatic.com/media/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg/v1/fill/w_1000,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_0cf0d237c2cc4956bf87dcf24425d375~mv2.jpg" alt="Cain's Pub at Gavan's Hotel" />
+      <div class="space-panel-content">
+        <p class="space-panel-label" data-en="Cain's Pub" data-fr="Pub Cain's">Cain's Pub</p>
+        <h3 class="space-panel-title" data-en="Food, Drinks, Music, Gathering" data-fr="Nourriture, Boissons, Musique, Rassemblement">Food, Drinks, Music, Gathering</h3>
+        <p class="space-panel-desc" data-en="The main stage for Quyon's most beloved evenings. Live music, cold drafts and a full menu served daily." data-fr="La scène principale des soirées les plus appréciées de Quyon. Musique live, bières froides et menu complet servi chaque jour.">The main stage for Quyon&rsquo;s most beloved evenings. Live music, cold drafts and a full menu served daily.</p>
+      </div>
+    </div>
+    <div class="space-panel reveal" style="transition-delay:0.15s;">
+      <img src="https://static.wixstatic.com/media/11062b_230ad47ea67d43d7b3a9a1550a4903c5~mv2.jpg/v1/fill/w_1000,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_230ad47ea67d43d7b3a9a1550a4903c5~mv2.jpg" alt="Shamrock Lounge at Gavan's Hotel" />
+      <div class="space-panel-content">
+        <p class="space-panel-label" data-en="Shamrock Lounge" data-fr="Salon Shamrock">Shamrock Lounge</p>
+        <h3 class="space-panel-title" data-en="A Quieter Corner" data-fr="Un Coin Plus Calme">A Quieter Corner</h3>
+        <p class="space-panel-desc" data-en="For those who prefer a more relaxed setting — the Shamrock Lounge offers a warm, welcoming retreat within the hotel." data-fr="Pour ceux qui préfèrent un cadre plus détendu — le Salon Shamrock offre un refuge chaleureux au sein de l'hôtel.">For those who prefer a more relaxed setting &mdash; the Shamrock Lounge offers a warm, welcoming retreat within the hotel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWSLETTER ===== -->
+<section id="newsletter" style="padding:80px 60px;">
+  <p class="section-eyebrow" data-en="Stay in the Loop" data-fr="Restez Informé">Stay in the Loop</p>
+  <h2 class="section-title" data-en="Be the First to Know" data-fr="Soyez les Premiers Informés">Be the First to Know</h2>
+  <p class="section-body" data-en="Shows, contests, specials and Pontiac community news — straight to your inbox." data-fr="Spectacles, concours, spéciaux et nouvelles de la communauté Pontiac — directement dans votre boîte.">Shows, contests, specials and Pontiac community news &mdash; straight to your inbox.</p>
+  <div class="newsletter-form">
+    <input type="email" id="nl-email" placeholder="Your email address" data-en-placeholder="Your email address" data-fr-placeholder="Votre adresse courriel" />
+    <button type="button" onclick="handleNewsletter()" data-en="Join the Family" data-fr="Rejoindre la Famille">Join the Family</button>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-inner">
+    <div>
+      <p class="section-eyebrow" data-en="Find Us" data-fr="Nous Trouver">Find Us</p>
+      <h2 class="section-title" data-en="Come Visit <em>Us</em>" data-fr="Venez Nous <em>Rendre Visite</em>">Come Visit <em>Us</em></h2>
+      <div class="contact-info reveal">
+        <div class="contact-block">
+          <strong data-en="Address" data-fr="Adresse">Address</strong>
+          <p>1157 Rue de Clarendon<br />Quyon, QC J0X 2V0<br />Canada</p>
+        </div>
+        <div class="contact-block">
+          <strong data-en="Located In" data-fr="Situé Dans">Located In</strong>
+          <p data-en="Pontiac, Quebec — Gateway to the Pontiac region, just west of Gatineau / Ottawa." data-fr="Pontiac, Québec — Porte du Pontiac, à l'ouest de Gatineau / Ottawa.">Pontiac, Quebec &mdash; Gateway to the Pontiac region, just west of Gatineau / Ottawa.</p>
+        </div>
+        <div class="contact-block">
+          <strong data-en="Follow Along" data-fr="Suivez-Nous">Follow Along</strong>
+          <a href="https://www.instagram.com/gavanshotel" target="_blank" rel="noopener">@gavanshotel on Instagram</a>
+        </div>
+        <div class="contact-block">
+          <strong data-en="Original Website" data-fr="Site Original">Original Website</strong>
+          <a href="https://www.gavanshotel.com" target="_blank" rel="noopener">www.gavanshotel.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-map reveal" style="transition-delay:0.15s;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.4!2d-76.2301!3d45.5292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccefeaaaaaaaaa%3A0x0!2sGavan's+Hotel%2C+1157+Rue+de+Clarendon%2C+Quyon%2C+QC!5e0!3m2!1sen!2sca!4v1"
+        allowfullscreen=""
+        loading="lazy"
+        title="Gavan's Hotel map"
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-logo">
+    <img src="https://static.wixstatic.com/media/67406f_808d12793ff64c58aa58f67c365728ed~mv2.png/v1/fill/w_264,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Gavans%20Horizonal%20Logo%20BW%20MAIN%20BRAND%20Revised%20MARCH%202025.png" alt="Gavan's Hotel" />
+  </div>
+  <p class="footer-copy">
+    &copy; 2025 Gavan's Hotel, Quyon, QC &mdash;
+    <span data-en="Website created by" data-fr="Site web créé par">Website created by</span>
+    <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a>
+  </p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/gavanshotel" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/gavanshotel" target="_blank" rel="noopener" aria-label="Facebook">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+<script>
+  // ===== LANGUAGE SYSTEM =====
+  let currentLang = 'en';
+
+  function setLang(lang) {
+    currentLang = lang;
+
+    // Update buttons
+    ['lang-en','lang-fr','m-lang-en','m-lang-fr'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('active', el.id.endsWith(lang));
+    });
+
+    // Update all data-en / data-fr elements
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const val = el.getAttribute('data-' + lang);
+      if (val !== null) el.innerHTML = val;
+    });
+
+    // Update placeholders
+    document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+      const val = el.getAttribute('data-' + lang + '-placeholder');
+      if (val) el.placeholder = val;
+    });
+
+    // Update html lang
+    document.documentElement.lang = lang === 'fr' ? 'fr' : 'en';
+  }
+
+  // ===== HERO SLIDESHOW =====
+  const slides = document.querySelectorAll('.hero-slide');
+  const dotsContainer = document.getElementById('heroDots');
+  let currentSlide = 0;
+
+  slides.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.setAttribute('aria-label', `Slide ${i + 1}`);
+    if (i === 0) btn.classList.add('active');
+    btn.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(btn);
+  });
+
+  function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    dotsContainer.children[currentSlide].classList.remove('active');
+    currentSlide = n;
+    slides[currentSlide].classList.add('active');
+    dotsContainer.children[currentSlide].classList.add('active');
+    // Restart zoom animation
+    const img = slides[currentSlide].querySelector('img');
+    img.style.animation = 'none';
+    img.offsetHeight; // reflow
+    img.style.animation = '';
+  }
+
+  setInterval(() => goToSlide((currentSlide + 1) % slides.length), 6000);
+
+  // ===== HEADER SCROLL =====
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // ===== HAMBURGER MENU =====
+  function toggleMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const ham = document.getElementById('hamburger');
+    const isOpen = menu.classList.toggle('open');
+    ham.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+
+  function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+    document.getElementById('hamburger').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ===== SCROLL REVEAL =====
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => observer.observe(el));
+
+  // ===== MENU TABS =====
+  function switchTab(id) {
+    document.querySelectorAll('.menu-tab').forEach((btn, i) => {
+      const matches = btn.getAttribute('onclick') === `switchTab('${id}')`;
+      btn.classList.toggle('active', matches);
+    });
+    document.querySelectorAll('.menu-panel').forEach(p => {
+      p.classList.toggle('active', p.id === 'panel-' + id);
+    });
+    // Re-trigger reveals inside the newly shown panel
+    document.querySelectorAll('#panel-' + id + ' .reveal').forEach(el => {
+      el.classList.remove('visible');
+      setTimeout(() => observer.observe(el), 10);
+    });
+  }
+
+  // ===== NEWSLETTER =====
+  function handleNewsletter() {
+    const email = document.getElementById('nl-email').value.trim();
+    if (!email || !email.includes('@')) {
+      alert(currentLang === 'fr' ? 'Veuillez entrer une adresse courriel valide.' : 'Please enter a valid email address.');
+      return;
+    }
+    alert(currentLang === 'fr' ? 'Merci! Vous faites maintenant partie de la famille Gavan\'s.' : 'Thank you! You\'re now part of the Gavan\'s family.');
+    document.getElementById('nl-email').value = '';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shane's Tree Service | Pontiac County, Quebec | 819-744-6285</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Shane's Tree Service - Professional tree removal, trimming, and emergency services in Pontiac County, Quebec. Free estimates, fully insured, 20+ years experience. Call 819-744-6285." />
+  <meta name="keywords" content="tree service Pontiac Quebec, tree removal Pontiac, tree trimming Campbell's Bay, arborist Pontiac County, emergency tree service Quebec, Shane's Tree Service, Jim's Tree Service, abattage arbres Pontiac" />
+  <meta name="author" content="Shane's Tree Service" />
+  <meta name="geo.region" content="CA-QC" />
+  <meta name="geo.placename" content="Pontiac County, Quebec" />
+  <meta name="geo.position" content="45.6;-76.6" />
+  <meta name="ICBM" content="45.6, -76.6" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Shane's Tree Service | Pontiac County, Quebec" />
+  <meta property="og:description" content="Free estimates, fully insured, 24hr emergency service. Serving Pontiac County for over 20 years." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET & BASE ──────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --forest:    #1a2e1a;
+      --bark:      #3d2b1f;
+      --moss:      #4a7c3f;
+      --sage:      #7aaa6e;
+      --cream:     #f5f0e8;
+      --gold:      #c8973a;
+      --gold-lt:   #e5b86a;
+      --white:     #ffffff;
+      --text-dark: #1a1a1a;
+      --text-mid:  #4a4a4a;
+      --text-lt:   #888;
+      --header-h:  80px;
+    }
+
+    body {
+      font-family: 'Barlow', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* ── STICKY HEADER ─────────────────────────────────── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      z-index: 1000;
+      background: rgba(26, 46, 26, 0.97);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      border-bottom: 1px solid rgba(200, 151, 58, 0.25);
+      transition: box-shadow 0.3s;
+    }
+    header.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.4); }
+
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .logo-top {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      color: var(--gold);
+      letter-spacing: 0.02em;
+    }
+    .logo-sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      color: var(--sage);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    nav { display: flex; align-items: center; gap: 32px; }
+    nav a {
+      color: rgba(245, 240, 232, 0.8);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -3px;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.3s;
+    }
+    nav a:hover { color: var(--gold); }
+    nav a:hover::after { width: 100%; }
+
+    .header-actions { display: flex; align-items: center; gap: 16px; }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid rgba(200, 151, 58, 0.5);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .lang-btn:hover {
+      background: var(--gold);
+      color: var(--forest);
+      border-color: var(--gold);
+    }
+
+    .cta-header {
+      background: var(--gold);
+      color: var(--forest);
+      padding: 10px 20px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .cta-header:hover { background: var(--gold-lt); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--cream);
+      transition: all 0.3s;
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav overlay */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: var(--forest);
+      padding: 30px 40px;
+      flex-direction: column;
+      gap: 0;
+      z-index: 999;
+      border-top: 1px solid rgba(200,151,58,0.2);
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      color: var(--cream);
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      transition: color 0.2s;
+    }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-nav .lang-btn { margin-top: 20px; align-self: flex-start; }
+    .mobile-nav .cta-header { margin-top: 10px; text-align: center; }
+
+    /* ── HERO ──────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(160deg, rgba(26,46,26,0.88) 0%, rgba(26,46,26,0.55) 50%, rgba(61,43,31,0.75) 100%),
+        url('https://images.unsplash.com/photo-1542044896530-3b5e7c7bab52?w=1600&q=80') center/cover no-repeat;
+      transform: scale(1.05);
+      animation: heroZoom 18s ease-in-out infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1.05); }
+      to   { transform: scale(1.12); }
+    }
+
+    /* Animated tree rings decoration */
+    .hero-rings {
+      position: absolute;
+      right: -120px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 600px;
+      height: 600px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+    .hero-rings circle {
+      fill: none;
+      stroke: var(--cream);
+      animation: ringPulse 4s ease-in-out infinite;
+    }
+    .hero-rings circle:nth-child(1) { stroke-width: 1; animation-delay: 0s; }
+    .hero-rings circle:nth-child(2) { stroke-width: 1; animation-delay: 0.4s; }
+    .hero-rings circle:nth-child(3) { stroke-width: 1; animation-delay: 0.8s; }
+    .hero-rings circle:nth-child(4) { stroke-width: 1; animation-delay: 1.2s; }
+    .hero-rings circle:nth-child(5) { stroke-width: 1; animation-delay: 1.6s; }
+    @keyframes ringPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 140px 60px 80px;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 151, 58, 0.15);
+      border: 1px solid rgba(200, 151, 58, 0.4);
+      color: var(--gold-lt);
+      padding: 7px 16px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      animation: fadeSlideUp 0.8s ease both;
+    }
+    .hero-badge::before {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      animation: fadeSlideUp 0.8s 0.15s ease both;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: rgba(245, 240, 232, 0.75);
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 40px;
+      animation: fadeSlideUp 0.8s 0.3s ease both;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeSlideUp 0.8s 0.45s ease both;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--forest);
+      padding: 16px 36px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-lt);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(200,151,58,0.4);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--cream);
+      padding: 16px 36px;
+      border-radius: 2px;
+      border: 1px solid rgba(245, 240, 232, 0.4);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.25s;
+    }
+    .btn-secondary:hover {
+      border-color: var(--cream);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* Hero trust bar */
+    .hero-trust {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: rgba(26, 46, 26, 0.9);
+      border-top: 1px solid rgba(200,151,58,0.2);
+      display: flex;
+      align-items: stretch;
+      z-index: 2;
+    }
+    .trust-item {
+      flex: 1;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      gap: 6px;
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .trust-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245,240,232,0.55);
+    }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTIONS COMMON ───────────────────────────────── */
+    section { padding: 100px 60px; }
+    .section-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::before {
+      content: '';
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.1;
+      color: var(--forest);
+      margin-bottom: 20px;
+    }
+    .section-title.light { color: var(--cream); }
+    .section-body {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-mid);
+      max-width: 560px;
+    }
+    .section-body.light { color: rgba(245,240,232,0.7); }
+
+    /* ── EMERGENCY BANNER ──────────────────────────────── */
+    .emergency-banner {
+      background: var(--bark);
+      padding: 0;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .emergency-accent {
+      width: 6px;
+      background: var(--gold);
+      align-self: stretch;
+      flex-shrink: 0;
+    }
+    .emergency-content {
+      padding: 32px 50px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .emergency-badge {
+      background: var(--gold);
+      color: var(--forest);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 2px;
+      white-space: nowrap;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.65; }
+    }
+    .emergency-text {
+      color: var(--cream);
+      font-size: 1rem;
+      font-weight: 300;
+    }
+    .emergency-text strong { font-weight: 600; color: var(--gold-lt); }
+    .emergency-phone {
+      margin-left: auto;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+    .emergency-phone:hover { color: var(--gold-lt); }
+
+    /* ── SERVICES ──────────────────────────────────────── */
+    #services { background: var(--cream); }
+    .services-header { max-width: 1200px; margin: 0 auto 60px; }
+    .services-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 44px 36px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: default;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: 3px;
+      height: 0;
+      background: var(--gold);
+      transition: height 0.4s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.1); }
+    .service-card:hover::before { height: 100%; }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .service-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--moss);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--forest);
+      margin-bottom: 14px;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--text-mid);
+    }
+
+    /* ── ABOUT ─────────────────────────────────────────── */
+    #about {
+      background: var(--forest);
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+    }
+    .about-img {
+      position: relative;
+      overflow: hidden;
+    }
+    .about-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.8s ease;
+    }
+    .about-img:hover img { transform: scale(1.04); }
+    .about-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent 60%, var(--forest) 100%);
+    }
+
+    .about-content {
+      padding: 80px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .legacy-line {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 28px 0;
+    }
+    .legacy-line hr {
+      flex: 1;
+      border: none;
+      border-top: 1px solid rgba(200,151,58,0.3);
+    }
+    .legacy-line span {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(200,151,58,0.7);
+      white-space: nowrap;
+    }
+
+    .about-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 36px;
+    }
+    .about-tag {
+      background: rgba(74, 124, 63, 0.2);
+      border: 1px solid rgba(74, 124, 63, 0.4);
+      color: var(--sage);
+      padding: 7px 16px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ── GALLERY ───────────────────────────────────────── */
+    #gallery { background: #f0ebe0; padding: 100px 60px; }
+    .gallery-header { max-width: 1200px; margin: 0 auto 50px; }
+    .gallery-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto auto;
+      gap: 4px;
+    }
+    .gallery-item {
+      overflow: hidden;
+      position: relative;
+      background: var(--forest);
+      cursor: pointer;
+    }
+    .gallery-item:first-child {
+      grid-column: 1 / 3;
+      grid-row: 1 / 3;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      aspect-ratio: 1;
+      transition: transform 0.6s ease, opacity 0.3s;
+    }
+    .gallery-item:first-child img { aspect-ratio: auto; }
+    .gallery-item:hover img { transform: scale(1.06); opacity: 0.85; }
+    .gallery-item-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,46,26,0.6) 0%, transparent 50%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+    }
+    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+    .gallery-item-label {
+      color: var(--cream);
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ── WHY CHOOSE ────────────────────────────────────── */
+    #why {
+      background: var(--bark);
+      position: relative;
+      overflow: hidden;
+    }
+    #why::before {
+      content: 'PONTIAC';
+      position: absolute;
+      right: -30px;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+      font-family: 'Playfair Display', serif;
+      font-size: 10rem;
+      color: rgba(255,255,255,0.03);
+      pointer-events: none;
+      white-space: nowrap;
+    }
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .why-list { display: flex; flex-direction: column; gap: 0; }
+    .why-item {
+      display: flex;
+      gap: 24px;
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      align-items: flex-start;
+      transition: transform 0.2s;
+    }
+    .why-item:hover { transform: translateX(6px); }
+    .why-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: rgba(200,151,58,0.3);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 40px;
+    }
+    .why-text h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+    .why-text p {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: rgba(245,240,232,0.55);
+      line-height: 1.6;
+    }
+
+    /* ── CONTACT ───────────────────────────────────────── */
+    #contact {
+      background: var(--cream);
+      padding: 100px 60px;
+    }
+    .contact-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info { padding-top: 8px; }
+    .contact-block {
+      margin-top: 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--forest);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+    .contact-item-text strong {
+      display: block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-lt);
+      margin-bottom: 3px;
+    }
+    .contact-item-text a,
+    .contact-item-text span {
+      color: var(--forest);
+      font-size: 1.05rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .contact-item-text a:hover { color: var(--moss); }
+
+    /* Contact form */
+    .contact-form {
+      background: var(--white);
+      padding: 50px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.06);
+    }
+    .contact-form h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--forest);
+      margin-bottom: 30px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+    .form-group label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-lt);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      border: 1px solid #e0d8cc;
+      background: var(--cream);
+      padding: 13px 16px;
+      border-radius: 2px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--moss);
+      background: var(--white);
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit {
+      background: var(--forest);
+      color: var(--gold);
+      border: none;
+      padding: 16px 40px;
+      border-radius: 2px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      width: 100%;
+    }
+    .form-submit:hover { background: var(--moss); transform: translateY(-1px); }
+
+    /* ── FOOTER ────────────────────────────────────────── */
+    footer {
+      background: var(--forest);
+      padding: 60px 60px 30px;
+      border-top: 3px solid var(--gold);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-brand .logo-top { font-size: 1.6rem; }
+    .footer-brand p {
+      margin-top: 16px;
+      font-size: 0.875rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(245,240,232,0.5);
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a {
+      color: rgba(245,240,232,0.5);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--cream); }
+    .footer-col ul li span {
+      color: rgba(245,240,232,0.5);
+      font-size: 0.875rem;
+      font-weight: 300;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 24px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 0.78rem;
+      color: rgba(245,240,232,0.3);
+    }
+    .footer-bottom a {
+      color: rgba(200,151,58,0.7);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .footer-bottom a:hover { color: var(--gold); }
+    .canada-flag {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(245,240,232,0.3);
+      font-size: 0.78rem;
+    }
+    .flag-icon {
+      width: 22px;
+      height: 15px;
+      background: linear-gradient(to right, #FF0000 25%, #fff 25% 75%, #FF0000 75%);
+      border-radius: 1px;
+      display: inline-block;
+    }
+
+    /* ── FLOATING CALL BUTTON (mobile) ─────────────────── */
+    .float-call {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gold);
+      color: var(--forest);
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(200,151,58,0.5);
+      z-index: 900;
+      transition: transform 0.2s;
+    }
+    .float-call:hover { transform: scale(1.1); }
+    .float-call svg { width: 26px; height: 26px; stroke: var(--forest); fill: none; stroke-width: 2; }
+
+    /* ── ANIMATIONS ON SCROLL ───────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      #about { grid-template-columns: 1fr; }
+      .about-img { height: 380px; }
+      .about-img-overlay { background: linear-gradient(0deg, var(--forest) 0%, transparent 60%); }
+      .why-inner { grid-template-columns: 1fr; gap: 50px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 50px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-item:first-child { grid-column: 1 / 3; grid-row: auto; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 70px 24px; }
+      header { padding: 0 24px; }
+      nav, .cta-header, .lang-btn { display: none; }
+      .hamburger { display: flex; }
+      .header-actions .cta-header { display: none; }
+      .header-actions .lang-btn { display: none; }
+      .float-call { display: flex; }
+      .hero-content { padding: 120px 24px 60px; }
+      .hero-rings { display: none; }
+      .hero-trust { position: static; flex-wrap: wrap; }
+      .trust-item { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .services-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:first-child { grid-column: 1 / 3; }
+      .contact-form { padding: 30px 24px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+      footer { padding: 50px 24px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+      .emergency-content { padding: 24px; gap: 16px; }
+      .emergency-phone { margin-left: 0; }
+      #about { display: block; }
+      .about-content { padding: 50px 24px; }
+      .hero-ctas { flex-direction: column; }
+      .btn-primary, .btn-secondary { text-align: center; }
+    }
+
+    /* ── FORM SUCCESS MESSAGE ─────────────────────────── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .form-success.visible { display: block; }
+    .form-success h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--forest);
+      margin-bottom: 10px;
+    }
+    .form-success p { color: var(--text-mid); font-weight: 300; }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header id="site-header">
+  <a href="#" class="logo">
+    <span class="logo-top">Shane's Tree Service</span>
+    <span class="logo-sub" data-en="Pontiac County, Quebec" data-fr="Comté de Pontiac, Québec">Pontiac County, Quebec</span>
+  </a>
+
+  <nav>
+    <a href="#services" data-en="Services" data-fr="Services">Services</a>
+    <a href="#about" data-en="About" data-fr="À propos">About</a>
+    <a href="#gallery" data-en="Gallery" data-fr="Galerie">Gallery</a>
+    <a href="#why" data-en="Why Us" data-fr="Pourquoi nous">Why Us</a>
+    <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="lang-btn" id="lang-toggle">FR</button>
+    <a href="tel:8197446285" class="cta-header" data-en="Call 819-744-6285" data-fr="Appel 819-744-6285">Call 819-744-6285</a>
+  </div>
+
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile nav -->
+<div class="mobile-nav" id="mobile-nav">
+  <a href="#services" data-en="Services" data-fr="Services">Services</a>
+  <a href="#about" data-en="About" data-fr="À propos">About</a>
+  <a href="#gallery" data-en="Gallery" data-fr="Galerie">Gallery</a>
+  <a href="#why" data-en="Why Us" data-fr="Pourquoi nous">Why Us</a>
+  <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
+  <button class="lang-btn" id="lang-toggle-mobile">FR</button>
+  <a href="tel:8197446285" class="cta-header" data-en="Call 819-744-6285" data-fr="Appel 819-744-6285">Call 819-744-6285</a>
+</div>
+
+<!-- ── HERO ──────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+
+  <!-- Animated tree rings -->
+  <svg class="hero-rings" viewBox="0 0 600 600">
+    <circle cx="300" cy="300" r="60" /><circle cx="300" cy="300" r="110" />
+    <circle cx="300" cy="300" r="160" /><circle cx="300" cy="300" r="220" />
+    <circle cx="300" cy="300" r="280" />
+  </svg>
+
+  <div class="hero-content">
+    <div class="hero-badge" data-en="Pontiac County's Trusted Tree Experts" data-fr="Les experts arbres de confiance du Pontiac">
+      Pontiac County's Trusted Tree Experts
+    </div>
+    <h1 data-en="We Handle <em>Every Tree</em> Job, Big or Small" data-fr="On prend en charge <em>chaque travail</em> d'arbre, grand ou petit">
+      We Handle <em>Every Tree</em> Job, Big or Small
+    </h1>
+    <p class="hero-desc" data-en="Free estimates. Fully insured. 24-hour emergency response. Serving Pontiac County with over 20 years of hands-on expertise passed down through generations." data-fr="Estimations gratuites. Entièrement assuré. Intervention d'urgence 24 heures. Au service du comté de Pontiac avec plus de 20 ans d'expertise pratique transmise de génération en génération.">
+      Free estimates. Fully insured. 24-hour emergency response. Serving Pontiac County with over 20 years of hands-on expertise passed down through generations.
+    </p>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary" data-en="Get a Free Estimate" data-fr="Obtenez une estimation gratuite">Get a Free Estimate</a>
+      <a href="tel:8197446285" class="btn-secondary" data-en="Call 819-744-6285" data-fr="Appeler 819-744-6285">Call 819-744-6285</a>
+    </div>
+  </div>
+
+  <div class="hero-trust">
+    <div class="trust-item">
+      <span class="trust-num">20+</span>
+      <span class="trust-label" data-en="Years Experience" data-fr="Ans d'expérience">Years Experience</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">24h</span>
+      <span class="trust-label" data-en="Emergency Service" data-fr="Service d'urgence">Emergency Service</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">100%</span>
+      <span class="trust-label" data-en="Fully Insured" data-fr="Entièrement assuré">Fully Insured</span>
+    </div>
+    <div class="trust-item">
+      <span class="trust-num">FREE</span>
+      <span class="trust-label" data-en="Estimates" data-fr="Estimations">Estimates</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── EMERGENCY BANNER ────────────────────────────── -->
+<div class="emergency-banner">
+  <div class="emergency-accent"></div>
+  <div class="emergency-content">
+    <span class="emergency-badge" data-en="24hr Emergency" data-fr="Urgence 24h">24hr Emergency</span>
+    <p class="emergency-text" data-en="Storm damage? Tree on your property? <strong>We respond around the clock</strong> — call us now." data-fr="Dommages causés par une tempête? Arbre sur votre propriété? <strong>Nous répondons 24h/24</strong> — appelez-nous maintenant.">
+      Storm damage? Tree on your property? <strong>We respond around the clock</strong> — call us now.
+    </p>
+    <a href="tel:8197446285" class="emergency-phone">819-744-6285</a>
+  </div>
+</div>
+
+<!-- ── SERVICES ───────────────────────────────────── -->
+<section id="services">
+  <div class="services-header reveal">
+    <p class="section-label" data-en="What We Do" data-fr="Ce que nous faisons">What We Do</p>
+    <h2 class="section-title" data-en="Professional Tree Services" data-fr="Services professionnels d'arbres">Professional Tree Services</h2>
+    <p class="section-body" data-en="From routine trimming to complex removals and emergency response, Shane's Tree Service delivers expert workmanship every time." data-fr="Des tailles de routine aux abattages complexes et aux interventions d'urgence, Shane's Tree Service offre un travail de qualité à chaque fois.">
+      From routine trimming to complex removals and emergency response, Shane's Tree Service delivers expert workmanship every time.
+    </p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg viewBox="0 0 52 52"><path d="M26 4 C26 4 14 16 14 28 A12 12 0 0 0 38 28 C38 16 26 4 26 4Z"/><line x1="26" y1="40" x2="26" y2="50"/><line x1="20" y1="50" x2="32" y2="50"/></svg>
+      </div>
+      <h3 data-en="Tree Removal" data-fr="Abattage d'arbres">Tree Removal</h3>
+      <p data-en="Safe, efficient removal of hazardous, dead, or unwanted trees of any size. We clear the site completely — leaving no mess behind." data-fr="Enlèvement sûr et efficace d'arbres dangereux, morts ou indésirables de toute taille. Nous nettoyons complètement le site, sans laisser de désordre.">Safe, efficient removal of hazardous, dead, or unwanted trees of any size. We clear the site completely — leaving no mess behind.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg viewBox="0 0 52 52"><path d="M10 42 L26 8 L42 42"/><path d="M18 28 L34 28"/><path d="M14 36 L38 36"/></svg>
+      </div>
+      <h3 data-en="Tree Trimming &amp; Pruning" data-fr="Taille et élagage">Tree Trimming &amp; Pruning</h3>
+      <p data-en="Shape, health, and safety — we prune to promote strong growth, improve aesthetics, and eliminate dangerous overhanging branches." data-fr="Forme, santé et sécurité — nous élagons pour favoriser une croissance robuste, améliorer l'aspect esthétique et éliminer les branches dangereuses en surplomb.">Shape, health, and safety — we prune to promote strong growth, improve aesthetics, and eliminate dangerous overhanging branches.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="10"/><line x1="26" y1="4" x2="26" y2="14"/><line x1="26" y1="38" x2="26" y2="48"/><line x1="4" y1="26" x2="14" y2="26"/><line x1="38" y1="26" x2="48" y2="26"/><line x1="11" y1="11" x2="18" y2="18"/><line x1="34" y1="34" x2="41" y2="41"/><line x1="41" y1="11" x2="34" y2="18"/><line x1="18" y1="34" x2="11" y2="41"/></svg>
+      </div>
+      <h3 data-en="Stump Grinding" data-fr="Broyage de souches">Stump Grinding</h3>
+      <p data-en="Eliminate unsightly stumps and reclaim your yard. We grind stumps below ground level so you can replant, pave, or landscape with ease." data-fr="Éliminez les souches inesthétiques et récupérez votre terrain. Nous broyons les souches sous le niveau du sol pour que vous puissiez replanter, paver ou aménager facilement.">Eliminate unsightly stumps and reclaim your yard. We grind stumps below ground level so you can replant, pave, or landscape with ease.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg viewBox="0 0 52 52"><path d="M8 44 L26 10 L44 44"/><path d="M8 44 L44 44"/><path d="M20 44 L20 32 A6 6 0 0 1 32 32 L32 44"/></svg>
+      </div>
+      <h3 data-en="24hr Emergency Services" data-fr="Services d'urgence 24h">24hr Emergency Services</h3>
+      <p data-en="Storm damage, fallen trees, or dangerous limbs over power lines — we're available around the clock to protect your home and property." data-fr="Dommages causés par des tempêtes, arbres tombés ou branches dangereuses au-dessus des lignes électriques — nous sommes disponibles 24h/24 pour protéger votre maison et propriété.">Storm damage, fallen trees, or dangerous limbs over power lines — we're available around the clock to protect your home and property.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg viewBox="0 0 52 52"><rect x="10" y="20" width="32" height="26" rx="2"/><path d="M18 20 V14 A8 8 0 0 1 34 14 V20"/><line x1="26" y1="30" x2="26" y2="36"/><circle cx="26" cy="28" r="2"/></svg>
+      </div>
+      <h3 data-en="Lot &amp; Land Clearing" data-fr="Débroussaillage de terrain">Lot &amp; Land Clearing</h3>
+      <p data-en="Preparing land for construction, agriculture, or development? We clear trees, brush, and stumps efficiently to get your project started right." data-fr="Vous préparez un terrain pour la construction, l'agriculture ou l'aménagement? Nous dégageons les arbres, broussailles et souches efficacement pour bien démarrer votre projet.">Preparing land for construction, agriculture, or development? We clear trees, brush, and stumps efficiently to get your project started right.</p>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-icon">
+        <svg viewBox="0 0 52 52"><path d="M12 44 C12 44 14 30 26 26 C38 22 40 8 40 8"/><path d="M40 8 C40 8 28 12 24 22 C20 32 8 34 8 44"/><circle cx="26" cy="26" r="3"/></svg>
+      </div>
+      <h3 data-en="Tree Health Assessment" data-fr="Évaluation de la santé des arbres">Tree Health Assessment</h3>
+      <p data-en="Concerned about a tree on your property? Shane will evaluate for disease, structural weakness, and risk — with honest advice on what to do next." data-fr="Préoccupé par un arbre sur votre propriété? Shane évaluera les maladies, les faiblesses structurelles et les risques — avec des conseils honnêtes sur les prochaines étapes.">Concerned about a tree on your property? Shane will evaluate for disease, structural weakness, and risk — with honest advice on what to do next.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── ABOUT ──────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-img">
+    <!-- TEMPLATE PHOTO: Replace with a photo of Shane or his crew at work -->
+    <img src="https://images.unsplash.com/photo-1589209960492-2e9c2b1ddbd0?w=900&q=80" alt="Shane's Tree Service crew at work in Pontiac County" loading="lazy" />
+    <div class="about-img-overlay"></div>
+  </div>
+  <div class="about-content">
+    <p class="section-label" data-en="Our Story" data-fr="Notre histoire">Our Story</p>
+    <h2 class="section-title light" data-en="Rooted in Pontiac for Generations" data-fr="Enraciné dans le Pontiac depuis des générations">Rooted in Pontiac for Generations</h2>
+    <p class="section-body light" data-en="Shane Newton grew up in the tree business, learning every technique alongside his father Jim Newton of Jim's Tree Service. With more than 20 years of experience on the job, Shane brings that same dedication, knowledge, and Pontiac pride to every project — big or small." data-fr="Shane Newton a grandi dans le domaine des arbres, apprenant chaque technique aux côtés de son père Jim Newton de Jim's Tree Service. Avec plus de 20 ans d'expérience sur le terrain, Shane apporte ce même dévouement, cette connaissance et cette fierté du Pontiac à chaque projet — grand ou petit.">
+      Shane Newton grew up in the tree business, learning every technique alongside his father Jim Newton of Jim's Tree Service. With more than 20 years of experience on the job, Shane brings that same dedication, knowledge, and Pontiac pride to every project — big or small.
+    </p>
+
+    <div class="legacy-line">
+      <hr/>
+      <span data-en="A legacy built with Jim's Tree Service" data-fr="Un héritage bâti avec Jim's Tree Service">A legacy built with Jim's Tree Service</span>
+      <hr/>
+    </div>
+
+    <p class="section-body light" data-en="Shane's Tree Service is proudly local, proudly Canadian, and committed to fair pricing, quality work, and treating every property with the respect it deserves." data-fr="Shane's Tree Service est fièrement local, fièrement canadien, et engagé envers des prix équitables, un travail de qualité et le respect de chaque propriété.">
+      Shane's Tree Service is proudly local, proudly Canadian, and committed to fair pricing, quality work, and treating every property with the respect it deserves.
+    </p>
+
+    <div class="about-tags">
+      <span class="about-tag" data-en="Pontiac Proud" data-fr="Fierté du Pontiac">Pontiac Proud</span>
+      <span class="about-tag" data-en="Fully Insured" data-fr="Entièrement assuré">Fully Insured</span>
+      <span class="about-tag" data-en="Free Estimates" data-fr="Estimations gratuites">Free Estimates</span>
+      <span class="about-tag" data-en="Family Legacy" data-fr="Héritage familial">Family Legacy</span>
+      <span class="about-tag" data-en="20+ Years" data-fr="20+ ans">20+ Years</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ─────────────────────────────────────────── -->
+<section id="gallery">
+  <div class="gallery-header reveal">
+    <p class="section-label" data-en="Our Work" data-fr="Nos réalisations">Our Work</p>
+    <h2 class="section-title" data-en="See the Results" data-fr="Voyez les résultats">See the Results</h2>
+  </div>
+  <div class="gallery-grid">
+    <!-- TEMPLATE PHOTOS: Replace all src URLs with your Facebook/actual job photos -->
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1609764219726-cd0d1e59f4be?w=900&q=80" alt="Large tree removal in Pontiac County" loading="lazy" />
+      <div class="gallery-item-overlay"><span class="gallery-item-label" data-en="Tree Removal" data-fr="Abattage">Tree Removal</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80" alt="Tree trimming service" loading="lazy" />
+      <div class="gallery-item-overlay"><span class="gallery-item-label" data-en="Trimming" data-fr="Élagage">Trimming</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=600&q=80" alt="Stump grinding" loading="lazy" />
+      <div class="gallery-item-overlay"><span class="gallery-item-label" data-en="Stump Grinding" data-fr="Broyage">Stump Grinding</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1543373072-1f02d97e3079?w=600&q=80" alt="Land clearing Pontiac Quebec" loading="lazy" />
+      <div class="gallery-item-overlay"><span class="gallery-item-label" data-en="Land Clearing" data-fr="Débroussaillage">Land Clearing</span></div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Forest work Quebec" loading="lazy" />
+      <div class="gallery-item-overlay"><span class="gallery-item-label" data-en="Forest Work" data-fr="Travaux forestiers">Forest Work</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY US ──────────────────────────────────────────── -->
+<section id="why">
+  <div class="why-inner">
+    <div class="reveal">
+      <p class="section-label" data-en="Why Shane's" data-fr="Pourquoi Shane's">Why Shane's</p>
+      <h2 class="section-title light" data-en="Why Pontiac Trusts Us" data-fr="Pourquoi le Pontiac nous fait confiance">Why Pontiac Trusts Us</h2>
+      <p class="section-body light" data-en="We're not a faceless corporation. We're your neighbours — and we treat your property the way we'd want ours treated." data-fr="Nous ne sommes pas une corporation sans visage. Nous sommes vos voisins — et nous traitons votre propriété comme nous voudrions que la nôtre soit traitée.">
+        We're not a faceless corporation. We're your neighbours — and we treat your property the way we'd want ours treated.
+      </p>
+      <div class="about-tags" style="margin-top:40px;">
+        <a href="tel:8197446285" class="btn-primary" data-en="Call for a Free Quote" data-fr="Appelez pour un devis gratuit">Call for a Free Quote</a>
+      </div>
+    </div>
+
+    <div class="why-list reveal">
+      <div class="why-item">
+        <span class="why-num">01</span>
+        <div class="why-text">
+          <h4 data-en="Affordable Pricing" data-fr="Prix abordables">Affordable Pricing</h4>
+          <p data-en="We believe quality tree work shouldn't break the bank. Free estimates, no hidden fees — ever." data-fr="Nous croyons que des travaux d'arbres de qualité ne devraient pas coûter une fortune. Estimations gratuites, sans frais cachés — jamais.">We believe quality tree work shouldn't break the bank. Free estimates, no hidden fees — ever.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">02</span>
+        <div class="why-text">
+          <h4 data-en="Fully Insured" data-fr="Entièrement assuré">Fully Insured</h4>
+          <p data-en="Your home and property are fully protected. We carry comprehensive liability insurance on every job." data-fr="Votre maison et propriété sont entièrement protégées. Nous avons une assurance responsabilité civile complète sur chaque travail.">Your home and property are fully protected. We carry comprehensive liability insurance on every job.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">03</span>
+        <div class="why-text">
+          <h4 data-en="24hr Emergency Response" data-fr="Intervention d'urgence 24h">24hr Emergency Response</h4>
+          <p data-en="Trees don't fall on a schedule. We're available day or night when you need us most." data-fr="Les arbres ne tombent pas à l'heure. Nous sommes disponibles jour et nuit quand vous avez le plus besoin de nous.">Trees don't fall on a schedule. We're available day or night when you need us most.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">04</span>
+        <div class="why-text">
+          <h4 data-en="20+ Years of Expertise" data-fr="Plus de 20 ans d'expertise">20+ Years of Expertise</h4>
+          <p data-en="Experience that comes from thousands of jobs across Pontiac County — and a lifetime of learning from the best." data-fr="Une expérience acquise grâce à des milliers de travaux dans tout le comté de Pontiac — et une vie d'apprentissage auprès des meilleurs.">Experience that comes from thousands of jobs across Pontiac County — and a lifetime of learning from the best.</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <span class="why-num">05</span>
+        <div class="why-text">
+          <h4 data-en="Local &amp; Community-Focused" data-fr="Local et orienté communauté">Local &amp; Community-Focused</h4>
+          <p data-en="Proudly serving Pontiac County and surrounding areas. We're your neighbours — and we stand behind every job." data-fr="Au service du comté de Pontiac et des environs avec fierté. Nous sommes vos voisins — et nous assumons chaque travail.">Proudly serving Pontiac County and surrounding areas. We're your neighbours — and we stand behind every job.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ─────────────────────────────────────────── -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <p class="section-label" data-en="Reach Us" data-fr="Nous joindre">Reach Us</p>
+      <h2 class="section-title" data-en="Get Your Free Estimate" data-fr="Obtenez votre estimation gratuite">Get Your Free Estimate</h2>
+      <p class="section-body" data-en="Ready to get started? Call Shane directly or fill out the form and we'll be in touch shortly." data-fr="Prêt à commencer? Appelez Shane directement ou remplissez le formulaire et nous vous contacterons bientôt.">
+        Ready to get started? Call Shane directly or fill out the form and we'll be in touch shortly.
+      </p>
+      <div class="contact-block">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.38 19a19.4 19.4 0 0 1-5.4-5.36A19.75 19.75 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14 15.82l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong data-en="Phone" data-fr="Téléphone">Phone</strong>
+            <a href="tel:8197446285">819-744-6285</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong data-en="Service Area" data-fr="Zone de service">Service Area</strong>
+            <span data-en="Pontiac County &amp; Surrounding Areas, QC" data-fr="Comté de Pontiac et environs, QC">Pontiac County &amp; Surrounding Areas, QC</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="contact-item-text">
+            <strong data-en="Hours" data-fr="Heures">Hours</strong>
+            <span data-en="Mon-Sat 7am-7pm | 24hr Emergency" data-fr="Lun-Sam 7h-19h | Urgence 24h">Mon-Sat 7am-7pm | 24hr Emergency</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <h3 data-en="Request a Free Estimate" data-fr="Demandez une estimation gratuite">Request a Free Estimate</h3>
+      <div id="form-fields">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-en="First Name" data-fr="Prénom">First Name</label>
+            <input type="text" id="fname" placeholder="Shane" />
+          </div>
+          <div class="form-group">
+            <label data-en="Last Name" data-fr="Nom de famille">Last Name</label>
+            <input type="text" id="lname" placeholder="Newton" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label data-en="Phone Number" data-fr="Numéro de téléphone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="819-000-0000" />
+        </div>
+        <div class="form-group">
+          <label data-en="Service Needed" data-fr="Service requis">Service Needed</label>
+          <select id="service">
+            <option data-en="Select a service..." data-fr="Choisissez un service..." value="">Select a service...</option>
+            <option data-en="Tree Removal" data-fr="Abattage d'arbres" value="removal">Tree Removal</option>
+            <option data-en="Tree Trimming / Pruning" data-fr="Taille et élagage" value="trimming">Tree Trimming / Pruning</option>
+            <option data-en="Stump Grinding" data-fr="Broyage de souches" value="stump">Stump Grinding</option>
+            <option data-en="Emergency Service" data-fr="Service d'urgence" value="emergency">Emergency Service</option>
+            <option data-en="Land Clearing" data-fr="Débroussaillage" value="clearing">Land Clearing</option>
+            <option data-en="Tree Health Assessment" data-fr="Évaluation de la santé des arbres" value="assessment">Tree Health Assessment</option>
+            <option data-en="Other" data-fr="Autre" value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-en="Tell us about your project" data-fr="Parlez-nous de votre projet">Tell us about your project</label>
+          <textarea id="message" placeholder="Describe the job, location, and any urgency..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitForm()" data-en="Send My Request" data-fr="Envoyer ma demande">Send My Request</button>
+      </div>
+      <div class="form-success" id="form-success">
+        <h4 data-en="Thank you! We'll be in touch soon." data-fr="Merci! Nous vous contacterons bientôt.">Thank you! We'll be in touch soon.</h4>
+        <p data-en="For immediate needs, call us at 819-744-6285." data-fr="Pour les besoins immédiats, appelez-nous au 819-744-6285.">For immediate needs, call us at 819-744-6285.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <span class="logo-top">Shane's Tree Service</span>
+        <span class="logo-sub" data-en="Pontiac County, Quebec" data-fr="Comté de Pontiac, Québec">Pontiac County, Quebec</span>
+      </a>
+      <p data-en="Professional tree services for Pontiac County and surrounding areas. Over 20 years of experience, fully insured, free estimates. Available 24 hours for emergencies." data-fr="Services professionnels d'arbres pour le comté de Pontiac et les environs. Plus de 20 ans d'expérience, entièrement assuré, estimations gratuites. Disponible 24h pour les urgences.">
+        Professional tree services for Pontiac County and surrounding areas. Over 20 years of experience, fully insured, free estimates. Available 24 hours for emergencies.
+      </p>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Services" data-fr="Services">Services</h4>
+      <ul>
+        <li><a href="#services" data-en="Tree Removal" data-fr="Abattage d'arbres">Tree Removal</a></li>
+        <li><a href="#services" data-en="Trimming &amp; Pruning" data-fr="Taille et élagage">Trimming &amp; Pruning</a></li>
+        <li><a href="#services" data-en="Stump Grinding" data-fr="Broyage de souches">Stump Grinding</a></li>
+        <li><a href="#services" data-en="Emergency Service" data-fr="Service d'urgence">Emergency Service</a></li>
+        <li><a href="#services" data-en="Land Clearing" data-fr="Débroussaillage">Land Clearing</a></li>
+        <li><a href="#services" data-en="Health Assessment" data-fr="Évaluation santé">Health Assessment</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-en="Contact" data-fr="Contact">Contact</h4>
+      <ul>
+        <li><a href="tel:8197446285">819-744-6285</a></li>
+        <li><span data-en="Pontiac County, QC" data-fr="Comté de Pontiac, QC">Pontiac County, QC</span></li>
+        <li><span data-en="Canada" data-fr="Canada">Canada</span></li>
+        <li><a href="#contact" data-en="Free Estimate" data-fr="Estimation gratuite">Free Estimate</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-en="© 2025 Shane's Tree Service. All rights reserved." data-fr="© 2025 Shane's Tree Service. Tous droits réservés.">© 2025 Shane's Tree Service. All rights reserved.</p>
+    <p>
+      <span data-en="Created by " data-fr="Créé par ">Created by </span><a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a>
+    </p>
+    <div class="canada-flag">
+      <span class="flag-icon"></span>
+      <span data-en="Proudly Canadian" data-fr="Fièrement canadien">Proudly Canadian</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Mobile float call button -->
+<a href="tel:8197446285" class="float-call" aria-label="Call Shane's Tree Service">
+  <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.38 19a19.4 19.4 0 0 1-5.4-5.36A19.75 19.75 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 14 15.82l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script>
+  // ── LANGUAGE SYSTEM ──────────────────────────────────
+  let currentLang = 'en';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang === 'en' ? 'en' : 'fr';
+
+    // Toggle all data-en / data-fr elements
+    document.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (!text) return;
+
+      // If element contains child elements, use innerHTML
+      if (el.querySelector('strong, em, a, br')) {
+        el.innerHTML = text;
+      } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        // skip value
+      } else if (el.tagName === 'OPTION') {
+        el.textContent = text;
+      } else {
+        el.innerHTML = text;
+      }
+    });
+
+    // Update lang buttons
+    document.getElementById('lang-toggle').textContent = lang === 'en' ? 'FR' : 'EN';
+    document.getElementById('lang-toggle-mobile').textContent = lang === 'en' ? 'FR' : 'EN';
+
+    // Update hero h1 which uses innerHTML for em tags
+    const h1 = document.querySelector('.hero h1');
+    if (h1) {
+      const raw = h1.getAttribute('data-' + lang);
+      if (raw) h1.innerHTML = raw;
+    }
+
+    // Update select placeholder
+    const sel = document.getElementById('service');
+    if (sel) {
+      sel.options[0].text = lang === 'en' ? 'Select a service...' : 'Choisissez un service...';
+      const opts = [
+        [lang === 'en' ? 'Tree Removal' : "Abattage d'arbres"],
+        [lang === 'en' ? 'Tree Trimming / Pruning' : 'Taille et élagage'],
+        [lang === 'en' ? 'Stump Grinding' : 'Broyage de souches'],
+        [lang === 'en' ? 'Emergency Service' : "Service d'urgence"],
+        [lang === 'en' ? 'Land Clearing' : 'Débroussaillage'],
+        [lang === 'en' ? 'Tree Health Assessment' : "Évaluation de la santé des arbres"],
+        [lang === 'en' ? 'Other' : 'Autre'],
+      ];
+      opts.forEach((o, i) => { if(sel.options[i+1]) sel.options[i+1].text = o[0]; });
+    }
+
+    // textarea placeholder
+    const msg = document.getElementById('message');
+    if (msg) msg.placeholder = lang === 'en'
+      ? 'Describe the job, location, and any urgency...'
+      : 'Décrivez le travail, l\'emplacement et toute urgence...';
+  }
+
+  document.getElementById('lang-toggle').addEventListener('click', () => {
+    setLanguage(currentLang === 'en' ? 'fr' : 'en');
+  });
+  document.getElementById('lang-toggle-mobile').addEventListener('click', () => {
+    setLanguage(currentLang === 'en' ? 'fr' : 'en');
+  });
+
+  // ── HAMBURGER MENU ───────────────────────────────────
+  const burger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  mobileNav.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('open');
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  // ── SCROLL HEADER SHADOW ─────────────────────────────
+  window.addEventListener('scroll', () => {
+    document.getElementById('site-header').classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // ── SCROLL REVEAL ─────────────────────────────────────
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── FORM SUBMIT ───────────────────────────────────────
+  function submitForm() {
+    const name = document.getElementById('fname').value;
+    if (!name.trim()) {
+      const msg = currentLang === 'en' ? 'Please enter your name.' : 'Veuillez entrer votre nom.';
+      alert(msg);
+      return;
+    }
+    document.getElementById('form-fields').style.display = 'none';
+    const success = document.getElementById('form-success');
+    success.classList.add('visible');
+
+    // Apply language to success message immediately
+    success.querySelectorAll('[data-en]').forEach(el => {
+      const text = el.getAttribute('data-' + currentLang);
+      if (text) el.textContent = text;
+    });
+  }
+
+  // ── SMOOTH ANCHOR OFFSET ──────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = 80;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    });
+  });
+</script>
+
+</body>
+</html>
