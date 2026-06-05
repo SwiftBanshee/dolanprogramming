@@ -1,530 +1,1706 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DK Contracting - Professional residential and commercial renovations in Shawville, Quebec. Expert kitchen, bathroom, basement remodeling in Renfrew County and Pontiac region. Fully insured.">
-    <meta name="keywords" content="contractor Shawville Quebec, home renovation Pontiac, kitchen renovation Renfrew County, bathroom remodeling Shawville, general contractor Quebec, commercial renovation Pontiac">
-    <meta name="author" content="Dolan Programming">
-    <title>DK Contracting | Renovations Shawville, QC</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
-        
-        :root {
-            --primary: #1e3a8a;
-        }
-        
-        .hero-bg {
-            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://picsum.photos/id/1015/2000/1200');
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .nav-link {
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            transform: translateY(-2px);
-        }
-        
-        .service-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .service-card:hover {
-            transform: translateY(-15px) scale(1.03);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        }
-        
-        .sticky-header {
-            transition: all 0.3s ease;
-        }
-        
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-        
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-        
-        .language-btn {
-            transition: all 0.3s ease;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO - English -->
+  <title>DK Contracting | General Contractor Quebec | Renovation & Construction</title>
+  <meta name="description" content="DK Contracting is a trusted general contractor serving Quebec. We specialize in residential and commercial renovations, roofing, framing, drywall, painting, and more. Serving the greater Quebec region." />
+  <meta name="keywords" content="general contractor Quebec, entrepreneur général Québec, renovation contractor Quebec, construction Quebec, DK Contracting, rénovation résidentielle Québec, roofing Quebec, drywall contractor Quebec, painting contractor Quebec" />
+  <meta name="author" content="DK Contracting" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DK Contracting | General Contractor Quebec" />
+  <meta property="og:description" content="Trusted renovation and construction contractor serving Quebec. Quality work, honest pricing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
+
+  <!-- Schema.org local business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "DK Contracting",
+    "description": "General contractor specializing in residential and commercial renovation and construction in Quebec.",
+    "areaServed": {
+      "@type": "State",
+      "name": "Quebec, Canada"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 46.8139,
+        "longitude": -71.2082
+      }
+    },
+    "knowsLanguage": ["en", "fr"],
+    "url": "https://www.dolanprogramming.ca/demo/sites/dk-contracting/"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --col-bg: #0c0f12;
+      --col-surface: #13171c;
+      --col-card: #1a1f26;
+      --col-border: #252c35;
+      --col-accent: #e8a020;
+      --col-accent2: #c47a10;
+      --col-text: #ecedf0;
+      --col-muted: #8a919c;
+      --col-white: #ffffff;
+      --font-head: 'Barlow Condensed', sans-serif;
+      --font-body: 'Lato', sans-serif;
+      --header-h: 72px;
+      --radius: 4px;
+      --trans: 0.3s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--col-bg);
+      color: var(--col-text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    img { display: block; width: 100%; object-fit: cover; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ========== HEADER ========== */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--header-h);
+      background: rgba(12, 15, 18, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--col-border);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      gap: 2rem;
+      transition: box-shadow var(--trans);
+    }
+    #header.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.5); }
+
+    .logo {
+      font-family: var(--font-head);
+      font-size: 1.75rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--col-white);
+      flex-shrink: 0;
+    }
+    .logo span { color: var(--col-accent); }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-left: auto;
+    }
+    nav a {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--col-muted);
+      padding: 0 1.1rem;
+      height: var(--header-h);
+      display: flex;
+      align-items: center;
+      transition: color var(--trans);
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 1.1rem; right: 1.1rem;
+      height: 2px;
+      background: var(--col-accent);
+      transform: scaleX(0);
+      transition: transform var(--trans);
+    }
+    nav a:hover { color: var(--col-white); }
+    nav a:hover::after { transform: scaleX(1); }
+
+    .lang-btn {
+      margin-left: 1.5rem;
+      background: transparent;
+      border: 1.5px solid var(--col-accent);
+      color: var(--col-accent);
+      font-family: var(--font-head);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      cursor: pointer;
+      border-radius: var(--radius);
+      transition: background var(--trans), color var(--trans);
+      flex-shrink: 0;
+    }
+    .lang-btn:hover { background: var(--col-accent); color: var(--col-bg); }
+
+    .cta-header {
+      margin-left: 1rem;
+      background: var(--col-accent);
+      color: var(--col-bg);
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.4rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background var(--trans), transform var(--trans);
+      flex-shrink: 0;
+    }
+    .cta-header:hover { background: var(--col-accent2); transform: translateY(-1px); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      margin-left: auto;
+      padding: 6px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background: var(--col-text);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: rgba(12, 15, 18, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--col-border);
+      z-index: 999;
+      padding: 1rem 0 1.5rem;
+      flex-direction: column;
+    }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a {
+      font-family: var(--font-head);
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--col-muted);
+      padding: 0.75rem 7%;
+      border-bottom: 1px solid var(--col-border);
+      transition: color var(--trans), background var(--trans);
+    }
+    .mobile-nav a:hover { color: var(--col-white); background: rgba(255,255,255,0.03); }
+    .mobile-nav-bottom {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 7% 0;
+    }
+
+    /* ========== HERO ========== */
+    #home {
+      min-height: 100vh;
+      padding-top: var(--header-h);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80') center/cover no-repeat;
+      filter: brightness(0.3);
+      transform: scale(1.05);
+      animation: heroZoom 12s ease forwards;
+    }
+    @keyframes heroZoom {
+      to { transform: scale(1); }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(12,15,18,0.85) 40%, rgba(232,160,32,0.1) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 7%;
+      max-width: 820px;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--col-accent);
+      color: var(--col-bg);
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+      animation: fadeUp 0.8s 0.2s both;
+    }
+    .hero-title {
+      font-family: var(--font-head);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 900;
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--col-white);
+      animation: fadeUp 0.8s 0.4s both;
+    }
+    .hero-title em {
+      font-style: normal;
+      color: var(--col-accent);
+      display: block;
+    }
+    .hero-sub {
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: rgba(236,237,240,0.75);
+      margin-top: 1.5rem;
+      max-width: 520px;
+      animation: fadeUp 0.8s 0.6s both;
+    }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.8s 0.8s both;
+    }
+    .btn-primary {
+      background: var(--col-accent);
+      color: var(--col-bg);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.2rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+    }
+    .btn-primary:hover {
+      background: var(--col-accent2);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232,160,32,0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--col-white);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.9rem 2.2rem;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: border-color var(--trans), color var(--trans);
+    }
+    .btn-outline:hover { border-color: var(--col-accent); color: var(--col-accent); }
+
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 4rem;
+      animation: fadeUp 0.8s 1s both;
+      flex-wrap: wrap;
+    }
+    .stat-item { position: relative; }
+    .stat-item::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      background: var(--col-accent);
+      position: absolute;
+      left: -1rem;
+      top: 0;
+    }
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--col-accent);
+      line-height: 1;
+    }
+    .stat-label { font-size: 0.8rem; color: var(--col-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      animation: fadeUp 1s 1.5s both;
+      z-index: 2;
+    }
+    .scroll-indicator span { font-size: 0.7rem; letter-spacing: 0.15em; color: var(--col-muted); text-transform: uppercase; }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--col-accent), transparent);
+      animation: scrollPulse 1.5s infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* ========== SECTION SHARED ========== */
+    section { position: relative; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 7%; }
+    .section-pad { padding: 6rem 0; }
+
+    .section-label {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--col-accent);
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: var(--col-white);
+    }
+    .section-title em { font-style: normal; color: var(--col-accent); }
+    .section-desc {
+      font-size: 1rem;
+      color: var(--col-muted);
+      margin-top: 1rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .divider {
+      width: 60px;
+      height: 3px;
+      background: var(--col-accent);
+      margin-top: 1.5rem;
+      border-radius: 2px;
+    }
+
+    /* ========== ABOUT ========== */
+    #about { background: var(--col-surface); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .about-img-wrap img { height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .about-img-wrap:hover img { transform: scale(1.04); }
+    .about-img-accent {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      width: 180px;
+      height: 180px;
+      background: var(--col-accent);
+      border-radius: var(--radius);
+      z-index: -1;
+    }
+    .about-features {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .feat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .feat-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(232,160,32,0.12);
+      border: 1px solid rgba(232,160,32,0.3);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .feat-icon svg { width: 16px; height: 16px; fill: var(--col-accent); }
+    .feat-text { font-size: 0.9rem; color: var(--col-muted); }
+    .feat-text strong { display: block; color: var(--col-text); font-size: 0.95rem; margin-bottom: 0.1rem; }
+
+    /* ========== SERVICES ========== */
+    #services { background: var(--col-bg); }
+    .services-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--col-border);
+      border: 1.5px solid var(--col-border);
+      border-radius: calc(var(--radius) + 2px);
+      overflow: hidden;
+    }
+    .service-card {
+      background: var(--col-card);
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+      transition: background var(--trans);
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--col-accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover { background: #1e242d; }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-number {
+      font-family: var(--font-head);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--col-accent);
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    .service-img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .service-img img { height: 100%; transition: transform 0.6s ease; }
+    .service-card:hover .service-img img { transform: scale(1.05); }
+    .service-name {
+      font-family: var(--font-head);
+      font-size: 1.35rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--col-white);
+      letter-spacing: 0.03em;
+      margin-bottom: 0.75rem;
+    }
+    .service-desc { font-size: 0.9rem; color: var(--col-muted); line-height: 1.6; }
+    .service-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--col-accent);
+      transition: gap var(--trans);
+    }
+    .service-card:hover .service-arrow { gap: 0.8rem; }
+
+    /* ========== WHY US ========== */
+    #why { background: var(--col-surface); overflow: hidden; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .why-img {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .why-img img { height: 100%; }
+    .why-img-overlay {
+      position: absolute;
+      bottom: 2rem;
+      left: -2rem;
+      background: var(--col-accent);
+      color: var(--col-bg);
+      padding: 1.5rem 2rem;
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius);
+      max-width: 220px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .why-img-overlay .big { font-size: 2.5rem; line-height: 1; display: block; }
+    .why-list { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .why-item {
+      display: flex;
+      gap: 1.25rem;
+      padding: 1.5rem;
+      background: var(--col-card);
+      border: 1px solid var(--col-border);
+      border-radius: var(--radius);
+      transition: border-color var(--trans), transform var(--trans);
+    }
+    .why-item:hover { border-color: var(--col-accent); transform: translateX(4px); }
+    .why-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--col-accent);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .why-item-text h4 {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--col-white);
+      letter-spacing: 0.05em;
+    }
+    .why-item-text p { font-size: 0.9rem; color: var(--col-muted); margin-top: 0.3rem; }
+
+    /* ========== PROJECTS ========== */
+    #projects { background: var(--col-bg); }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .project-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+    }
+    .project-card.tall { aspect-ratio: 3/4; }
+    .project-card img { height: 100%; transition: transform 0.5s ease; }
+    .project-card:hover img { transform: scale(1.08); }
+    .project-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,15,18,0.9) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity var(--trans);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+    .project-card:hover .project-overlay { opacity: 1; }
+    .project-title {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--col-white);
+    }
+    .project-cat {
+      font-size: 0.8rem;
+      color: var(--col-accent);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ========== PROCESS ========== */
+    #process { background: var(--col-surface); }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+      position: relative;
+    }
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 2.2rem;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: linear-gradient(to right, var(--col-accent), var(--col-border), var(--col-accent));
+    }
+    .process-step {
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .step-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--col-accent);
+      color: var(--col-bg);
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 0 6px var(--col-surface), 0 0 0 7px var(--col-border);
+    }
+    .step-name {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--col-white);
+      letter-spacing: 0.05em;
+    }
+    .step-desc { font-size: 0.85rem; color: var(--col-muted); margin-top: 0.5rem; }
+
+    /* ========== TESTIMONIALS ========== */
+    #testimonials { background: var(--col-bg); }
+    .testimonials-track { margin-top: 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .testimonial-card {
+      background: var(--col-card);
+      border: 1px solid var(--col-border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      position: relative;
+      transition: border-color var(--trans), transform var(--trans);
+    }
+    .testimonial-card:hover { border-color: var(--col-accent); transform: translateY(-4px); }
+    .quote-mark {
+      font-family: Georgia, serif;
+      font-size: 4rem;
+      line-height: 0.8;
+      color: var(--col-accent);
+      opacity: 0.5;
+      margin-bottom: 0.75rem;
+    }
+    .testimonial-text { font-size: 0.95rem; color: var(--col-muted); line-height: 1.7; font-style: italic; }
+    .testimonial-author {
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--col-border);
+    }
+    .author-name { font-family: var(--font-head); font-size: 1rem; font-weight: 800; text-transform: uppercase; color: var(--col-white); }
+    .author-loc { font-size: 0.8rem; color: var(--col-accent); font-weight: 700; }
+    .stars { color: var(--col-accent); font-size: 0.9rem; letter-spacing: 1px; margin-top: 0.3rem; }
+
+    /* ========== CTA BANNER ========== */
+    #cta-banner {
+      background: var(--col-accent);
+      padding: 5rem 0;
+    }
+    .cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .cta-text-block .cta-label {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(12,15,18,0.6);
+      margin-bottom: 0.5rem;
+    }
+    .cta-text-block .cta-heading {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--col-bg);
+      line-height: 1.05;
+    }
+    .btn-dark {
+      background: var(--col-bg);
+      color: var(--col-accent);
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 1rem 2.5rem;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform var(--trans), box-shadow var(--trans);
+    }
+    .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+
+    /* ========== CONTACT ========== */
+    #contact { background: var(--col-surface); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .contact-info-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--col-border);
+    }
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(232,160,32,0.12);
+      border: 1px solid rgba(232,160,32,0.25);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { width: 18px; height: 18px; fill: var(--col-accent); }
+    .contact-info-text strong { display: block; font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--col-accent); margin-bottom: 0.2rem; }
+    .contact-info-text span { color: var(--col-muted); font-size: 0.95rem; }
+
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+    .form-group label {
+      font-family: var(--font-head);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--col-muted);
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--col-card);
+      border: 1px solid var(--col-border);
+      border-radius: var(--radius);
+      color: var(--col-text);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      padding: 0.8rem 1rem;
+      transition: border-color var(--trans);
+      outline: none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(138,145,156,0.5); }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--col-accent); }
+    .form-group select option { background: var(--col-card); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #080a0c;
+      padding: 4rem 0 2rem;
+      border-top: 1px solid var(--col-border);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-brand .logo { margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.9rem; color: var(--col-muted); line-height: 1.7; }
+    .footer-col h5 {
+      font-family: var(--font-head);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--col-accent);
+      margin-bottom: 1.2rem;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--col-muted);
+      margin-bottom: 0.6rem;
+      transition: color var(--trans);
+    }
+    .footer-col a:hover { color: var(--col-white); }
+    .footer-bottom {
+      border-top: 1px solid var(--col-border);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.85rem; color: var(--col-muted); }
+    .footer-bottom a { color: var(--col-accent); transition: opacity var(--trans); }
+    .footer-bottom a:hover { opacity: 0.8; }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1024px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .process-steps::before { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      nav, .cta-header { display: none; }
+      .hamburger { display: flex; }
+      .lang-btn { margin-left: auto; }
+
+      .about-grid, .why-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .why-img { aspect-ratio: 16/9; }
+      .why-img-overlay { left: 1rem; bottom: 1rem; }
+      .about-features { grid-template-columns: 1fr; }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-track { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .cta-inner { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+  </style>
 </head>
-<body class="font-sans bg-gray-50 text-gray-900">
-    <!-- Sticky Header -->
-    <header class="sticky-header bg-white border-b shadow-sm fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl">DK</div>
-                <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-blue-950">DK Contracting</h1>
-                    <p class="text-xs text-gray-500 -mt-1">Shawville, QC</p>
-                </div>
-            </div>
-            
-            <!-- Desktop Nav -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#home" class="nav-link text-gray-700 hover:text-blue-700">Home</a>
-                <a href="#services" class="nav-link text-gray-700 hover:text-blue-700">Services</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-blue-700">About</a>
-                <a href="#gallery" class="nav-link text-gray-700 hover:text-blue-700">Gallery</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-700">Contact</a>
-            </nav>
-            
-            <div class="flex items-center gap-4">
-                <!-- Language Toggle -->
-                <div class="flex border rounded-full overflow-hidden text-sm font-medium">
-                    <button onclick="switchLanguage('en')" id="btn-en" 
-                            class="px-4 py-1.5 bg-blue-900 text-white transition-all">EN</button>
-                    <button onclick="switchLanguage('fr')" id="btn-fr" 
-                            class="px-4 py-1.5 hover:bg-gray-100 transition-all">FR</button>
-                </div>
-                
-                <a href="tel:6135708245" 
-                   class="hidden sm:flex items-center gap-2 bg-blue-700 hover:bg-blue-800 text-white px-6 py-3 rounded-2xl font-semibold transition-all">
-                    <i class="fas fa-phone"></i>
-                    <span>(613) 570-8245</span>
-                </a>
-                
-                <!-- Hamburger -->
-                <button id="hamburger" class="md:hidden text-3xl text-gray-700">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-6 py-6 flex flex-col gap-6 text-lg">
-                <a href="#home" class="mobile-link">Home</a>
-                <a href="#services" class="mobile-link">Services</a>
-                <a href="#about" class="mobile-link">About Us</a>
-                <a href="#gallery" class="mobile-link">Project Gallery</a>
-                <a href="#contact" class="mobile-link">Get a Quote</a>
-                <a href="tel:6135708245" class="block bg-blue-700 text-white text-center py-4 rounded-2xl font-semibold">Call (613) 570-8245</a>
-            </div>
-        </div>
-    </header>
+<body>
 
-    <!-- Hero -->
-    <section id="home" class="hero-bg h-screen flex items-center text-white pt-20">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="max-w-2xl mx-auto">
-                <span id="hero-badge" class="inline-block px-6 py-2 bg-white/20 backdrop-blur-md rounded-full text-sm tracking-widest mb-6">FULLY INSURED • SHAWVILLE, QC</span>
-                <h2 id="hero-title" class="text-6xl md:text-7xl font-bold leading-tight mb-6">Expert Renovations.<br>Built with Trust.</h2>
-                <p id="hero-subtitle" class="text-xl md:text-2xl text-gray-200 mb-10">Residential &amp; Commercial Remodeling in Renfrew County &amp; the Pontiac Region</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="#contact" 
-                       class="px-10 py-5 bg-white text-blue-950 rounded-3xl font-semibold text-lg hover:bg-amber-300 transition-all inline-flex items-center justify-center gap-3">
-                        <span>Get Free Estimate</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#gallery" 
-                       class="px-10 py-5 border-2 border-white/80 hover:bg-white/10 rounded-3xl font-semibold text-lg transition-all">
-                        View Our Work
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Scroll indicator -->
-            <div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center">
-                <div class="text-xs tracking-widest mb-2">SCROLL TO EXPLORE</div>
-                <i class="fas fa-chevron-down animate-bounce text-3xl"></i>
-            </div>
-        </div>
-    </section>
+<!-- ====== HEADER ====== -->
+<header id="header">
+  <div class="logo">DK<span>.</span>Contracting</div>
+  <nav>
+    <a href="#home" data-i18n="nav_home">Home</a>
+    <a href="#about" data-i18n="nav_about">About</a>
+    <a href="#services" data-i18n="nav_services">Services</a>
+    <a href="#projects" data-i18n="nav_projects">Projects</a>
+    <a href="#contact" data-i18n="nav_contact">Contact</a>
+  </nav>
+  <button class="lang-btn" id="langToggle">FR</button>
+  <button class="cta-header" onclick="scrollTo('#contact')" data-i18n="nav_quote">Free Quote</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
 
-    <!-- Services -->
-    <section id="services" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-blue-600 font-semibold tracking-wider">WHAT WE DO</span>
-                <h2 id="services-title" class="text-5xl font-bold mt-3">Our Services</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1015/800/600')"></div>
-                    <div class="p-8">
-                        <h3 id="svc1" class="text-2xl font-semibold mb-3">Kitchen Renovations</h3>
-                        <p id="svc1-desc" class="text-gray-600">Custom cabinets, quartz countertops, modern layouts and premium finishes that transform the heart of your home.</p>
-                        <div class="mt-6 flex items-center text-blue-700 font-medium group-hover:gap-3 transition-all">
-                            Learn more <span class="text-xl">→</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/600')"></div>
-                    <div class="p-8">
-                        <h3 id="svc2" class="text-2xl font-semibold mb-3">Bathroom Remodeling</h3>
-                        <p id="svc2-desc" class="text-gray-600">Luxury showers, vanities, tiling and complete bathroom transformations for both primary and guest baths.</p>
-                        <div class="mt-6 flex items-center text-blue-700 font-medium group-hover:gap-3 transition-all">
-                            Learn more <span class="text-xl">→</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/251/800/600')"></div>
-                    <div class="p-8">
-                        <h3 id="svc3" class="text-2xl font-semibold mb-3">Basement Finishing</h3>
-                        <p id="svc3-desc" class="text-gray-600">Custom bars, home theaters, rec rooms and functional living spaces in your lower level.</p>
-                        <div class="mt-6 flex items-center text-blue-700 font-medium group-hover:gap-3 transition-all">
-                            Learn more <span class="text-xl">→</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- More services -->
-                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/316/800/600')"></div>
-                    <div class="p-8">
-                        <h3 id="svc4" class="text-2xl font-semibold mb-3">Home Additions &amp; Extensions</h3>
-                        <p id="svc4-desc" class="text-gray-600">Increase your living space with expertly built additions and structural modifications.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/866/800/600')"></div>
-                    <div class="p-8">
-                        <h3 id="svc5" class="text-2xl font-semibold mb-3">Commercial Renovations</h3>
-                        <p id="svc5-desc" class="text-gray-600">Office builds, retail updates, restaurants and professional workspaces.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card bg-white border rounded-3xl overflow-hidden group">
-                    <div class="h-64 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1016/800/600')"></div>
-                    <div class="p-8">
-                        <h3 id="svc6" class="text-2xl font-semibold mb-3">Decks, Patios &amp; Outdoor Living</h3>
-                        <p id="svc6-desc" class="text-gray-600">Beautiful outdoor spaces designed for Canadian seasons.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="#home" data-i18n="nav_home">Home</a>
+  <a href="#about" data-i18n="nav_about">About</a>
+  <a href="#services" data-i18n="nav_services">Services</a>
+  <a href="#projects" data-i18n="nav_projects">Projects</a>
+  <a href="#contact" data-i18n="nav_contact">Contact</a>
+  <div class="mobile-nav-bottom">
+    <button class="lang-btn" id="langToggleMobile">FR</button>
+    <button class="btn-primary" onclick="scrollTo('#contact'); closeMobileNav();" data-i18n="nav_quote">Free Quote</button>
+  </div>
+</nav>
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-gray-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <img src="https://picsum.photos/id/1018/800/900" alt="DK Contracting Team" 
-                         class="rounded-3xl shadow-2xl">
-                </div>
-                <div>
-                    <span class="text-blue-600 font-semibold">ESTABLISHED CONTRACTOR</span>
-                    <h2 id="about-title" class="text-5xl font-bold mt-4 leading-tight">Reliable Craftsmanship Across the Pontiac &amp; Renfrew</h2>
-                    <div id="about-text" class="mt-8 space-y-6 text-lg text-gray-600">
-                        <p>DK Contracting is a fully insured general contracting business based in Shawville, Quebec. We specialize in high-quality residential and commercial renovations and remodeling.</p>
-                        <p>From kitchens and bathrooms to complete home transformations, our team brings professionalism, attention to detail, and client-first service to every project in the Pontiac region and Renfrew County.</p>
-                    </div>
-                    
-                    <div class="mt-12 grid grid-cols-3 gap-8">
-                        <div>
-                            <div class="text-4xl font-bold text-blue-900">15+</div>
-                            <div class="text-sm text-gray-500">Years Experience</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-blue-900">200+</div>
-                            <div class="text-sm text-gray-500">Projects Completed</div>
-                        </div>
-                        <div>
-                            <div class="text-4xl font-bold text-blue-900">100%</div>
-                            <div class="text-sm text-gray-500">Insured</div>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="mt-12 inline-flex items-center gap-4 group">
-                        <div class="w-14 h-14 rounded-2xl bg-blue-900 text-white flex items-center justify-center text-2xl group-hover:rotate-12 transition">📍</div>
-                        <div>
-                            <div class="font-medium">30 Chemin Elliott</div>
-                            <div class="text-gray-500">Shawville, QC J0X 2Y0</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Teaser -->
-    <section id="gallery" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <span class="uppercase tracking-widest text-sm font-semibold text-amber-600">Our Projects</span>
-                    <h2 id="gallery-title" class="text-5xl font-bold">Real Results</h2>
-                </div>
-                <a href="#" class="hidden md:flex items-center gap-3 text-blue-700 hover:text-blue-900 font-medium">
-                    View full gallery <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/1015/800/500')"></div>
-                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/201/800/500')"></div>
-                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/251/800/500')"></div>
-                <div class="aspect-video bg-cover rounded-3xl overflow-hidden" style="background-image: url('https://picsum.photos/id/316/800/500')"></div>
-                <div class="aspect-video bg-cover rounded-3xl overflow-hidden md:col-span-2" style="background-image: url('https://picsum.photos/id/866/1200/500')"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <div class="bg-blue-950 py-16 text-white">
-        <div class="max-w-4xl mx-auto text-center px-6">
-            <h2 id="cta-title" class="text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
-            <p id="cta-text" class="text-xl mb-8 text-blue-200">Contact us today for a free, no-obligation estimate.</p>
-            <a href="#contact" 
-               class="inline-block bg-white text-blue-950 px-12 py-6 rounded-3xl text-xl font-semibold hover:scale-105 transition">
-                Get Your Free Quote
-            </a>
-        </div>
+<!-- ====== HERO ====== -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content container">
+    <div class="hero-badge" data-i18n="hero_badge">Quebec's Trusted Contractor</div>
+    <h1 class="hero-title">
+      <span data-i18n="hero_title1">Built with</span>
+      <em data-i18n="hero_title2">Precision.</em>
+      <span data-i18n="hero_title3">Finished with Pride.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero_sub">From residential renovations to large commercial builds, DK Contracting delivers quality craftsmanship across Quebec.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="scrollTo('#services')" data-i18n="hero_btn1">Our Services</button>
+      <button class="btn-outline" onclick="scrollTo('#contact')" data-i18n="hero_btn2">Get a Free Quote</button>
     </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label" data-i18n="stat1">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label" data-i18n="stat2">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">100%</div>
+        <div class="stat-label" data-i18n="stat3">Licensed & Insured</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span data-i18n="scroll">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-5 gap-12">
-                <div class="md:col-span-2">
-                    <h2 id="contact-title" class="text-5xl font-bold mb-8">Let's Build Something Great Together</h2>
-                    <div class="space-y-8">
-                        <div>
-                            <div class="flex items-center gap-4">
-                                <i class="fas fa-phone text-3xl text-blue-700"></i>
-                                <div>
-                                    <div class="font-semibold">Phone</div>
-                                    <a href="tel:6135708245" class="text-2xl hover:underline">(613) 570-8245</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-4">
-                                <i class="fas fa-envelope text-3xl text-blue-700"></i>
-                                <div>
-                                    <div class="font-semibold">Email</div>
-                                    <a href="mailto:duane@dkcontracting.ca" class="hover:underline">duane@dkcontracting.ca</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex items-center gap-4">
-                                <i class="fas fa-map-marker-alt text-3xl text-blue-700"></i>
-                                <div>
-                                    <div class="font-semibold">Address</div>
-                                    <div>30 Chemin Elliott<br>Shawville, Quebec J0X 2Y0</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Contact Form -->
-                <div class="md:col-span-3 bg-white p-10 rounded-3xl shadow">
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Name</label>
-                                <input type="text" class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500" required>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Phone</label>
-                                <input type="tel" class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500" required>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500" required>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Project Type</label>
-                            <select class="w-full border rounded-2xl px-5 py-4 focus:outline-none focus:border-blue-500">
-                                <option>Kitchen Renovation</option>
-                                <option>Bathroom Remodel</option>
-                                <option>Basement Finishing</option>
-                                <option>Home Addition</option>
-                                <option>Commercial Project</option>
-                                <option>Other</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Message</label>
-                            <textarea rows="5" class="w-full border rounded-3xl px-5 py-4 focus:outline-none focus:border-blue-500" placeholder="Tell us about your project..."></textarea>
-                        </div>
-                        <button type="submit" 
-                                class="w-full bg-blue-900 hover:bg-blue-800 text-white py-6 rounded-3xl font-semibold text-lg transition">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
+<!-- ====== ABOUT ====== -->
+<section id="about">
+  <div class="container section-pad">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="DK Contracting team at work" />
+        <div class="about-img-accent"></div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-label" data-i18n="about_label">About DK Contracting</div>
+        <h2 class="section-title" data-i18n="about_title">A Name You Can <em>Trust.</em></h2>
+        <div class="divider"></div>
+        <p class="section-desc" data-i18n="about_desc">DK Contracting is a Quebec-based general contractor with over 15 years of experience in residential and commercial construction. We combine skilled tradespeople, transparent communication, and a relentless commitment to quality on every job — large or small.</p>
+        <div class="about-features">
+          <div class="feat-item">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7 7h10a2 2 0 012 2v8a2 2 0 01-2 2H7a2 2 0 01-2-2V9a2 2 0 012-2z"/></svg></div>
+            <div class="feat-text"><strong data-i18n="feat1_title">CCQ Certified</strong><span data-i18n="feat1_desc">Fully licensed under Quebec construction law</span></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.09 6.26H21l-5.47 3.97 2.09 6.26L12 14.52l-5.62 3.97 2.09-6.26L3 8.26h6.91z"/></svg></div>
+            <div class="feat-text"><strong data-i18n="feat2_title">5-Star Rated</strong><span data-i18n="feat2_desc">Consistently praised by clients across Quebec</span></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="feat-text"><strong data-i18n="feat3_title">Fully Insured</strong><span data-i18n="feat3_desc">Complete liability coverage on all projects</span></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+            <div class="feat-text"><strong data-i18n="feat4_title">Bilingual Team</strong><span data-i18n="feat4_desc">We serve clients in English and French</span></div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-400">
-        <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
-            <div class="grid md:grid-cols-12 gap-10">
-                <div class="md:col-span-5">
-                    <div class="flex items-center gap-3 text-white mb-6">
-                        <div class="w-10 h-10 bg-white rounded-2xl flex items-center justify-center text-blue-900 font-bold text-3xl">DK</div>
-                        <div class="text-3xl font-bold">DK Contracting</div>
-                    </div>
-                    <p class="max-w-md">Professional general contracting and renovation services across the Pontiac and Renfrew County since day one.</p>
-                    
-                    <div class="mt-10 text-sm">
-                        Fully Insured • License # Pending
-                    </div>
-                </div>
-                
-                <div class="md:col-span-3">
-                    <div class="font-semibold text-white mb-6">Quick Links</div>
-                    <div class="space-y-3 text-sm">
-                        <a href="#services" class="block hover:text-white">Services</a>
-                        <a href="#gallery" class="block hover:text-white">Gallery</a>
-                        <a href="#about" class="block hover:text-white">About Us</a>
-                    </div>
-                </div>
-                
-                <div class="md:col-span-4">
-                    <div class="font-semibold text-white mb-6">Service Areas</div>
-                    <div class="grid grid-cols-2 gap-y-2 text-sm">
-                        <div>Shawville</div>
-                        <div>Renfrew County</div>
-                        <div>Pontiac Region</div>
-                        <div>Fort-Coulonge</div>
-                        <div>Bristol</div>
-                        <div>Quyon</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-                <div>© 2026 DK Contracting. All Rights Reserved.</div>
-                <div class="flex items-center gap-8">
-                    <a href="https://www.dolanprogramming.ca" target="_blank" class="hover:text-white flex items-center gap-2">
-                        <span>Created by Dolan Programming</span>
-                        <i class="fas fa-external-link-alt text-xs"></i>
-                    </a>
-                    <div class="flex gap-6">
-                        <a href="#" class="hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="hover:text-white"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
+<!-- ====== SERVICES ====== -->
+<section id="services">
+  <div class="container section-pad">
+    <div class="services-intro">
+      <div class="reveal">
+        <div class="section-label" data-i18n="services_label">What We Do</div>
+        <h2 class="section-title" data-i18n="services_title">Our <em>Services</em></h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-2" style="margin-top:0;" data-i18n="services_intro_desc">Professional contracting for residential and commercial clients across Quebec.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card reveal">
+        <span class="service-number">01</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="General Contracting" /></div>
+        <div class="service-name" data-i18n="s1_name">General Contracting</div>
+        <p class="service-desc" data-i18n="s1_desc">Full-scope project management for residential and commercial builds — from permits to final walk-through.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-number">02</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80" alt="Renovations" /></div>
+        <div class="service-name" data-i18n="s2_name">Renovations</div>
+        <p class="service-desc" data-i18n="s2_desc">Kitchen, bathroom, basement, and whole-home renovations executed with precision and minimal disruption.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-number">03</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1521193089715-88c9beed7a1e?w=600&q=80" alt="Roofing" /></div>
+        <div class="service-name" data-i18n="s3_name">Roofing</div>
+        <p class="service-desc" data-i18n="s3_desc">New roofs, re-roofing, and repairs for all types — shingles, metal, flat, and more.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-number">04</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Framing" /></div>
+        <div class="service-name" data-i18n="s4_name">Framing & Structure</div>
+        <p class="service-desc" data-i18n="s4_desc">Wood and steel framing, structural additions, and load-bearing modifications done safely and to code.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-number">05</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=600&q=80" alt="Drywall & Finishing" /></div>
+        <div class="service-name" data-i18n="s5_name">Drywall & Finishing</div>
+        <p class="service-desc" data-i18n="s5_desc">Installation, taping, mudding, texturing, and a flawless finish — interior walls done right.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-number">06</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1562259929-b4e1fd3aef09?w=600&q=80" alt="Painting" /></div>
+        <div class="service-name" data-i18n="s6_name">Painting & Finishing</div>
+        <p class="service-desc" data-i18n="s6_desc">Interior and exterior painting services using premium products for a lasting, professional result.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal">
+        <span class="service-number">07</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1601524909162-ae8725290836?w=600&q=80" alt="Flooring" /></div>
+        <div class="service-name" data-i18n="s7_name">Flooring</div>
+        <p class="service-desc" data-i18n="s7_desc">Laminate, hardwood, tile, vinyl plank, and more — supply and install across Quebec.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-number">08</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Decks & Exterior" /></div>
+        <div class="service-name" data-i18n="s8_name">Decks & Exterior</div>
+        <p class="service-desc" data-i18n="s8_desc">Custom deck design and build, fencing, siding, and exterior finishing for homes across Quebec.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-number">09</span>
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=80" alt="Commercial Construction" /></div>
+        <div class="service-name" data-i18n="s9_name">Commercial Construction</div>
+        <p class="service-desc" data-i18n="s9_desc">Office fit-outs, retail buildouts, and commercial renovations — on time and on budget.</p>
+        <span class="service-arrow">Learn More &#8594;</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHY US ====== -->
+<section id="why">
+  <div class="container section-pad">
+    <div class="why-grid">
+      <div class="why-img reveal">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80" alt="DK Contracting quality work" />
+        <div class="why-img-overlay">
+          <span class="big">15+</span>
+          <span data-i18n="why_years">Years of trusted work in Quebec</span>
         </div>
-    </footer>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-label" data-i18n="why_label">Why DK Contracting</div>
+        <h2 class="section-title" data-i18n="why_title">The Difference Is in <em>the Details.</em></h2>
+        <div class="divider"></div>
+        <div class="why-list">
+          <div class="why-item">
+            <div class="why-num">01</div>
+            <div class="why-item-text">
+              <h4 data-i18n="why1_title">Transparent Pricing</h4>
+              <p data-i18n="why1_desc">Detailed quotes with no hidden fees. You know exactly what you're paying for before we start.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">02</div>
+            <div class="why-item-text">
+              <h4 data-i18n="why2_title">On-Time Delivery</h4>
+              <p data-i18n="why2_desc">We set realistic timelines and hold to them. Your project runs on schedule — no excuses.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">03</div>
+            <div class="why-item-text">
+              <h4 data-i18n="why3_title">Quality Craftsmanship</h4>
+              <p data-i18n="why3_desc">Every detail matters. Our team takes pride in workmanship that stands the test of time.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-num">04</div>
+            <div class="why-item-text">
+              <h4 data-i18n="why4_title">Local Quebec Experts</h4>
+              <p data-i18n="why4_desc">We know Quebec building codes, seasons, and standards inside and out. Local knowledge matters.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Tailwind script already included via CDN
-        
-        // Mobile menu
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            const icon = hamburger.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
-            }
-        });
-        
-        // Language support
-        let currentLang = 'en';
-        
-        const translations = {
-            en: {
-                heroTitle: "Expert Renovations.<br>Built with Trust.",
-                heroSubtitle: "Residential & Commercial Remodeling in Renfrew County & the Pontiac Region",
-                servicesTitle: "Our Services",
-                aboutTitle: "Reliable Craftsmanship Across the Pontiac & Renfrew",
-                galleryTitle: "Real Results",
-                ctaTitle: "Ready to Transform Your Space?",
-                contactTitle: "Let's Build Something Great Together"
-            },
-            fr: {
-                heroTitle: "Rénovations d'expert.<br>Construites avec confiance.",
-                heroSubtitle: "Rénovation résidentielle et commerciale dans le comté de Renfrew et la région de la Pontiac",
-                servicesTitle: "Nos Services",
-                aboutTitle: "Artisanat fiable à travers la Pontiac et Renfrew",
-                galleryTitle: "Projets Réels",
-                ctaTitle: "Prêt à transformer votre espace ?",
-                contactTitle: "Construisons quelque chose de grand ensemble"
-            }
-        };
-        
-        function switchLanguage(lang) {
-            currentLang = lang;
-            
-            // Toggle active button
-            document.getElementById('btn-en').classList.toggle('bg-blue-900', lang === 'en');
-            document.getElementById('btn-en').classList.toggle('text-white', lang === 'en');
-            document.getElementById('btn-fr').classList.toggle('bg-blue-900', lang === 'fr');
-            document.getElementById('btn-fr').classList.toggle('text-white', lang === 'fr');
-            
-            // Update texts (example - expand as needed)
-            document.getElementById('hero-title').innerHTML = translations[lang].heroTitle;
-            document.getElementById('hero-subtitle').textContent = translations[lang].heroSubtitle;
-            document.getElementById('services-title').textContent = translations[lang].servicesTitle;
-            document.getElementById('about-title').textContent = translations[lang].aboutTitle;
-            document.getElementById('gallery-title').textContent = translations[lang].galleryTitle;
-            document.getElementById('cta-title').textContent = translations[lang].ctaTitle;
-            document.getElementById('contact-title').textContent = translations[lang].contactTitle;
-        }
-        
-        // Form submission (demo)
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert("Thank you! Your message has been received. We'll contact you shortly.");
-            this.reset();
-        });
-        
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
-                }
-            });
-        });
-        
-        // Close mobile menu when clicking links
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-        
-        // Keyboard escape for mobile menu
-        document.addEventListener('keydown', (e) => {
-            if (e.key === "Escape" && !mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-        
-        // Initial setup
-        console.log('%cDK Contracting website loaded successfully! Created by Dolan Programming', 'color: #1e3a8a; font-weight: bold');
-    </script>
+<!-- ====== PROJECTS ====== -->
+<section id="projects">
+  <div class="container section-pad">
+    <div class="reveal" style="text-align:center; max-width:600px; margin: 0 auto 0;">
+      <div class="section-label" data-i18n="projects_label">Our Work</div>
+      <h2 class="section-title" data-i18n="projects_title">Recent <em>Projects</em></h2>
+      <p class="section-desc" style="margin: 1rem auto 0;" data-i18n="projects_desc">A selection of residential and commercial work completed across Quebec. Replace these template images with your own project photos.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Project 1 - [Replace with project name]" />
+        <div class="project-overlay">
+          <div>
+            <div class="project-cat" data-i18n="proj1_cat">Residential Renovation</div>
+            <div class="project-title" data-i18n="proj1_name">[Project Name Here]</div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=700&q=80" alt="Project 2 - [Replace with project name]" />
+        <div class="project-overlay">
+          <div>
+            <div class="project-cat" data-i18n="proj2_cat">Kitchen Renovation</div>
+            <div class="project-title" data-i18n="proj2_name">[Project Name Here]</div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?w=700&q=80" alt="Project 3 - [Replace with project name]" />
+        <div class="project-overlay">
+          <div>
+            <div class="project-cat" data-i18n="proj3_cat">Commercial Build</div>
+            <div class="project-title" data-i18n="proj3_name">[Project Name Here]</div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&q=80" alt="Project 4 - [Replace with project name]" />
+        <div class="project-overlay">
+          <div>
+            <div class="project-cat" data-i18n="proj4_cat">Deck Construction</div>
+            <div class="project-title" data-i18n="proj4_name">[Project Name Here]</div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=700&q=80" alt="Project 5 - [Replace with project name]" />
+        <div class="project-overlay">
+          <div>
+            <div class="project-cat" data-i18n="proj5_cat">Roofing</div>
+            <div class="project-title" data-i18n="proj5_name">[Project Name Here]</div>
+          </div>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80" alt="Project 6 - [Replace with project name]" />
+        <div class="project-overlay">
+          <div>
+            <div class="project-cat" data-i18n="proj6_cat">Bathroom Renovation</div>
+            <div class="project-title" data-i18n="proj6_name">[Project Name Here]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROCESS ====== -->
+<section id="process">
+  <div class="container section-pad">
+    <div class="reveal" style="text-align:center; max-width:600px; margin: 0 auto;">
+      <div class="section-label" data-i18n="process_label">How It Works</div>
+      <h2 class="section-title" data-i18n="process_title">Our Simple <em>Process</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-circle">1</div>
+        <div class="step-name" data-i18n="step1_name">Consultation</div>
+        <p class="step-desc" data-i18n="step1_desc">We meet on-site to discuss your vision, needs, and budget. No obligation.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-circle">2</div>
+        <div class="step-name" data-i18n="step2_name">Quote & Plan</div>
+        <p class="step-desc" data-i18n="step2_desc">You receive a detailed written quote and project timeline within days.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-circle">3</div>
+        <div class="step-name" data-i18n="step3_name">We Build</div>
+        <p class="step-desc" data-i18n="step3_desc">Our team gets to work — on time, on budget, with daily communication.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-4">
+        <div class="step-circle">4</div>
+        <div class="step-name" data-i18n="step4_name">Final Walk-Through</div>
+        <p class="step-desc" data-i18n="step4_desc">We walk the finished project with you. Nothing is done until you are satisfied.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TESTIMONIALS ====== -->
+<section id="testimonials">
+  <div class="container section-pad">
+    <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto 0;">
+      <div class="section-label" data-i18n="test_label">Client Reviews</div>
+      <h2 class="section-title" data-i18n="test_title">What Our Clients <em>Say</em></h2>
+    </div>
+    <div class="testimonials-track">
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text" data-i18n="t1_text">DK Contracting completely transformed our basement. The team was professional, clean, and finished exactly on schedule. We could not be happier with the quality of the work.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Client" /></div>
+          <div>
+            <div class="author-name" data-i18n="t1_name">[Client Name]</div>
+            <div class="author-loc" data-i18n="t1_loc">Quebec City, QC</div>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text" data-i18n="t2_text">Had our roof replaced last fall. The crew arrived on time, the work was spotless, and cleanup was perfect. Very fair pricing for Quebec. Highly recommend DK Contracting.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&q=80" alt="Client" /></div>
+          <div>
+            <div class="author-name" data-i18n="t2_name">[Client Name]</div>
+            <div class="author-loc" data-i18n="t2_loc">Levis, QC</div>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="quote-mark">"</div>
+        <p class="testimonial-text" data-i18n="t3_text">We hired DK for a full kitchen renovation. The craftsmanship is outstanding. They communicated every step of the way in both English and French. Would absolutely hire again.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Client" /></div>
+          <div>
+            <div class="author-name" data-i18n="t3_name">[Client Name]</div>
+            <div class="author-loc" data-i18n="t3_loc">Sherbrooke, QC</div>
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CTA BANNER ====== -->
+<section id="cta-banner">
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-text-block reveal">
+        <div class="cta-label" data-i18n="cta_label">Ready to Start?</div>
+        <h2 class="cta-heading" data-i18n="cta_heading">Your Project Starts<br>With a Free Quote.</h2>
+      </div>
+      <button class="btn-dark reveal reveal-delay-2" onclick="scrollTo('#contact')" data-i18n="cta_btn">Get Your Free Quote Today</button>
+    </div>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section id="contact">
+  <div class="container section-pad">
+    <div class="reveal" style="margin-bottom:3rem;">
+      <div class="section-label" data-i18n="contact_label">Get In Touch</div>
+      <h2 class="section-title" data-i18n="contact_title">Request a <em>Free Quote</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="section-desc" style="margin:0 0 2rem;" data-i18n="contact_desc">Ready to get started? Fill out the form and we will be in touch within 24 hours to discuss your project.</p>
+        <div class="contact-info-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.78 2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.56A16 16 0 0015.44 17.1l1.92-1.92a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div class="contact-info-text"><strong data-i18n="contact_phone_label">Phone</strong><span data-i18n="contact_phone">(418) 000-0000</span></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="contact-info-text"><strong data-i18n="contact_email_label">Email</strong><span data-i18n="contact_email">info@dkcontracting.ca</span></div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-info-text"><strong data-i18n="contact_area_label">Service Area</strong><span data-i18n="contact_area">Quebec City and Surrounding Region, QC</span></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="form_name">Full Name</label>
+              <input type="text" data-i18n-placeholder="form_name_ph" placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label data-i18n="form_phone">Phone Number</label>
+              <input type="tel" data-i18n-placeholder="form_phone_ph" placeholder="(418) 000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_email">Email Address</label>
+            <input type="email" data-i18n-placeholder="form_email_ph" placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_service">Service Needed</label>
+            <select>
+              <option value="" data-i18n="form_service_ph">Select a service...</option>
+              <option data-i18n="s1_name">General Contracting</option>
+              <option data-i18n="s2_name">Renovations</option>
+              <option data-i18n="s3_name">Roofing</option>
+              <option data-i18n="s4_name">Framing & Structure</option>
+              <option data-i18n="s5_name">Drywall & Finishing</option>
+              <option data-i18n="s6_name">Painting & Finishing</option>
+              <option data-i18n="s7_name">Flooring</option>
+              <option data-i18n="s8_name">Decks & Exterior</option>
+              <option data-i18n="s9_name">Commercial Construction</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="form_message">Project Details</label>
+            <textarea data-i18n-placeholder="form_message_ph" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button class="btn-primary" onclick="alert(currentLang === 'fr' ? 'Merci! Nous vous contacterons sous peu.' : 'Thank you! We will be in touch shortly.')" data-i18n="form_submit">Send My Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">DK<span>.</span>Contracting</div>
+        <p data-i18n="footer_about">Quebec's trusted general contractor. Quality renovations and construction for residential and commercial clients across the region.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_services_title">Services</h5>
+        <a href="#services" data-i18n="s1_name">General Contracting</a>
+        <a href="#services" data-i18n="s2_name">Renovations</a>
+        <a href="#services" data-i18n="s3_name">Roofing</a>
+        <a href="#services" data-i18n="s4_name">Framing & Structure</a>
+        <a href="#services" data-i18n="s9_name">Commercial Construction</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_links_title">Quick Links</h5>
+        <a href="#home" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer_contact_title">Contact</h5>
+        <a href="tel:4180000000" data-i18n="contact_phone">(418) 000-0000</a>
+        <a href="mailto:info@dkcontracting.ca" data-i18n="contact_email">info@dkcontracting.ca</a>
+        <a href="#contact" data-i18n="contact_area">Quebec City Region, QC</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_copy">&copy; 2025 DK Contracting. All rights reserved.</p>
+      <p>Created by <a href="https://www.dolanprogramming.ca" target="_blank" rel="noopener">Dolan Programming</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ===== TRANSLATIONS =====
+  const translations = {
+    en: {
+      nav_home: "Home", nav_about: "About", nav_services: "Services",
+      nav_projects: "Projects", nav_contact: "Contact", nav_quote: "Free Quote",
+      hero_badge: "Quebec's Trusted Contractor",
+      hero_title1: "Built with", hero_title2: "Precision.", hero_title3: "Finished with Pride.",
+      hero_sub: "From residential renovations to large commercial builds, DK Contracting delivers quality craftsmanship across Quebec.",
+      hero_btn1: "Our Services", hero_btn2: "Get a Free Quote",
+      stat1: "Years Experience", stat2: "Projects Completed", stat3: "Licensed & Insured",
+      scroll: "Scroll",
+      about_label: "About DK Contracting", about_title: "A Name You Can Trust.",
+      about_desc: "DK Contracting is a Quebec-based general contractor with over 15 years of experience in residential and commercial construction. We combine skilled tradespeople, transparent communication, and a relentless commitment to quality on every job — large or small.",
+      feat1_title: "CCQ Certified", feat1_desc: "Fully licensed under Quebec construction law",
+      feat2_title: "5-Star Rated", feat2_desc: "Consistently praised by clients across Quebec",
+      feat3_title: "Fully Insured", feat3_desc: "Complete liability coverage on all projects",
+      feat4_title: "Bilingual Team", feat4_desc: "We serve clients in English and French",
+      services_label: "What We Do", services_title: "Our Services",
+      services_intro_desc: "Professional contracting for residential and commercial clients across Quebec.",
+      s1_name: "General Contracting", s1_desc: "Full-scope project management for residential and commercial builds — from permits to final walk-through.",
+      s2_name: "Renovations", s2_desc: "Kitchen, bathroom, basement, and whole-home renovations executed with precision and minimal disruption.",
+      s3_name: "Roofing", s3_desc: "New roofs, re-roofing, and repairs for all types — shingles, metal, flat, and more.",
+      s4_name: "Framing & Structure", s4_desc: "Wood and steel framing, structural additions, and load-bearing modifications done safely and to code.",
+      s5_name: "Drywall & Finishing", s5_desc: "Installation, taping, mudding, texturing, and a flawless finish — interior walls done right.",
+      s6_name: "Painting & Finishing", s6_desc: "Interior and exterior painting services using premium products for a lasting, professional result.",
+      s7_name: "Flooring", s7_desc: "Laminate, hardwood, tile, vinyl plank, and more — supply and install across Quebec.",
+      s8_name: "Decks & Exterior", s8_desc: "Custom deck design and build, fencing, siding, and exterior finishing for homes across Quebec.",
+      s9_name: "Commercial Construction", s9_desc: "Office fit-outs, retail buildouts, and commercial renovations — on time and on budget.",
+      why_label: "Why DK Contracting", why_title: "The Difference Is in the Details.",
+      why_years: "Years of trusted work in Quebec",
+      why1_title: "Transparent Pricing", why1_desc: "Detailed quotes with no hidden fees. You know exactly what you're paying for before we start.",
+      why2_title: "On-Time Delivery", why2_desc: "We set realistic timelines and hold to them. Your project runs on schedule — no excuses.",
+      why3_title: "Quality Craftsmanship", why3_desc: "Every detail matters. Our team takes pride in workmanship that stands the test of time.",
+      why4_title: "Local Quebec Experts", why4_desc: "We know Quebec building codes, seasons, and standards inside and out. Local knowledge matters.",
+      projects_label: "Our Work", projects_title: "Recent Projects",
+      projects_desc: "A selection of residential and commercial work completed across Quebec. Replace these template images with your own project photos.",
+      proj1_cat: "Residential Renovation", proj1_name: "[Project Name Here]",
+      proj2_cat: "Kitchen Renovation", proj2_name: "[Project Name Here]",
+      proj3_cat: "Commercial Build", proj3_name: "[Project Name Here]",
+      proj4_cat: "Deck Construction", proj4_name: "[Project Name Here]",
+      proj5_cat: "Roofing", proj5_name: "[Project Name Here]",
+      proj6_cat: "Bathroom Renovation", proj6_name: "[Project Name Here]",
+      process_label: "How It Works", process_title: "Our Simple Process",
+      step1_name: "Consultation", step1_desc: "We meet on-site to discuss your vision, needs, and budget. No obligation.",
+      step2_name: "Quote & Plan", step2_desc: "You receive a detailed written quote and project timeline within days.",
+      step3_name: "We Build", step3_desc: "Our team gets to work — on time, on budget, with daily communication.",
+      step4_name: "Final Walk-Through", step4_desc: "We walk the finished project with you. Nothing is done until you are satisfied.",
+      test_label: "Client Reviews", test_title: "What Our Clients Say",
+      t1_text: "DK Contracting completely transformed our basement. The team was professional, clean, and finished exactly on schedule. We could not be happier with the quality of the work.",
+      t1_name: "[Client Name]", t1_loc: "Quebec City, QC",
+      t2_text: "Had our roof replaced last fall. The crew arrived on time, the work was spotless, and cleanup was perfect. Very fair pricing for Quebec. Highly recommend DK Contracting.",
+      t2_name: "[Client Name]", t2_loc: "Levis, QC",
+      t3_text: "We hired DK for a full kitchen renovation. The craftsmanship is outstanding. They communicated every step of the way in both English and French. Would absolutely hire again.",
+      t3_name: "[Client Name]", t3_loc: "Sherbrooke, QC",
+      cta_label: "Ready to Start?", cta_heading: "Your Project Starts\nWith a Free Quote.",
+      cta_btn: "Get Your Free Quote Today",
+      contact_label: "Get In Touch", contact_title: "Request a Free Quote",
+      contact_desc: "Ready to get started? Fill out the form and we will be in touch within 24 hours to discuss your project.",
+      contact_phone_label: "Phone", contact_phone: "(418) 000-0000",
+      contact_email_label: "Email", contact_email: "info@dkcontracting.ca",
+      contact_area_label: "Service Area", contact_area: "Quebec City and Surrounding Region, QC",
+      form_name: "Full Name", form_name_ph: "Your full name",
+      form_phone: "Phone Number", form_phone_ph: "(418) 000-0000",
+      form_email: "Email Address", form_email_ph: "your@email.com",
+      form_service: "Service Needed", form_service_ph: "Select a service...",
+      form_message: "Project Details", form_message_ph: "Tell us about your project...",
+      form_submit: "Send My Request",
+      footer_about: "Quebec's trusted general contractor. Quality renovations and construction for residential and commercial clients across the region.",
+      footer_services_title: "Services", footer_links_title: "Quick Links", footer_contact_title: "Contact",
+      footer_copy: "\u00A9 2025 DK Contracting. All rights reserved.",
+    },
+    fr: {
+      nav_home: "Accueil", nav_about: "À propos", nav_services: "Services",
+      nav_projects: "Projets", nav_contact: "Contact", nav_quote: "Soumission gratuite",
+      hero_badge: "L'entrepreneur de confiance au Québec",
+      hero_title1: "Construit avec", hero_title2: "Précision.", hero_title3: "Fini avec Fierté.",
+      hero_sub: "Des rénovations résidentielles aux grands projets commerciaux, DK Contracting livre un travail de qualité partout au Québec.",
+      hero_btn1: "Nos services", hero_btn2: "Obtenir une soumission gratuite",
+      stat1: "Années d'expérience", stat2: "Projets réalisés", stat3: "Certifié et assuré",
+      scroll: "Défiler",
+      about_label: "À propos de DK Contracting", about_title: "Un nom en qui vous pouvez avoir confiance.",
+      about_desc: "DK Contracting est un entrepreneur général basé au Québec avec plus de 15 ans d'expérience en construction résidentielle et commerciale. Nous combinons des artisans qualifiés, une communication transparente et un engagement sans relâche envers la qualité sur chaque chantier.",
+      feat1_title: "Certifié CCQ", feat1_desc: "Détenteur de licence en vertu des lois sur la construction du Québec",
+      feat2_title: "Cote 5 étoiles", feat2_desc: "Constamment félicité par les clients partout au Québec",
+      feat3_title: "Pleinement assuré", feat3_desc: "Couverture complète en responsabilité civile sur tous les projets",
+      feat4_title: "Équipe bilingue", feat4_desc: "Nous servons les clients en anglais et en français",
+      services_label: "Ce que nous faisons", services_title: "Nos Services",
+      services_intro_desc: "Services professionnels de construction pour clients résidentiels et commerciaux partout au Québec.",
+      s1_name: "Entrepreneur général", s1_desc: "Gestion de projet complète pour constructions résidentielles et commerciales, des permis jusqu'à l'inspection finale.",
+      s2_name: "Rénovations", s2_desc: "Rénovations de cuisines, salles de bain, sous-sols et maisons entières, avec précision et le moins de perturbation possible.",
+      s3_name: "Toiture", s3_desc: "Nouvelles toitures, remplacements et réparations pour tous types — bardeaux, métal, toits plats et plus.",
+      s4_name: "Charpente et structure", s4_desc: "Charpente en bois et en acier, ajouts structuraux et modifications portantes effectués en toute sécurité et conformément aux normes.",
+      s5_name: "Cloisons sèches et finition", s5_desc: "Installation, rubanage, jointoyage, textures et finition impeccable — des murs intérieurs réussis.",
+      s6_name: "Peinture et finition", s6_desc: "Services de peinture intérieure et extérieure avec des produits haut de gamme pour un résultat professionnel durable.",
+      s7_name: "Revêtements de sol", s7_desc: "Stratifié, bois franc, céramique, vinyle et plus — fourniture et pose partout au Québec.",
+      s8_name: "Terrasses et extérieur", s8_desc: "Conception et construction de terrasses sur mesure, clôtures, revêtements et finitions extérieures.",
+      s9_name: "Construction commerciale", s9_desc: "Aménagements de bureaux, commerces et rénovations commerciales — dans les délais et le budget prévus.",
+      why_label: "Pourquoi DK Contracting", why_title: "La différence est dans les détails.",
+      why_years: "Années de travail de confiance au Québec",
+      why1_title: "Prix transparents", why1_desc: "Soumissions détaillées sans frais cachés. Vous savez exactement ce que vous payez avant le début des travaux.",
+      why2_title: "Livraison dans les délais", why2_desc: "Nous établissons des échéanciers réalistes et les respectons. Votre projet avance selon le calendrier — sans excuses.",
+      why3_title: "Travail de qualité", why3_desc: "Chaque détail compte. Notre équipe est fière d'un travail qui résiste à l'épreuve du temps.",
+      why4_title: "Experts québécois locaux", why4_desc: "Nous connaissons les codes du bâtiment, les saisons et les normes du Québec sur le bout des doigts.",
+      projects_label: "Notre travail", projects_title: "Projets récents",
+      projects_desc: "Une sélection de travaux résidentiels et commerciaux réalisés partout au Québec. Remplacez ces images modèles par vos propres photos de projets.",
+      proj1_cat: "Rénovation résidentielle", proj1_name: "[Nom du projet]",
+      proj2_cat: "Rénovation de cuisine", proj2_name: "[Nom du projet]",
+      proj3_cat: "Construction commerciale", proj3_name: "[Nom du projet]",
+      proj4_cat: "Construction de terrasse", proj4_name: "[Nom du projet]",
+      proj5_cat: "Toiture", proj5_name: "[Nom du projet]",
+      proj6_cat: "Rénovation de salle de bain", proj6_name: "[Nom du projet]",
+      process_label: "Comment ça fonctionne", process_title: "Notre processus simple",
+      step1_name: "Consultation", step1_desc: "Nous nous rencontrons sur le site pour discuter de votre vision, de vos besoins et de votre budget. Sans engagement.",
+      step2_name: "Soumission et planification", step2_desc: "Vous recevez une soumission écrite détaillée et un échéancier de projet en quelques jours.",
+      step3_name: "Nous construisons", step3_desc: "Notre équipe se met au travail — dans les délais, dans le budget, avec une communication quotidienne.",
+      step4_name: "Inspection finale", step4_desc: "Nous parcourons le projet terminé avec vous. Rien n'est considéré comme terminé tant que vous n'êtes pas satisfait.",
+      test_label: "Avis des clients", test_title: "Ce que nos clients disent",
+      t1_text: "DK Contracting a complètement transformé notre sous-sol. L'équipe était professionnelle, propre et a terminé exactement dans les délais. Nous ne pourrions pas être plus heureux de la qualité du travail.",
+      t1_name: "[Nom du client]", t1_loc: "Québec, QC",
+      t2_text: "Nous avons fait remplacer notre toit l'automne dernier. L'équipe est arrivée à l'heure, le travail était impeccable et le nettoyage parfait. Prix très raisonnable pour le Québec. Je recommande fortement DK Contracting.",
+      t2_name: "[Nom du client]", t2_loc: "Lévis, QC",
+      t3_text: "Nous avons engagé DK pour une rénovation complète de cuisine. Le travail est remarquable. Ils ont communiqué à chaque étape en anglais et en français. Nous les engagerions à nouveau sans hésiter.",
+      t3_name: "[Nom du client]", t3_loc: "Sherbrooke, QC",
+      cta_label: "Prêt à commencer?", cta_heading: "Votre projet commence\npar une soumission gratuite.",
+      cta_btn: "Obtenez votre soumission gratuite aujourd'hui",
+      contact_label: "Contactez-nous", contact_title: "Demandez une soumission gratuite",
+      contact_desc: "Prêt à démarrer? Remplissez le formulaire et nous vous contacterons dans les 24 heures pour discuter de votre projet.",
+      contact_phone_label: "Téléphone", contact_phone: "(418) 000-0000",
+      contact_email_label: "Courriel", contact_email: "info@dkcontracting.ca",
+      contact_area_label: "Zone desservie", contact_area: "Québec et région environnante, QC",
+      form_name: "Nom complet", form_name_ph: "Votre nom complet",
+      form_phone: "Numéro de téléphone", form_phone_ph: "(418) 000-0000",
+      form_email: "Adresse courriel", form_email_ph: "votre@courriel.com",
+      form_service: "Service requis", form_service_ph: "Choisissez un service...",
+      form_message: "Détails du projet", form_message_ph: "Parlez-nous de votre projet...",
+      form_submit: "Envoyer ma demande",
+      footer_about: "L'entrepreneur général de confiance au Québec. Rénovations et construction de qualité pour clients résidentiels et commerciaux.",
+      footer_services_title: "Services", footer_links_title: "Liens rapides", footer_contact_title: "Contact",
+      footer_copy: "\u00A9 2025 DK Contracting. Tous droits réservés.",
+    }
+  };
+
+  let currentLang = 'en';
+
+  function applyTranslations(lang) {
+    const t = translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (t[key] !== undefined) el.textContent = t[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (t[key] !== undefined) el.placeholder = t[key];
+    });
+    document.documentElement.lang = lang;
+    document.getElementById('langToggle').textContent = lang === 'en' ? 'FR' : 'EN';
+    document.getElementById('langToggleMobile').textContent = lang === 'en' ? 'FR' : 'EN';
+
+    // Update meta for SEO
+    if (lang === 'fr') {
+      document.title = "DK Contracting | Entrepreneur Général Québec | Rénovation et Construction";
+      document.querySelector('meta[name="description"]').setAttribute('content',
+        "DK Contracting est un entrepreneur général de confiance au Québec. Spécialisé en rénovations résidentielles et commerciales, toiture, charpente, cloisons sèches, peinture et plus.");
+    } else {
+      document.title = "DK Contracting | General Contractor Quebec | Renovation & Construction";
+      document.querySelector('meta[name="description"]').setAttribute('content',
+        "DK Contracting is a trusted general contractor serving Quebec. We specialize in residential and commercial renovations, roofing, framing, drywall, painting, and more.");
+    }
+  }
+
+  function toggleLang() {
+    currentLang = currentLang === 'en' ? 'fr' : 'en';
+    applyTranslations(currentLang);
+  }
+
+  document.getElementById('langToggle').addEventListener('click', toggleLang);
+  document.getElementById('langToggleMobile').addEventListener('click', toggleLang);
+
+  // ===== HAMBURGER =====
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileNav.classList.remove('open');
+    });
+  });
+
+  function closeMobileNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
+  }
+
+  // ===== SCROLL HELPER =====
+  function scrollTo(selector) {
+    const el = document.querySelector(selector);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // ===== HEADER SCROLL =====
+  window.addEventListener('scroll', () => {
+    document.getElementById('header').classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // ===== REVEAL ON SCROLL =====
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ===== COUNTER ANIMATION =====
+  function animateCounters() {
+    document.querySelectorAll('.stat-num').forEach(el => {
+      const target = parseInt(el.textContent);
+      if (isNaN(target)) return;
+      const suffix = el.textContent.replace(/[0-9]/g, '');
+      let start = 0;
+      const step = Math.ceil(target / 40);
+      const interval = setInterval(() => {
+        start = Math.min(start + step, target);
+        el.textContent = start + suffix;
+        if (start >= target) clearInterval(interval);
+      }, 30);
+    });
+  }
+
+  const heroObserver = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) { animateCounters(); heroObserver.disconnect(); }
+  }, { threshold: 0.5 });
+  heroObserver.observe(document.querySelector('.hero-stats'));
+</script>
 </body>
 </html>
-```
